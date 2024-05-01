@@ -1,0 +1,20 @@
+@mixin flexbox(
+  $justify: null,
+  $alignItems: null,
+  $textAlign: null,
+  $direction: null
+) {
+  display: flex;
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  @if $alignItems != null {
+    align-items: $alignItems;
+  }
+  @if $textAlign != null {
+    text-align: $textAlign;
+  }
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+}

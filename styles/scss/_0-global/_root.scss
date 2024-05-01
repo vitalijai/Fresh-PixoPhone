@@ -2,16 +2,20 @@
 @import "../_2-main/main-variable";
 
 :root {
-  //parametrs
-  ---width: #{$---width};
+  //PARAMETRS
+  //global
+  ---width-desc: 1920px;
+  ---width: 1366px;
+  ---gap-basic: 24px;
 
   //COLORS
   //global
   --bg-color: #f5f5f5;
 
-  ---white: #{$---white};
+  ---white: #fff;
+
   --colors-red-300: #{$--colors-red-300};
   --colors-red-500: #{$--colors-red-500};
-  --colors-gray-500: #{$--colors-gray-500};
-  --colors-green-500-primary: #{$--colors-green-500-primary};
+  --colors-gray-500: #696969;
+  --colors-green-500-primary: #2ea84f;
 }
