@@ -1,0 +1,14 @@
+* {
+  font-family: Rubik;
+}
+
+body {
+  background: var(--bg-color, #f5f5f5);
+}
+
+a,
+a:active,
+a:visited {
+  color: var(--colors-gray-500, #696969);
+  text-decoration: none;
+}

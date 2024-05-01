@@ -2,16 +2,97 @@
 <html dir="ltr" lang="uk">
 
 <head>
+    <!-- мета -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- стили -->
     <link rel="stylesheet" href="/styles/css/style.css">
+    <link href="https://pixophone.com/image/catalog/LOGO/favicon.png" rel="icon">
+
+    <!-- шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="preload"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- тайтл -->
     <title>Сторінка товару</title>
 </head>
 
 <body>
+    <!-- header -->
+    <div class="header_basic">
+        <header class="header">
+            <div class="left_side">
+                <a href="#" class="main_logo">
+                    <div class="main_logo-img"></div>
+                </a>
+                <div class="city-switch">
+                    <p>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5 9.5C5 5.62941 8.12941 2.5 12 2.5C15.8706 2.5 19 5.62941 19 9.5C19 16.2118 12.5353 21.1529 12.2471 21.3588C12.1647 21.4 12.0824 21.4412 12 21.4412C11.9176 21.4412 11.8353 21.4 11.7529 21.3588C11.4647 21.1529 5 16.2118 5 9.5ZM12 13C13.933 13 15.5 11.433 15.5 9.5C15.5 7.567 13.933 6 12 6C10.067 6 8.5 7.567 8.5 9.5C8.5 11.433 10.067 13 12 13Z"
+                                    fill="#E5E4E2" />
+                            </svg>
+                            Івано-Франківськ
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="right_side">
+                <div class="menu">
+                    <a href="#" class="menu_promotion">
+                        Акції
+                    </a>
+                    <a href="#">
+                        Ремонт
+                    </a>
+                    <a href="#">
+                        Trade-In
+                    </a>
+                    <a href="#">
+                        FAQ
+                    </a>
+                    <a href="#" class="menu_contacts">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M19.7162 14.5022C18.7366 14.5022 17.7747 14.349 16.8633 14.0478C16.4167 13.8954 15.8676 14.0352 15.595 14.3151L13.796 15.6732C11.7096 14.5595 10.4245 13.2748 9.32596 11.204L10.6441 9.45188C10.9865 9.10988 11.1094 8.61029 10.9622 8.14154C10.6597 7.22529 10.506 6.26392 10.506 5.28392C10.5061 4.57596 9.93012 4 9.22221 4H6.28387C5.57596 4 5 4.57596 5 5.28387C5 13.3985 11.6016 20 19.7162 20C20.4241 20 21 19.424 21 18.7161V15.786C21 15.0781 20.424 14.5022 19.7162 14.5022Z"
+                                fill="#E5E4E2" />
+                        </svg>
+                        Контакти
+                    </a>
+                </div>
+                <div class="language_switch">
+                    <div class="language_switch-container">
+                        <span id="language_switch-ua" class="language_switch-span active">UA</span>
+                        <span id="language_switch-ru" class="language_switch-span">RU</span>
+                    </div>
+                    <input type="checkbox" />
+                </div>
+            </div>
+        </header>
+    </div>
+    <script>
+        const checkbox = document.querySelector('.language_switch input[type="checkbox"]');
+        const uaSpan = document.getElementById('language_switch-ua');
+        const ruSpan = document.getElementById('language_switch-ru');
 
 
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                ruSpan.classList.add('active');
+                uaSpan.classList.remove('active');
+            } else {
+                uaSpan.classList.add('active');
+                ruSpan.classList.remove('active');
+            }
+        });
+
+    </script>
 </body>
 
 </html>
