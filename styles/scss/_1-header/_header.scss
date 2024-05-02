@@ -1,5 +1,3 @@
-@import "../_0-global/mixin";
-
 .header {
   @include flexbox($alignItems: flex-start, $direction: column);
 
@@ -7,20 +5,16 @@
   .header_top {
     @include flexbox($alignItems: flex-start, $justify: center);
 
-    width: var(---width-desc, 1920px);
+    width: 100%;
 
     background: var(---white, #fff);
 
     font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
     user-select: none;
 
     a {
       @include flexbox($alignItems: center, $justify: center);
 
-      color: var(--colors-gray-500, #696969);
       text-align: center;
 
       &:hover {
@@ -31,7 +25,6 @@
     .header_top-content {
       @include flexbox($alignItems: center, $justify: space-between);
 
-      width: var(---width, 1366px);
       padding: 8px 0px;
       flex-shrink: 0;
 
@@ -160,14 +153,13 @@
 
   .header_bottom {
     @include flexbox($justify: center, $alignItems: flex-start);
-    width: var(---width-desc, 1920px);
+    width: 100%;
 
     background: var(--colors-green-500-primary, #2ea84f);
 
     .header_bottom-content {
       @include flexbox($justify: center, $alignItems: flex-start);
 
-      width: var(---width, 1366px);
       padding: 8px 0px;
       gap: var(---gap-big, 48px);
       flex-shrink: 0;
@@ -229,7 +221,7 @@
 
           .header-search-form__input {
             background: var(--colors-white, #fff);
-            color: var(--colors-gray-500, #696969);
+            color: var(--colors-gray-300, #c0c0c0);
             font-weight: 400;
             border: none;
             flex: 1;
