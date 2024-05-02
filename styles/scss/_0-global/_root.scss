@@ -4,9 +4,11 @@
 :root {
   //PARAMETRS
   //global
-  ---width-desc: 1920px;
   ---width: 1366px;
+  ---width-desc: 1920px;
+  ---gap-small: 16px;
   ---gap-basic: 24px;
+  ---gap-big: 48px;
 
   //COLORS
   //global
@@ -14,8 +16,13 @@
 
   ---white: #fff;
 
-  --colors-red-300: #{$--colors-red-300};
-  --colors-red-500: #{$--colors-red-500};
+  --colors-white: #fff;
+  --colors-gray-svg: #{$--colors-gray-svg};
+  --colors-gray-100: #{$--colors-gray-100};
   --colors-gray-500: #696969;
   --colors-green-500-primary: #2ea84f;
+  --colors-green-600: #{$--colors-green-600};
+  --colors-green-700: #{$--colors-green-700};
+  --colors-red-300: #{$--colors-red-300};
+  --colors-red-500: #{$--colors-red-500};
 }

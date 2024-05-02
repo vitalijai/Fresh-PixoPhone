@@ -1,150 +1,273 @@
 @import "../_0-global/mixin";
 
-.header_basic {
-  @include flexbox($alignItems: flex-start, $justify: center);
+.header {
+  @include flexbox($alignItems: flex-start, $direction: column);
 
-  width: var(---width-desc, 1920px);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  .header_top {
+    @include flexbox($alignItems: flex-start, $justify: center);
 
-  background: var(---white, #fff);
+    width: var(---width-desc, 1920px);
 
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+    background: var(---white, #fff);
 
-  a {
-    @include flexbox($alignItems: center, $justify: center);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    user-select: none;
 
-    color: var(--colors-gray-500, #696969);
-    text-align: center;
+    a {
+      @include flexbox($alignItems: center, $justify: center);
 
-    &:hover {
-      color: var(--colors-green-500-primary, #2ea84f);
+      color: var(--colors-gray-500, #696969);
+      text-align: center;
+
+      &:hover {
+        color: var(--colors-green-500-primary, #2ea84f);
+      }
+    }
+
+    .header_top-content {
+      @include flexbox($alignItems: center, $justify: space-between);
+
+      width: var(---width, 1366px);
+      padding: 8px 0px;
+      flex-shrink: 0;
+
+      .left_side {
+        @include flexbox($alignItems: center);
+
+        padding: 0px 8px 0px 6px;
+        gap: var(---gap-basic, 24px);
+
+        .main_logo {
+          @include flexbox($alignItems: center);
+
+          .main_logo-img {
+            width: 144px;
+            height: 48px;
+
+            background: url("/images/main\ logo.png") 50% / cover no-repeat;
+          }
+        }
+
+        .city-switch {
+          @include flexbox($alignItems: center);
+
+          gap: 2px;
+        }
+      }
+
+      .right_side {
+        @include flexbox($alignItems: center);
+        padding: 0px 8px;
+        gap: var(---gap-basic, 24px);
+
+        .menu {
+          @include flexbox($alignItems: center, $justify: flex-end);
+
+          gap: var(---gap-basic, 24px);
+
+          .menu_promotion {
+            padding: 8px 24px;
+
+            border-radius: 24px;
+            background: var(--colors-red-300, #fa8072);
+
+            color: var(---white, #fff);
+            text-align: center;
+
+            &:hover {
+              background: var(--colors-red-500, #dc343b);
+            }
+          }
+
+          .menu_contacts {
+            gap: 2px;
+          }
+        }
+
+        .language_switch {
+          @include flexbox($alignItems: center, $justify: center);
+
+          gap: 4px;
+
+          .language_switch-container {
+            @include flexbox(
+              $alignItems: center,
+              $justify: center,
+              $direction: column
+            );
+            cursor: default;
+
+            gap: 2px;
+
+            .language_switch-span {
+              @include flexbox($alignItems: center, $justify: center);
+
+              padding: 1px 3px 0px 3px;
+
+              border-radius: 4px;
+
+              font-size: 10px;
+
+              &.active {
+                color: var(--colors-green-500-primary, #2ea84f);
+              }
+            }
+          }
+          // Toogle Switch Checkbox
+          input[type="checkbox"] {
+            position: relative;
+            width: 16px;
+            height: 32px;
+            appearance: none;
+            background: var(--colors-green-500-primary, #2ea84f);
+
+            outline: none;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: background 300ms linear;
+
+            // circle
+            &::before {
+              position: absolute;
+              content: "";
+              width: 12px;
+              height: 12px;
+              top: 2px;
+              left: 2px;
+              border-radius: 16px;
+              background-color: var(---white, #fff);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              transition: top 300ms linear;
+            }
+
+            // move to right
+            &:checked {
+              &::before {
+                top: 18px;
+                background-color: var(---white, #fff);
+              }
+            }
+          }
+        }
+      }
     }
   }
 
-  .header {
-    @include flexbox($alignItems: center, $justify: space-between);
+  .header_bottom {
+    @include flexbox($justify: center, $alignItems: flex-start);
+    width: var(---width-desc, 1920px);
 
-    width: var(---width, 1366px);
-    padding: 8px 0px;
-    flex-shrink: 0;
+    background: var(--colors-green-500-primary, #2ea84f);
 
-    .left_side {
-      @include flexbox($alignItems: center);
+    .header_bottom-content {
+      @include flexbox($justify: center, $alignItems: flex-start);
 
-      padding: 0px 8px 0px 6px;
-      gap: var(---gap-basic, 24px);
+      width: var(---width, 1366px);
+      padding: 8px 0px;
+      gap: var(---gap-big, 48px);
+      flex-shrink: 0;
 
-      .main_logo {
-        @include flexbox($alignItems: center);
+      .header_bottom-content__left {
+        user-select: none;
 
-        .main_logo-img {
-          width: 144px;
-          height: 48px;
+        .header_bottom-catalog {
+          .header-bottom-catalog__desc {
+            @include flexbox($alignItems: center);
 
-          background: url("/images/main\ logo.png") 50% / cover no-repeat;
+            height: 48px;
+            padding: 0px 48px 0px 8px;
+            gap: 4px;
+
+            border-radius: 8px;
+            background: var(--colors-green-700, #1d6d33);
+            cursor: pointer;
+
+            &:hover {
+              background: var(--colors-green-600, #25863f);
+            }
+
+            .header-bottom-catalog__label {
+              color: var(--colors-white, #fff);
+              font-size: 16px;
+            }
+          }
         }
-      }
-
-      .city-switch {
-        @include flexbox($alignItems: center);
-
-        gap: 2px;
       }
     }
+    .header_bottom-content__right {
+      @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
 
-    .right_side {
-      @include flexbox($alignItems: center);
-      padding: 0px 8px;
-      gap: var(---gap-basic, 24px);
+      padding-left: 48px;
+      gap: var(---gap-small, 16px);
+      flex: 1 0 0;
 
-      .menu {
-        @include flexbox($alignItems: center, $justify: flex-end);
+      .header-bottom-search {
+        background: var(--colors-white, #fff);
+        @include flexbox(
+          $justify: flex-end,
+          $alignItems: center,
+          $self: stretch
+        );
 
+        min-width: 220px;
+        max-width: 580px;
         gap: var(---gap-basic, 24px);
+        flex: 1 0 0;
 
-        .menu_promotion {
-          padding: 8px 24px;
+        border-radius: 8px;
+        border: 2px solid var(--colors-gray-100, #f7f7f7);
 
-          border-radius: 24px;
-          background: var(--colors-red-300, #fa8072);
+        .header-search-form {
+          @include flexbox();
+          width: 100%;
+          height: 100%;
 
-          color: var(---white, #fff);
-          text-align: center;
-
-          &:hover {
-            background: var(--colors-red-500, #dc343b);
+          .header-search-form__input {
+            background: var(--colors-white, #fff);
+            color: var(--colors-gray-500, #696969);
+            font-weight: 400;
+            border: none;
+            flex: 1;
+            padding: 0 16px;
+            text-overflow: ellipsis;
+            outline: none;
           }
-        }
-
-        .menu_contacts {
-          gap: 2px;
+          .header-search-form__search-btn {
+            background: var(--colors-white, #fff);
+            border: none;
+            margin: auto 14px;
+            height: 18px;
+            padding: 0;
+            cursor: pointer;
+          }
         }
       }
 
-      .language_switch {
-        @include flexbox($alignItems: center, $justify: center);
+      .header-bottom-controls {
+        @include flexbox(
+          $justify: flex-end,
+          $alignItems: center,
+          $self: stretch
+        );
 
-        gap: 4px;
-
-        .language_switch-container {
-          @include flexbox(
-            $alignItems: center,
-            $justify: center,
-            $direction: column
-          );
-
-          gap: 2px;
-
-          .language_switch-span {
-            @include flexbox($alignItems: center, $justify: center);
-
-            padding: 1px 3px 0px 3px;
-
-            border-radius: 4px;
-
-            font-size: 10px;
-
-            &.active {
-              color: var(--colors-green-500-primary, #2ea84f);
-            }
-          }
-        }
-        // Toogle Switch Checkbox
-        input[type="checkbox"] {
-          position: relative;
-          width: 16px;
-          height: 32px;
-          appearance: none;
+        gap: var(---gap-small, 16px);
+        .header-bottom-controls__btn {
           background: var(--colors-green-500-primary, #2ea84f);
-
-          outline: none;
+          @include flexbox($justify: center, $alignItems: center);
+          border: none;
+          border-radius: 8px;
+          width: 48px;
+          height: 48px;
+          padding: 0px 8px;
           cursor: pointer;
-          border-radius: 20px;
-          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-          transition: background 300ms linear;
 
-          // circle
-          &::before {
-            position: absolute;
-            content: "";
-            width: 12px;
-            height: 12px;
-            top: 2px;
-            left: 2px;
-            border-radius: 16px;
-            background-color: var(---white, #fff);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: top 300ms linear;
-          }
-
-          // move to right
-          &:checked {
-            &::before {
-              top: 18px;
-              background-color: var(---white, #fff);
-            }
+          &:hover {
+            background: var(--colors-green-700, #1d6d33);
           }
         }
       }

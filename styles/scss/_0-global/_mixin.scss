@@ -2,7 +2,8 @@
   $justify: null,
   $alignItems: null,
   $textAlign: null,
-  $direction: null
+  $direction: null,
+  $self: null
 ) {
   display: flex;
   @if $justify != null {
@@ -16,5 +17,8 @@
   }
   @if $direction != null {
     flex-direction: $direction;
+  }
+  @if $self != null {
+    align-self: $self;
   }
 }
