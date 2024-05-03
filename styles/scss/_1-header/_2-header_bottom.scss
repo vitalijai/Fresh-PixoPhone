@@ -1,0 +1,106 @@
+.header_bottom {
+  @include flexbox($justify: center, $alignItems: flex-start);
+  width: 100%;
+
+  background: var(--colors-green-500-primary, #2ea84f);
+
+  .header_bottom-content {
+    @include flexbox($justify: center, $alignItems: flex-start);
+
+    padding: 8px 0px;
+    gap: var(---gap-big, 48px);
+    flex-shrink: 0;
+
+    .header_bottom-content__left {
+      user-select: none;
+
+      .header_bottom-catalog {
+        .header-bottom-catalog__desc {
+          @include flexbox($alignItems: center);
+
+          height: 48px;
+          padding: 0px 48px 0px 8px;
+          gap: 4px;
+
+          border-radius: 8px;
+          background: var(--colors-green-700, #1d6d33);
+          cursor: pointer;
+
+          &:hover {
+            background: var(--colors-green-600, #25863f);
+          }
+
+          .header-bottom-catalog__label {
+            color: var(--colors-white, #fff);
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .header_bottom-content__right {
+    @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
+
+    padding-left: 48px;
+    gap: var(---gap-small, 16px);
+    flex: 1 0 0;
+
+    .header-bottom-search {
+      background: var(--colors-white, #fff);
+      @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
+
+      min-width: 220px;
+      max-width: 580px;
+      gap: var(---gap-basic, 24px);
+      flex: 1 0 0;
+
+      border-radius: 8px;
+      border: 2px solid var(--colors-gray-100, #f7f7f7);
+
+      .header-search-form {
+        @include flexbox();
+        width: 100%;
+        height: 100%;
+
+        .header-search-form__input {
+          background: var(--colors-white, #fff);
+          color: var(--colors-gray-300, #c0c0c0);
+          font-weight: 400;
+          border: none;
+          flex: 1;
+          padding: 0 16px;
+          text-overflow: ellipsis;
+          outline: none;
+        }
+        .header-search-form__search-btn {
+          background: var(--colors-white, #fff);
+          border: none;
+          margin: auto 14px;
+          height: 18px;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .header-bottom-controls {
+      @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
+
+      gap: var(---gap-small, 16px);
+      .header-bottom-controls__btn {
+        background: var(--colors-green-500-primary, #2ea84f);
+        @include flexbox($justify: center, $alignItems: center);
+        border: none;
+        border-radius: 8px;
+        width: 48px;
+        height: 48px;
+        padding: 0px 8px;
+        cursor: pointer;
+
+        &:hover {
+          background: var(--colors-green-700, #1d6d33);
+        }
+      }
+    }
+  }
+}

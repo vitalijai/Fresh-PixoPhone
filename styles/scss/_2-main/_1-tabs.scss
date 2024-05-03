@@ -1,4 +1,7 @@
 .common-template__tabs {
+  @include flexbox($justify: center, $alignItems: flex-start);
+  width: 100%;
+
   user-select: none;
 
   .tabs {
@@ -14,7 +17,6 @@
       @include flexbox($justify: center, $alignItems: center);
       gap: 1px;
       flex: 1 0 0;
-      border-radius: 32px;
 
       .tabs__link {
         @include flexbox($justify: center, $alignItems: center);

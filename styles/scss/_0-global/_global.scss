@@ -20,6 +20,5 @@ a:visited {
 }
 
 .content-container {
-  width: var(---width, 1366px);
-  margin: 0 auto;
+  width: min(95%, var(---width, 1366px));
 }
