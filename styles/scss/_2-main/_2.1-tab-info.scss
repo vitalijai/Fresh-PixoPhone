@@ -56,7 +56,7 @@
     }
   }
 
-  .gen-tab__list {
+  .gen-tab__info-list {
     @include flexbox($alignItems: center, $self: stretch);
     gap: 16px;
 
@@ -68,29 +68,29 @@
 
     user-select: none;
 
-    .gen-tab__list-line {
+    .gen-tab__info-list-line {
       @include flexbox($alignItems: center);
       gap: 2px;
     }
 
-    .gen-tab__list-guarantee-days {
+    .gen-tab__info-list-guarantee-days {
       color: var(--colors-green-400, #62b278);
 
       font-weight: 500;
       margin-left: 2px;
     }
 
-    .gen-tab__list-reviews-container {
+    .gen-tab__info-list-reviews-container {
       @include flexbox($alignItems: center);
       gap: 16px;
 
-      .gen-tab__list-rating {
+      .gen-tab__info-list-rating {
         @include flexbox($alignItems: center);
 
         color: var(---dark-gray, #333);
         text-align: center;
       }
-      .gen-tab__list-reviews {
+      .gen-tab__info-list-reviews {
         @include flexbox($alignItems: center);
 
         gap: 4px;
@@ -111,14 +111,14 @@
     }
   }
 
-  .gen-tab__price {
+  .gen-tab__info-price {
     @include flexbox(
       $alignItems: baseline,
       $self: stretch,
       $justify: space-between
     );
 
-    .gen-tab__price-cashback {
+    .gen-tab__info-price-cashback {
       @include flexbox(
         $alignItems: center,
         $direction: column,
@@ -175,13 +175,13 @@
         display: block;
       }
 
-      .gen-tab__price-cashback-span {
+      .gen-tab__info-price-cashback-span {
         @include flexbox($alignItems: center);
 
         gap: 2px;
       }
 
-      .gen-tab__price-cashback-current {
+      .gen-tab__info-price-cashback-current {
         color: var(--colors-green-400, #62b278);
         margin-left: 2px;
 
@@ -189,21 +189,21 @@
       }
     }
 
-    .gen-tab__price-value {
+    .gen-tab__info-price-value {
       color: var(---dark-gray, #333);
       font-size: 48px;
       font-style: normal;
       font-weight: 500;
       line-height: normal;
 
-      .gen-tab__price-simb {
+      .gen-tab__info-price-simb {
         font-size: 32px;
         user-select: none;
       }
     }
   }
 
-  .gen-tab__delivery {
+  .gen-tab__info-delivery {
     @include flexbox($alignItems: flex-start, $self: stretch);
 
     border-radius: 4px;
@@ -216,7 +216,7 @@
 
     user-select: none;
 
-    .gen-tab__delivery-text {
+    .gen-tab__info-delivery-text {
       @include flexbox(
         $alignItems: flex-start,
         $direction: column,
@@ -234,11 +234,11 @@
 
       background: url(/images/delivery\ evrope.png) no-repeat right;
 
-      .gen-tab__delivery-top {
+      .gen-tab__info-delivery-top {
         font-size: 18px;
         font-weight: 600;
       }
-      .gen-tab__delivery-bottom {
+      .gen-tab__info-delivery-bottom {
         font-size: 12px;
         font-weight: 400;
       }
