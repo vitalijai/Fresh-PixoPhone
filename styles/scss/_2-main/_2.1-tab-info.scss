@@ -209,8 +209,8 @@
     border-radius: 4px;
     background: radial-gradient(
         46.03% 170.31% at 75.55% 50%,
-        #81dcec 0%,
-        #0eb7d4 100%
+        var(---blue-light, #81dcec) 0%,
+        var(---blue, #0eb7d4) 100%
       ),
       var(---blue, #0eb7d4);
 
