@@ -895,7 +895,7 @@ a:visited {
   align-items: center;
   gap: 2px;
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__price .gen-tab__price-cashback .gen-tab__price-cashback-value {
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__price .gen-tab__price-cashback .gen-tab__price-cashback-current {
   color: var(--colors-green-400, #62b278);
   margin-left: 2px;
   font-weight: 500;
