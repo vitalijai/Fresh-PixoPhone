@@ -4,39 +4,40 @@
 
   // user-select: none;
   .page-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
     gap: 1px;
-    align-self: stretch;
 
-    border-radius: var(---radius-block, 24px);
+    border-radius: 24px;
     background: var(---disabled, #e9e9e9);
 
     /* block-shadow */
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
     .gen-tab__left-side {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexbox($direction: column, $alignItems: center, $self: stretch);
       flex: 1 0 0;
-      align-self: stretch;
       height: 500px;
       background: var(--colors-white, #fff);
       border-radius: 24px 0 0 24px;
     }
 
     .gen-tab__right-side {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexbox($direction: column, $alignItems: center);
       gap: 1px;
       flex: 1 0 0;
 
       background: var(---disabled, #e9e9e9);
       border-radius: 0 24px 24px 0;
 
+      .gen-tab__block {
+        &:first-child {
+          border-radius: 0 24px 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 24px 0;
+        }
+      }
       @import "../_2-main/2.1-tab-info";
       @import "../_2-main/2.2-tab-to-order";
       @import "../_2-main/2.3-tab-constructor";
