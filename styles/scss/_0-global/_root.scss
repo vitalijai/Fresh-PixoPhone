@@ -22,8 +22,12 @@
   ---white: #fff;
 
   --colors-white: #fff;
+  --colors-blue-100: #{$--colors-blue-100};
+  --colors-blue-400: #{$--colors-blue-400};
+  --colors-blue-500: #{$--colors-blue-500};
   --colors-gray-svg: #{$--colors-gray-svg};
   --colors-gray-100: #{$--colors-gray-100};
+  --colors-gray-200: #{$--colors-gray-200};
   --colors-gray-300: #{$--colors-gray-300};
   --colors-gray-400: #{$--colors-gray-400};
   --colors-gray-500: #{$--colors-gray-500};
