@@ -16,7 +16,7 @@
     .gen-tab__left-side {
       @include flexbox($direction: column, $alignItems: center, $self: stretch);
       flex: 1 0 0;
-      height: 500px;
+      height: 1500px;
       background: var(--colors-white, #fff);
       border-radius: 24px 0 0 24px;
     }
@@ -41,6 +41,7 @@
       @import "../_2-main/2.1-tab-info";
       @import "../_2-main/2.2-tab-to-order";
       @import "../_2-main/2.3-tab-constructor";
+      @import "../_2-main/2.4-tab-stock";
     }
   }
 }
