@@ -73,7 +73,7 @@
                                 <span id="language_switch-ua" class="language_switch-span active">UA</span>
                                 <span id="language_switch-ru" class="language_switch-span">RU</span>
                             </div>
-                            <input type="checkbox" title="Мова" />
+                            <input type="checkbox" title="Мова" id="language_switch" />
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,8 @@
                         <div class="header-bottom-search">
                             <form method="get" action="#" target="_top" autocomplete="off" class="header-search-form">
                                 <input name="q" placeholder="Пошук товарів" value="" class="header-search-form__input">
-                                <button type="submit" title="Знайти" class="header-search-form__search-btn">
+                                <button type="submit" title="Знайти" class="header-search-form__search-btn"
+                                    id="search-form__btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
                                         fill="none">
                                         <circle cx="8" cy="8" r="7" stroke="var(--colors-green-500-primary)"
@@ -117,8 +118,8 @@
                         </div>
                         <div class="header-bottom-controls">
                             <div class="header-bottom-profile">
-                                <button type="submit" title="Кабінет"
-                                    class="header-search-form__profile-btn header-bottom-controls__btn">
+                                <button type="submit" title="Кабінет" id="header-bottom__profile"
+                                    class="header-bottom__profile-btn header-bottom-controls__btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
                                         fill="none">
                                         <path
@@ -133,8 +134,8 @@
                                 </button>
                             </div>
                             <div class="header-bottom-compare">
-                                <button type="submit" title="Список порівняння"
-                                    class="header-search-form__compare-btn header-bottom-controls__btn">
+                                <button type="submit" title="Список порівняння" id="header-bottom__compare"
+                                    class="header-bottom__compare-btn header-bottom-controls__btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22"
                                         fill="none">
                                         <path
@@ -163,8 +164,8 @@
                                 </button>
                             </div>
                             <div class="header-bottom-wishlist">
-                                <button type="submit" title="Список бажань"
-                                    class="header-search-form__wishlist-btn header-bottom-controls__btn">
+                                <button type="submit" title="Список бажань" id="header-bottom__wishlist"
+                                    class="header-bottom__wishlist-btn header-bottom-controls__btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
                                         fill="none">
                                         <path
@@ -175,8 +176,8 @@
                                 </button>
                             </div>
                             <div class="header-bottom-cart">
-                                <button type="submit" title="Кошик"
-                                    class="header-search-form__cart-btn header-bottom-controls__btn">
+                                <button type="submit" title="Кошик" id="header-bottom__cart"
+                                    class="header-bottom__cart-btn header-bottom-controls__btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22"
                                         fill="none">
                                         <path
@@ -193,7 +194,7 @@
                                 <span id="language_switch-ua" class="language_switch-span active">UA</span>
                                 <span id="language_switch-ru" class="language_switch-span">RU</span>
                             </div>
-                            <input type="checkbox" />
+                            <input type="checkbox" id="language_switch-bottom" />
                         </div>
                     </div>
                 </div>
@@ -265,7 +266,7 @@
                             </div>
                             <div class="gen-tab__info-btn">
                                 <div class="gen-tab__info-compare">
-                                    <button type="submit" title="Список порівняння"
+                                    <button type="submit" title="Список порівняння" id="gen-tab___compare"
                                         class="gen-tab__info-compare-btn gen-tab-controls__btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22"
                                             viewBox="0 0 26 22" fill="none">
@@ -295,7 +296,7 @@
                                     </button>
                                 </div>
                                 <div class="gen-tab__info-wishlist">
-                                    <button type="submit" title="Список бажань"
+                                    <button type="submit" title="Список бажань" id="gen-tab___wishlist"
                                         class="gen-tab__info-wishlist-btn gen-tab-controls__btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
                                             viewBox="0 0 22 20" fill="none">
@@ -470,7 +471,8 @@
                         </div>
                         <div class="gen-tab__device-version constructor-container">
                             <span class="gen-tab__device-version-span constructor-container__header">Версія:
-                                <a href="#" class="gen-tab__device-version-a__more"> більше</a>
+                                <button id="en-tab__device-button"
+                                    class="gen-tab__device-version-a__more">більше</button>
                             </span>
                             <div class="gen-tab__device-version-list constructor-container__list">
                                 <a href="#" class="device-version-block constructor-container__block active"
@@ -512,7 +514,7 @@
                         </div>
                         <div class="gen-tab__show-all-models">
                             <div class="gen-tab__show-all-models-button">
-                                <button>Показати всі моделі серії</button>
+                                <a href="#">Показати всі моделі серії</a>
                             </div>
                         </div>
                     </div>

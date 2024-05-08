@@ -130,9 +130,10 @@
         padding: 4px 8px;
         justify-content: center;
         align-items: center;
-
+        border: none;
         border-radius: 24px;
         background: var(--colors-blue-100, #e9f5ff);
+        cursor: pointer;
 
         color: var(--colors-blue-400, #62a8ed);
         font-size: 10px;
@@ -155,12 +156,12 @@
       @include flexbox();
       flex: 1 0 0;
 
-      button {
+      a {
         @include flexbox($justify: center, $alignItems: center);
 
         height: 52px;
         flex: 1 0 0;
-        border: none;
+        border: solid 2px transparent;
         border-radius: 8px;
         background: var(--colors-blue-100, #e9f5ff);
         color: var(--colors-blue-400, #62a8ed);
