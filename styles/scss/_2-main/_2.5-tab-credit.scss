@@ -22,7 +22,7 @@
 
   .gen-tab__credit-container {
     @include flexbox();
-    gap: 16px;
+    gap: var(---gap-small, 16px);
     width: 100%;
 
     .gen-tab__credit-block {

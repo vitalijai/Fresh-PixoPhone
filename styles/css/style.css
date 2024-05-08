@@ -791,9 +791,7 @@ a:visited {
   align-self: stretch;
   gap: var(---gap-small, 16px);
   color: var(--colors-gray-700, #2f2c2f);
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   font-size: 14px;
   user-select: none;
 }
@@ -806,6 +804,9 @@ a:visited {
   color: var(--colors-green-400, #62b278);
   font-weight: 500;
   margin-left: 2px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-list .gen-tab__info-list-articul {
+  color: var(--colors-gray-400, #929292);
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-list .gen-tab__info-list-reviews-container {
   display: flex;
@@ -824,6 +825,9 @@ a:visited {
   gap: 4px;
   text-align: center;
   font-size: 16px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-list .gen-tab__info-list-reviews-container .gen-tab__info-list-reviews a {
+  color: var(--colors-gray-700, #2f2c2f);
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-list .gen-tab__info-list-reviews-container .gen-tab__info-list-reviews:hover path {
   fill: var(--colors-green-500-primary, #2ea84f);
@@ -982,7 +986,7 @@ a:visited {
   flex-direction: column;
   align-self: stretch;
   padding: 24px 32px;
-  gap: var(---gap-basic, 24);
+  gap: var(---gap-basic, 24px);
   background: var(---white, #fff);
   user-select: none;
 }
@@ -1300,7 +1304,7 @@ a:visited {
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container {
   display: flex;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   width: 100%;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-block {

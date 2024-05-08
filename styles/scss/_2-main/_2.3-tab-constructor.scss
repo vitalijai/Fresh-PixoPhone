@@ -2,7 +2,7 @@
   @include flexbox($direction: column, $alignItems: flex-start, $self: stretch);
 
   padding: 24px 32px;
-  gap: var(---gap-basic, 24);
+  gap: var(---gap-basic, 24px);
 
   background: var(---white, #fff);
   user-select: none;

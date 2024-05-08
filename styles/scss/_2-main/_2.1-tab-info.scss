@@ -59,9 +59,7 @@
     gap: var(---gap-small, 16px);
 
     color: var(--colors-gray-700, #2f2c2f);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     font-size: 14px;
 
     user-select: none;
@@ -76,6 +74,10 @@
 
       font-weight: 500;
       margin-left: 2px;
+    }
+
+    .gen-tab__info-list-articul {
+      color: var(--colors-gray-400, #929292);
     }
 
     .gen-tab__info-list-reviews-container {
@@ -94,8 +96,11 @@
         gap: 4px;
 
         text-align: center;
-
         font-size: 16px;
+
+        a {
+          color: var(--colors-gray-700, #2f2c2f);
+        }
 
         &:hover {
           path {
