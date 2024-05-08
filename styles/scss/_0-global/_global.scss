@@ -1,11 +1,11 @@
 @import "../_0-global/mixin";
 
-* {
-  font-family: Rubik;
-}
-
 body {
   background: var(--bg-color, #f5f5f5);
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 a,
@@ -13,10 +13,6 @@ a:active,
 a:visited {
   color: var(--colors-gray-500, #696969);
   text-decoration: none;
-
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
 
 .content-container {

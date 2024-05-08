@@ -1,16 +1,5 @@
 @charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
 /* Sections
    ========================================================================== */
 /**
@@ -142,9 +131,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
 }
 
@@ -153,7 +140,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -162,7 +150,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -308,12 +297,12 @@ template {
   display: none;
 }
 
-* {
-  font-family: Rubik;
-}
-
 body {
   background: var(--bg-color, #f5f5f5);
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 a,
@@ -321,9 +310,6 @@ a:active,
 a:visited {
   color: var(--colors-gray-500, #696969);
   text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
 
 .content-container {
@@ -1291,4 +1277,90 @@ a:visited {
   width: 12px;
   visibility: visible;
   transition-delay: 0s; /* Сброс задержки для плавного появления */
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 24px 32px;
+  gap: 12px;
+  background: var(--colors-white, #fff);
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-header {
+  display: flex;
+  color: var(--colors-gray-700, #2f2c2f);
+  font-weight: 400;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-header .gen-tab__credit-header-span {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-weight: 500;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-block .gen-tab__credit-block__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  background: var(--colors-white, #fff);
+  cursor: pointer;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-block .gen-tab__credit-block__btn:hover {
+  background: var(--colors-gray-100, #f7f7f7);
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-block .gen-tab__credit-block__btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-block .gen-tab__credit-block__btn .gen-tab__credit-block__span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 12px;
+  background: var(--colors-white, #fff);
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+  font-size: 8px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-btn {
+  display: flex;
+  display: flex;
+  flex: 1 0 0;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 0px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: var(--colors-green-100, #e9f9e9);
+  color: var(--colors-green-400, #62b278);
+  text-align: center;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit .gen-tab__credit-container .gen-tab__credit-btn button:hover {
+  border: 2px solid var(--colors-green-500-primary, #2ea84f);
+  background: var(--colors-white, #fff);
 }/*# sourceMappingURL=style.css.map */
