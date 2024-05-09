@@ -625,8 +625,185 @@
                         </div>
                     </div>
                     <div class="gen-tab__add-services gen-tab__block">
-
+                        <div class="gen-tab__add-services-header">
+                            <span>Додаткові послуги:</span>
+                        </div>
+                        <form>
+                            <div class="gen-tab__add-services-block">
+                                <div class="gen-tab__add-services-guarantee">
+                                    <div class="gen-tab__add-services-guarantee-block">
+                                        <input type="checkbox" id="services-guarantee" />
+                                        <div class="gen-tab__add-services-guarantee-container">
+                                            <span>Гарантія</span>
+                                            <svg class="gen-tab__add-services-guarantee-svg"
+                                                xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                viewBox="0 0 32 32" fill="none">
+                                                <path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="#2F2C2F"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <span class="gen-tab__add-services-guarantee-price"></span>
+                                </div>
+                                <ul class="gen-tab__add-services-ul">
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div">
+                                            <span class="gen-tab__add-services-li-info">Базова гарантія 3
+                                                місяці</span><span
+                                                class="gen-tab__add-services-li-price">Безкоштовно</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Подовжена гарантія на 6
+                                                місяців</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Подовжена гарантія на 6 місяців дарує вам мир спокійного користування,
+                                            уникнення непередбачених витрат на ремонт чи заміну пристрою, а також
+                                            забезпечує довготривалу безпеку вашого технічного обладнання. Оберіть
+                                            розширену гарантію і збережіть ваш пристрій в надійних руках на тривалий
+                                            період!</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Подовжена гарантія на 12
+                                                місяців</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Подовжена гарантія на 12 місяців дарує вам мир спокійного користування,
+                                            уникнення непередбачених витрат на ремонт чи заміну пристрою, а також
+                                            забезпечує довготривалу безпеку вашого технічного обладнання. Оберіть
+                                            розширену гарантію і збережіть ваш пристрій в надійних руках на тривалий
+                                            період!</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
                     </div>
+                    <script>
+                        // document.addEventListener('DOMContentLoaded', function () {
+                        //     let input = document.getElementById('services-guarantee');
+                        //     let ul = document.querySelector('.gen-tab__add-services-block ul');
+                        //     let span = document.querySelector('.gen-tab__add-services-guarantee span');
+                        //     let priceSpan = document.createElement('span'); // Создаем новый элемент span для цены
+                        //     priceSpan.classList.add('price'); // Добавляем класс 'price' для стилизации
+                        //     span.parentNode.insertBefore(priceSpan, span.nextSibling); // Вставляем новый элемент после span с текстом
+                        //     let originalText = span.textContent; // Сохраняем изначальный текст в переменной
+                        //     let originalPrice = priceSpan.textContent; // Сохраняем изначальную цену в переменной
+                        //     let isChecked = false; // Флаг для отслеживания состояния чекбокса
+
+
+                        //     input.addEventListener('click', function () {
+                        //         ul.style.display = 'none'; // Открываем список при клике на инпут
+                        //     });
+
+                        //     span.addEventListener('click', function (event) {
+                        //         if (ul.style.display === 'block' && !isChecked) {
+                        //             ul.style.display = 'none'; // Скрываем список, если он уже открыт и ничего не выбрано
+                        //             input.checked = false; // Снимаем чекбокс, если span нажат повторно
+                        //         } else {
+                        //             ul.style.display = ul.style.display === 'block' ? 'none' : 'block'; // Переключаем видимость ul
+                        //             if (ul.style.display === 'block') {
+                        //                 input.checked = true; // Ставим чек в инпуте при открытии ul
+                        //             } else {
+                        //                 span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
+                        //                 priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
+                        //             }
+                        //         }
+                        //     });
+
+                        //     ul.addEventListener('click', function (event) {
+                        //         let targetElement = event.target.tagName === 'SPAN' ? event.target : event.target.closest('li').querySelector('span');
+                        //         if (targetElement) {
+                        //             span.textContent = targetElement.textContent;
+                        //             let priceText = targetElement.nextElementSibling.textContent;
+                        //             if (/^\d+ ₴$/.test(priceText) || /^\d+ \D+$/.test(priceText)) {
+                        //                 priceSpan.textContent = "+" + priceText; // Добавляем "+" перед ценой
+                        //             } else {
+                        //                 priceSpan.textContent = ''; // Очищаем цену, если не соответствует формату
+                        //             }
+                        //             ul.style.display = 'none';
+                        //             isChecked = true; // Устанавливаем флаг, что выбран пункт списка
+                        //         }
+                        //     });
+                        //     input.addEventListener('change', function () {
+                        //         ul.style.display = this.checked ? 'block' : 'none';
+                        //     });
+                        //     input.addEventListener('change', function () {
+                        //         if (!this.checked) {
+                        //             span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
+                        //             priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
+                        //             isChecked = false; // Сбрасываем флаг выбора пункта списка
+                        //         }
+                        //     });
+                        // });
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            let input = document.getElementById('services-guarantee');
+                            let ul = document.querySelector('.gen-tab__add-services-ul');
+                            let span = document.querySelector('.gen-tab__add-services-guarantee .gen-tab__add-services-guarantee-container');
+                            let priceSpan = document.querySelector('.gen-tab__add-services-guarantee-price');
+                            // let priceSpan = document.createElement('span'); // Создаем новый элемент span для цены
+                            // priceSpan.classList.add('price'); // Добавляем класс 'price' для стилизации
+                            // span.parentNode.insertBefore(priceSpan, span.nextSibling); // Вставляем новый элемент после span с текстом
+                            let originalText = span.textContent; // Сохраняем изначальный текст в переменной
+                            let originalPrice = priceSpan.textContent; // Сохраняем изначальную цену в переменной
+                            let isChecked = false; // Флаг для отслеживания состояния чекбокса
+
+                            input.addEventListener('click', function () {
+                                ul.style.display = 'none'; // Открываем список при клике на инпут
+                            });
+
+                            span.addEventListener('click', function (event) {
+                                if (ul.style.display === 'flex' && !isChecked) {
+                                    ul.style.display = 'none'; // Скрываем список, если он уже открыт и ничего не выбрано
+                                    input.checked = false; // Снимаем чекбокс, если span нажат повторно
+                                } else {
+                                    ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex'; // Переключаем видимость ul
+                                    if (ul.style.display === 'flex') {
+                                        input.checked = true; // Ставим чек в инпуте при открытии ul
+                                    } else {
+                                        span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
+                                        priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
+                                    }
+                                }
+                            });
+
+                            ul.addEventListener('click', function (event) {
+                                let targetElement = event.target.classList.contains('gen-tab__add-services-li-info') ? event.target : event.target.closest('li').querySelector('.gen-tab__add-services-li-info');
+                                if (targetElement) {
+                                    span.textContent = targetElement.textContent;
+                                    let priceText = targetElement.nextElementSibling.textContent;
+                                    if (/^\d+ ₴$/.test(priceText) || /^\d+ \D+$/.test(priceText)) {
+                                        priceSpan.textContent = "+ " + priceText; // Добавляем "+" перед ценой
+                                    } else {
+                                        priceSpan.textContent = ''; // Очищаем цену, если не соответствует формату
+                                    }
+                                    ul.style.display = 'none';
+                                    isChecked = true; // Устанавливаем флаг, что выбран пункт списка
+                                }
+                            });
+
+                            input.addEventListener('change', function () {
+                                ul.style.display = this.checked ? 'flex' : 'none';
+                            });
+                            input.addEventListener('change', function () {
+                                if (!this.checked) {
+                                    span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
+                                    priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
+                                    isChecked = false; // Сбрасываем флаг выбора пункта списка
+                                }
+                            });
+                        });
+
+
+
+
+
+
+
+                    </script>
                     <div class="gen-tab__add-product gen-tab__block">
 
                     </div>
