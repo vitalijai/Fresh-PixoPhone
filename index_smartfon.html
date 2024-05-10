@@ -629,21 +629,19 @@
                             <span>Додаткові послуги:</span>
                         </div>
                         <form>
-                            <div class="gen-tab__add-services-block">
-                                <div class="gen-tab__add-services-guarantee">
-                                    <div class="gen-tab__add-services-guarantee-block">
-                                        <input type="checkbox" id="services-guarantee" />
-                                        <div class="gen-tab__add-services-guarantee-container">
-                                            <span>Гарантія</span>
-                                            <svg class="gen-tab__add-services-guarantee-svg"
-                                                xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                viewBox="0 0 32 32" fill="none">
-                                                <path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="#2F2C2F"
-                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                            <div id="tab__add-services-guarantee"
+                                class="gen-tab__add-services-guarantee-container gen-tab__add-services-block default">
+                                <div class="gen-tab__add-services-guarantee gen-tab__add-services-wrapper">
+                                    <div class="gen-tab__add-services-guarantee-block gen-tab__add-services-content">
+                                        <input type="checkbox" id="services-guarantee" checked disabled />
+                                        <div
+                                            class="gen-tab__add-services-guarantee-block-span gen-tab__add-services-text">
+                                            <span>Базова гарантія 3
+                                                місяці </span>
                                         </div>
                                     </div>
-                                    <span class="gen-tab__add-services-guarantee-price"></span>
+                                    <span class="gen-tab__add-services-guarantee-price gen-tab__add-services-price">
+                                    </span>
                                 </div>
                                 <ul class="gen-tab__add-services-ul">
                                     <li>
@@ -679,131 +677,230 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div id="tab__add-services-ad-service"
+                                class="gen-tab__add-services-ad-service gen-tab__add-services-block">
+                                <div class="gen-tab__add-services-ad-service gen-tab__add-services-wrapper">
+                                    <div class="gen-tab__add-services-ad-service-block gen-tab__add-services-content">
+                                        <input type="checkbox" id="services-ad-service" />
+                                        <div
+                                            class="gen-tab__add-services-ad-service-block-span gen-tab__add-services-text">
+                                            <span>Розширений сервіс</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="gen-tab__add-services-ad-service-price gen-tab__add-services-price"></span>
+                                </div>
+                                <ul class="gen-tab__add-services-ul">
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div">
+                                            <span class="gen-tab__add-services-li-info">Карта розширеного сервісу Start
+                                                Card</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Start Card - це розширений сервіс, який не лише надає додаткову гарантію на
+                                            ваш пристрій на ще один місяць, але й забезпечує безперебійний
+                                            інтернет-серфінг без нав'язливої реклами, завдяки функціоналу блокування
+                                            AdBlock. Також, в рамках цього сервісу ви отримуєте швидке та ефективне
+                                            початкове налаштування вашого пристрою, а також можливість встановлення
+                                            плівки на смартфон безкоштовно.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div">
+                                            <span class="gen-tab__add-services-li-info">Карта розширеного сервісу Start
+                                                Card</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Start Card - це розширений сервіс, який не лише надає додаткову гарантію на
+                                            ваш пристрій на ще один місяць, але й забезпечує безперебійний
+                                            інтернет-серфінг без нав'язливої реклами, завдяки функціоналу блокування
+                                            AdBlock. Також, в рамках цього сервісу ви отримуєте швидке та ефективне
+                                            початкове налаштування вашого пристрою, а також можливість встановлення
+                                            плівки на смартфон безкоштовно.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Карта розширеного сервісу Gold
+                                                Card</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Gold Card - це преміум сервіс, який надає додатковий захист вашого пристрою
+                                            протягом трьох місяців, блокуючи реклами завдяки технологіям AdBlock, а
+                                            також забезпечує доступ до Revansed YouTube Premium. Крім того, ви отримуєте
+                                            безперешкодний інтернет-серфінг. Gold Card також включає швидке налаштування
+                                            пристрою, безкоштовну установку плівки на смартфон та зручну міграцію даних.
+                                            За додатковою знижкою 40% ви можете замінити акумулятор.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Карта розширеного сервісу Try and
+                                                Buy 30</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Карта розширеного сервісу Try and Buy 30 дарує клієнтам плівку для захисту
+                                            екрану телефону, подовжує гарантію до 30 днів і надає комплекс послуг з
+                                            налаштування та міграції даних. Також, вона дозволяє обміняти вживаний
+                                            пристрій без втрати вартості або отримати знижку до 25% на новий пристрій.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Карта розширеного сервісу Try and
+                                                Buy 60</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Карта розширеного сервісу Try and Buy 60 дарує клієнтам плівку для захисту
+                                            екрану телефону, подовжує гарантію до 60 днів і надає комплекс послуг з
+                                            налаштування та міграції даних. Також, вона дозволяє обміняти вживаний
+                                            пристрій без втрати вартості або отримати знижку до 25% на новий пристрій.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Карта розширеного сервісу Try and
+                                                Buy 90</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Карта розширеного сервісу Try and Buy 90 дарує клієнтам плівку для захисту
+                                            екрану телефону, подовжує гарантію до 90 днів і надає комплекс послуг з
+                                            налаштування та міграції даних. Також, вона дозволяє обміняти вживаний
+                                            пристрій без втрати вартості або отримати знижку до 25% на новий пристрій.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab__add-services-gluing"
+                                class="gen-tab__add-services-gluing-container gen-tab__add-services-block">
+                                <div class="gen-tab__add-services-gluing gen-tab__add-services-wrapper">
+                                    <div class="gen-tab__add-services-gluing-block gen-tab__add-services-content">
+                                        <input type="checkbox" id="services-gluing" />
+                                        <div class="gen-tab__add-services-gluing-block-span gen-tab__add-services-text">
+                                            <span>Поклейка плівки/скла</span>
+                                        </div>
+                                    </div>
+                                    <span class="gen-tab__add-services-gluing-price gen-tab__add-services-price"></span>
+                                </div>
+                                <ul class="gen-tab__add-services-ul">
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div">
+                                            <span class="gen-tab__add-services-li-info">Поклейка гідрогелевої
+                                                плівки</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Послуга включає в себе поклейку гідрогелевої плівки на ваш пристрій,
+                                            забезпечуючи йому надійний захист від подряпин і пошкоджень.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Поклейка поліурітанової плівки
+                                            </span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Ця послуга включає в себе поклейку поліурітанової плівки на ваш пристрій,
+                                            забезпечуючи надійний захист екрану від подряпин та пошкоджень.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Поклейка захисниго
+                                                скла</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Послуга включає в себе поклейку захисного скла на ваш пристрій, забезпечуючи
+                                            йому надійний захист від подряпин і пошкоджень.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Поклейка захисниго скла
+                                                UV</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Ця послуга включає в себе поклейку захисного скла 3D з використанням UV клею
+                                            на ваш пристрій, що забезпечує максимальний захист екрану від подряпин та
+                                            пошкоджень.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab__add-services-package"
+                                class="gen-tab__add-services-package-container gen-tab__add-services-block">
+                                <div class="gen-tab__add-services-package gen-tab__add-services-wrapper">
+                                    <div class="gen-tab__add-services-package-block gen-tab__add-services-content">
+                                        <input type="checkbox" id="services-package" />
+                                        <div
+                                            class="gen-tab__add-services-package-block-span gen-tab__add-services-text">
+                                            <span>Пакет послуг Pixo</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="gen-tab__add-services-package-price gen-tab__add-services-price"></span>
+                                </div>
+                                <ul class="gen-tab__add-services-ul">
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div">
+                                            <span class="gen-tab__add-services-li-info">Пакет послуг Pixo Lite
+                                                (A)</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Пакет послуг Pixo Lite (A) - ідеальний вибір для власників смартфонів Google
+                                            Pixel(2/2xl, 3/3XL/3a/3aXL, 4/4XL/4a/4a5G), пропонуючи одноразову заміну
+                                            плівки або скла разом з безкоштовною поклейкою та додаткові три місяці
+                                            гарантії, що дозволяють спокійно користуватися пристроєм та можливість
+                                            одноразової заміни акумулятора зі знижкою 40%.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Пакет послуг Pixo Pro (A)
+                                            </span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Пакет послуг Pixo Pro (A) - ідеальний вибір для власників смартфонів Google
+                                            Pixel(2/2xl, 3/3XL/3a/3aXL, 4/4XL/4a/4a5G), пропонуючи одноразову заміну
+                                            плівки або скла разом з безкоштовною поклейкою, відновлення телефону після
+                                            пошкодження дисплею протягом 3 місяців, додаткові три місяці гарантії без
+                                            стресу та можливість одноразової заміни акумулятора зі знижкою 40%. Також
+                                            включає фірмову коробку для якісного збереження та покращення зовнішнього
+                                            сприйняття товару і бренду.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Пакет послуг Pixo Ultra
+                                                (A)</span><span class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Пакет послуг Pixo Ultra (A) - ідеальний вибір для власників смартфонів Google
+                                            Pixel(5/5a5G, 6/6a/6Pro, 7/7a/7Pro), пропонуючи одноразову заміну плівки або
+                                            скла разом з безкоштовною поклейкою, відновлення телефону після пошкодження
+                                            дисплею протягом 6 місяців, додаткові шість місяців гарантії без стресу та
+                                            можливість одноразової заміни акумулятора зі знижкою 40%. Також включає
+                                            фірмову коробку для якісного збереження та покращення зовнішнього сприйняття
+                                            товару і бренду.</p>
+                                    </li>
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div"><span
+                                                class="gen-tab__add-services-li-info">Пакет послуг Pixo Care</span><span
+                                                class="gen-tab__add-services-li-price">100 ₴</span>
+                                        </div>
+                                        <p>Пакет послуг Pixo Care надає можливість разової заміни дисплея або скляної
+                                            задньої поверхні протягом 12 місяців на вживані пристрої, заміни
+                                            акумуляторної батареї при втраті вказаної ємності та захисного скла або
+                                            плівки у подарунок для екрану пристрою. При обміні пристрою клієнти
+                                            отримують додаткову знижку 10%, а також комплекс послуг з налаштування та
+                                            міграції даних для швидкого старту з новим пристроєм.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab__add-services-firmware"
+                                class="gen-tab__add-services-firmware-container gen-tab__add-services-block">
+                                <div class="gen-tab__add-services-firmware gen-tab__add-services-wrapper">
+                                    <div class="gen-tab__add-services-firmware-block gen-tab__add-services-content">
+                                        <input type="checkbox" id="services-firmware" />
+                                        <div
+                                            class="gen-tab__add-services-firmware-block-span gen-tab__add-services-text">
+                                            <span>Прошивка</span>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="gen-tab__add-services-firmware-price gen-tab__add-services-price"></span>
+                                </div>
+                                <ul class="gen-tab__add-services-ul">
+                                    <li>
+                                        <div class="gen-tab__add-services-li-div">
+                                            <span class="gen-tab__add-services-li-info">Прошивка</span><span
+                                                class="gen-tab__add-services-li-price"><span>1600</span> ₴</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </form>
                     </div>
-                    <script>
-                        // document.addEventListener('DOMContentLoaded', function () {
-                        //     let input = document.getElementById('services-guarantee');
-                        //     let ul = document.querySelector('.gen-tab__add-services-block ul');
-                        //     let span = document.querySelector('.gen-tab__add-services-guarantee span');
-                        //     let priceSpan = document.createElement('span'); // Создаем новый элемент span для цены
-                        //     priceSpan.classList.add('price'); // Добавляем класс 'price' для стилизации
-                        //     span.parentNode.insertBefore(priceSpan, span.nextSibling); // Вставляем новый элемент после span с текстом
-                        //     let originalText = span.textContent; // Сохраняем изначальный текст в переменной
-                        //     let originalPrice = priceSpan.textContent; // Сохраняем изначальную цену в переменной
-                        //     let isChecked = false; // Флаг для отслеживания состояния чекбокса
-
-
-                        //     input.addEventListener('click', function () {
-                        //         ul.style.display = 'none'; // Открываем список при клике на инпут
-                        //     });
-
-                        //     span.addEventListener('click', function (event) {
-                        //         if (ul.style.display === 'block' && !isChecked) {
-                        //             ul.style.display = 'none'; // Скрываем список, если он уже открыт и ничего не выбрано
-                        //             input.checked = false; // Снимаем чекбокс, если span нажат повторно
-                        //         } else {
-                        //             ul.style.display = ul.style.display === 'block' ? 'none' : 'block'; // Переключаем видимость ul
-                        //             if (ul.style.display === 'block') {
-                        //                 input.checked = true; // Ставим чек в инпуте при открытии ul
-                        //             } else {
-                        //                 span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
-                        //                 priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
-                        //             }
-                        //         }
-                        //     });
-
-                        //     ul.addEventListener('click', function (event) {
-                        //         let targetElement = event.target.tagName === 'SPAN' ? event.target : event.target.closest('li').querySelector('span');
-                        //         if (targetElement) {
-                        //             span.textContent = targetElement.textContent;
-                        //             let priceText = targetElement.nextElementSibling.textContent;
-                        //             if (/^\d+ ₴$/.test(priceText) || /^\d+ \D+$/.test(priceText)) {
-                        //                 priceSpan.textContent = "+" + priceText; // Добавляем "+" перед ценой
-                        //             } else {
-                        //                 priceSpan.textContent = ''; // Очищаем цену, если не соответствует формату
-                        //             }
-                        //             ul.style.display = 'none';
-                        //             isChecked = true; // Устанавливаем флаг, что выбран пункт списка
-                        //         }
-                        //     });
-                        //     input.addEventListener('change', function () {
-                        //         ul.style.display = this.checked ? 'block' : 'none';
-                        //     });
-                        //     input.addEventListener('change', function () {
-                        //         if (!this.checked) {
-                        //             span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
-                        //             priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
-                        //             isChecked = false; // Сбрасываем флаг выбора пункта списка
-                        //         }
-                        //     });
-                        // });
-
-                        document.addEventListener('DOMContentLoaded', function () {
-                            let input = document.getElementById('services-guarantee');
-                            let ul = document.querySelector('.gen-tab__add-services-ul');
-                            let span = document.querySelector('.gen-tab__add-services-guarantee .gen-tab__add-services-guarantee-container');
-                            let priceSpan = document.querySelector('.gen-tab__add-services-guarantee-price');
-                            // let priceSpan = document.createElement('span'); // Создаем новый элемент span для цены
-                            // priceSpan.classList.add('price'); // Добавляем класс 'price' для стилизации
-                            // span.parentNode.insertBefore(priceSpan, span.nextSibling); // Вставляем новый элемент после span с текстом
-                            let originalText = span.textContent; // Сохраняем изначальный текст в переменной
-                            let originalPrice = priceSpan.textContent; // Сохраняем изначальную цену в переменной
-                            let isChecked = false; // Флаг для отслеживания состояния чекбокса
-
-                            input.addEventListener('click', function () {
-                                ul.style.display = 'none'; // Открываем список при клике на инпут
-                            });
-
-                            span.addEventListener('click', function (event) {
-                                if (ul.style.display === 'flex' && !isChecked) {
-                                    ul.style.display = 'none'; // Скрываем список, если он уже открыт и ничего не выбрано
-                                    input.checked = false; // Снимаем чекбокс, если span нажат повторно
-                                } else {
-                                    ul.style.display = ul.style.display === 'flex' ? 'none' : 'flex'; // Переключаем видимость ul
-                                    if (ul.style.display === 'flex') {
-                                        input.checked = true; // Ставим чек в инпуте при открытии ul
-                                    } else {
-                                        span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
-                                        priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
-                                    }
-                                }
-                            });
-
-                            ul.addEventListener('click', function (event) {
-                                let targetElement = event.target.classList.contains('gen-tab__add-services-li-info') ? event.target : event.target.closest('li').querySelector('.gen-tab__add-services-li-info');
-                                if (targetElement) {
-                                    span.textContent = targetElement.textContent;
-                                    let priceText = targetElement.nextElementSibling.textContent;
-                                    if (/^\d+ ₴$/.test(priceText) || /^\d+ \D+$/.test(priceText)) {
-                                        priceSpan.textContent = "+ " + priceText; // Добавляем "+" перед ценой
-                                    } else {
-                                        priceSpan.textContent = ''; // Очищаем цену, если не соответствует формату
-                                    }
-                                    ul.style.display = 'none';
-                                    isChecked = true; // Устанавливаем флаг, что выбран пункт списка
-                                }
-                            });
-
-                            input.addEventListener('change', function () {
-                                ul.style.display = this.checked ? 'flex' : 'none';
-                            });
-                            input.addEventListener('change', function () {
-                                if (!this.checked) {
-                                    span.textContent = originalText; // Возвращаем изначальный текст при снятии чека
-                                    priceSpan.textContent = originalPrice; // Возвращаем изначальную цену при снятии чека
-                                    isChecked = false; // Сбрасываем флаг выбора пункта списка
-                                }
-                            });
-                        });
-
-
-
-
-
-
-
-                    </script>
+                    <script src="/scripts/tab-add-servises.js"></script>
                     <div class="gen-tab__add-product gen-tab__block">
 
                     </div>

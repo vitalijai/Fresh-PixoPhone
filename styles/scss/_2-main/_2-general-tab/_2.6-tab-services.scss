@@ -1,28 +1,39 @@
 .gen-tab__add-services {
-  display: flex;
+  @include flexbox(
+    $justify: center,
+    $alignItems: flex-start,
+    $direction: column,
+    $self: stretch
+  );
+
   padding: 24px 28px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 12px;
-  align-self: stretch;
 
   background: var(---white, #fff);
 
+  .gen-tab__add-services-header {
+    align-self: stretch;
+
+    color: var(---dark-gray, #333);
+    font-weight: 400;
+  }
+
   .gen-tab__add-services-block {
-    display: flex;
+    @include flexbox($alignItems: flex-start, $direction: column);
+
     width: 613px;
     height: var(--nums-block-radius, 32px);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
     flex-shrink: 0;
+    position: relative;
 
-    .gen-tab__add-services-guarantee {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      align-self: stretch;
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+
+    .gen-tab__add-services-wrapper {
+      @include flexbox($alignItems: center, $self: stretch);
+
+      gap: var(---gap-small, 16px);
       user-select: none;
 
       // Toogle Switch Checkbox
@@ -63,37 +74,34 @@
         }
       }
 
-      .gen-tab__add-services-guarantee-block {
-        display: flex;
-        align-items: center;
+      .gen-tab__add-services-content {
+        @include flexbox($alignItems: center);
+
         gap: 8px;
         flex: 1 0 0;
 
-        cursor: pointer;
+        .gen-tab__add-services-text {
+          @include flexbox(
+            $alignItems: center,
+            $justify: space-between,
+            $self: stretch
+          );
 
-        .gen-tab__add-services-guarantee-container {
-          display: flex;
           height: var(--nums-block-radius, 32px);
           padding-left: 16px;
-          align-items: center;
-          justify-content: space-between;
           gap: 64px;
           flex-shrink: 0;
-          align-self: stretch;
           flex: 1 0 0;
-
+          cursor: pointer;
           border-radius: var(---radius-min, 8px);
-          border: var(---stroke-thickness, 2px) solid
-            var(--colors-gray-200, #e5e4e2);
+          border: var(---stroke-thickness, 2px) solid transparent;
           background: var(--colors-white, #fff);
         }
       }
 
-      .gen-tab__add-services-guarantee-price {
-        display: flex;
+      .gen-tab__add-services-price {
+        @include flexbox($alignItems: baseline, $justify: flex-end);
         width: 80px;
-        justify-content: flex-end;
-        align-items: baseline;
       }
     }
 
@@ -102,6 +110,12 @@
       flex-direction: column;
       align-items: flex-start;
       align-self: stretch;
+      position: absolute;
+      z-index: 24;
+
+      width: 477px;
+      left: 40px;
+      top: 26px;
 
       border-radius: var(---radius-min, 8px);
       background: var(--colors-white, #fff);
@@ -110,12 +124,14 @@
       box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
 
       li {
-        display: flex;
+        @include flexbox(
+          $alignItems: flex-start,
+          $direction: column,
+          $self: stretch
+        );
+
         padding: 16px;
-        flex-direction: column;
-        align-items: flex-start;
         gap: 8px;
-        align-self: stretch;
         cursor: pointer;
 
         background: var(--colors-white, #fff);
@@ -150,15 +166,40 @@
             var(--colors-white, #fff);
         }
         .gen-tab__add-services-li-div {
-          display: flex;
-          align-items: center;
+          @include flexbox(
+            $alignItems: center,
+            $justify: space-between,
+            $self: stretch
+          );
           gap: var(--nums-block-radius, 32px);
-          align-self: stretch;
-          justify-content: space-between;
 
           color: var(--colors-gray-700, #2f2c2f);
           font-size: 14px;
           font-weight: 500;
+        }
+      }
+    }
+
+    &.default,
+    &.enable-check {
+      &.active {
+        .gen-tab__add-services-text {
+          border: var(---stroke-thickness, 2px) solid
+            var(--colors-gray-200, #e5e4e2) !important;
+        }
+      }
+      .gen-tab__add-services-text {
+        border: var(---stroke-thickness, 2px) solid
+          var(--colors-gray-100, #e5e4e2) !important;
+
+        &:hover {
+          border: var(---stroke-thickness, 2px) solid
+            var(--colors-gray-200, #e5e4e2) !important;
+        }
+        &::after {
+          content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="%232F2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+          width: 32px;
+          height: 32px;
         }
       }
     }
