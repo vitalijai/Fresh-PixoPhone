@@ -1,10 +1,8 @@
 .gen-tab__add-product {
-  display: flex;
+  @include flexbox($alignItems: flex-start, $direction: column, $self: stretch);
+
   padding: 24px 32px;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 12px;
-  align-self: stretch;
 
   background: var(---white, #fff);
 
@@ -13,28 +11,27 @@
   font-size: 18px;
   font-weight: 400;
 
+  user-select: none;
+
   .gen-tab__add-product-accessories-container {
-    display: flex;
-    align-items: flex-start;
-    align-self: stretch;
-    gap: 16px;
+    @include flexbox($alignItems: flex-start, $self: stretch);
+
+    gap: var(---gap-small, 16px);
     // flex: 1 0 0;
+
     .gen-tab__add-product-accessories--item {
-      display: flex;
+      @include flexbox($alignItems: flex-start, $justify: center);
+
       width: 181.167px;
       padding: 8px;
-      justify-content: center;
-      align-items: flex-start;
       gap: 8px;
 
       border-radius: 16px;
-      border: var(---stroke-thickness, 2px) solid
-        var(--colors-gray-100, #f7f7f7);
+      border: 2px solid var(--colors-gray-100, #f7f7f7);
       background: var(--colors-white, #fff);
 
       &:hover {
-        border: var(---stroke-thickness, 2px) solid
-          var(--colors-gray-200, #e5e4e2);
+        border: 2px solid var(--colors-gray-200, #e5e4e2);
       }
 
       img {
@@ -44,33 +41,35 @@
       }
 
       .gen-tab__add-product-accessories--info-conteiner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexbox(
+          $alignItems: center,
+          $direction: column,
+          $self: stretch
+        );
+
         flex: 1 0 0;
-        align-self: stretch;
+        gap: 8px;
 
         .gen-tab__add-product-accessories--name {
-          flex: 1 0 0;
-          width: 93px;
-
+          display: -webkit-box;
+          -webkit-line-clamp: 2; /* количество строк */
+          -webkit-box-orient: vertical;
+          width: 100px;
+          height: calc(12px * 2);
           align-self: stretch;
           overflow: hidden;
           color: var(--colors-gray-700, #2f2c2f);
           text-overflow: ellipsis;
-          white-space: nowrap;
-          font-family: Rubik;
           font-size: 10px;
-          font-style: normal;
           font-weight: 400;
-          line-height: normal;
         }
 
         .gen-tab__add-product-accessories--info {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          align-self: stretch;
+          @include flexbox(
+            $alignItems: center,
+            $justify: space-between,
+            $self: stretch
+          );
 
           color: var(--colors-gray-700, #2f2c2f);
 

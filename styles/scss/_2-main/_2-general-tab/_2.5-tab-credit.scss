@@ -5,6 +5,7 @@
   gap: 12px;
 
   background: var(--colors-white, #fff);
+  user-select: none;
 
   .gen-tab__credit-header {
     @include flexbox();
@@ -17,6 +18,10 @@
       color: var(--colors-gray-700, #2f2c2f);
 
       font-weight: 500;
+    }
+
+    #gen-tab__credit-value {
+      user-select: text;
     }
   }
 
