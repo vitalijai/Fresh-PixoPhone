@@ -316,6 +316,44 @@ a:visited {
   width: min(95%, var(---width, 1366px));
 }
 
+.global-button-state {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: var(---radius-min, 8px);
+}
+.global-button-state.add-product {
+  background: var(--colors-green-500-primary, #2ea84f);
+}
+.global-button-state.add-product:hover {
+  background: var(--colors-green-600, #25863f);
+}
+.global-button-state.add-product::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 14" fill="none"><path d="M7.66699 1L7.66699 13" stroke="%23fff" stroke-width="2" stroke-linecap="round" /><path d="M1.66699 7H13.667" stroke="%23fff" stroke-width="2" stroke-linecap="round" /></svg>');
+  width: 16px;
+  height: 16px;
+}
+.global-button-state.succes {
+  background: var(--colors-green-200, #dbf6e2);
+}
+.global-button-state.succes::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.5 13.4407L9.76442 16.7051L18.5 8" stroke="%2362B378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+.global-button-state.succes:hover {
+  background: var(--colors-red-100, #ffe4e1);
+}
+.global-button-state.succes:hover::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/><path d="M1 1L11 11" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/></svg>');
+  width: 12px;
+  height: 12px;
+}
+
 :root {
   ---width: 1366px;
   ---width-desc: 1920px;
@@ -340,6 +378,7 @@ a:visited {
   --colors-gray-400: #929292;
   --colors-gray-500: #696969;
   --colors-gray-700: #2f2c2f;
+  --colors-green-200: #dbf6e2;
   --colors-green-400: #62b278;
   --colors-green-500-primary: #2ea84f;
   --colors-green-600: #25863f;
@@ -1531,4 +1570,72 @@ a:visited {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="%232F2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   width: 32px;
   height: 32px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product {
+  display: flex;
+  padding: 24px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+  background: var(---white, #fff);
+  color: var(---dark-gray, #333);
+  text-align: start;
+  font-size: 18px;
+  font-weight: 400;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 16px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item {
+  display: flex;
+  width: 181.167px;
+  padding: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 16px;
+  border: var(---stroke-thickness, 2px) solid var(--colors-gray-100, #f7f7f7);
+  background: var(--colors-white, #fff);
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item:hover {
+  border: var(---stroke-thickness, 2px) solid var(--colors-gray-200, #e5e4e2);
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item .gen-tab__add-product-accessories--info-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item .gen-tab__add-product-accessories--info-conteiner .gen-tab__add-product-accessories--name {
+  flex: 1 0 0;
+  width: 93px;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Rubik;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item .gen-tab__add-product-accessories--info-conteiner .gen-tab__add-product-accessories--info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 12px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

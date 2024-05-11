@@ -18,3 +18,43 @@ a:visited {
 .content-container {
   width: min(95%, var(---width, 1366px));
 }
+
+.global-button-state {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: var(---radius-min, 8px);
+
+  &.add-product {
+    background: var(--colors-green-500-primary, #2ea84f);
+    &:hover {
+      background: var(--colors-green-600, #25863f);
+    }
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 15 14" fill="none"><path d="M7.66699 1L7.66699 13" stroke="%23fff" stroke-width="2" stroke-linecap="round" /><path d="M1.66699 7H13.667" stroke="%23fff" stroke-width="2" stroke-linecap="round" /></svg>');
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &.succes {
+    background: var(--colors-green-200, #dbf6e2);
+
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.5 13.4407L9.76442 16.7051L18.5 8" stroke="%2362B378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      width: 24px;
+      height: 24px;
+    }
+    &:hover {
+      background: var(--colors-red-100, #ffe4e1);
+    }
+    &:hover::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/><path d="M1 1L11 11" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/></svg>');
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
