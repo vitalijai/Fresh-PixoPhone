@@ -1593,11 +1593,16 @@ a:visited {
   font-weight: 400;
   user-select: none;
 }
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .carousel-container {
+  overflow: hidden;
+}
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container {
   display: flex;
   align-items: flex-start;
   align-self: stretch;
+  width: 615px;
   gap: var(---gap-small, 16px);
+  transition: transform 0.3s ease;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__add-product .gen-tab__add-product-accessories-container .gen-tab__add-product-accessories--item {
   display: flex;
@@ -1630,7 +1635,7 @@ a:visited {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* количество строк */
   -webkit-box-orient: vertical;
-  width: 100px;
+  width: 90px;
   height: 24px;
   align-self: stretch;
   overflow: hidden;

@@ -13,11 +13,14 @@
 
   user-select: none;
 
+  .carousel-container {
+    overflow: hidden;
+  }
   .gen-tab__add-product-accessories-container {
     @include flexbox($alignItems: flex-start, $self: stretch);
-
+    width: 615px;
     gap: var(---gap-small, 16px);
-    // flex: 1 0 0;
+    transition: transform 0.3s ease;
 
     .gen-tab__add-product-accessories--item {
       @include flexbox($alignItems: flex-start, $justify: center);
@@ -54,7 +57,7 @@
           display: -webkit-box;
           -webkit-line-clamp: 2; /* количество строк */
           -webkit-box-orient: vertical;
-          width: 100px;
+          width: 90px;
           height: calc(12px * 2);
           align-self: stretch;
           overflow: hidden;
