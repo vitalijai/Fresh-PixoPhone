@@ -66,7 +66,12 @@
 
     .gen-tab__info-list-line {
       @include flexbox($alignItems: center);
-      gap: 2px;
+      gap: 4px;
+
+      .gen-tab__info-list-expected {
+        color: var(--colors-gray-700, #2f2c2f);
+        font-weight: 500;
+      }
     }
 
     .gen-tab__info-list-guarantee-days {

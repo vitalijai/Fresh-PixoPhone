@@ -151,32 +151,5 @@
 
   .gen-tab__show-all-models {
     @include flexbox($justify: center, $alignItems: center, $self: stretch);
-
-    .gen-tab__show-all-models-button {
-      @include flexbox();
-      flex: 1 0 0;
-
-      a {
-        @include flexbox($justify: center, $alignItems: center);
-
-        height: 52px;
-        flex: 1 0 0;
-        border: solid 2px transparent;
-        border-radius: 8px;
-        background: var(--colors-blue-100, #e9f5ff);
-        color: var(--colors-blue-400, #62a8ed);
-
-        font-weight: 500;
-        cursor: pointer;
-
-        &:hover {
-          border: var(---stroke-thickness, 2px) solid
-            var(--colors-blue-500, #318ce7);
-          background: var(--colors-white, #fff);
-
-          color: var(--colors-blue-500, #318ce7);
-        }
-      }
-    }
   }
 }

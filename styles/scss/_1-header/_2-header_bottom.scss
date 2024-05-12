@@ -120,7 +120,7 @@
 
     .header_bottom-content__left {
       display: flex;
-      gap: 16px;
+      gap: var(---gap-small, 16px);
 
       .main_logo-bottom {
         display: block !important;
