@@ -30,8 +30,6 @@ document.addEventListener("mouseup", () => {
     const threshold = itemWidth / 20; // Порог для определения, когда переключить слайд
     if (Math.abs(offsetX) > threshold) {
       handleStepScroll(offsetX);
-    } else {
-      handleScrollEnd();
     }
   }
 });
@@ -39,7 +37,6 @@ document.addEventListener("mouseup", () => {
 document.addEventListener("mouseleave", () => {
   if (isDragging) {
     isDragging = false;
-    handleScrollEnd();
   }
 });
 
@@ -124,11 +121,6 @@ function updateCarouselPosition(diff) {
   }
 
   requestAnimationFrame(step);
-}
-
-function handleScrollEnd() {
-  // Действия при достижении конца прокрутки
-  console.log("End of scroll");
 }
 
 // Функция для плавного завершения анимации (easing)
