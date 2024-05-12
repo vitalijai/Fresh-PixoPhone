@@ -68,24 +68,26 @@
                                 Контакти
                             </a>
                         </div>
-                        <div class="language_switch">
-                            <div class="language_switch-container">
-                                <span id="language_switch-ua" class="language_switch-span active">UA</span>
-                                <span id="language_switch-ru" class="language_switch-span">RU</span>
+                        <div class="language_switch-top language_switch">
+                            <div class="language_switch-top-container language_switch-container">
+                                <span id="language_switch-top-ua"
+                                    class="language_switch-span language_switch-span-ua active">UA</span>
+                                <span id="language_switch-top-ru"
+                                    class="language_switch-span language_switch-span-ru">RU</span>
                             </div>
-                            <input type="checkbox" title="Мова" id="language_switch" />
+                            <input type="checkbox" title="Мова" id="language_switch" class="language_switch-input" />
                         </div>
                     </div>
                 </div>
-                <script src='/scripts/header-basic.js'></script>
             </div>
             <!-- header top end-->
             <!-- header bottom-->
             <div class="header_bottom">
                 <div class="header_bottom-content content-container">
                     <div class="header_bottom-content__left">
-                        <a href="#" class="main_logo" style="display: none;">
-                            <div class="main_logo-img"></div>
+                        <a href="#" class="main_logo-bottom">
+                            <div class=" main_logo-bottom-img">
+                            </div>
                         </a>
                         <nav class="header_bottom-catalog">
                             <div class="header-bottom-catalog__desc">
@@ -190,12 +192,14 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="language_switch" style="display: none;">
-                            <div class="language_switch-container">
-                                <span id="language_switch-ua" class="language_switch-span active">UA</span>
-                                <span id="language_switch-ru" class="language_switch-span">RU</span>
+                        <div class="language_switch-bottom language_switch">
+                            <div class="language_switch-bottom-container language_switch-container">
+                                <span id="language_switch-bottom-ua"
+                                    class="language_switch-span language_switch-span-ua active">UA</span>
+                                <span id="language_switch-bottom-ru"
+                                    class="language_switch-span language_switch-span-ru">RU</span>
                             </div>
-                            <input type="checkbox" id="language_switch-bottom" />
+                            <input type="checkbox" id="language_switch-bottom" class="language_switch-input" />
                         </div>
                     </div>
                 </div>
@@ -245,7 +249,24 @@
                         <span class="tabs__link-span">Сервіси</span>
                     </a>
                 </div>
-                <div class="p-short-info"></div>
+                <div class="p-short-info">
+                    <div class="p-short-info-left">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="p-short-product-container">
+                            <span class="p-short-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                            <div class="p-short-product">
+                                <span class="p-short-product-old-price-container"><span>44770</span> ₴</span>
+                                <span class="p-short-product-discount-container">-8%</span>
+                                <span class="p-short-product-new-price-container"><span>41000</span> ₴</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-short-info-right">
+                        <div class="p-short-info-button global-button">
+                            <button>Купити</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- tabs end -->
@@ -402,7 +423,7 @@
                         </div>
                     </div>
                     <div class="gen-tab__to-order gen-tab__block">
-                        <div class="gen-tab__to-order-button">
+                        <div class="gen-tab__to-order-button global-button">
                             <button>Хочу купити</button>
                         </div>
                     </div>
@@ -904,7 +925,6 @@
                             </div>
                         </form>
                     </div>
-                    <script src="/scripts/tab-add-servises.js"></script>
                     <div class="gen-tab__add-product gen-tab__block">
                         <div class="gen-tab__add-product-header">
                             <span>Аксесуари:</span>
@@ -1073,10 +1093,12 @@
                 </div>
             </div>
         </div>
+        <!-- general tab end -->
+        <script src='/scripts/header-basic.js'></script>
+        <script src="/scripts/tab-add-servises.js"></script>
         <script src="/scripts/carusel.js"></script>
         <script src="/scripts/button-add.js"></script>
         <script src="/scripts/tab-info-add-button.js"></script>
-        <!-- general tab end -->
     </main>
     <!-- main end -->
 </body>

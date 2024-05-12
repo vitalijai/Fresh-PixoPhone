@@ -1,7 +1,8 @@
 .header_bottom {
-  @include flexbox($justify: center, $alignItems: flex-start);
+  @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
   width: 100%;
-
+  position: static;
+  transition: top 3s ease; /* добавляем transition для плавного изменения свойств */
   background: var(--colors-green-500-primary, #2ea84f);
 
   .header_bottom-content {
@@ -13,6 +14,10 @@
 
     .header_bottom-content__left {
       user-select: none;
+
+      .main_logo-bottom {
+        display: none;
+      }
 
       .header_bottom-catalog {
         .header-bottom-catalog__desc {
@@ -99,6 +104,59 @@
 
         &:hover {
           background: var(--colors-green-700, #1d6d33);
+        }
+      }
+    }
+
+    .language_switch-bottom {
+      display: none;
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 24;
+
+    .header_bottom-content__left {
+      display: flex;
+      gap: 16px;
+
+      .main_logo-bottom {
+        display: block !important;
+        width: 144px;
+        height: 48px;
+        margin-left: 6px;
+
+        background: url("/images/main\ logo_w.png") 50% / cover no-repeat;
+      }
+    }
+
+    .header_bottom-content__right {
+      .language_switch-bottom {
+        @include flexbox($alignItems: center, $justify: center);
+        padding: 0 8px;
+
+        .language_switch-span {
+          color: var(--colors-white, #fff);
+          &.active {
+            color: var(--colors-green-500-primary, #2ea84f);
+            background: var(--colors-white, #fff);
+          }
+        }
+
+        input[type="checkbox"] {
+          background: var(--colors-white, #fff);
+
+          &::before {
+            background-color: var(--colors-green-500-primary, #2ea84f);
+          }
+
+          &:checked {
+            &::before {
+              background-color: var(--colors-green-500-primary, #2ea84f);
+            }
+          }
         }
       }
     }

@@ -5,47 +5,4 @@
 
   background: var(---white, #fff);
   user-select: none;
-
-  .gen-tab__to-order-button {
-    @include flexbox();
-    flex: 1 0 0;
-
-    button {
-      @include flexbox($justify: center, $alignItems: center);
-
-      height: 48px;
-      flex: 1 0 0;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(
-          0deg,
-          var(--colors-green-500-primary, #2ea84f) 0%,
-          var(--colors-green-500-primary, #2ea84f) 100%
-        ),
-        var(--colors-white, #fff);
-
-      color: var(--colors-white, #fff);
-
-      font-weight: 500;
-      cursor: pointer;
-
-      &:hover {
-        background: var(--colors-green-600, #25863f);
-      }
-      &::before {
-        // SVG COLOR var(--colors-white: #fff;);
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L18.7457 4.92374C18.8767 4.30211 18.4025 3.71743 17.7672 3.71743H8.09091" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="white"/><circle cx="15.475" cy="15.225" r="1.35" fill="white"/></svg>');
-        width: 18px;
-        height: 15.075px;
-        // margin: auto 0;
-        // margin-right: 8px;
-        // margin-bottom: 17px;
-        margin: auto 8px 17px 0;
-      }
-      &:hover::before {
-        // SVG COLOR var(--colors-white: #fff;);
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L19 3.71743" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="white"/><circle cx="15.475" cy="15.225" r="1.35" fill="white"/><path d="M11.5 3L11.5 8" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M9 5.5L14 5.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
-      }
-    }
-  }
 }

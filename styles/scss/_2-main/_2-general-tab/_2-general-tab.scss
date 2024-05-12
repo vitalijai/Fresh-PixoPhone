@@ -1,6 +1,5 @@
 .general-tab {
-  @include flexbox($justify: center, $alignItems: flex-start);
-  width: 100%;
+  @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
 
   // user-select: none;
   .page-container {

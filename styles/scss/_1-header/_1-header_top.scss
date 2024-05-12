@@ -1,7 +1,5 @@
 .header_top {
-  @include flexbox($alignItems: flex-start, $justify: center);
-
-  width: 100%;
+  @include flexbox($alignItems: flex-start, $justify: center, $self: stretch);
 
   background: var(---white, #fff);
 
@@ -77,67 +75,22 @@
         }
       }
 
-      .language_switch {
-        @include flexbox($alignItems: center, $justify: center);
-
-        gap: 4px;
-
-        .language_switch-container {
-          @include flexbox(
-            $alignItems: center,
-            $justify: center,
-            $direction: column
-          );
-          cursor: default;
-
-          gap: 2px;
-
-          .language_switch-span {
-            @include flexbox($alignItems: center, $justify: center);
-
-            padding: 1px 3px 0px 3px;
-
-            border-radius: 4px;
-
-            font-size: 10px;
-
-            &.active {
-              color: var(--colors-green-500-primary, #2ea84f);
-            }
+      .language_switch-top {
+        .language_switch-span {
+          &.active {
+            color: var(--colors-green-500-primary, #2ea84f);
           }
         }
-        // Toogle Switch Checkbox
+
         input[type="checkbox"] {
-          position: relative;
-          width: 16px;
-          height: 32px;
-          appearance: none;
           background: var(--colors-green-500-primary, #2ea84f);
 
-          outline: none;
-          cursor: pointer;
-          border-radius: 20px;
-          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-          transition: background 300ms linear;
-
-          // circle
           &::before {
-            position: absolute;
-            content: "";
-            width: 12px;
-            height: 12px;
-            top: 2px;
-            left: 2px;
-            border-radius: 16px;
             background-color: var(---white, #fff);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: top 300ms linear;
           }
 
-          // move to right
           &:checked {
             &::before {
-              top: 18px;
               background-color: var(---white, #fff);
             }
           }

@@ -22,7 +22,8 @@
   .gen-tab__add-services-block {
     @include flexbox($alignItems: flex-start, $direction: column);
 
-    width: 613px;
+    // (1366/2)-10% = 615px
+    width: calc(var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.1));
     height: var(--nums-block-radius, 32px);
     flex-shrink: 0;
     position: relative;

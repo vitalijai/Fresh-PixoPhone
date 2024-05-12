@@ -18,7 +18,10 @@
   }
   .gen-tab__add-product-accessories-container {
     @include flexbox($alignItems: flex-start, $self: stretch);
-    width: 615px;
+
+    // (1366/2)-10% = 615px
+    width: calc(var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.1));
+
     gap: var(---gap-small, 16px);
     transition: transform 0.3s ease;
 
