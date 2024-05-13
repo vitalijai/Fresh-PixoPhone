@@ -22,8 +22,11 @@
     // (1366/2)-10% = 615px
     width: calc(var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.1));
 
-    gap: var(---gap-small, 16px);
     transition: transform 0.3s ease;
+
+    & .slick-slide {
+      margin-right: var(---gap-small, 16px);
+    }
 
     .gen-tab__add-product-accessories--item {
       @include flexbox($alignItems: flex-start, $justify: center);

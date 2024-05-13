@@ -58,64 +58,9 @@
     @include flexbox($alignItems: center, $self: stretch);
     gap: var(---gap-small, 16px);
 
-    color: var(--colors-gray-700, #2f2c2f);
-    font-weight: 400;
-    font-size: 14px;
-
-    user-select: none;
-
-    .gen-tab__info-list-line {
-      @include flexbox($alignItems: center);
-      gap: 4px;
-
-      .gen-tab__info-list-expected {
-        color: var(--colors-gray-700, #2f2c2f);
-        font-weight: 500;
-      }
-    }
-
-    .gen-tab__info-list-guarantee-days {
-      color: var(--colors-green-400, #62b278);
-
-      font-weight: 500;
-      margin-left: 2px;
-    }
-
-    .gen-tab__info-list-articul {
-      color: var(--colors-gray-400, #929292);
-    }
-
     .gen-tab__info-list-reviews-container {
       @include flexbox($alignItems: center);
       gap: var(---gap-small, 16px);
-
-      .gen-tab__info-list-rating {
-        @include flexbox($alignItems: center);
-
-        color: var(---dark-gray, #333);
-        text-align: center;
-      }
-      .gen-tab__info-list-reviews {
-        @include flexbox($alignItems: center);
-
-        gap: 4px;
-
-        text-align: center;
-        font-size: 16px;
-
-        a {
-          color: var(--colors-gray-700, #2f2c2f);
-        }
-
-        &:hover {
-          path {
-            fill: var(--colors-green-500-primary, #2ea84f);
-          }
-          a {
-            color: var(--colors-green-500-primary, #2ea84f);
-          }
-        }
-      }
     }
   }
 
