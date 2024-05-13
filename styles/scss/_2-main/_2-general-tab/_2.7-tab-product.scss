@@ -60,16 +60,18 @@
         gap: 8px;
 
         .gen-tab__add-product-accessories--name {
+          $font-size: 10px;
+
           display: -webkit-box;
           -webkit-line-clamp: 2; /* количество строк */
           -webkit-box-orient: vertical;
           width: 90px;
-          height: calc(12px * 2);
+          height: calc(($font-size + 2px) * 2);
           align-self: stretch;
           overflow: hidden;
           color: var(--colors-gray-700, #2f2c2f);
           text-overflow: ellipsis;
-          font-size: 10px;
+          font-size: $font-size;
           font-weight: 400;
         }
 

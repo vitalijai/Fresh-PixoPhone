@@ -1985,7 +1985,7 @@ a:visited {
   align-items: flex-start;
   flex-direction: column;
   width: calc(var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.1);
-  height: var(--nums-block-radius, 32px);
+  height: 32px;
   flex-shrink: 0;
   position: relative;
 }
@@ -2260,4 +2260,36 @@ a:visited {
   justify-content: center;
   align-items: flex-start;
   align-self: stretch;
+}
+.common-template .block-description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .block-description .block-block-description-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-self: stretch;
+  padding: 48px;
+  width: min(95%, var(---width, 1366px) - 96px);
+  gap: 24px;
+  border-radius: 32px;
+  background: var(--colors-white, #fff);
+  /* block-shadow */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.common-template .block-description .block-block-description-container .block-block-description-paragraf {
+  align-self: stretch;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: justify;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  margin: 0;
+}
+.common-template .block-description .block-block-description-container img {
+  width: 100%;
+  align-self: stretch;
+  border-radius: 8px;
 }/*# sourceMappingURL=style.css.map */
