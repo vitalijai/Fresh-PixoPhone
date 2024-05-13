@@ -226,7 +226,7 @@
 }
 
 //Прямоугольная кнопка Олата частями
-.global-credit-btn {
+.global-button-credit {
   @include flexbox();
 
   display: flex;
@@ -252,6 +252,7 @@
     }
   }
 }
+
 //Прямоугольная ссылка показать все модели
 .global-all-models-button-a {
   @include flexbox();
@@ -265,7 +266,7 @@
     border: solid 2px transparent;
     border-radius: 8px;
     background: var(--colors-blue-100, #e9f5ff);
-    color: var(--colors-blue-400, #62a8ed);
+    color: var(--colors-blue-500, #318ce7);
 
     font-weight: 500;
     cursor: pointer;
@@ -275,7 +276,69 @@
         var(--colors-blue-500, #318ce7);
       background: var(--colors-white, #fff);
 
-      color: var(--colors-blue-500, #318ce7);
+      color: var(--colors-blue-400, #62a8ed);
     }
+  }
+}
+//Прямоугольная кнопка Оповстить
+.global-button-notify {
+  @include flexbox();
+  flex: 1 0 0;
+
+  button {
+    @include flexbox($justify: center, $alignItems: center);
+
+    height: 48px;
+
+    flex: 1 0 0;
+    border: solid 2px transparent;
+    border-radius: 8px;
+    background: var(--colors-blue-100, #e9f5ff);
+
+    font-weight: 500;
+    color: var(--colors-blue-500, #318ce7);
+    cursor: pointer;
+
+    &:hover {
+      border: var(---stroke-thickness, 2px) solid
+        var(--colors-blue-500, #318ce7);
+      background: var(--colors-white, #fff);
+
+      color: var(--colors-blue-400, #62a8ed);
+    }
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.4081 18.0938C13.7831 19.0312 13.0019 19.5 12.0644 19.5C11.1269 19.5 10.3456 19.0312 9.72064 18.0938M16.8311 16.6875H7.29765C6.44296 16.6875 5.7501 15.9946 5.7501 15.14C5.7501 14.8595 5.82633 14.5843 5.97064 14.3438C6.89081 12.8101 7.37689 11.0552 7.37689 9.26674V8.25C7.37689 6.17893 9.05582 4.5 11.1269 4.5H13.0019C15.073 4.5 16.7519 6.17893 16.7519 8.25V9.26674C16.7519 11.0552 17.238 12.8101 18.1581 14.3438C18.5979 15.0766 18.3602 16.0272 17.6273 16.467C17.3868 16.6113 17.1116 16.6875 16.8311 16.6875Z" stroke="%23318CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      width: 24px;
+      height: 24px;
+    }
+    &:hover::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.4081 18.0938C13.7831 19.0312 13.0019 19.5 12.0644 19.5C11.1269 19.5 10.3456 19.0312 9.72064 18.0938M16.8311 16.6875H7.29765C6.44296 16.6875 5.7501 15.9946 5.7501 15.14C5.7501 14.8595 5.82633 14.5843 5.97064 14.3438C6.89081 12.8101 7.37689 11.0552 7.37689 9.26674V8.25C7.37689 6.17893 9.05582 4.5 11.1269 4.5H13.0019C15.073 4.5 16.7519 6.17893 16.7519 8.25V9.26674C16.7519 11.0552 17.238 12.8101 18.1581 14.3438C18.5979 15.0766 18.3602 16.0272 17.6273 16.467C17.3868 16.6113 17.1116 16.6875 16.8311 16.6875Z" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: none;
+
+  padding: 13px 12px 11px 12px;
+  align-items: flex-start;
+
+  cursor: pointer;
+  z-index: 100;
+
+  border-radius: 32px;
+  background: var(--colors-green-500-primary, #2ea84f);
+
+  &:hover {
+    background: var(--colors-green-600, #25863f);
+  }
+
+  &::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 10L8 4L2 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 16px;
+    height: 16px;
   }
 }

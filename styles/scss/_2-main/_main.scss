@@ -3,9 +3,12 @@
   flex-direction: column;
   gap: 32px;
   // background-color: aqua;
+  padding-bottom: 32px;
 
   @import "../_2-main/_1-tabs/1-tabs";
   @import "../_2-main/_2-general-tab/2-general-tab";
   @import "../_2-main/_3-block-on-sale-soon/3-block-on-sale-soon";
   @import "../_2-main/_4-description/4-description";
+  @import "../_2-main/_5-recently-viewed/5-recently-viewed";
+  @import "../_2-main/_6-novelty/6-novelty";
 }

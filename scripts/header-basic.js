@@ -28,6 +28,8 @@ window.addEventListener("scroll", function () {
   var tabs = document.querySelectorAll(".tabs");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   var isFixed = scrollPosition > 64;
+  const backToTop = document.getElementById("back-to-top");
+  const vw50 = window.innerWidth / 2; // 50vw in pixels
 
   headerBottoms.forEach(function (headerBottom) {
     headerBottom.classList.toggle("fixed", isFixed);
@@ -39,5 +41,15 @@ window.addEventListener("scroll", function () {
 
   tabs.forEach(function (headerTab) {
     headerTab.classList.toggle("tabs-fixed", isFixed);
+  });
+
+  if (scrollPosition > vw50) {
+    backToTop.style.display = "inline-flex";
+  } else {
+    backToTop.style.display = "none";
+  }
+  backToTop.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
