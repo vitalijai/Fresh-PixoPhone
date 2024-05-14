@@ -1,5 +1,6 @@
 @import "../_1-header/header-variable";
 @import "../_2-main/main-variable";
+@import "../_3-footer/footer-variable";
 
 :root {
   //PARAMETRS
@@ -44,6 +45,7 @@
   --colors-green-500-primary: #2ea84f;
   --colors-green-600: #{$--colors-green-600};
   --colors-green-700: #{$--colors-green-700};
+  --colors-green-900: #{$--colors-green-900};
   --colors-mint-300: #81d8d0;
   --colors-red-300: #{$--colors-red-300};
   --colors-red-500: #{$--colors-red-500};

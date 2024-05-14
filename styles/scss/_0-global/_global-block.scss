@@ -103,7 +103,7 @@
     .global-block-container {
       @include flexbox($alignItems: center, $direction: column);
 
-      min-width: 220px;
+      min-width: 200px;
       max-width: 260px;
       padding: 20px;
       gap: 8px;
@@ -377,8 +377,10 @@
             }
           }
         }
+      }
 
-        &:hover {
+      &:hover {
+        .global-block-container-header {
           .global-block-credit-group,
           .global-block-add-group {
             opacity: 1;
