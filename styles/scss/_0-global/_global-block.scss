@@ -130,6 +130,10 @@
           position: relative;
           border-radius: 4px;
 
+          a {
+            display: flex;
+          }
+
           img {
             height: 232px;
           }
@@ -394,17 +398,20 @@
           $direction: column,
           $self: stretch
         );
-
         gap: 8px;
 
-        .global-block-container-header {
+        &,
+        a {
+          color: var(--colors-gray-700, #2f2c2f);
+        }
+
+        .global-block-container-bottom-list-header {
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
           align-self: stretch;
 
           overflow: hidden;
-          color: var(--colors-gray-700, #2f2c2f);
           text-overflow: ellipsis;
 
           font-weight: 400;
@@ -426,7 +433,6 @@
           );
 
           height: 32px;
-          padding: 6px 0px;
 
           .global-p-short-product-new-price-container {
             display: block;
@@ -477,6 +483,7 @@
             }
           }
         }
+
         .global-block-container-button {
           @include flexbox(
             $alignItems: center,
