@@ -4,6 +4,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--colors-green-500-primary, #2ea84f)
     var(--colors-white, #fff);
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 // html::-webkit-scrollbar {
 //   width: 5px; /* Ширина всего элемента навигации */
