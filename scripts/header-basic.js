@@ -22,10 +22,22 @@ checkboxes.forEach((checkbox) => {
   });
 });
 
+//Раскритие меню
+$(document).ready(function () {
+  $(".vertical-list").on("mouseover", function () {
+    $(this).children(".js-menu-list").addClass("active");
+  });
+
+  $(".vertical-list").on("mouseout", function () {
+    $(this).children(".js-menu-list").removeClass("active");
+  });
+});
+
 window.addEventListener("scroll", function () {
   var headerBottoms = document.querySelectorAll(".header_bottom");
   var headerTabs = document.querySelectorAll(".common-template__tabs");
   var tabs = document.querySelectorAll(".tabs");
+  var mainMenu = document.querySelectorAll(".catalog_products_main");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   var isFixed = scrollPosition > 64;
   const backToTop = document.getElementById("back-to-top");
@@ -39,8 +51,12 @@ window.addEventListener("scroll", function () {
     headerTab.classList.toggle("fixed", isFixed);
   });
 
-  tabs.forEach(function (headerTab) {
-    headerTab.classList.toggle("tabs-fixed", isFixed);
+  tabs.forEach(function (tab) {
+    tab.classList.toggle("tabs-fixed", isFixed);
+  });
+
+  mainMenu.forEach(function (main) {
+    main.classList.toggle("active", isFixed);
   });
 
   if (scrollPosition > vw50) {

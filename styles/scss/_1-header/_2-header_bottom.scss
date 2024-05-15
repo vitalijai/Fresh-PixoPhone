@@ -20,6 +20,7 @@
       }
 
       .header_bottom-catalog {
+        position: relative;
         .header-bottom-catalog__desc {
           @include flexbox($alignItems: center);
 
