@@ -31,6 +31,7 @@ $(document).ready(function () {
   // Обработчик для клика на кнопку
   $(".header-bottom-catalog__desc").on("click", function (event) {
     event.stopPropagation(); // Останавливаем всплытие события
+    $(".screen").addClass("overflow");
     toggleMenu();
   });
 
@@ -46,6 +47,8 @@ $(document).ready(function () {
       !$button.is(event.target)
     ) {
       if ($menu.is(":visible")) {
+        $(".screen").removeClass("overflow");
+
         $menu.fadeOut();
         $("html").removeClass("no-scroll");
         $tabs.show(); // Показываем блок с классом fixed

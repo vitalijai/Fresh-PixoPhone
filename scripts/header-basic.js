@@ -23,13 +23,19 @@ checkboxes.forEach((checkbox) => {
 });
 
 //Раскритие меню
-$(document).ready(function () {
-  $(".vertical-list").on("mouseover", function () {
-    $(this).children(".js-menu-list").addClass("active");
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  const submenuItems = document.querySelectorAll(".vertical-list");
 
-  $(".vertical-list").on("mouseout", function () {
-    $(this).children(".js-menu-list").removeClass("active");
+  submenuItems.forEach((item) => {
+    item.addEventListener("mouseover", (event) => {
+      const catalogMain = item.querySelector(".submenu-list__i");
+      catalogMain.classList.add("active");
+    });
+
+    item.addEventListener("mouseout", (event) => {
+      const catalogMain = item.querySelector(".submenu-list__i");
+      catalogMain.classList.remove("active");
+    });
   });
 });
 
