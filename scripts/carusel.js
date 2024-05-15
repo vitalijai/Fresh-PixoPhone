@@ -51,13 +51,10 @@ $(".carousel-wrapper").slick({
 
 //Главное фото
 document.addEventListener("DOMContentLoaded", function () {
-  var popUpPhoto = new Splide("#popUpPhoto", {
-    pagination: false,
-    type: "loop",
-  });
   var primarySlider = new Splide("#main-photo-slider", {
     pagination: false,
   });
+
   var secondarySlider = new Splide("#secondary-slider", {
     fixedWidth: 90,
     height: 90,
@@ -68,8 +65,25 @@ document.addEventListener("DOMContentLoaded", function () {
     focus: "center",
   }).mount();
 
+  var popUpPhoto = new Splide("#popUpPhoto", {
+    // height: 800,
+    pagination: false,
+    type: "loop",
+  });
+
+  var secondSlider = new Splide("#second-slider", {
+    fixedWidth: 90,
+    height: 90,
+    gap: 8,
+    pagination: false,
+    arrows: true,
+    isNavigation: true,
+    focus: "center",
+    type: "loop",
+  }).mount();
+
   primarySlider.sync(secondarySlider).mount();
-  popUpPhoto.sync(secondarySlider).mount();
+  popUpPhoto.sync(secondSlider).mount();
 });
 
 //Zoom
