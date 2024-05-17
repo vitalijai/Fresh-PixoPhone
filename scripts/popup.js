@@ -57,50 +57,53 @@ $(document).ready(function () {
   });
 });
 
-//Обормление поиска
-$(document).ready(function () {
-  $(".header-search-form__input").on("focus", function () {
-    $("html").addClass("no-scroll");
-    $(".header-bottom-search").css("z-index", "100");
-    $(".screen").addClass("overflow");
-  });
-
-  $(".header-search-form__input").on("blur", function () {
-    $("html").removeClass("no-scroll");
-    $(".header-bottom-search").css("z-index", "");
-    $(".screen").removeClass("overflow");
-  });
-});
-//Открытие поиска
+// //Обормление поиска
 // $(document).ready(function () {
-//   $(".header-search-form__input").on("click", function () {
-//     $(".pop-up-search-modal").fadeIn();
+//   $(".header-search-form__input").on("focus", function () {
 //     $("html").addClass("no-scroll");
+//     $(".header-bottom-search").css("z-index", "100");
 //     $(".screen").addClass("overflow");
 //   });
 
-//   $(".header-search-form__search-btn-close").on("click", function () {
-//     $(".pop-up-search-modal").fadeOut();
-//     $(".screen").removeClass("overflow");
+//   $(".header-search-form__input").on("blur", function () {
 //     $("html").removeClass("no-scroll");
-//   });
-
-//   $(window).on("click", function (event) {
-//     if ($(event.target).is("#popUpSearchModal")) {
-//       $("#popUpSearchModal").fadeOut(function () {
-//         $(".pop-up-search-modal").fadeOut();
-//       });
-//       $("html").removeClass("no-scroll");
-//       $(".screen").removeClass("overflow");
-//     }
-//   });
-
-//   // Добавление класса active конкретному родителю с классом contain-submenu при клике на category-link
-//   $(".category-link").on("click", function () {
-//     $(".contain-submenu").removeClass("active"); // Удаление класса active у всех элементов
-//     $(this).closest(".contain-submenu").addClass("active"); // Добавление класса active конкретному родителю
+//     $(".header-bottom-search").css("z-index", "");
+//     $(".screen").removeClass("overflow");
 //   });
 // });
+//Открытие поиска
+$(document).ready(function () {
+  $(".header-search-form__input").on("click", function () {
+    $(".pop-up-search-modal").fadeIn();
+    $("html").addClass("no-scroll");
+    $(".screen").addClass("overflow");
+    $(".screen.overflow").css("z-index", "22");
+  });
+
+  $(".header-search-form__search-btn-close").on("click", function () {
+    $(".pop-up-search-modal").fadeOut();
+    $(".screen").removeClass("overflow");
+    $("html").removeClass("no-scroll");
+    $(".screen").css("z-index", "20");
+  });
+
+  $(window).on("click", function (event) {
+    if ($(event.target).is("#popUpSearchModal")) {
+      $("#popUpSearchModal").fadeOut(function () {
+        $(".pop-up-search-modal").fadeOut();
+      });
+      $("html").removeClass("no-scroll");
+      $(".screen").removeClass("overflow");
+      $(".screen").css("z-index", "20");
+    }
+  });
+
+  // Добавление класса active конкретному родителю с классом contain-submenu при клике на category-link
+  $(".category-link").on("click", function () {
+    $(".contain-submenu").removeClass("active"); // Удаление класса active у всех элементов
+    $(this).closest(".contain-submenu").addClass("active"); // Добавление класса active конкретному родителю
+  });
+});
 //Открытие фото
 $(document).ready(function () {
   $(".cloud-zoom-wrap").on("click", function () {
