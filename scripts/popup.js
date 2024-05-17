@@ -66,6 +66,9 @@ $(document).ready(function () {
     $("html").addClass("no-scroll");
     $(".screen").addClass("overflow");
     $(".screen.overflow").css("z-index", "22");
+
+    // Фокус на новый инпут в модальном окне
+    $(".pop-up-header-search-form__input").focus();
   });
 
   $(".header-search-form__search-btn-close").on("click", function () {
@@ -88,12 +91,6 @@ $(document).ready(function () {
       }
       $(".screen").css("z-index", "20");
     }
-  });
-
-  // Добавление класса active конкретному родителю с классом contain-submenu при клике на category-link
-  $(".category-link").on("click", function () {
-    $(".contain-submenu").removeClass("active"); // Удаление класса active у всех элементов
-    $(this).closest(".contain-submenu").addClass("active"); // Добавление класса active конкретному родителю
   });
 });
 

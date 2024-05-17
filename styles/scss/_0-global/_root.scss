@@ -1,6 +1,7 @@
 @import "../_1-header/header-variable";
 @import "../_2-main/main-variable";
 @import "../_3-footer/footer-variable";
+@import "../_4-pop-up/pop-up-modal-variable";
 
 :root {
   //PARAMETRS
@@ -50,4 +51,16 @@
   --colors-red-300: #{$--colors-red-300};
   --colors-red-500: #{$--colors-red-500};
   --colors-violet-300: #{$--colors-violet-300};
+
+  //modal-searcch
+  --modal-colors-white: #{$--modal-colors-white};
+  --modal-colors-blue-400: #{$--modal-colors-blue-400};
+  --modal-colors-gray-100: #{$--modal-colors-gray-100};
+  --modal-colors-gray-200: #{$--modal-colors-gray-200};
+  --modal-colors-gray-400: #{$--modal-colors-gray-400};
+  --modal-colors-gray-500: #{$--modal-colors-gray-500};
+  --modal-colors-gray-700: #{$--modal-colors-gray-700};
+  --modal-colors-green-100: #{$--modal-colors-green-100};
+  --modal-colors-green-400: #{$--modal-colors-green-400};
+  --modal-colors-red-300: #{$--modal-colors-red-300};
 }

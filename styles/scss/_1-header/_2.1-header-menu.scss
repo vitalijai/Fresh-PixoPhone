@@ -11,8 +11,9 @@
 }
 
 .catalog_products_main {
-  width: 1390px;
-  height: 640px;
+  // width: 1390px;
+  width: calc(var(---width, 1366px) + 1.25%);
+
   align-items: flex-start;
   position: fixed;
   top: 128px;
@@ -23,6 +24,9 @@
   left: auto;
   left: 50%;
   transform: translateX(-50%);
+  min-height: 630px;
+  height: 68.5vh;
+  max-height: 650px;
 
   &.active {
     top: 64px;
@@ -95,7 +99,9 @@
 
           gap: 24px;
           flex: 1 0 0;
-          width: 1094px;
+          // width: 1094px;
+          width: calc(var(---width, 1366px) - 91.89%);
+
           position: absolute;
           top: 0;
           left: 296px;
