@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var popUpPhoto = new Splide("#popUpPhoto", {
     // height: 800,
     pagination: false,
-    type: "loop",
+    // type: "loop",
   });
 
   var secondSlider = new Splide("#second-slider", {
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     arrows: true,
     isNavigation: true,
     focus: "center",
-    type: "loop",
+    // type: "loop",
   }).mount();
 
   primarySlider.sync(secondarySlider).mount();
