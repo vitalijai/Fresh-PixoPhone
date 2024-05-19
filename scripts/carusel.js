@@ -1,21 +1,21 @@
-// $(document).ready(function () {
-//   // Инициализация слайдера
-//   $(".gen-tab__carousel-wrapper").slick({
-//     infinite: false,
-//     slidesToShow: 5,
-//     slidesToScroll: 1,
-//     arrows: false,
-//   });
+$(document).ready(function () {
+  // Инициализация слайдера
+  $(".gen-tab__carousel-wrapper").slick({
+    infinite: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: false,
+  });
 
-//   // Привязка кнопок к слайдеру
-//   $(".slickPrev").click(function () {
-//     $(".gen-tab__carousel-wrapper").slick("slickPrev");
-//   });
+  // Привязка кнопок к слайдеру
+  $(".block-cheaper-slick-prev").click(function () {
+    $(".gen-tab__carousel-wrapper").slick("slickPrev");
+  });
 
-//   $(".slickNext").click(function () {
-//     $(".gen-tab__carousel-wrapper").slick("slickNext");
-//   });
-// });
+  $(".block-cheaper-slick-next").click(function () {
+    $(".gen-tab__carousel-wrapper").slick("slickNext");
+  });
+});
 
 //Рандомайзер
 $(document).ready(function () {

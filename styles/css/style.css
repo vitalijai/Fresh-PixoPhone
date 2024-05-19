@@ -1217,6 +1217,10 @@ a:visited {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path d="M21.9138 10.3107C21.7818 9.88999 21.3659 9.15265 20.0582 8.95686L15.7351 8.30282L13.8035 4.21618C13.2156 2.9831 12.4198 2.7998 11.9959 2.7998C11.5719 2.7998 10.7721 2.9831 10.1882 4.22034L8.25664 8.30699L3.93354 8.96102C2.62181 9.15681 2.2059 9.89416 2.07793 10.3149C1.94595 10.7357 1.86997 11.5855 2.81377 12.5436L5.94512 15.7263L5.20927 20.217C5.03731 21.2543 5.32125 21.8667 5.58919 22.1999C6.14108 22.879 7.11688 22.9873 8.12866 22.4332L11.9999 20.3128L15.8671 22.4332C16.307 22.6748 16.7309 22.7998 17.1308 22.7998C17.6467 22.7998 18.1026 22.5873 18.4105 22.2041C18.6785 21.8708 18.9664 21.2585 18.7944 20.2212L18.0546 15.7304L21.1819 12.5519C22.1297 11.5938 22.0538 10.744 21.9218 10.3232L21.9138 10.3107Z" stroke="%232F2C2F" stroke-width="2"/></svg>');
 }
 
+.block-cheaper-together .global-block-header-left::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 7.5C12.5523 7.5 13 7.94772 13 8.5V11H15.5C16.0523 11 16.5 11.4477 16.5 12C16.5 12.5523 16.0523 13 15.5 13H13V15.5C13 16.0523 12.5523 16.5 12 16.5C11.4477 16.5 11 16.0523 11 15.5V13H8.5C7.94772 13 7.5 12.5523 7.5 12C7.5 11.4477 7.94772 11 8.5 11H11V8.5C11 7.94772 11.4477 7.5 12 7.5Z" fill="%232F2C2F"/></svg>');
+}
+
 .global-block-discount-group {
   display: flex;
   align-items: flex-start;
@@ -3363,6 +3367,105 @@ a:visited {
 .common-template .information-tab.no-price .inf-tab__info-price-simb,
 .common-template .information-tab.no-price .global-button-notify {
   display: none !important;
+}
+.common-template .block-cheaper-together {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .block-cheaper-together.hidden {
+  display: none;
+}
+.common-template .block-cheaper-together .global-block-content-container {
+  display: flex;
+  flex-direction: column;
+}
+.common-template .block-cheaper-together .global-block-content-container .slick-list {
+  border-radius: 0 0 24px 24px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container {
+  flex: 1 0 0;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-product-container {
+  display: flex;
+  align-items: flex-end;
+  align-self: stretch;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container {
+  min-width: 260px;
+  max-width: 300px;
+  padding: 16px;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container.not-color .global-block-colors {
+  display: none;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container .global-block-container-bottom .global-block-container-bottom-cheaper {
+  color: var(--colors-gray-400, #929292);
+  font-size: 24px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container .global-block-container-bottom .global-block-container-bottom-cheaper span {
+  font-size: 16px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-plus-container {
+  display: flex;
+  padding: 0px 12px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: var(--colors-white, #fff);
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-cheaper-container .global-block-plus-container::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none"><path d="M16.25 4.5L16.25 28.5" stroke="%23DBF6E2" stroke-width="8" stroke-linecap="round"/><path d="M4.25 16.5L28.25 16.5" stroke="%23DBF6E2" stroke-width="8" stroke-linecap="round"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container {
+  display: flex;
+  padding: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--nums-block-radius, 32px);
+  align-self: stretch;
+  background: var(--colors-white, #fff);
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container .global-p-short-product {
+  display: flex;
+  height: var(--nums-block-radius, 32px);
+  padding: 6px 0px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container .global-p-short-product .global-p-short-product-discount-container {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container .global-p-short-product .global-block-container-bottom-new-price {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 32px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container .global-p-short-product .global-block-container-bottom-new-price span {
+  margin-top: 7px;
+  font-size: 24px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container .global-button {
+  display: flex;
+  height: var(---button-height, 48px);
+  justify-content: center;
+  align-items: center;
+  flex: unset;
+  width: 200px;
+}
+.common-template .block-cheaper-together .global-block-content-container .global-block-price-container .global-button button {
+  display: flex;
+  padding: 0px 32px 0px 24px;
+  gap: 8px;
 }
 
 .footer {

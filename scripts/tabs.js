@@ -16,11 +16,17 @@ $(document).ready(function () {
 
     // Скрываем блок "general-tab"
     $(".general-tab").hide();
+    $(".block-description").hide();
+    $(".block-on-sale-soon").hide();
+    $(".block-novelty").hide();
 
     // Проверяем, если был клик по "tabs__link-description", показываем "general-tab"
     if ($(this).hasClass("tabs__link-description")) {
       $(".information-tab").removeClass(newClass);
       $(".general-tab").show();
+      $(".block-description").show();
+      $(".block-on-sale-soon").show();
+      $(".block-novelty").show();
     }
   });
 
