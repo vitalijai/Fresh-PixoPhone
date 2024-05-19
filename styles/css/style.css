@@ -575,15 +575,20 @@ a:visited {
   color: var(--colors-blue-400, #62a8ed);
 }
 
-.global-button-notify {
+.global-button-notify,
+.global-button-reviews,
+.global-button-fast-buy {
   display: flex;
   flex: 1 0 0;
 }
-.global-button-notify button {
+.global-button-notify button,
+.global-button-reviews button,
+.global-button-fast-buy button {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 48px;
+  gap: 4px;
   flex: 1 0 0;
   border: solid 2px transparent;
   border-radius: 8px;
@@ -592,10 +597,42 @@ a:visited {
   color: var(--colors-blue-500, #318ce7);
   cursor: pointer;
 }
-.global-button-notify button:hover {
+
+.global-button-notify button:hover,
+.global-button-fast-buy button:hover {
   border: var(---stroke-thickness, 2px) solid var(--colors-blue-500, #318ce7);
   background: var(--colors-white, #fff);
   color: var(--colors-blue-400, #62a8ed);
+}
+
+.global-button-questions,
+.global-button-reviews {
+  display: flex;
+  flex: 1 0 0;
+}
+.global-button-questions button,
+.global-button-reviews button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  gap: 4px;
+  flex: 1 0 0;
+  border: solid 2px transparent;
+  border-radius: 8px;
+  background: var(--colors-blue-100, #e9f5ff);
+  font-weight: 500;
+  color: var(--colors-blue-500, #318ce7);
+  cursor: pointer;
+}
+.global-button-questions button:hover,
+.global-button-reviews button:hover {
+  background: var(--colors-blue-500, #318ce7);
+  color: var(--colors-white, #fff);
+}
+
+.global-button-notify button {
+  gap: 8px;
 }
 .global-button-notify button::before {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.4081 18.0938C13.7831 19.0312 13.0019 19.5 12.0644 19.5C11.1269 19.5 10.3456 19.0312 9.72064 18.0938M16.8311 16.6875H7.29765C6.44296 16.6875 5.7501 15.9946 5.7501 15.14C5.7501 14.8595 5.82633 14.5843 5.97064 14.3438C6.89081 12.8101 7.37689 11.0552 7.37689 9.26674V8.25C7.37689 6.17893 9.05582 4.5 11.1269 4.5H13.0019C15.073 4.5 16.7519 6.17893 16.7519 8.25V9.26674C16.7519 11.0552 17.238 12.8101 18.1581 14.3438C18.5979 15.0766 18.3602 16.0272 17.6273 16.467C17.3868 16.6113 17.1116 16.6875 16.8311 16.6875Z" stroke="%23318CE7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
@@ -604,6 +641,19 @@ a:visited {
 }
 .global-button-notify button:hover::before {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M14.4081 18.0938C13.7831 19.0312 13.0019 19.5 12.0644 19.5C11.1269 19.5 10.3456 19.0312 9.72064 18.0938M16.8311 16.6875H7.29765C6.44296 16.6875 5.7501 15.9946 5.7501 15.14C5.7501 14.8595 5.82633 14.5843 5.97064 14.3438C6.89081 12.8101 7.37689 11.0552 7.37689 9.26674V8.25C7.37689 6.17893 9.05582 4.5 11.1269 4.5H13.0019C15.073 4.5 16.7519 6.17893 16.7519 8.25V9.26674C16.7519 11.0552 17.238 12.8101 18.1581 14.3438C18.5979 15.0766 18.3602 16.0272 17.6273 16.467C17.3868 16.6113 17.1116 16.6875 16.8311 16.6875Z" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+.global-button-fast-buy button {
+  gap: 8px;
+}
+.global-button-fast-buy button::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" viewBox="0 0 23 18" fill="none"><path d="M13.625 4.5V8.79289C13.625 8.9255 13.6777 9.05268 13.7714 9.14645L16.625 12" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.31291 5C7.66795 5 7.99619 4.8227 8.2221 4.54881C9.50599 2.99224 11.4495 2 13.6248 2C17.4908 2 20.6248 5.13401 20.6248 9C20.6248 12.866 17.4908 16 13.6248 16C12.4276 16 11.3005 15.6994 10.315 15.1696C10.1175 15.0634 9.89876 15 9.67453 15C8.60876 15 8.12181 16.2014 9.03834 16.7453C10.3815 17.5424 11.9497 18 13.6248 18C18.5954 18 22.6248 13.9706 22.6248 9C22.6248 4.02944 18.5954 0 13.6248 0C10.7182 0 8.13335 1.37791 6.48792 3.51617C5.99625 4.15511 6.50669 5 7.31291 5Z" fill="%2362A8ED"/><path d="M8.625 7L3.625 7" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path d="M7.625 10L1.625 10" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path d="M8.625 13L4.625 13" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/></svg>');
+  width: 21px;
+  height: 18px;
+  margin-bottom: 2px;
+}
+.global-button-fast-buy button:hover::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" viewBox="0 0 23 18" fill="none"><path d="M13.75 4.5V8.79289C13.75 8.9255 13.8027 9.05268 13.8964 9.14645L16.75 12" stroke="%23318CE7" stroke-width="2" stroke-linecap="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.43791 5C7.79295 5 8.12119 4.8227 8.3471 4.54881C9.63099 2.99224 11.5745 2 13.7498 2C17.6158 2 20.7498 5.13401 20.7498 9C20.7498 12.866 17.6158 16 13.7498 16C12.5526 16 11.4255 15.6994 10.44 15.1696C10.2425 15.0634 10.0238 15 9.79953 15C8.73376 15 8.24681 16.2014 9.16334 16.7453C10.5065 17.5424 12.0747 18 13.7498 18C18.7204 18 22.7498 13.9706 22.7498 9C22.7498 4.02944 18.7204 0 13.7498 0C10.8432 0 8.25835 1.37791 6.61292 3.51617C6.12125 4.15511 6.63169 5 7.43791 5Z" fill="%23318CE7"/><path d="M8.75 7L3.75 7" stroke="%23318CE7" stroke-width="2" stroke-linecap="round"/><path d="M7.75 10L1.75 10" stroke="%23318CE7" stroke-width="2" stroke-linecap="round"/><path d="M8.75 13L4.75 13" stroke="%23318CE7" stroke-width="2" stroke-linecap="round"/></svg>');
 }
 
 .back-to-top {
@@ -625,6 +675,77 @@ a:visited {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 10L8 4L2 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   width: 16px;
   height: 16px;
+}
+
+.raiting {
+  margin-left: auto;
+  margin-right: auto;
+}
+.raiting::before, .raiting::after {
+  content: "";
+  display: table;
+}
+.raiting::after {
+  clear: both;
+}
+.raiting__check {
+  display: none;
+}
+.raiting__check:checked ~ .raiting__star {
+  color: #f29625;
+}
+.raiting__star {
+  position: relative;
+  display: block;
+  float: right;
+  height: 0;
+  width: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid;
+  border-left: 10px solid transparent;
+  margin-right: 5px;
+  font-size: 0;
+  line-height: 0;
+  color: #e1e1e1;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  cursor: pointer;
+}
+.raiting__star::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -6px;
+  height: 0;
+  width: 0;
+  border-bottom: 8px solid;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+.raiting__star::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid;
+  border-left: 10px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  transform: rotate(-70deg);
+}
+.raiting__star:hover {
+  color: #f29625;
+}
+.raiting__star:hover ~ .raiting__star {
+  color: #f29625;
+}
+
+.reviews-block-rating-value {
+  display: block;
 }
 
 .global-list {
@@ -1706,6 +1827,7 @@ a:visited {
   background: var(--colors-white, #fff);
   color: var(--colors-gray-700, #2f2c2f);
   font-weight: 400;
+  cursor: pointer;
 }
 .common-template .common-template__tabs .tabs .tablist .tabs__link:first-child {
   border-radius: 32px 0 0 32px;
@@ -1828,7 +1950,6 @@ a:visited {
   gap: 1px;
   border-radius: 24px;
   background: var(---disabled, #e9e9e9);
-  /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 }
 .common-template .general-tab .page-container .gen-tab__left-side {
@@ -2037,7 +2158,7 @@ a:visited {
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-end;
   align-self: stretch;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-cashback {
@@ -2101,15 +2222,42 @@ a:visited {
   font-weight: 500;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value {
+  align-items: flex-end;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value .global-p-short-product-old-price-container {
+  font-size: 24px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value .global-p-short-product-discount-container {
+  padding: 2px 9px 2px 7px;
+  font-weight: 700;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value .global-p-short-product-new-price-container {
   color: var(---dark-gray, #333);
   font-size: 48px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value .gen-tab__info-price-simb {
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value .global-p-short-product-new-price-container .gen-tab__info-price-simb {
   font-size: 32px;
+  margin-top: 10px;
   user-select: none;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-cashback,
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .global-p-short-product-old-price-container {
+  margin-bottom: 7px;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-discount {
+  display: flex;
+  padding: 8px 24px 8px 8px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: linear-gradient(0deg, rgba(255, 208, 88, 0.2) 0%, rgba(255, 208, 88, 0.2) 100%), #fff;
+  color: var(---dark-gray, #333);
+  text-align: justify;
+  font-size: 12px;
+  font-weight: 400;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-delivery {
   display: flex;
@@ -2146,6 +2294,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  gap: 16px;
   padding: 24px 32px;
   background: var(---white, #fff);
   user-select: none;
@@ -2790,6 +2939,34 @@ a:visited {
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__to-order-services .gen-tab__to-order-services-pay-block .gen-tab__to-order-services-pay-privat {
   background: url("/images/icon-privat--new 1.svg") 50% no-repeat;
 }
+.common-template .general-tab .page-container .gen-tab__right-side.no-acces .gen-tab__info {
+  width: calc(var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.095);
+}
+.common-template .general-tab .page-container .gen-tab__right-side.to-order .gen-tab__info-price .global-p-short-product-old-price-container,
+.common-template .general-tab .page-container .gen-tab__right-side.to-order .gen-tab__info-price .global-p-short-product-discount-container {
+  display: none;
+}
+.common-template .general-tab .page-container .gen-tab__right-side.disabled .gen-tab__info-price, .common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price {
+  justify-content: flex-end;
+}
+.common-template .general-tab .page-container .gen-tab__right-side.disabled .gen-tab__info-price .gen-tab__info-price-cashback,
+.common-template .general-tab .page-container .gen-tab__right-side.disabled .gen-tab__info-price .global-p-short-product-old-price-container,
+.common-template .general-tab .page-container .gen-tab__right-side.disabled .gen-tab__info-price .global-p-short-product-discount-container, .common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .gen-tab__info-price-cashback,
+.common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-old-price-container,
+.common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-discount-container {
+  display: none;
+}
+.common-template .general-tab .page-container .gen-tab__right-side.disabled .gen-tab__info-price .global-p-short-product-new-price-container, .common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-new-price-container {
+  color: var(--colors-gray-300, #c0c0c0) !important;
+}
+.common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-new-price-container {
+  font-size: 24px !important;
+}
+.common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-new-price-container .global-p-short-product-old-price-container,
+.common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-new-price-container .global-p-short-product-discount-container,
+.common-template .general-tab .page-container .gen-tab__right-side.no-price .gen-tab__info-price .global-p-short-product-new-price-container .gen-tab__info-price-simb {
+  display: none;
+}
 .common-template .cloud-zoom-lens {
   background-color: #fff;
   cursor: move;
@@ -2865,6 +3042,327 @@ a:visited {
   justify-content: center;
   align-items: flex-start;
   align-self: stretch;
+}
+.common-template .information-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  display: none;
+}
+.common-template .information-tab .information-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 1px;
+  border-radius: 24px;
+  background: var(---disabled, #e9e9e9);
+  /* block-shadow */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side {
+  display: flex;
+  padding: 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  gap: 32px;
+  background: var(---white, #fff);
+  border-radius: 24px 0 0 24px;
+  height: calc(100% - 96px);
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .specifications-header {
+  color: var(---dark-gray, #333);
+  font-size: 24px;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 32px;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container,
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__reviews-container,
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__specifications-container {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .global-button-reviews,
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .global-button-questions {
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .reviews-block,
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .questions-block-question,
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .questions-block-answers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container .global-button-questions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container .global-button-questions button {
+  padding: 13px 0;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container .global-button-questions span {
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+  font-weight: 400;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container .questions-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container .questions-block .questions-block-answers {
+  padding-left: 40px;
+  position: relative;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__questions-container .questions-block .questions-block-answers .questions-block-rectangle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 12px;
+  top: -10px;
+  border-radius: 0px 0px 0px 8px;
+  border-bottom: 2px solid var(--colors-green-200, #dbf6e2);
+  border-left: 2px solid var(--colors-green-200, #dbf6e2);
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__reviews-container .reviews-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__reviews-container .reviews-block-header .reviews-block-rating-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__specifications-container .specifications-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  text-align: justify;
+  gap: 16px;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__specifications-container .specifications-block .specifications-block-header {
+  font-size: 20px;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__specifications-container .specifications-block .specifications-block-content {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: justify;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__block-user-name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__block-user-name-container .inf-tab__block-user-name {
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+  font-size: 16px;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__block-user-name-container .inf-tab__block-user-date {
+  display: flex;
+  padding: 4px 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 24px;
+  background: var(--colors-gray-100, #f7f7f7);
+  color: var(--colors-gray-500, #696969);
+  text-align: center;
+  font-size: 12px;
+}
+.common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__block-content {
+  align-self: stretch;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: justify;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side {
+  display: flex;
+  width: 384px;
+  padding: 48px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  background: var(---white, #fff);
+  border-radius: 0 24px 24px 0;
+  user-select: none;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  position: sticky;
+  top: 156px;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  width: 384px;
+  border-radius: var(---radius-min, 8px);
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .global-p-short-product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  align-self: stretch;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .global-p-short-product .global-p-short-product-old-price-container {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .global-p-short-product .global-p-short-product-discount-container {
+  display: flex;
+  padding: 2px 9px 2px 7px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  margin-right: 8px;
+  margin-bottom: 12px;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .global-p-short-product .global-p-short-product-new-price-container {
+  font-size: 48px;
+  user-select: text;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .global-p-short-product .global-p-short-product-new-price-container .inf-tab__info-price-simb {
+  margin-left: 8px;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .inf-tab__to-order {
+  display: flex;
+  align-self: stretch;
+  gap: 16px;
+}
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .global-button-notify,
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .global-button-fast-buy,
+.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__to-order-button {
+  display: none;
+}
+.common-template .information-tab.specifications {
+  display: flex;
+}
+.common-template .information-tab.specifications .inf-tab__specifications-container {
+  display: flex !important;
+}
+.common-template .information-tab.specifications .inf-tab__questions-container,
+.common-template .information-tab.specifications .inf-tab__reviews-container {
+  display: none !important;
+}
+.common-template .information-tab.reviews {
+  display: flex;
+}
+.common-template .information-tab.reviews .inf-tab__reviews-container {
+  display: flex !important;
+}
+.common-template .information-tab.reviews .inf-tab__questions-container,
+.common-template .information-tab.reviews .inf-tab__specifications-container {
+  display: none !important;
+}
+.common-template .information-tab.questions {
+  display: flex;
+}
+.common-template .information-tab.questions .inf-tab__questions-container {
+  display: flex !important;
+}
+.common-template .information-tab.questions .inf-tab__reviews-container,
+.common-template .information-tab.questions .inf-tab__specifications-container {
+  display: none !important;
+}
+.common-template .information-tab.to-order .inf-tab__info-price {
+  justify-content: flex-end !important;
+}
+.common-template .information-tab.to-order .inf-tab__to-order-button {
+  display: flex !important;
+}
+.common-template .information-tab.to-order .global-p-short-product-old-price-container,
+.common-template .information-tab.to-order .global-p-short-product-discount-container,
+.common-template .information-tab.to-order .global-button-notify,
+.common-template .information-tab.to-order .inf-tab__to-buy-button,
+.common-template .information-tab.to-order .global-button-fast-buy {
+  display: none !important;
+}
+.common-template .information-tab.disabled .inf-tab__info-price, .common-template .information-tab.no-price .inf-tab__info-price {
+  justify-content: flex-end !important;
+}
+.common-template .information-tab.disabled .inf-tab__info-price .global-p-short-product-new-price-container, .common-template .information-tab.no-price .inf-tab__info-price .global-p-short-product-new-price-container {
+  color: var(--colors-gray-300, #c0c0c0) !important;
+}
+.common-template .information-tab.disabled .inf-tab__info-price-cashback,
+.common-template .information-tab.disabled .global-p-short-product-old-price-container,
+.common-template .information-tab.disabled .global-p-short-product-discount-container,
+.common-template .information-tab.disabled .inf-tab__to-buy-button,
+.common-template .information-tab.disabled .global-button-fast-buy, .common-template .information-tab.no-price .inf-tab__info-price-cashback,
+.common-template .information-tab.no-price .global-p-short-product-old-price-container,
+.common-template .information-tab.no-price .global-p-short-product-discount-container,
+.common-template .information-tab.no-price .inf-tab__to-buy-button,
+.common-template .information-tab.no-price .global-button-fast-buy {
+  display: none !important;
+}
+.common-template .information-tab.disabled .global-button-notify {
+  display: flex !important;
+}
+.common-template .information-tab.disabled .global-p-short-product-old-price-container,
+.common-template .information-tab.disabled .global-p-short-product-discount-container,
+.common-template .information-tab.disabled .global-button {
+  display: none !important;
+}
+.common-template .information-tab.no-price .inf-tab__info-price .global-p-short-product-new-price-container {
+  font-size: 24px !important;
+}
+.common-template .information-tab.no-price .inf-tab__to-order-button {
+  display: flex !important;
+}
+.common-template .information-tab.no-price .global-p-short-product-old-price-container,
+.common-template .information-tab.no-price .global-p-short-product-discount-container,
+.common-template .information-tab.no-price .inf-tab__info-price-simb,
+.common-template .information-tab.no-price .global-button-notify {
+  display: none !important;
 }
 
 .footer {

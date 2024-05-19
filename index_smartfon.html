@@ -2703,26 +2703,26 @@
         <div class="common-template__tabs">
             <div class="tabs content-container">
                 <div class="tablist">
-                    <a href="#" class="tabs__link active">
+                    <span class="tabs__link-description tabs__link active">
                         <span class="tabs__link-span">Опис</span>
-                    </a>
-                    <a href="#" class="tabs__link">
+                    </span>
+                    <span class="tabs__link-specifications tabs__link">
                         <span class="tabs__link-span">Характеристики</span>
-                    </a>
-                    <a href="#" class="tabs__link">
+                    </span>
+                    <span class="tabs__link-reviews tabs__link">
                         <span class="tabs__link-span">Відгуки</span>
                         <span class="tabs__link-count">4</span>
-                    </a>
-                    <a href="#" class="tabs__link">
+                    </span>
+                    <span class="tabs__link-questions tabs__link">
                         <span class="tabs__link-span">Питання</span>
                         <span class="tabs__link-count">2</span>
-                    </a>
-                    <a href="#" class="tabs__link">
+                    </span>
+                    <span class="tabs__link-acces tabs__link">
                         <span class="tabs__link-span">Аксесуари</span>
-                    </a>
-                    <a href="#" class="tabs__link">
+                    </span>
+                    <span class="tabs__link-service tabs__link">
                         <span class="tabs__link-span">Сервіси</span>
-                    </a>
+                    </span>
                 </div>
                 <div class="p-short-info">
                     <div class="p-short-info-left">
@@ -2867,7 +2867,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="gen-tab__right-side">
+                <div class="gen-tab__right-side ">
                     <div class="gen-tab__info gen-tab__block">
                         <div class="gen-tab__info-name">
                             <div class="gen-tab__info-p">
@@ -2924,11 +2924,11 @@
                             </div>
                         </div>
                         <div class="gen-tab__info-list">
-                            <div class="gen-tab__info-list-status--to-order global-list-status--to-order global-list">
+                            <!-- <div class="gen-tab__info-list-status--to-order global-list-status--to-order global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     Під замовлення
                                 </span>
-                            </div>
+                            </div> -->
                             <!-- <div class="gen-tab__info-list-status--in-stock global-list-status--in-stock global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     В наявності
@@ -2941,15 +2941,17 @@
                             </div> -->
                             <!-- <div class="gen-tab__info-list-status--expected global-list-status--expected global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
-                                    Очікуємо <span class="gen-tab__info-list-expected global-list-line-expected">15.04.2024</span>
+                                    Очікуємо <span
+                                        class="gen-tab__info-list-expected global-list-line-expected">15.04.2024</span>
                                 </span>
                             </div> -->
-                            <!-- <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                            <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     Аутлет
                                 </span>
-                            </div> -->
-                            <!-- <div class="gen-tab__info-list-status--not-available global-list-status--not-available global-list">
+                            </div>
+                            <!-- <div
+                                class="gen-tab__info-list-status--not-available global-list-status--not-available global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     Немає в наявності
                                 </span>
@@ -3003,15 +3005,28 @@
                                             id="gen-tab__info-price-cashback-value">316</span> ₴</span>
                                 </span>
                             </div>
-                            <div class="gen-tab__info-price-value">
-                                <span>
-                                    <span id="gen-tab__info-price-value">38430</span><span
-                                        class="gen-tab__info-price-simb">
-                                        ₴</span>
-                                </span>
+                            <div class="gen-tab__info-price-value global-p-short-product">
+                                <span class="global-p-short-product-old-price-container"><span>44770</span> ₴</span>
+                                <span class="global-p-short-product-discount-container">-8%</span>
+                                <span id="gen-tab__info-price-value"
+                                    class="global-p-short-product-new-price-container"><span>41000</span><span
+                                        class="gen-tab__info-price-simb"> ₴</span></span>
                             </div>
+                            <!-- <div class="gen-tab__info-price-value global-p-short-product">
+                                <span class="global-p-short-product-old-price-container"><span>44770</span> ₴</span>
+                                <span class="global-p-short-product-discount-container">-8%</span>
+                                <span id="gen-tab__info-price-value"
+                                    class="global-p-short-product-new-price-container"><span>Ціна формується</span><span
+                                        class="gen-tab__info-price-simb"> ₴</span></span>
+                            </div> -->
                         </div>
-                        <div class="gen-tab__info-delivery">
+                        <div class="gen-tab__info-discount" style="display: none;">
+                            <img src="/images/discount.png" alt="discount">
+                            <span>Ми знизили ціну на цей товар тому, що ... Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua.</span>
+                        </div>
+                        <div class="gen-tab__info-delivery" style="display: none;">
                             <div class="gen-tab__info-delivery-text">
                                 <span class="gen-tab__info-delivery-top">Доставка з Європи</span>
                                 <span class="gen-tab__info-delivery-bottom">час доставки 20-30 днів</span>
@@ -3019,8 +3034,17 @@
                         </div>
                     </div>
                     <div class="gen-tab__to-order gen-tab__block">
-                        <div class="gen-tab__to-order-button global-button">
+                        <!-- <div class="gen-tab__to-order-button global-button">
                             <button>Хочу купити</button>
+                        </div> -->
+                        <!-- <div class="gen-tab__to-notify-button global-button-notify">
+                            <button>Сповістити про наявність</button>
+                        </div> -->
+                        <div class="gen-tab__to-buy-button global-button">
+                            <button onclick="toggleBayBtn(event, this)">Купити</button>
+                        </div>
+                        <div class="gen-tab__to-fast-buy-button global-button-fast-buy">
+                            <button>Швидке замовлення</button>
                         </div>
                     </div>
                     <div class="gen-tab__constructor gen-tab__block">
@@ -3690,6 +3714,491 @@
             </div>
         </div>
         <!-- general tab end -->
+        <!-- information tab -->
+        <div class="information-tab">
+            <div class="information-page-container content-container">
+                <div class="inf-tab__left-side">
+                    <div class="inf-tab__information-block">
+                        <div class="inf-tab__questions-container">
+                            <div class="specifications-header">
+                                <span>Питання про <span id="specifications-value">Google Pixel 8 Pro 12/512GB
+                                        Obsidian</span></span>
+                            </div>
+                            <div class="inf-tab__to-notify-button global-button-questions">
+                                <button>Залишились питання про товар?</button>
+                                <span>Наші фахівці мають відповідь на будь-яке ваше питання про товар</span>
+                            </div>
+                            <div class="questions-block">
+                                <div class="questions-block-question">
+                                    <div class="questions-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-user-name"
+                                            class="questions-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="questions-block-user-date"
+                                            class="questions-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <p class="questions-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                </div>
+                                <div class="questions-block-answers">
+                                    <div
+                                        class="questions-block-answers-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-answers-name"
+                                            class="questions-block-answers-name inf-tab__block-user-name">Наш
+                                            фахівець</span>
+                                    </div>
+                                    <p class="answers-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                    <div class="questions-block-rectangle"></div>
+                                </div>
+                            </div>
+                            <div class="questions-block">
+                                <div class="questions-block-question">
+                                    <div class="questions-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-user-name"
+                                            class="questions-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="questions-block-user-date"
+                                            class="questions-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <p class="questions-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                </div>
+                                <div class="questions-block-answers">
+                                    <div
+                                        class="questions-block-answers-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-answers-name"
+                                            class="questions-block-answers-name inf-tab__block-user-name">Наш
+                                            фахівець</span>
+                                    </div>
+                                    <p class="answers-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                    <div class="questions-block-rectangle"></div>
+                                </div>
+                            </div>
+                            <div class="questions-block">
+                                <div class="questions-block-question">
+                                    <div class="questions-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-user-name"
+                                            class="questions-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="questions-block-user-date"
+                                            class="questions-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <p class="questions-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="questions-block">
+                                <div class="questions-block-question">
+                                    <div class="questions-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-user-name"
+                                            class="questions-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="questions-block-user-date"
+                                            class="questions-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <p class="questions-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                </div>
+                                <div class="questions-block-answers">
+                                    <div
+                                        class="questions-block-answers-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-answers-name"
+                                            class="questions-block-answers-name inf-tab__block-user-name">Наш
+                                            фахівець</span>
+                                    </div>
+                                    <p class="answers-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                    <div class="questions-block-rectangle"></div>
+                                </div>
+                            </div>
+                            <div class="questions-block">
+                                <div class="questions-block-question">
+                                    <div class="questions-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-user-name"
+                                            class="questions-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="questions-block-user-date"
+                                            class="questions-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <p class="questions-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                </div>
+                                <div class="questions-block-answers">
+                                    <div
+                                        class="questions-block-answers-name-container inf-tab__block-user-name-container">
+                                        <span id="questions-block-answers-name"
+                                            class="questions-block-answers-name inf-tab__block-user-name">Наш
+                                            фахівець</span>
+                                    </div>
+                                    <p class="answers-block-content inf-tab__block-content">
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                        old. Richard McClintock.
+                                    </p>
+                                    <div class="questions-block-rectangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inf-tab__reviews-container">
+                            <div class="specifications-header">
+                                <span>Відгуки про <span id="specifications-value">Google Pixel 8 Pro 12/512GB
+                                        Obsidian</span></span>
+                            </div>
+                            <div class="inf-tab__to-notify-button global-button-reviews">
+                                <button>Залишити свій відгук про товар</button>
+                            </div>
+                            <div class="reviews-block">
+                                <div class="reviews-block-header">
+                                    <div class="reviews-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="reviews-block-user-name"
+                                            class="reviews-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="reviews-block-user-date"
+                                            class="reviews-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <div class="reviews-block-rating-container">
+                                        <canvas class="reviews-block-rating-value" data-rating="4.5" width="120"
+                                            height="20"></canvas>
+                                        <span id="reviews-block-rating-count"
+                                            class="reviews-block-rating-count">4,5</span>
+                                    </div>
+                                </div>
+                                <p class="reviews-block-content inf-tab__block-content">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                    Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                                    Lorem Ipsum passage, and going through the cites of the word in classical
+                                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                                    Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                    ethics, very popular during the Renaissance.
+                                </p>
+                            </div>
+                            <div class="reviews-block">
+                                <div class="reviews-block-header">
+                                    <div class="reviews-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="reviews-block-user-name"
+                                            class="reviews-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="reviews-block-user-date"
+                                            class="reviews-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <div class="reviews-block-rating-container">
+                                        <canvas class="reviews-block-rating-value" data-rating="4.5" width="120"
+                                            height="20"></canvas>
+                                        <span id="reviews-block-rating-count"
+                                            class="reviews-block-rating-count">4,5</span>
+                                    </div>
+                                </div>
+                                <p class="reviews-block-content inf-tab__block-content">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                    Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                                    Lorem Ipsum passage, and going through the cites of the word in classical
+                                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                                    Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                    ethics, very popular during the Renaissance.
+                                </p>
+                            </div>
+                            <div class="reviews-block">
+                                <div class="reviews-block-header">
+                                    <div class="reviews-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="reviews-block-user-name"
+                                            class="reviews-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="reviews-block-user-date"
+                                            class="reviews-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <div class="reviews-block-rating-container">
+                                        <canvas class="reviews-block-rating-value" data-rating="4.5" width="120"
+                                            height="20"></canvas>
+                                        <span id="reviews-block-rating-count"
+                                            class="reviews-block-rating-count">4,5</span>
+                                    </div>
+                                </div>
+                                <p class="reviews-block-content inf-tab__block-content">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                    Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                                    Lorem Ipsum passage, and going through the cites of the word in classical
+                                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                                    Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                    ethics, very popular during the Renaissance.
+                                </p>
+                            </div>
+                            <div class="reviews-block">
+                                <div class="reviews-block-header">
+                                    <div class="reviews-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="reviews-block-user-name"
+                                            class="reviews-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="reviews-block-user-date"
+                                            class="reviews-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <div class="reviews-block-rating-container">
+                                        <canvas class="reviews-block-rating-value" data-rating="4.5" width="120"
+                                            height="20"></canvas>
+                                        <span id="reviews-block-rating-count"
+                                            class="reviews-block-rating-count">4,5</span>
+                                    </div>
+                                </div>
+                                <p class="reviews-block-content inf-tab__block-content">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                    Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                                    Lorem Ipsum passage, and going through the cites of the word in classical
+                                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                                    Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                    ethics, very popular during the Renaissance.
+                                </p>
+                            </div>
+                            <div class="reviews-block">
+                                <div class="reviews-block-header">
+                                    <div class="reviews-block-user-name-container inf-tab__block-user-name-container">
+                                        <span id="reviews-block-user-name"
+                                            class="reviews-block-user-name inf-tab__block-user-name">Покупець
+                                            пристрою</span>
+                                        <span id="reviews-block-user-date"
+                                            class="reviews-block-user-date inf-tab__block-user-date">24 січня
+                                            2024</span>
+                                    </div>
+                                    <div class="reviews-block-rating-container">
+                                        <canvas class="reviews-block-rating-value" data-rating="4.5" width="120"
+                                            height="20"></canvas>
+                                        <span id="reviews-block-rating-count"
+                                            class="reviews-block-rating-count">4,5</span>
+                                    </div>
+                                </div>
+                                <p class="reviews-block-content inf-tab__block-content">
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                    Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                                    Lorem Ipsum passage, and going through the cites of the word in classical
+                                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+                                    1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                                    Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                    ethics, very popular during the Renaissance.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="inf-tab__specifications-container">
+                            <div class="specifications-header">
+                                <span>Характеристики <span id="specifications-value">Google Pixel 8 Pro 12/512GB
+                                        Obsidian</span></span>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Основні</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Зв’язок</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Екран</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Процесор</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Пам’ять</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Основна камера</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Фронтальна камера</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                            <div class="specifications-block">
+                                <div class="specifications-block-header">
+                                    <span>Корпус</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                                <div class="specifications-block-content">
+                                    <span>Параметр</span>
+                                    <span>значення</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inf-tab__right-side">
+                    <div class="inf-tab__specifications-photo">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="inf-tab__specifications-photo-price">
+                            <div class="inf-tab__info-price global-p-short-product">
+                                <span class="global-p-short-product-old-price-container"><span>44770</span> ₴</span>
+                                <span class="global-p-short-product-discount-container">-8%</span>
+                                <span id="inf-tab__info-price-value"
+                                    class="global-p-short-product-new-price-container"><span>41000</span><span
+                                        class="inf-tab__info-price-simb">₴</span></span>
+                            </div>
+                            <div class="inf-tab__to-order inf-tab__block">
+                                <div class="inf-tab__to-order-button global-button">
+                                    <button>Хочу купити</button>
+                                </div>
+                                <div class="inf-tab__to-notify-button global-button-notify">
+                                    <button>Сповістити про наявність</button>
+                                </div>
+                                <div class="inf-tab__to-buy-button global-button">
+                                    <button onclick="toggleBayBtn(event, this)">Купити</button>
+                                </div>
+                                <div class="inf-tab__to-fast-buy-button global-button-fast-buy">
+                                    <button>Швидке замовлення</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- information tab end -->
         <!-- block on sale soon -->
         <div class="block-on-sale-soon">
             <div class="block-on-sale-soon-container global-block-content-container content-container">
@@ -4287,7 +4796,7 @@
         <!-- block on sale soon end -->
         <!-- block description -->
         <div class="block-description">
-            <div class="block-block-description-container content-container">
+            <div class="block-block-description-container">
                 <p class="block-block-description-paragraf">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis commodo odio. Pellentesque metus
                     ex, dapibus id bibendum et, ullamcorper ut urna. In non erat eu arcu tincidunt bibendum id vel ante.
@@ -7569,7 +8078,9 @@
         <script type="text/javascript" src="/scripts/splide.min.js"></script>
         <script type="text/javascript" src='/scripts/header-basic.js'></script>
         <script type="text/javascript" src="/scripts/tab-add-servises.js"></script>
+        <script type="text/javascript" src="/scripts/tabs.js"></script>
         <script type="text/javascript" src="/scripts/carusel.js"></script>
+        <script type="text/javascript" src="/scripts/rating.js"></script>
         <script type="text/javascript" src="/scripts/popup.js"></script>
         <script type="text/javascript" src="/scripts/button-add.js"></script>
         <script type="text/javascript" src="/scripts/tab-info-add-button.js"></script>
@@ -7855,6 +8366,28 @@
             </div>
         </div>
     </footer>
+    <!-- <div class="raiting">
+        <input id="item5" name="raiting" type="radio" value="5" class="raiting__check">
+        <label for="item5" class="raiting__star raiting__star_choose">
+            5 звезда
+        </label>
+        <input id="item4" name="raiting" type="radio" value="4" class="raiting__check">
+        <label for="item4" class="raiting__star raiting__star_choose">
+            4 звезды
+        </label>
+        <input id="item3" name="raiting" type="radio" value="3" class="raiting__check">
+        <label for="item3" class="raiting__star raiting__star_choose">
+            3 звезды
+        </label>
+        <input id="item2" name="raiting" type="radio" value="2" class="raiting__check">
+        <label for="item2" class="raiting__star raiting__star_choose">
+            2 звезды
+        </label>
+        <input id="item1" name="raiting" type="radio" value="1" class="raiting__check">
+        <label for="item1" class="raiting__star raiting__star_choose">
+            1 звёзд
+        </label>
+    </div> -->
 </body>
 
 </html>

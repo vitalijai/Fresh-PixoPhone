@@ -36,16 +36,19 @@
             stroke: var(--colors-gray-700, #2f2c2f);
           }
         }
+
         &.gen-tab__info-wishlist-btn.active {
           path {
             stroke: var(--colors-green-500-primary, #2ea84f);
             fill: var(--colors-green-500-primary, #2ea84f);
           }
         }
+
         &.gen-tab__info-compare-btn.active {
           path {
             stroke: var(--colors-green-500-primary, #2ea84f);
           }
+
           .gen-tab__info-compare-btn_fill {
             fill: var(--colors-green-500-primary, #2ea84f);
           }
@@ -66,7 +69,7 @@
 
   .gen-tab__info-price {
     @include flexbox(
-      $alignItems: baseline,
+      $alignItems: flex-end,
       $self: stretch,
       $justify: space-between
     );
@@ -77,6 +80,7 @@
         $direction: column,
         $justify: space-between
       );
+
       height: 24px;
       position: relative;
 
@@ -143,17 +147,58 @@
     }
 
     .gen-tab__info-price-value {
-      color: var(---dark-gray, #333);
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
+      align-items: flex-end;
 
-      .gen-tab__info-price-simb {
-        font-size: 32px;
-        user-select: none;
+      .global-p-short-product-old-price-container {
+        font-size: 24px;
+      }
+
+      .global-p-short-product-discount-container {
+        padding: 2px 9px 2px 7px;
+
+        font-weight: 700;
+
+        margin-right: 8px;
+        margin-bottom: 10px;
+      }
+
+      .global-p-short-product-new-price-container {
+        color: var(---dark-gray, #333);
+        font-size: 48px;
+
+        .gen-tab__info-price-simb {
+          font-size: 32px;
+          margin-top: 10px;
+          user-select: none;
+        }
       }
     }
+
+    .gen-tab__info-price-cashback,
+    .global-p-short-product-old-price-container {
+      margin-bottom: 7px;
+    }
+  }
+
+  .gen-tab__info-discount {
+    display: flex;
+    padding: 8px 24px 8px 8px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+
+    border-radius: 8px;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 208, 88, 0.2) 0%,
+        rgba(255, 208, 88, 0.2) 100%
+      ),
+      #fff;
+
+    color: var(---dark-gray, #333);
+    text-align: justify;
+    font-size: 12px;
+    font-weight: 400;
   }
 
   .gen-tab__info-delivery {
