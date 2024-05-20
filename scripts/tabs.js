@@ -14,7 +14,7 @@ $(document).ready(function () {
     // Добавляем новый класс к "information-tab"
     $(".information-tab").addClass(newClass);
 
-    // Скрываем все блоки, кроме "information-tab", "accessories-tab" и "service-tab"
+    // Скрываем все блоки, кроме "information-tab"
     $(".general-tab, .accessories-tab, .service-tab").hide();
 
     // Проверяем, если был клик по "tabs__link-description", показываем "general-tab"
@@ -22,24 +22,22 @@ $(document).ready(function () {
       $(".information-tab").removeClass(newClass);
       $(".general-tab").show();
       $(".block-description, .block-on-sale-soon, .block-novelty").show();
+    } else {
+      // Скрываем блок "general-tab"
+      $(".general-tab").hide();
+      $(".block-description").hide();
+      $(".block-on-sale-soon").hide();
+      $(".block-novelty").hide();
     }
 
     // Проверяем, если был клик по "tabs__link-acces", показываем "accessories-tab"
     if ($(this).hasClass("tabs__link-acces")) {
       $(".accessories-tab").show();
-      // Скрываем блоки, кроме "accessories-tab"
-      $(
-        ".general-tab, .block-description, .block-on-sale-soon, .block-novelty"
-      ).hide();
     }
 
     // Проверяем, если был клик по "tabs__link-service", показываем "service-tab"
     if ($(this).hasClass("tabs__link-service")) {
       $(".service-tab").show();
-      // Скрываем блоки, кроме "service-tab"
-      $(
-        ".general-tab, .block-description, .block-on-sale-soon, .block-novelty"
-      ).hide();
     }
   });
 

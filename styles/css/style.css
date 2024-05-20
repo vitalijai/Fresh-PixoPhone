@@ -3467,6 +3467,277 @@ a:visited {
   padding: 0px 32px 0px 24px;
   gap: 8px;
 }
+.common-template .accessories-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .accessories-tab .accessories-page-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  align-self: stretch;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-header-container {
+  display: flex;
+  padding: 32px 48px 24px 48px;
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(---white, #fff);
+  border-radius: 24px 24px 0 0;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-header-container .accessories-page-header {
+  font-size: 24px;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  align-self: stretch;
+  background: var(---disabled, #e9e9e9);
+  border-radius: 0 0 24px 24px;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left {
+  display: flex;
+  width: 240px;
+  padding: 32px 32px 32px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(---white, #fff);
+  border-radius: 0 0 0 24px;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 4px;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox + label:before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 17.8px;
+  height: 16px;
+  border-radius: 4px;
+  border: 2px solid var(--colors-gray-200, #e5e4e2);
+  background: var(--colors-white, #fff);
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox:hover + label:before {
+  border: 2px solid var(--colors-green-500-primary, #2ea84f);
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox:disabled:hover + label:before {
+  border: 2px solid var(--colors-gray-200, #e5e4e2);
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox:checked + label:before {
+  border: 2px solid var(--colors-green-500-primary, #2ea84f);
+  background: #2ea84f;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: var(---disabled, #e9e9e9);
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox:disabled + label {
+  cursor: auto;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li .accessories-page-checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: var(--colors-white, #fff);
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 var(--colors-white, #fff), 4px 0 0 var(--colors-white, #fff), 4px -2px 0 var(--colors-white, #fff), 4px -4px 0 var(--colors-white, #fff), 4px -6px 0 var(--colors-white, #fff), 4px -8px 0 var(--colors-white, #fff);
+  transform: rotate(45deg);
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li label {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li label .accessories-page-checkbox-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li label .accessories-page-checkbox-box .accessories-page-checkbox-value {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-weight: 400;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-left .accessories-page-checkbox-ul .accessories-page-checkbox-li label .accessories-page-checkbox-box .accessories-page-checkbox-count {
+  display: flex;
+  padding: 2px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(---radius-block, 24px);
+  background: var(--colors-gray-100, #f7f7f7);
+  color: var(--colors-gray-400, #929292);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  flex: 1 0 0;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-right .global-p-short-product {
+  justify-content: flex-end !important;
+  gap: 24px;
+}
+.common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-right .global-button-show-more button {
+  border-radius: 0 0 24px 0;
+}
+.common-template .service-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .service-tab .service-page-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  align-self: stretch;
+  flex-direction: column;
+  border-radius: 24px;
+  background: var(---disabled, #e9e9e9);
+  /* block-shadow */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.common-template .service-tab .service-page-container .service-page-header {
+  display: flex;
+  padding: 32px 48px 24px 48px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  background: var(---white, #fff);
+  border-radius: 24px 24px 0 0;
+  color: var(---dark-gray, #333);
+  font-size: 24px;
+}
+.common-template .service-tab .service-page-container .service-page-content {
+  display: flex;
+  width: var(---width, 1366px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block {
+  display: flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  background: var(--colors-white, #fff);
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block:last-child {
+  border-radius: 0 0 24px 24px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-img {
+  width: 200px;
+  height: 200px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content {
+  display: flex;
+  padding-top: 12px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-header p,
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-header span {
+  align-self: stretch;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-header span {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 20px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-header p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: justify;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-bottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-bottom .service-page-block-value {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 24px;
+  text-align: center;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-bottom .service-page-block-value span {
+  font-size: 32px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-bottom .service-page-button {
+  display: flex;
+  height: var(---button-height, 48px);
+  padding: 0px 32px 0px 24px;
+  justify-content: center;
+  align-items: center;
+  flex: unset;
+  width: 160px;
+  min-width: 160px;
+}
+.common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-bottom .service-page-button button {
+  gap: 8px;
+}
 
 .footer {
   display: flex;
