@@ -283,11 +283,11 @@
           }
         }
 
-        .global-button-notify,
-        .global-button-fast-buy,
-        .inf-tab__to-order-button {
-          display: none;
-        }
+        // .global-button-notify,
+        // .global-button-fast-buy,
+        // .inf-tab__to-order-button {
+        //   display: none;
+        // }
       }
     }
   }
@@ -324,74 +324,6 @@
     }
     .inf-tab__reviews-container,
     .inf-tab__specifications-container {
-      display: none !important;
-    }
-  }
-
-  &.to-order {
-    .inf-tab__info-price {
-      justify-content: flex-end !important;
-    }
-
-    .inf-tab__to-order-button {
-      display: flex !important;
-    }
-
-    .global-p-short-product-old-price-container,
-    .global-p-short-product-discount-container,
-    .global-button-notify,
-    .inf-tab__to-buy-button,
-    .global-button-fast-buy {
-      display: none !important;
-    }
-  }
-
-  &.disabled,
-  &.no-price {
-    .inf-tab__info-price {
-      justify-content: flex-end !important;
-
-      .global-p-short-product-new-price-container {
-        color: var(--colors-gray-300, #c0c0c0) !important;
-      }
-    }
-
-    .inf-tab__info-price-cashback,
-    .global-p-short-product-old-price-container,
-    .global-p-short-product-discount-container,
-    .inf-tab__to-buy-button,
-    .global-button-fast-buy {
-      display: none !important;
-    }
-  }
-
-  &.disabled {
-    .global-button-notify {
-      display: flex !important;
-    }
-
-    .global-p-short-product-old-price-container,
-    .global-p-short-product-discount-container,
-    .global-button {
-      display: none !important;
-    }
-  }
-
-  &.no-price {
-    .inf-tab__info-price {
-      .global-p-short-product-new-price-container {
-        font-size: 24px !important;
-      }
-    }
-
-    .inf-tab__to-order-button {
-      display: flex !important;
-    }
-
-    .global-p-short-product-old-price-container,
-    .global-p-short-product-discount-container,
-    .inf-tab__info-price-simb,
-    .global-button-notify {
       display: none !important;
     }
   }

@@ -394,7 +394,12 @@
     cursor: pointer;
 
     border-radius: 4px;
-    background: var(--blue, #0eb7d4);
+    background: linear-gradient(
+        0deg,
+        var(--colors-blue-500, #318ce7) 0%,
+        var(--colors-blue-500, #318ce7) 100%
+      ),
+      var(--colors-white, #fff);
 
     color: var(--colors-white, #fff);
     font-size: 14px;
@@ -402,7 +407,7 @@
     border: none;
 
     &:hover {
-      background: var(--blue, #37afc4);
+      background: var(--colors-blue-600, #2672be);
     }
   }
 }

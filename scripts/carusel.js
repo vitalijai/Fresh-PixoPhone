@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     height: 90,
     gap: 8,
     pagination: false,
-    arrows: true,
+    arrows: false,
     isNavigation: true,
     focus: "center",
     // type: "loop",

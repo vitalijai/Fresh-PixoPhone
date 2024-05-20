@@ -669,13 +669,13 @@ a:visited {
   width: 100%;
   cursor: pointer;
   border-radius: 4px;
-  background: var(--blue, #0eb7d4);
+  background: linear-gradient(0deg, var(--colors-blue-500, #318ce7) 0%, var(--colors-blue-500, #318ce7) 100%), var(--colors-white, #fff);
   color: var(--colors-white, #fff);
   font-size: 14px;
   border: none;
 }
 .global-button-send button:hover {
-  background: var(--blue, #37afc4);
+  background: var(--colors-blue-600, #2672be);
 }
 
 .back-to-top {
@@ -3506,11 +3506,6 @@ a:visited {
   align-self: stretch;
   gap: 16px;
 }
-.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .global-button-notify,
-.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .global-button-fast-buy,
-.common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__to-order-button {
-  display: none;
-}
 .common-template .information-tab.specifications {
   display: flex;
 }
@@ -3539,56 +3534,6 @@ a:visited {
 }
 .common-template .information-tab.questions .inf-tab__reviews-container,
 .common-template .information-tab.questions .inf-tab__specifications-container {
-  display: none !important;
-}
-.common-template .information-tab.to-order .inf-tab__info-price {
-  justify-content: flex-end !important;
-}
-.common-template .information-tab.to-order .inf-tab__to-order-button {
-  display: flex !important;
-}
-.common-template .information-tab.to-order .global-p-short-product-old-price-container,
-.common-template .information-tab.to-order .global-p-short-product-discount-container,
-.common-template .information-tab.to-order .global-button-notify,
-.common-template .information-tab.to-order .inf-tab__to-buy-button,
-.common-template .information-tab.to-order .global-button-fast-buy {
-  display: none !important;
-}
-.common-template .information-tab.disabled .inf-tab__info-price, .common-template .information-tab.no-price .inf-tab__info-price {
-  justify-content: flex-end !important;
-}
-.common-template .information-tab.disabled .inf-tab__info-price .global-p-short-product-new-price-container, .common-template .information-tab.no-price .inf-tab__info-price .global-p-short-product-new-price-container {
-  color: var(--colors-gray-300, #c0c0c0) !important;
-}
-.common-template .information-tab.disabled .inf-tab__info-price-cashback,
-.common-template .information-tab.disabled .global-p-short-product-old-price-container,
-.common-template .information-tab.disabled .global-p-short-product-discount-container,
-.common-template .information-tab.disabled .inf-tab__to-buy-button,
-.common-template .information-tab.disabled .global-button-fast-buy, .common-template .information-tab.no-price .inf-tab__info-price-cashback,
-.common-template .information-tab.no-price .global-p-short-product-old-price-container,
-.common-template .information-tab.no-price .global-p-short-product-discount-container,
-.common-template .information-tab.no-price .inf-tab__to-buy-button,
-.common-template .information-tab.no-price .global-button-fast-buy {
-  display: none !important;
-}
-.common-template .information-tab.disabled .global-button-notify {
-  display: flex !important;
-}
-.common-template .information-tab.disabled .global-p-short-product-old-price-container,
-.common-template .information-tab.disabled .global-p-short-product-discount-container,
-.common-template .information-tab.disabled .global-button {
-  display: none !important;
-}
-.common-template .information-tab.no-price .inf-tab__info-price .global-p-short-product-new-price-container {
-  font-size: 24px !important;
-}
-.common-template .information-tab.no-price .inf-tab__to-order-button {
-  display: flex !important;
-}
-.common-template .information-tab.no-price .global-p-short-product-old-price-container,
-.common-template .information-tab.no-price .global-p-short-product-discount-container,
-.common-template .information-tab.no-price .inf-tab__info-price-simb,
-.common-template .information-tab.no-price .global-button-notify {
   display: none !important;
 }
 .common-template .block-cheaper-together {
