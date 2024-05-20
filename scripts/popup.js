@@ -170,14 +170,14 @@ $(document).ready(function () {
     });
   }
 
-  //Открытие показать версию смартфонов
+  //Показать блок версий смартфонов
   initModal(
     ".gen-tab__device-version-a__more",
     ".pop-up-smartphone-version-modal",
     ".pop-up-smartphone-version-close",
     "#popUpSmartphoneVersion"
   );
-  //Открытие показать кнопку оповещение
+  //Показать блок создания оповещения
   initModal(
     ".gen-tab__to-notify-button",
     ".pop-up-notify-modal",
@@ -185,7 +185,7 @@ $(document).ready(function () {
     "#popUpNotify",
     ".pop-up-notify-button"
   );
-  //Открытие показать кнопку оповещение
+  //Показать блок вопроса
   initModal(
     ".inf-tab__to-questions-button",
     ".pop-up-user-question-modal",
@@ -193,12 +193,20 @@ $(document).ready(function () {
     "#popUpUserQuestion",
     ".pop-up-user-question-button"
   );
-  //Открытие показать кнопку оповещение
+  //Показать блок отзывов
   initModal(
     ".inf-tab__to-reviews-button",
     ".pop-up-user-review-modal",
     ".pop-up-user-review-close",
     "#popUpUserReview",
     ".pop-up-user-review-button"
+  );
+  //Показать блок быстрого заказа
+  initModal(
+    ".gen-tab__to-fast-buy-button",
+    ".pop-up-fast-buy-modal",
+    ".pop-up-fast-buy-close",
+    "#popUpFastBuy",
+    ".pop-up-fast-buy-button"
   );
 });

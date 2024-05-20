@@ -4,6 +4,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--colors-green-500-primary, #2ea84f)
     var(--colors-white, #fff);
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -22,12 +23,22 @@ html {
 //   // border-radius: 20px; /* Округление бегунка */
 //   // border: 3px solid var(--colors-white, #fff); /* Оформление границ бегунка */
 // }
-body {
-  background: var(--bg-color, #f5f5f5);
+body,
+input,
+textarea {
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+body {
+  background: var(--bg-color, #f5f5f5);
+}
+
+img,
+button {
+  user-select: none;
 }
 
 a,
@@ -40,8 +51,10 @@ a:visited {
 .content-container {
   width: min(95%, var(---width, 1366px));
 }
+
 .screen {
   display: none;
+
   &.overflow {
     display: block;
     background: rgba(0, 0, 0, 0.5);

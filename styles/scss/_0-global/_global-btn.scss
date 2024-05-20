@@ -380,7 +380,8 @@
   }
 }
 
-.global-button-send {
+.global-button-send,
+.global-button-send-fast-buy {
   width: 100%;
 
   button {
@@ -394,17 +395,32 @@
     cursor: pointer;
 
     border-radius: 4px;
+
+    color: var(--colors-white, #fff);
+    font-size: 14px;
+
+    border: none;
+  }
+}
+
+.global-button-send-fast-buy {
+  button {
+    background: var(--colors-green-500-primary, #2ea84f);
+
+    &:hover {
+      background: var(--colors-green-600, #25863f);
+    }
+  }
+}
+
+.global-button-send {
+  button {
     background: linear-gradient(
         0deg,
         var(--colors-blue-500, #318ce7) 0%,
         var(--colors-blue-500, #318ce7) 100%
       ),
       var(--colors-white, #fff);
-
-    color: var(--colors-white, #fff);
-    font-size: 14px;
-
-    border: none;
 
     &:hover {
       background: var(--colors-blue-600, #2672be);
