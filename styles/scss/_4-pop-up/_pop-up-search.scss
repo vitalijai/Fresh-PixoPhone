@@ -57,6 +57,18 @@
           border: none;
           background: var(--modal-colors-white, #fff);
           cursor: pointer;
+
+          &:hover {
+            path {
+              stroke: var(--colors-gray-300, #c0c0c0);
+            }
+          }
+
+          &:active {
+            path {
+              stroke: var(---pink-btn, #f37d7d);
+            }
+          }
         }
       }
     }

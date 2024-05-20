@@ -2816,6 +2816,9 @@
                                     <!-- <div
                                         class="gen-tab__carousel-discount-sale global-block-discount-sale global-block-discount">
                                         SALE </div> -->
+                                    <!-- <div
+                                        class="gen-tab__carousel-discount-outlet global-block-discount-outlet global-block-discount">
+                                        Outlet </div> -->
                                 </div>
                             </div>
                             <div id="secondary-slider" class="secondary-slider splide">
@@ -3037,15 +3040,15 @@
                         <!-- <div class="gen-tab__to-order-button global-button">
                             <button>Хочу купити</button>
                         </div> -->
-                        <!-- <div class="gen-tab__to-notify-button global-button-notify">
+                        <div class="gen-tab__to-notify-button global-button-notify">
                             <button>Сповістити про наявність</button>
-                        </div> -->
-                        <div class="gen-tab__to-buy-button global-button">
+                        </div>
+                        <!-- <div class="gen-tab__to-buy-button global-button">
                             <button onclick="toggleBayBtn(event, this)">Купити</button>
                         </div>
                         <div class="gen-tab__to-fast-buy-button global-button-fast-buy">
                             <button>Швидке замовлення</button>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="gen-tab__constructor gen-tab__block">
                         <div class="gen-tab__device-color constructor-container">
@@ -3724,7 +3727,7 @@
                                 <span>Питання про <span id="specifications-value">Google Pixel 8 Pro 12/512GB
                                         Obsidian</span></span>
                             </div>
-                            <div class="inf-tab__to-notify-button global-button-questions">
+                            <div class="inf-tab__to-questions-button global-button-questions">
                                 <button>Залишились питання про товар?</button>
                                 <span>Наші фахівці мають відповідь на будь-яке ваше питання про товар</span>
                             </div>
@@ -3875,7 +3878,7 @@
                                 <span>Відгуки про <span id="specifications-value">Google Pixel 8 Pro 12/512GB
                                         Obsidian</span></span>
                             </div>
-                            <div class="inf-tab__to-notify-button global-button-reviews">
+                            <div class="inf-tab__to-reviews-button global-button-reviews">
                                 <button>Залишити свій відгук про товар</button>
                             </div>
                             <div class="reviews-block">
@@ -8480,10 +8483,11 @@
             </div>
         </div>
         <!-- novelty end -->
+
         <!-- PopUp Photo -->
         <div id="popUpPhotoModal" class="pop-up-photo-modal">
             <div class="pop-up-photo-modal-content">
-                <span class="close">&times;</span>
+                <span class="pop-up-photo-close">&times;</span>
                 <div id="popUpPhoto" class="splide">
                     <div class="splide__track">
                         <ul class="splide__list">
@@ -10431,10 +10435,146 @@
             </div>
         </div>
         <!-- Search PopUp End -->
-
+        <!-- PopUp Smartphone Version -->
+        <div id="popUpSmartphoneVersion" class="pop-up-smartphone-version-modal global-pop-modal">
+            <div class="pop-up-smartphone-version-modal-content global-pop-modal-content">
+                <div class="smartphone-version-modal-header global-pop-modal-header">
+                    <span>Версія: Global, EU, JP, US, HK</span>
+                    <span class="pop-up-smartphone-version-close global-pop-up-close"></span>
+                </div>
+            </div>
+        </div>
+        <!-- PopUp Smartphone Version End-->
+        <!-- PopUp Notify -->
+        <div id="popUpNotify" class="pop-up-notify-modal global-pop-modal">
+            <div class="pop-up-notify-modal-content global-pop-modal-content user-notify">
+                <div class="notify-modal-header-block global-pop-modal-header">
+                    <div class="global-pop-modal-header-top">
+                        <span>Ваші контакти</span>
+                        <span class="pop-up-notify-close global-pop-up-close"></span>
+                    </div>
+                    <div class="global-pop-modal-header-bottom">
+                        <span>щоб ми повідомили, коли товар з’явиться у продажу</span>
+                    </div>
+                </div>
+                <div class="notify-modal-form-container global-modal-form-container">
+                    <form method="get" action="#" target="_top" autocomplete="off" class="notify-modal-form">
+                        <div>
+                            <input name="q" placeholder="Ім’я" type="text" inputmode="verbatim" value=""
+                                class="notify-modal-form__name">
+                        </div>
+                        <div>
+                            <input name="q" placeholder="Номер телефону" type="tel" inputmode="tel" value=""
+                                class="notify-modal-form__number">
+                        </div>
+                        <div>
+                            <input name="q" placeholder="Email" type="email" inputmode="email" value=""
+                                class="notify-modal-form__email">
+                        </div>
+                    </form>
+                </div>
+                <div class="pop-up-notify-button global-button-notify-send global-button-send">
+                    <button>Надіслати</button>
+                </div>
+            </div>
+        </div>
+        <!-- PopUp Notify End-->
+        <!-- PopUp user question -->
+        <div id="popUpUserQuestion" class="pop-up-user-question-modal global-pop-modal">
+            <div class="pop-up-user-question-modal-content global-pop-modal-content user-response">
+                <div class="user-question-modal-header-block global-pop-modal-header">
+                    <div class="global-pop-modal-header-top">
+                        <span>Ваше питання</span>
+                        <span class="pop-up-user-question-close global-pop-up-close"></span>
+                    </div>
+                    <div class="global-pop-modal-header-bottom">
+                        <span>про товар </span>
+                        <span class="pop-up-user-question-value">Google Pixel 7 Pro 12/512GB Obsidian</span>
+                    </div>
+                </div>
+                <div class="user-question-modal-form-container global-modal-form-container">
+                    <form method="get" action="#" target="_top" autocomplete="off" class="user-question-modal-form">
+                        <div>
+                            <input name="q" placeholder="Ім’я" type="text" inputmode="verbatim" value=""
+                                class="user-question-modal-form__name">
+                        </div>
+                        <div>
+                            <input name="q" placeholder="Email" type="email" inputmode="email" value=""
+                                class="user-question-modal-form__email">
+                        </div>
+                        <div class="user-question-modal-textarea global-modal-textarea">
+                            <textarea name="q" id="user-question-modal-form__question" placeholder="Ваше питання"
+                                autocomplete="off"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="pop-up-user-question-button global-button-user-question-send global-button-send">
+                    <button type="submit">Надіслати</button>
+                </div>
+            </div>
+        </div>
+        <!-- PopUp user question End-->
+        <!-- PopUp user review -->
+        <div id="popUpUserReview" class="pop-up-user-review-modal global-pop-modal">
+            <div class="pop-up-user-review-modal-content global-pop-modal-content user-response">
+                <div class="user-review-modal-header-block global-pop-modal-header">
+                    <div class="global-pop-modal-header-top">
+                        <span>Ваш відгук</span>
+                        <span class="pop-up-user-review-close global-pop-up-close"></span>
+                    </div>
+                    <div class="global-pop-modal-header-bottom">
+                        <span>про товар </span>
+                        <span class="pop-up-user-review-value">Google Pixel 7 Pro 12/512GB Obsidian</span>
+                    </div>
+                </div>
+                <div class="user-review-modal-form-container global-modal-form-container">
+                    <form method="get" action="#" target="_top" autocomplete="off" class="user-review-modal-form">
+                        <div>
+                            <input name="q" placeholder="Ім’я" type="text" inputmode="verbatim" value=""
+                                class="user-review-modal-form__name">
+                        </div>
+                        <div>
+                            <input name="q" placeholder="Email" type="email" inputmode="email" value=""
+                                class="user-review-modal-form__email">
+                        </div>
+                        <div class="user-review-raiting global-raiting raiting">
+                            <input id="item1" name="raiting" type="radio" value="1" class="raiting__check">
+                            <label for="item1" class="raiting__star raiting__star_choose">
+                                1 звёзд
+                            </label>
+                            <input id="item2" name="raiting" type="radio" value="2" class="raiting__check">
+                            <label for="item2" class="raiting__star raiting__star_choose">
+                                2 звезды
+                            </label>
+                            <input id="item3" name="raiting" type="radio" value="3" class="raiting__check">
+                            <label for="item3" class="raiting__star raiting__star_choose">
+                                3 звезды
+                            </label>
+                            <input id="item4" name="raiting" type="radio" value="4" class="raiting__check">
+                            <label for="item4" class="raiting__star raiting__star_choose">
+                                4 звезды
+                            </label>
+                            <input id="item5" name="raiting" type="radio" value="5" class="raiting__check">
+                            <label for="item5" class="raiting__star raiting__star_choose">
+                                5 звезд
+                            </label>
+                        </div>
+                        <div class="user-review-modal-textarea global-modal-textarea">
+                            <textarea name="q" id="user-review-modal-form__review" placeholder="Ваші враження"
+                                autocomplete="off"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="pop-up-user-review-button global-button-user-review-send global-button-send">
+                    <button type="submit">Надіслати</button>
+                </div>
+            </div>
+        </div>
+        <!-- PopUp user review End-->
         <!-- Button TOP -->
         <a href="#top" id="back-to-top" class="back-to-top" title="Догори"></a>
         <!-- Button TOP End-->
+
         <!-- scripts -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="/scripts/slick.min.js"></script>
@@ -10729,28 +10869,6 @@
             </div>
         </div>
     </footer>
-    <!-- <div class="raiting">
-        <input id="item5" name="raiting" type="radio" value="5" class="raiting__check">
-        <label for="item5" class="raiting__star raiting__star_choose">
-            5 звезда
-        </label>
-        <input id="item4" name="raiting" type="radio" value="4" class="raiting__check">
-        <label for="item4" class="raiting__star raiting__star_choose">
-            4 звезды
-        </label>
-        <input id="item3" name="raiting" type="radio" value="3" class="raiting__check">
-        <label for="item3" class="raiting__star raiting__star_choose">
-            3 звезды
-        </label>
-        <input id="item2" name="raiting" type="radio" value="2" class="raiting__check">
-        <label for="item2" class="raiting__star raiting__star_choose">
-            2 звезды
-        </label>
-        <input id="item1" name="raiting" type="radio" value="1" class="raiting__check">
-        <label for="item1" class="raiting__star raiting__star_choose">
-            1 звёзд
-        </label>
-    </div> -->
 </body>
 
 </html>

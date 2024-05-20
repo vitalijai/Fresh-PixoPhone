@@ -1,0 +1,131 @@
+.global-pop-modal {
+  z-index: 100;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  .global-pop-modal-content {
+    display: flex;
+    margin: 14.5% auto;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    border-radius: 28px;
+    background: var(--colors-white, #fff);
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
+
+    &.user-notify {
+      width: 480px;
+    }
+
+    &.user-response {
+      width: 640px;
+    }
+
+    .global-pop-modal-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      align-self: stretch;
+
+      color: var(---dark-gray, #333);
+      font-weight: 400;
+
+      .global-pop-modal-header-top {
+        display: flex;
+        height: 24px;
+        align-items: center;
+        gap: 32px;
+        justify-content: space-between;
+        align-self: stretch;
+
+        font-size: 24px;
+      }
+
+      .global-pop-modal-header-bottom {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        gap: 8px;
+
+        font-size: 14px;
+
+        .pop-up-user-question-value {
+          color: #808080;
+        }
+      }
+    }
+
+    .global-modal-form-container {
+      display: flex;
+      align-self: stretch;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+        width: 100%;
+
+        div {
+          display: flex;
+          height: 40px;
+          padding: 0px 16px;
+          align-items: center;
+          align-self: stretch;
+
+          border-radius: 4px;
+          background: #fafafa;
+
+          /* form-inner-shadow */
+          box-shadow: 2px 2px 4px 0px rgba(216, 216, 216, 0.5) inset;
+
+          color: var(--gray, #c0c0c0);
+          font-size: 12px;
+          font-weight: 400;
+
+          input {
+            width: 100%;
+            border: none;
+            background: #fafafa;
+            outline: none;
+          }
+        }
+
+        .global-raiting {
+          flex-direction: row-reverse;
+          background: transparent;
+          box-shadow: unset;
+        }
+
+        .global-modal-textarea {
+          display: flex;
+          height: 120px;
+          padding: 13px 16px;
+          align-items: flex-start;
+          align-self: stretch;
+
+          textarea {
+            resize: none;
+            outline: none;
+            background: #fafafa;
+            height: 120px;
+            width: 100%;
+          }
+
+          textarea:valid {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

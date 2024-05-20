@@ -147,7 +147,7 @@
             border: none;
             position: relative;
             border-radius: 28px;
-            background: #fff;
+            background: var(--colors-white, #fff);
             cursor: pointer;
             /* micro */
             box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.24);
@@ -188,7 +188,7 @@
               bottom: -2px;
 
               border-radius: 8px;
-              background: #fff;
+              background: var(--colors-white, #fff);
 
               /* micro */
               box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.24);
@@ -199,6 +199,11 @@
               line-height: 10px; /* 100% */
             }
 
+            .global-block-credit__btn {
+              &:hover {
+                background: var(--colors-gray-100, #f7f7f7);
+              }
+            }
             .global-block-credit-mono__btn {
               &::after {
                 background: url(/images/bank\ mono.png) no-repeat center/contain;
@@ -463,6 +468,116 @@
       cursor: pointer;
     }
   }
+
+  .slick-list {
+    border-radius: 0 0 24px 24px;
+  }
+
+  .global-block-cheaper-container {
+    flex: 1 0 0;
+
+    .global-block-product-container {
+      display: flex;
+      align-items: flex-end;
+      align-self: stretch;
+
+      .global-block-container {
+        min-width: 260px;
+        max-width: 300px;
+        padding: 16px;
+        justify-content: space-between;
+        align-self: stretch;
+
+        &.not-color {
+          .global-block-colors {
+            display: none;
+          }
+        }
+
+        .global-block-container-bottom {
+          .global-block-container-bottom-cheaper {
+            color: var(--colors-gray-400, #929292);
+            font-size: 24px;
+
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .global-block-plus-container {
+      display: flex;
+      padding: 0px 12px;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      // flex: 1 0 0;
+      background: var(--colors-white, #fff);
+
+      &::after {
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none"><path d="M16.25 4.5L16.25 28.5" stroke="%23DBF6E2" stroke-width="8" stroke-linecap="round"/><path d="M4.25 16.5L28.25 16.5" stroke="%23DBF6E2" stroke-width="8" stroke-linecap="round"/></svg>');
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .global-block-price-container {
+    display: flex;
+    padding: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--nums-block-radius, 32px);
+    align-self: stretch;
+
+    background: var(--colors-white, #fff);
+
+    .global-p-short-product {
+      display: flex;
+      height: var(--nums-block-radius, 32px);
+      padding: 6px 0px;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 8px;
+      flex: 1 0 0;
+
+      .global-p-short-product-discount-container {
+        display: flex;
+        padding: 4px 12px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .global-block-container-bottom-new-price {
+        color: var(--colors-gray-700, #2f2c2f);
+        font-size: 32px;
+
+        span {
+          margin-top: 7px;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .global-button {
+      display: flex;
+      height: var(---button-height, 48px);
+      justify-content: center;
+      align-items: center;
+      flex: unset;
+      // min-width: 140px;
+      // max-width: 300px;
+      width: 200px;
+
+      button {
+        display: flex;
+        padding: 0px 32px 0px 24px;
+        gap: 8px;
+      }
+    }
+  }
 }
 
 .block-on-sale-soon {
@@ -534,12 +649,20 @@
     }
   }
 
-  .global-block-discount-sale {
-    background: var(--colors-violet-300, #b57edc);
+  .global-block-discount-sale,
+  .global-block-discount-outlet {
     &::before {
       content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M1 4.88235C2.18261 4.88235 3.08696 5.8 3.08696 7C3.08696 8.2 2.18261 9.11765 1 9.11765V11.9412C1 12.5059 1.48696 13 2.04348 13L15.9565 13C16.513 13 17 12.5059 17 11.9412V9.11765C15.8174 9.11765 14.913 8.2 14.913 7C14.913 5.8 15.8174 4.88235 17 4.88235V2.05882C17 1.49412 16.513 1 15.9565 1L2.04348 1C1.48696 1 1 1.49412 1 2.05882V4.88235Z" stroke="%23fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" /><path d="M6.6 6.05761C7.12991 6.05761 7.575 5.61918 7.575 5.05908C7.575 4.49897 7.12991 4.06055 6.6 4.06055C6.07009 4.06055 5.625 4.49897 5.625 5.05908C5.625 5.61918 6.07009 6.05761 6.6 6.05761Z" stroke="%23fff" stroke-width="1.25" /><path d="M10.6 10.1162C11.1299 10.1162 11.575 9.67778 11.575 9.11767C11.575 8.55756 11.1299 8.11914 10.6 8.11914C10.0701 8.11914 9.625 8.55756 9.625 9.11767C9.625 9.67778 10.0701 10.1162 10.6 10.1162Z" stroke="%23fff" stroke-width="1.25" /><path d="M11.8008 3.8418L5.40078 10.3359" stroke="%23fff" stroke-width="1.25" stroke-linecap="round" /></svg>');
       width: 18px;
       height: 14px;
     }
+  }
+
+  .global-block-discount-sale {
+    background: var(--colors-violet-300, #b57edc);
+  }
+
+  .global-block-discount-outlet {
+    background: var(--colors-yellow-500, #ffbf00);
   }
 }

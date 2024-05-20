@@ -116,7 +116,7 @@ $(document).ready(function () {
     $("html").addClass("no-scroll");
   });
 
-  $(".close").on("click", function () {
+  $(".pop-up-photo-close").on("click", function () {
     $("#popUpPhotoModal").fadeOut(function () {
       $(this).css("display", "none");
     });
@@ -131,4 +131,74 @@ $(document).ready(function () {
       $("html").removeClass("no-scroll");
     }
   });
+});
+
+//Универсальная логика для других попап
+$(document).ready(function () {
+  function initModal(triggerClass, modalClass, closeClass, overlayId, sendBtn) {
+    $(triggerClass).on("click", function () {
+      $(modalClass).fadeIn();
+      $("html").addClass("no-scroll");
+      $(".screen").addClass("overflow");
+      $(".screen.overflow").css("z-index", "22");
+    });
+
+    function outSpec() {
+      $(modalClass).fadeOut();
+      $("html").removeClass("no-scroll");
+      $(".screen").removeClass("overflow");
+      $(".screen").css("z-index", "20");
+    }
+
+    $(closeClass).on("click", function () {
+      outSpec();
+    });
+
+    $(sendBtn).on("click", function () {
+      outSpec();
+    });
+
+    $(window).on("click", function (event) {
+      if ($(event.target).is(overlayId)) {
+        $(overlayId).fadeOut(function () {
+          $(modalClass).fadeOut();
+        });
+        if (!$(overlayId).is()) {
+          outSpec();
+        }
+      }
+    });
+  }
+
+  //Открытие показать версию смартфонов
+  initModal(
+    ".gen-tab__device-version-a__more",
+    ".pop-up-smartphone-version-modal",
+    ".pop-up-smartphone-version-close",
+    "#popUpSmartphoneVersion"
+  );
+  //Открытие показать кнопку оповещение
+  initModal(
+    ".gen-tab__to-notify-button",
+    ".pop-up-notify-modal",
+    ".pop-up-notify-close",
+    "#popUpNotify",
+    ".pop-up-notify-button"
+  );
+  //Открытие показать кнопку оповещение
+  initModal(
+    ".inf-tab__to-questions-button",
+    ".pop-up-user-question-modal",
+    ".pop-up-user-question-close",
+    "#popUpUserQuestion",
+    ".pop-up-user-question-button"
+  );
+  //Открытие показать кнопку оповещение
+  initModal(
+    ".inf-tab__to-reviews-button",
+    ".pop-up-user-review-modal",
+    ".pop-up-user-review-close",
+    "#popUpUserReview",
+    ".pop-up-user-review-button"
+  );
 });
