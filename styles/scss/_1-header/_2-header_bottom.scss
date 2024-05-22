@@ -91,8 +91,10 @@
 
     .header-bottom-controls {
       @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
+      user-select: none;
 
       gap: var(---gap-small, 16px);
+
       .header-bottom-controls__btn {
         background: var(--colors-green-500-primary, #2ea84f);
         @include flexbox($justify: center, $alignItems: center);
@@ -105,6 +107,44 @@
 
         &:hover {
           background: var(--colors-green-700, #1d6d33);
+        }
+      }
+
+      .header-bottom-cart {
+        .header-bottom-counter {
+          display: none;
+        }
+
+        &.counter {
+          position: relative;
+
+          .header-bottom-counter {
+            display: flex;
+            padding: 2px 3px;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+
+            position: absolute;
+            right: 6px;
+            top: 12px;
+
+            border-radius: 28px;
+            border: 1px solid var(--colors-green-500-primary, #2ea84f);
+            background: var(--colors-white, #fff);
+
+            color: var(--colors-green-500-primary, #2ea84f);
+            text-align: center;
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 6px; /* 75% */
+          }
+
+          &:hover {
+            .header-bottom-counter {
+              border: 1px solid var(--colors-green-700, #1d6d33);
+            }
+          }
         }
       }
     }

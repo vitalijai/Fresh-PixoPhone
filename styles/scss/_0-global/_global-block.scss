@@ -135,7 +135,11 @@
           }
 
           img {
+            width: 232px;
             height: 232px;
+            object-fit: contain;
+
+            border-radius: 8px;
           }
 
           .global-block-credit__btn {

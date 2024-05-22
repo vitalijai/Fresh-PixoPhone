@@ -7,6 +7,15 @@
   top: 0;
   bottom: 0;
 
+  &.pop-up-to-cart-modal {
+    display: block;
+    visibility: hidden;
+
+    &.overflow {
+      visibility: visible;
+    }
+  }
+
   .global-pop-modal-content {
     display: flex;
     margin: 14.5% auto;
@@ -20,7 +29,7 @@
     box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
 
     &.user-fast-buy {
-      width: 480px;
+      width: calc(480px - (32px * 2));
 
       .global-modal-form-container {
         flex-direction: column;
@@ -29,11 +38,21 @@
     }
 
     &.user-notify {
-      width: 480px;
+      width: calc(480px - (32px * 2));
     }
 
     &.user-response {
-      width: 640px;
+      width: calc(640px - (32px * 2));
+    }
+
+    &.user-cart,
+    &.user-to-cart {
+      width: calc(960px - (32px * 2));
+      gap: 32px;
+      margin: 2% auto;
+    }
+    &.user-to-cart {
+      margin: 10% auto;
     }
 
     .global-pop-modal-header {
@@ -78,7 +97,9 @@
       align-self: stretch;
 
       img {
+        width: 80px;
         height: 80px;
+        object-fit: contain;
       }
 
       .global-modal-block-content-container {
@@ -188,13 +209,17 @@
 
               .ctrl-counter-num,
               &.is-input .ctrl-counter-input {
-                visability: visible;
+                visibility: visible;
                 opacity: 1;
+              }
+              .to-cart-counter-num,
+              &.is-input .ctrl-counter-input {
+                visibility: hidden;
               }
 
               .global-modal-counter,
               &.is-input .ctrl-counter-num {
-                visability: hidden;
+                visibility: hidden;
                 opacity: 0;
               }
 

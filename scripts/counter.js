@@ -1,18 +1,24 @@
 (function () {
   "use strict";
 
-  function ctrls() {
+  function ctrls(
+    decrement,
+    counterContainer,
+    counterNum,
+    counterInput,
+    increment
+  ) {
     var _this = this;
 
     this.counter = 1;
     this.els = {
-      decrement: document.querySelector(".ctrl-button-decrement"),
+      decrement: decrement,
       counter: {
-        container: document.querySelector(".ctrl-counter"),
-        num: document.querySelector(".ctrl-counter-num"),
-        input: document.querySelector(".ctrl-counter-input"),
+        container: counterContainer,
+        num: counterNum,
+        input: counterInput,
       },
-      increment: document.querySelector(".ctrl-button-increment"),
+      increment: increment,
     };
 
     this.decrement = function () {
@@ -72,7 +78,7 @@
       _this.els.counter.input.addEventListener("input", function (e) {
         var parseValue = parseInt(e.target.value);
         if (!isNaN(parseValue)) {
-          if (parseValue >= 0 && parseValue <= 99) {
+          if (parseValue >= 1 && parseValue <= 99) {
             _this.setCounter(parseValue);
           } else if (parseValue > 99) {
             _this.setCounter(99);
@@ -90,9 +96,27 @@
         _this.render();
       });
     };
+
+    this.ready();
   }
 
   // init
-  var controls = new ctrls();
-  document.addEventListener("DOMContentLoaded", controls.ready);
+  document.addEventListener("DOMContentLoaded", function () {
+    var counters = document.querySelectorAll(".global-modal-counter-container");
+    counters.forEach(function (container) {
+      var decrement = container.querySelector(".ctrl-button-decrement");
+      var counterContainer = container.querySelector(".ctrl-counter");
+      var counterNum = container.querySelector(".ctrl-counter-num");
+      var counterInput = container.querySelector(".ctrl-counter-input");
+      var increment = container.querySelector(".ctrl-button-increment");
+
+      new ctrls(
+        decrement,
+        counterContainer,
+        counterNum,
+        counterInput,
+        increment
+      );
+    });
+  });
 })();

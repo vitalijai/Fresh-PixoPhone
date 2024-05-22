@@ -15,10 +15,44 @@ $(document).ready(function () {
   $(".block-cheaper-slick-next").click(function () {
     $(".gen-tab__carousel-wrapper").slick("slickNext");
   });
-});
 
-//Рандомайзер
-$(document).ready(function () {
+  //Аксы
+  // Инициализация слайдера
+  $(".carousel-wrapper").slick({
+    infinite: false,
+    slidesToShow: 3.2,
+    slidesToScroll: 1,
+    arrows: false,
+  });
+
+  // Привязка кнопок к слайдеру
+  $(".gen-tab__prev").click(function () {
+    $(".carousel-wrapper").slick("slickPrev");
+  });
+
+  $(".gen-tab__next").click(function () {
+    $(".carousel-wrapper").slick("slickNext");
+  });
+
+  //Аксы корзина
+  // Инициализация слайдера
+  $(".cart-carousel-wrapper").slick({
+    infinite: false,
+    slidesToShow: 3.7,
+    slidesToScroll: 2,
+    arrows: false,
+  });
+
+  // Привязка кнопок к слайдеру
+  $(".cart-prev").click(function () {
+    $(".cart-carousel-wrapper").slick("slickPrev");
+  });
+
+  $(".cart-next").click(function () {
+    $(".cart-carousel-wrapper").slick("slickNext");
+  });
+
+  //Рандомайзер
   var randomNumber = Math.floor(Math.random() * 10) + 1;
   var text;
   var secondary;
@@ -36,17 +70,6 @@ $(document).ready(function () {
   $(".people-watching-span").text(randomNumber);
   $(".people-watching-text-span").text(text);
   $(".people-watching-secondary-span").text(secondary);
-});
-
-//Аксы
-$(".carousel-wrapper").slick({
-  infinite: false,
-  slidesToShow: 3.1,
-  slidesToScroll: 1,
-  arrows: false,
-  // prevArrow: `<button type="button" class="slick-prev" aria-label="Previous"></button>`,
-  // nextArrow:
-  //   '<button type="button" class="slick-next" aria-label="Next"></button>',
 });
 
 //Главное фото

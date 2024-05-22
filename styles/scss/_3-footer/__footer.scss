@@ -113,6 +113,9 @@
         .footer-nav__title {
           img {
             width: $width;
+            object-fit: contain;
+
+            border-radius: 8px;
           }
         }
 

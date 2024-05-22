@@ -135,7 +135,14 @@ $(document).ready(function () {
 
 //Универсальная логика для других попап
 $(document).ready(function () {
-  function initModal(triggerClass, modalClass, closeClass, overlayId, sendBtn) {
+  function initModal(
+    triggerClass,
+    modalClass,
+    closeClass,
+    overlayId,
+    sendBtn,
+    backToClass
+  ) {
     $(triggerClass).on("click", function () {
       $(modalClass).fadeIn();
       $("html").addClass("no-scroll");
@@ -151,6 +158,10 @@ $(document).ready(function () {
     }
 
     $(closeClass).on("click", function () {
+      outSpec();
+    });
+
+    $(backToClass).on("click", function () {
       outSpec();
     });
 
@@ -170,6 +181,52 @@ $(document).ready(function () {
     });
   }
 
+  function initOverlow(
+    triggerClass,
+    modalClass,
+    closeClass,
+    overlayId,
+    sendBtn,
+    backToClass
+  ) {
+    $(triggerClass).on("click", function () {
+      $(modalClass).addClass("overflow");
+      $("html").addClass("no-scroll");
+      $(".screen").addClass("overflow");
+      $(".screen.overflow").css("z-index", "22");
+      $(".to-cart-counter-num").css("visibility", "visible");
+    });
+
+    function outOverlow() {
+      $(modalClass).removeClass("overflow");
+      $("html").removeClass("no-scroll");
+      $(".screen").removeClass("overflow");
+      $(".screen").css("z-index", "20");
+      $(".to-cart-counter-num").css("visibility", "hidden");
+    }
+
+    $(closeClass).on("click", function () {
+      outOverlow();
+    });
+
+    $(backToClass).on("click", function () {
+      outOverlow();
+    });
+
+    $(sendBtn).on("click", function () {
+      outOverlow();
+    });
+
+    $(window).on("click", function (event) {
+      if ($(event.target).is(overlayId)) {
+        $(overlayId).removeClass("overflow");
+        if (!$(overlayId).is()) {
+          outOverlow();
+        }
+      }
+    });
+  }
+
   //Показать блок версий смартфонов
   initModal(
     ".gen-tab__device-version-a__more",
@@ -180,6 +237,14 @@ $(document).ready(function () {
   //Показать блок создания оповещения
   initModal(
     ".gen-tab__to-notify-button",
+    ".pop-up-notify-modal",
+    ".pop-up-notify-close",
+    "#popUpNotify",
+    ".pop-up-notify-button"
+  );
+  //Показать блок создания оповещения
+  initModal(
+    ".soon-waiting-order-button",
     ".pop-up-notify-modal",
     ".pop-up-notify-close",
     "#popUpNotify",
@@ -209,4 +274,45 @@ $(document).ready(function () {
     "#popUpFastBuy",
     ".pop-up-fast-buy-button"
   );
+  //Показать блок заказа
+  initOverlow(
+    ".gen-tab__to-buy-button",
+    ".pop-up-to-cart-modal",
+    ".pop-up-to-cart-close",
+    "#popUpToCart",
+    ".pop-up-to-cart-button",
+    ".pop-up-to-cart-bottom-left"
+  );
+
+  initOverlow(
+    ".p-short-info-button",
+    ".pop-up-to-cart-modal",
+    ".pop-up-to-cart-close",
+    "#popUpToCart",
+    ".pop-up-to-cart-button",
+    ".pop-up-to-cart-bottom-left"
+  );
+  initOverlow(
+    ".inf-tab__to-buy-button",
+    ".pop-up-to-cart-modal",
+    ".pop-up-to-cart-close",
+    "#popUpToCart",
+    ".pop-up-to-cart-button",
+    ".pop-up-to-cart-bottom-left"
+  );
+  //Показать блок корзины
+  initModal(
+    ".header-bottom__cart-btn",
+    "#popUpCart",
+    ".pop-up-cart-close",
+    "#popUpCart",
+    ".pop-up-cart-button",
+    ".pop-up-cart-bottom-left"
+  );
+});
+
+$(document).ready(function () {
+  $(".gen-tab__add-services-header").on("click", function () {
+    $(this).closest(".gen-tab__block").toggleClass("active");
+  });
 });

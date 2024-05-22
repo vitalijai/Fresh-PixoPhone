@@ -9,7 +9,6 @@
   text-rendering: optimizeLegibility;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
-  overflow: hidden;
   scrollbar-width: thin;
 
   .pop-up-search-container {
@@ -282,6 +281,10 @@
                     );
 
                     width: 64px;
+                    height: 64px;
+                    object-fit: contain;
+
+                    border-radius: 8px;
                   }
 
                   .global-p-short-product-container {

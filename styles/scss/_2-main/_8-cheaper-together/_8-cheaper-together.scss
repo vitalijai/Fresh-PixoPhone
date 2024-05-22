@@ -2,6 +2,8 @@
   &.hidden {
     display: none;
   }
-
+  .slick-slide {
+    margin-right: 1px;
+  }
   @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
 }
