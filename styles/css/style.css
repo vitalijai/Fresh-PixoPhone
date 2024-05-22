@@ -1451,11 +1451,11 @@ a:visited {
   top: 0;
   bottom: 0;
 }
-.global-pop-modal.pop-up-to-cart-modal {
+.global-pop-modal.pop-up-cart-modal {
   display: block;
   visibility: hidden;
 }
-.global-pop-modal.pop-up-to-cart-modal.overflow {
+.global-pop-modal.pop-up-cart-modal.overflow {
   visibility: visible;
 }
 .global-pop-modal .global-pop-modal-content {
@@ -1486,9 +1486,6 @@ a:visited {
   width: 896px;
   gap: 32px;
   margin: 2% auto;
-}
-.global-pop-modal .global-pop-modal-content.user-to-cart {
-  margin: 10% auto;
 }
 .global-pop-modal .global-pop-modal-content .global-pop-modal-header {
   display: flex;
@@ -1623,7 +1620,8 @@ a:visited {
   visibility: visible;
   opacity: 1;
 }
-.global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter .to-cart-counter-num, .global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter.is-input .ctrl-counter-input {
+.global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter .to-cart-counter-num,
+.global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter .cart-counter-num, .global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter.is-input .ctrl-counter-input {
   visibility: hidden;
 }
 .global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter .global-modal-counter, .global-pop-modal .global-pop-modal-content .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-counter-container .ctrl-counter.is-input .ctrl-counter-num {
@@ -4747,13 +4745,12 @@ a:visited {
   align-items: flex-start;
   gap: 1px;
   align-self: stretch;
-  height: 633.6px;
+  max-height: 480px;
   text-rendering: optimizeLegibility;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block.to-cart {
-  height: unset;
   overflow-y: unset;
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block::-webkit-scrollbar {
@@ -4864,6 +4861,28 @@ a:visited {
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form {
   display: block;
+}
+.pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form .gen-tab__add-services-block {
+  height: unset;
+}
+.pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form .gen-tab__add-services-ul li {
+  overflow: unset;
+}
+.pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form .gen-tab__add-services-ul.scroll {
+  overflow-y: scroll;
+  max-height: 450px;
+}
+.pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form .gen-tab__add-services-ul.scroll::-webkit-scrollbar {
+  width: 8px; /* Ширина всего элемента навигации */
+}
+.pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form .gen-tab__add-services-ul.scroll::-webkit-scrollbar-track {
+  border-radius: 8px; /* Округление бегунка */
+  background: var(--colors-gray-100, #f7f7f7); /* Цвет дорожки */
+}
+.pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active form .gen-tab__add-services-ul.scroll::-webkit-scrollbar-thumb {
+  background: var(--colors-gray-200, #e5e4e2);
+  /* Цвет бегунка */
+  border-radius: 8px; /* Округление бегунка */
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .gen-tab__add-services.active .gen-tab__add-services-header {
   justify-content: space-between;

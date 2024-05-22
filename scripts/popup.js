@@ -194,7 +194,13 @@ $(document).ready(function () {
       $("html").addClass("no-scroll");
       $(".screen").addClass("overflow");
       $(".screen.overflow").css("z-index", "22");
-      $(".to-cart-counter-num").css("visibility", "visible");
+
+      if (modalClass === "#popUpToCart") {
+        $(".to-cart-counter-num").css("visibility", "visible");
+      }
+      if (modalClass === "#popUpCart") {
+        $(".cart-counter-num").css("visibility", "visible");
+      }
     });
 
     function outOverlow() {
@@ -203,6 +209,7 @@ $(document).ready(function () {
       $(".screen").removeClass("overflow");
       $(".screen").css("z-index", "20");
       $(".to-cart-counter-num").css("visibility", "hidden");
+      $(".cart-counter-num").css("visibility", "hidden");
     }
 
     $(closeClass).on("click", function () {
@@ -277,7 +284,7 @@ $(document).ready(function () {
   //Показать блок заказа
   initOverlow(
     ".gen-tab__to-buy-button",
-    ".pop-up-to-cart-modal",
+    "#popUpToCart",
     ".pop-up-to-cart-close",
     "#popUpToCart",
     ".pop-up-to-cart-button",
@@ -286,7 +293,7 @@ $(document).ready(function () {
 
   initOverlow(
     ".p-short-info-button",
-    ".pop-up-to-cart-modal",
+    "#popUpToCart",
     ".pop-up-to-cart-close",
     "#popUpToCart",
     ".pop-up-to-cart-button",
@@ -294,14 +301,14 @@ $(document).ready(function () {
   );
   initOverlow(
     ".inf-tab__to-buy-button",
-    ".pop-up-to-cart-modal",
+    "#popUpToCart",
     ".pop-up-to-cart-close",
     "#popUpToCart",
     ".pop-up-to-cart-button",
     ".pop-up-to-cart-bottom-left"
   );
   //Показать блок корзины
-  initModal(
+  initOverlow(
     ".header-bottom__cart-btn",
     "#popUpCart",
     ".pop-up-cart-close",

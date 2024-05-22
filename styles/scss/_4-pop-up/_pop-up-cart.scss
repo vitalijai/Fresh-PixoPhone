@@ -13,14 +13,13 @@
       gap: 1px;
       align-self: stretch;
 
-      height: calc(192px * 3.3);
+      max-height: calc(192px * 2.5);
 
       text-rendering: optimizeLegibility;
       -webkit-overflow-scrolling: touch;
       overflow-y: scroll;
 
       &.to-cart {
-        height: unset;
         overflow-y: unset;
       }
 
@@ -149,9 +148,41 @@
               gap: 8px;
               border-radius: 16px;
               border: 2px solid var(--colors-gray-100, #f7f7f7);
-
               form {
                 display: block;
+
+                .gen-tab__add-services-block {
+                  height: unset;
+                }
+                .gen-tab__add-services-ul {
+                  li {
+                    overflow: unset;
+                  }
+
+                  &.scroll {
+                    overflow-y: scroll;
+                    max-height: 450px;
+
+                    &::-webkit-scrollbar {
+                      width: 8px; /* Ширина всего элемента навигации */
+                    }
+
+                    &::-webkit-scrollbar-track {
+                      border-radius: 8px; /* Округление бегунка */
+
+                      background: var(
+                        --colors-gray-100,
+                        #f7f7f7
+                      ); /* Цвет дорожки */
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                      background: var(--colors-gray-200, #e5e4e2);
+                      /* Цвет бегунка */
+                      border-radius: 8px; /* Округление бегунка */
+                    }
+                  }
+                }
               }
 
               .gen-tab__add-services-header {

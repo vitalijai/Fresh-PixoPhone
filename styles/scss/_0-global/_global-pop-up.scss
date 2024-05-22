@@ -7,7 +7,7 @@
   top: 0;
   bottom: 0;
 
-  &.pop-up-to-cart-modal {
+  &.pop-up-cart-modal {
     display: block;
     visibility: hidden;
 
@@ -50,9 +50,6 @@
       width: calc(960px - (32px * 2));
       gap: 32px;
       margin: 2% auto;
-    }
-    &.user-to-cart {
-      margin: 10% auto;
     }
 
     .global-pop-modal-header {
@@ -213,6 +210,7 @@
                 opacity: 1;
               }
               .to-cart-counter-num,
+              .cart-counter-num,
               &.is-input .ctrl-counter-input {
                 visibility: hidden;
               }
