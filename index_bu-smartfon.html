@@ -24,7 +24,7 @@
         as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <!-- title -->
-    <title>Сторінка товару</title>
+    <title>Сторінка товару БУ</title>
 
 </head>
 
@@ -2688,7 +2688,8 @@
                 <nav class="breadcrumbs">
                     <a href="https://pixophone.com/" class="breadcrumbs__item"
                         title="Перейти на головну сторінку"><span>Головна</span></a>
-                    <a href="https://pixophone.com/smartfon" class="breadcrumbs__item"><span>Смартфони</span></a>
+                    <a href="https://pixophone.com/smartfon" class="breadcrumbs__item"><span>Смартфони
+                            вживанні</span></a>
                     <a href="#" class="breadcrumbs__item"><span>Google Pixel</span></a>
                     <a href="#" class="breadcrumbs__item"><span>Google Pixel 8 Pro</span></a>
                     <a href="#" class="breadcrumbs__item"><span>Google Pixel 8 Pro 12/512GB Obsidian</span></a>
@@ -2709,6 +2710,10 @@
                     </span>
                     <span class="tabs__link-specifications tabs__link">
                         <span class="tabs__link-span">Характеристики</span>
+                    </span>
+                    <span class="tabs__link-reviews tabs__link">
+                        <span class="tabs__link-span">Пропозиції</span>
+                        <span class="tabs__link-count">4</span>
                     </span>
                     <span class="tabs__link-reviews tabs__link">
                         <span class="tabs__link-span">Відгуки</span>
@@ -2938,22 +2943,23 @@
                                     В наявності
                                 </span>
                             </div> -->
-                            <!-- <div class="gen-tab__info-list-status--available-propositions global-list-status--available-propositions global-list">
+                            <div
+                                class="gen-tab__info-list-status--available-propositions global-list-status--available-propositions global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     Доступні пропозиції
                                 </span>
-                            </div> -->
+                            </div>
                             <!-- <div class="gen-tab__info-list-status--expected global-list-status--expected global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     Очікуємо <span
                                         class="gen-tab__info-list-expected global-list-line-expected">15.04.2024</span>
                                 </span>
                             </div> -->
-                            <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                            <!-- <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
                                     Аутлет
                                 </span>
-                            </div>
+                            </div> -->
                             <!-- <div
                                 class="gen-tab__info-list-status--not-available global-list-status--not-available global-list">
                                 <span class="gen-tab__info-list-line global-list-line">
@@ -2997,7 +3003,7 @@
                             </div>
                         </div>
                         <div class="gen-tab__info-price">
-                            <div class="gen-tab__info-price-cashback">
+                            <!-- <div class="gen-tab__info-price-cashback">
                                 <span class="gen-tab__info-price-cashback-span">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21"
                                         fill="none">
@@ -3008,12 +3014,13 @@
                                     Кешбек <span class="gen-tab__info-price-cashback-current"><span
                                             id="gen-tab__info-price-cashback-value">316</span> ₴</span>
                                 </span>
+                            </div> -->
+                            <div class="gen-tab__to-all-product-button global-button-send">
+                                <button>Всі пропозиції</button>
                             </div>
                             <div class="gen-tab__info-price-value global-p-short-product">
-                                <span class="global-p-short-product-old-price-container"><span>44770</span> ₴</span>
-                                <span class="global-p-short-product-discount-container">-8%</span>
                                 <span id="gen-tab__info-price-value"
-                                    class="global-p-short-product-new-price-container"><span>41000</span><span
+                                    class="global-p-short-product-all-price-container">від<span>38430</span><span
                                         class="gen-tab__info-price-simb"> ₴</span></span>
                             </div>
                             <!-- <div class="gen-tab__info-price-value global-p-short-product">
@@ -3037,7 +3044,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gen-tab__to-order gen-tab__block">
+                    <div class="gen-tab__to-order gen-tab__block" style="display: none;">
                         <!-- <div class="gen-tab__to-order-button global-button">
                             <button>Хочу купити</button>
                         </div> -->
@@ -3049,6 +3056,71 @@
                         </div>
                         <div class="gen-tab__to-fast-buy-button global-button-fast-buy">
                             <button>Швидке замовлення</button>
+                        </div>
+                    </div>
+                    <div class="gen-tab__credit gen-tab__block hide">
+                        <div class="gen-tab__credit-header">
+                            <span>
+                                Щомісячний платіж <span class="gen-tab__credit-header-span">від <span
+                                        id="gen-tab__credit-value">3205</span> ₴</span>
+                            </span>
+                        </div>
+                        <div class="gen-tab__credit-container">
+                            <div class="gen-tab__credit-block">
+                                <div class="gen-tab__credit-block-mono">
+                                    <button id="gen-tab__credit-mono" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank mono.png" title="monobank" alt="monobank">
+                                        <span id="gen-tab__credit-mono-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                                <div class="gen-tab__credit-block-privat">
+                                    <button id="gen-tab__credit-privat" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank privat.png" title="privat" alt="privat">
+                                        <span id="gen-tab__credit-privat-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                                <div class="gen-tab__credit-block-installment-plan">
+                                    <button id="gen-tab__credit-installment-plan" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank installment plan.png" title="installment plan"
+                                            alt="installment plan">
+                                        <span id="gen-tab__credit-installment-plan-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                                <div class="gen-tab__credit-block-sense">
+                                    <button id="gen-tab__credit-sense" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank sense.png" title="sense" alt="sense">
+                                        <span id="gen-tab__credit-sense-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                                <div class="gen-tab__credit-block-a-bank">
+                                    <button id="gen-tab__credit-a-bank" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank a bank.png" title="a bank" alt="a bank">
+                                        <span id="gen-tab__credit-a-bank-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                                <div class="gen-tab__credit-block-pumb">
+                                    <button id="gen-tab__credit-pumb" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank pumb.png" title="pumb" alt="pumb">
+                                        <span id="gen-tab__credit-pumb-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                                <div class="gen-tab__credit-block-pl">
+                                    <button id="gen-tab__credit-pl" class="gen-tab__credit-block__btn">
+                                        <img src="/images/bank pl.png" title="pl" alt="pl">
+                                        <span id="gen-tab__credit-pl-month"
+                                            class="gen-tab__credit-block__span">12</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="gen-tab__credit-btn global-button-credit">
+                                <button>Оплата частинами</button>
+                            </div>
                         </div>
                     </div>
                     <div class="gen-tab__constructor gen-tab__block">
@@ -3222,11 +3294,11 @@
                                 <span class="gen-tab__stock-trade-in-bottom">скористайтесь trade-in</span>
                             </a>
                         </div>
-                        <div class="gen-tab__stock-used">
+                        <div class="gen-tab__stock-used new">
                             <a href="#" class="gen-tab__stock-used-text">
                                 <span class="gen-tab__stock-used-left">
-                                    <span class="gen-tab__stock-used-left-top">Вживаний</span>
-                                    <span class="gen-tab__stock-used-left-bottom">з економією</span>
+                                    <span class="gen-tab__stock-used-left-top">купуй новий</span>
+                                    <span class="gen-tab__stock-used-left-bottom">додавши лише</span>
                                 </span>
                                 <span class="gen-tab__stock-used-right">
                                     <span id="gen-tab__stock-used-value">4600</span>
@@ -3250,72 +3322,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="gen-tab__credit gen-tab__block">
-                        <div class="gen-tab__credit-header">
-                            <span>
-                                Щомісячний платіж <span class="gen-tab__credit-header-span">від <span
-                                        id="gen-tab__credit-value">3205</span> ₴</span>
-                            </span>
-                        </div>
-                        <div class="gen-tab__credit-container">
-                            <div class="gen-tab__credit-block">
-                                <div class="gen-tab__credit-block-mono">
-                                    <button id="gen-tab__credit-mono" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank mono.png" title="monobank" alt="monobank">
-                                        <span id="gen-tab__credit-mono-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                                <div class="gen-tab__credit-block-privat">
-                                    <button id="gen-tab__credit-privat" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank privat.png" title="privat" alt="privat">
-                                        <span id="gen-tab__credit-privat-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                                <div class="gen-tab__credit-block-installment-plan">
-                                    <button id="gen-tab__credit-installment-plan" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank installment plan.png" title="installment plan"
-                                            alt="installment plan">
-                                        <span id="gen-tab__credit-installment-plan-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                                <div class="gen-tab__credit-block-sense">
-                                    <button id="gen-tab__credit-sense" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank sense.png" title="sense" alt="sense">
-                                        <span id="gen-tab__credit-sense-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                                <div class="gen-tab__credit-block-a-bank">
-                                    <button id="gen-tab__credit-a-bank" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank a bank.png" title="a bank" alt="a bank">
-                                        <span id="gen-tab__credit-a-bank-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                                <div class="gen-tab__credit-block-pumb">
-                                    <button id="gen-tab__credit-pumb" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank pumb.png" title="pumb" alt="pumb">
-                                        <span id="gen-tab__credit-pumb-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                                <div class="gen-tab__credit-block-pl">
-                                    <button id="gen-tab__credit-pl" class="gen-tab__credit-block__btn">
-                                        <img src="/images/bank pl.png" title="pl" alt="pl">
-                                        <span id="gen-tab__credit-pl-month"
-                                            class="gen-tab__credit-block__span">12</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gen-tab__credit-btn global-button-credit">
-                                <button>Оплата частинами</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gen-tab__add-services gen-tab__block">
+                    <div class="gen-tab__add-services gen-tab__block" style="display: none;">
                         <div class="gen-tab__add-services-header">
                             <span>Додаткові послуги:</span>
                         </div>
@@ -3590,6 +3597,22 @@
                                 </ul>
                             </div>
                         </form>
+                    </div>
+                    <div class="gen-tab__work-checked gen-tab__block">
+                        <span class="gen-tab__work-checked-span work-checked-container__header">Версія:
+                            <button id="gen-tab__work-checked-button"
+                                class="gen-tab__work-checked-a__more button-a__more">що
+                                саме?</button>
+                        </span>
+                        <div class="work-checked-container__content">
+                            <span class="work-checked-container global-span-checked check">екран</span>
+                            <span class="work-checked-container global-span-checked check">мобільний зв’язок</span>
+                            <span class="work-checked-container global-span-checked check">акумуляторна батарея</span>
+                            <span class="work-checked-container global-span-checked check">динаміки та мікрофони</span>
+                            <span class="work-checked-container global-span-checked check">камери</span>
+                            <span class="work-checked-container global-span-checked check">кнопки</span>
+                            <span class="work-checked-container global-span-checked check">датчики та сенсори</span>
+                        </div>
                     </div>
                     <div class="gen-tab__add-product gen-tab__block">
                         <div class="gen-tab__add-product-header">
@@ -4240,11 +4263,14 @@
                                 <div class="inf-tab__to-notify-button global-button-notify">
                                     <button>Сповістити про наявність</button>
                                 </div>
-                                <div class="inf-tab__to-buy-button global-button">
+                                <!-- <div class="inf-tab__to-buy-button global-button">
                                     <button onclick="toggleBayBtn(event, this)">Купити</button>
-                                </div>
+                                </div> -->
                                 <div class="inf-tab__to-fast-buy-button global-button-fast-buy">
                                     <button>Швидке замовлення</button>
+                                </div>
+                                <div class="gen-tab__to-all-product-button global-button-send">
+                                    <button>Показати всі пропозиції</button>
                                 </div>
                             </div>
                         </div>
@@ -5656,8 +5682,139 @@
             </div>
         </div>
         <!-- service tab end -->
+        <!-- block used sentences -->
+        <div class="block-used-sentences">
+            <div class="block-used-sentences-container global-block-content-container content-container">
+                <div class="block-used-sentences-header global-block-header">
+                    <div class="block-used-sentences-header-left global-block-header-left">
+                        <span>Недавно переглянуті</span>
+                    </div>
+                </div>
+                <div class="block-used-sentences-content global-used-sentences-content global-block-content">
+                    <div class="block-used-sentences-container global-used-sentences-container">
+                        <img src="https://s3-alpha-sig.figma.com/img/c042/b597/0f4c5417d8a39f3b6f2894de589ad997?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=athJmuBFHKZRy~M6uLidCEIhZXdvUdiQ3Uu4C-OGvFOh09C4nt7tcA6D3EyruinBNeTZjXrezVz9r9LXdV7gpDPmuGLgUO5333u8UoJ2vxc~5eMvvBSKG154w2V3y7dmzu-5tJTKJQJ6EmhSD2TunWKphsRUDbvM76xwM88p7hWTtcCqIJg7Ji7WHa3h7jgCdStDuECGzQO34OpuI7k0mzGJVgybMLUdXjFlqMP-ku~XKdQ20e8r5AdgFvp2qlZ9NX~3JNkAoxSuVNe3r-SUGlV-eB02DkUq6dfdqc0pmEZpjkjGeS5Inajvgc4bfpMr4MAUeyAbNY-eYaTqi2OCyg__"
+                            alt="product" class="block-used-sentences-img global-used-sentences-img">
+                        <div class="block-used-sentences-block global-used-sentences-block">
+                            <div class="block-used-sentences-block-header global-used-sentences-block-header">
+                                <span class="pixo-indx score-4__good">3,8</span>
+                                <div class="gen-tab__info-list-guarantee global-list-guarantee global-list">
+                                    <span class="gen-tab__info-list-line global-list-line">
+                                        Гарантія <span
+                                            class="gen-tab__info-list-guarantee-days global-list-guarantee-days">14
+                                            днів</span>
+                                    </span>
+                                </div>
+                                <div class="gen-tab__info-list-articul global-list-articul global-list">
+                                    <span class="gen-tab__info-list-line global-list-line">
+                                        Код. 1234567
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="block-used-sentences-block-content global-used-sentences-block-content">
+                                <div class="block-used-sentences-content-span global-used-sentences-content-span">
+                                    <span>Комплектація:</span>
+                                    <span class="work-checked-container global-span-checked check">Зарядний
+                                        пристрій</span>
+                                    <span class="work-checked-container global-span-checked check">USB кабель</span>
+                                    <span class="work-checked-container global-span-checked check">Оригінальна
+                                        коробка</span>
+                                </div>
+                                <div class="block-used-sentences-content-span global-used-sentences-content-span">
+                                    <span>Стан екрану:</span>
+                                    <span class="work-checked-container global-span-checked">Присутні непомітні
+                                        подряпини</span>
+                                    <span class="work-checked-container global-span-checked">Присутнє залишкове
+                                        зображення</span>
+                                </div>
+                                <div class="block-used-sentences-content-span global-used-sentences-content-span">
+                                    <span>Рама корпусу:</span>
+                                    <span class="work-checked-container global-span-checked">Присутні незначні
+                                        потертості</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-used-sentences-container-btn global-used-sentences-container-btn">
+                            <div class="used-sentences-list-block-value global-block-container-bottom-value">
+                                <span
+                                    class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38430</span>
+                                    ₴</span>
+                            </div>
+                            <div class="used-sentences-order-button global-button global-block-container-button">
+                                <button onclick="toggleBayBtn(event, this)">Купити</button>
+                            </div>
+                            <div class="gen-tab__credit-btn global-button-credit">
+                                <button>від 6999 грн/міс.</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-used-sentences-container global-used-sentences-container">
+                        <img src="https://s3-alpha-sig.figma.com/img/c042/b597/0f4c5417d8a39f3b6f2894de589ad997?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=athJmuBFHKZRy~M6uLidCEIhZXdvUdiQ3Uu4C-OGvFOh09C4nt7tcA6D3EyruinBNeTZjXrezVz9r9LXdV7gpDPmuGLgUO5333u8UoJ2vxc~5eMvvBSKG154w2V3y7dmzu-5tJTKJQJ6EmhSD2TunWKphsRUDbvM76xwM88p7hWTtcCqIJg7Ji7WHa3h7jgCdStDuECGzQO34OpuI7k0mzGJVgybMLUdXjFlqMP-ku~XKdQ20e8r5AdgFvp2qlZ9NX~3JNkAoxSuVNe3r-SUGlV-eB02DkUq6dfdqc0pmEZpjkjGeS5Inajvgc4bfpMr4MAUeyAbNY-eYaTqi2OCyg__"
+                            alt="product" class="block-used-sentences-img global-used-sentences-img">
+                        <div class="block-used-sentences-block global-used-sentences-block">
+                            <div class="block-used-sentences-block-header global-used-sentences-block-header">
+                                <span class="pixo-indx score-4__good">3,8</span>
+                                <div class="gen-tab__info-list-guarantee global-list-guarantee global-list">
+                                    <span class="gen-tab__info-list-line global-list-line">
+                                        Гарантія <span
+                                            class="gen-tab__info-list-guarantee-days global-list-guarantee-days">14
+                                            днів</span>
+                                    </span>
+                                </div>
+                                <div class="gen-tab__info-list-articul global-list-articul global-list">
+                                    <span class="gen-tab__info-list-line global-list-line">
+                                        Код. 1234567
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="block-used-sentences-block-content global-used-sentences-block-content">
+                                <div class="block-used-sentences-content-span global-used-sentences-content-span">
+                                    <span>Комплектація:</span>
+                                    <span class="work-checked-container global-span-checked check">Зарядний
+                                        пристрій</span>
+                                    <span class="work-checked-container global-span-checked check">USB кабель</span>
+                                    <span class="work-checked-container global-span-checked check">Оригінальна
+                                        коробка</span>
+                                </div>
+                                <div class="block-used-sentences-content-span global-used-sentences-content-span">
+                                    <span>Стан екрану:</span>
+                                    <span class="work-checked-container global-span-checked">Присутні непомітні
+                                        подряпини</span>
+                                    <span class="work-checked-container global-span-checked">Присутнє залишкове
+                                        зображення</span>
+                                </div>
+                                <div class="block-used-sentences-content-span global-used-sentences-content-span">
+                                    <span>Рама корпусу:</span>
+                                    <span class="work-checked-container global-span-checked">Присутні незначні
+                                        потертості</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-used-sentences-container-btn global-used-sentences-container-btn">
+                            <div class="used-sentences-list-block-value global-block-container-bottom-value">
+                                <span
+                                    class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38430</span>
+                                    ₴</span>
+                            </div>
+                            <div class="used-sentences-order-button global-button global-block-container-button">
+                                <button onclick="toggleBayBtn(event, this)">Купити</button>
+                            </div>
+                            <div class="gen-tab__credit-btn global-button-credit">
+                                <button>від 6999 грн/міс.</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade"></div>
+                </div>
+                <div class="block-used-sentences-show-more global-button-all-show-bu">
+                    <button>
+                        Показати всі пропозиції
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- block used sentences end -->
         <!-- block on sale soon -->
-        <div class="block-on-sale-soon">
+        <!-- <div class="block-on-sale-soon">
             <div class="block-on-sale-soon-container global-block-content-container content-container">
                 <div class="block-on-sale-soon-header global-block-header">
                     <div class="block-on-sale-soon-header-left global-block-header-left">
@@ -5691,10 +5848,10 @@
                                             class="soon-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
                                             Хіт продаж
                                         </div>
-                                        <!-- <div
-                                    class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                        SALE
-                                    </div> -->
+                                        <div
+                                            class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                            SALE
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="soon-waiting-credit-group global-block-credit-group">
@@ -5803,10 +5960,10 @@
                                             class="soon-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
                                             Хіт продаж
                                         </div>
-                                        <!-- <div
-                                    class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                    SALE
-                                </div> -->
+                                        <div
+                                            class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                            SALE
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="soon-waiting-credit-group global-block-credit-group">
@@ -5915,10 +6072,10 @@
                                             class="soon-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
                                             Хіт продаж
                                         </div>
-                                        <!-- <div
-                                        class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                        SALE
-                                    </div> -->
+                                        <div
+                                            class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                            SALE
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="soon-waiting-credit-group global-block-credit-group">
@@ -6027,10 +6184,10 @@
                                             class="soon-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
                                             Хіт продаж
                                         </div>
-                                        <!-- <div
-                                        class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                        SALE
-                                    </div> -->
+                                        <div
+                                            class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                            SALE
+                                        </div>
                                     </div>
                                 </a>
                                 <div class="soon-waiting-credit-group global-block-credit-group">
@@ -6139,10 +6296,10 @@
                                             class="soon-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
                                             Хіт продаж
                                         </div>
-                                        <!-- <div
-                                        class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                        SALE
-                                    </div> -->
+                                        <div
+                                            class="soon-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                            SALE
+                                     </div>
                                     </div>
                                 </a>
                                 <div class="soon-waiting-credit-group global-block-credit-group">
@@ -6249,7 +6406,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- block on sale soon end -->
         <!-- block description -->
         <div class="block-description">
@@ -8534,7 +8691,6 @@
             </div>
         </div>
         <!-- novelty end -->
-
         <!-- PopUp Photo -->
         <div id="popUpPhotoModal" class="pop-up-photo-modal">
             <div class="pop-up-photo-modal-content">

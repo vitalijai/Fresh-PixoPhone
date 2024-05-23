@@ -7,6 +7,20 @@
   background: var(--colors-white, #fff);
   user-select: none;
 
+  &.hide {
+    .gen-tab__credit-container {
+      width: unset;
+
+      .gen-tab__credit-block {
+        gap: 16px;
+      }
+
+      .gen-tab__credit-btn {
+        display: none;
+      }
+    }
+  }
+
   .gen-tab__credit-header {
     @include flexbox();
 

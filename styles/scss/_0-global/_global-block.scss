@@ -2,7 +2,7 @@
   @include flexbox($alignItems: flex-start, $direction: column, $self: stretch);
   gap: 1px;
 
-  user-select: none;
+  // user-select: none;
 
   border-radius: 32px;
   background: var(--colors-gray-200, #e5e4e2);
@@ -135,7 +135,7 @@
           }
 
           img {
-            width: 232px;
+            max-width: 232px;
             height: 232px;
             object-fit: contain;
 
@@ -396,6 +396,7 @@
             display: block;
             color: var(--colors-gray-700, #2f2c2f);
             font-size: 16px;
+
             span {
               font-size: 24px;
             }

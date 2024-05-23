@@ -47,7 +47,7 @@
         align-self: stretch;
 
         img {
-          width: 160px;
+          max-width: 160px;
           height: 160px;
           object-fit: contain;
 
@@ -215,7 +215,7 @@
         height: 32px;
 
         position: absolute;
-        bottom: 112px;
+        bottom: 307px;
 
         background: linear-gradient(
           360deg,

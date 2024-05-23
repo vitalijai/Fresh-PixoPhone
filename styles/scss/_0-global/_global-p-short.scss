@@ -9,6 +9,12 @@
     gap: 4px;
   }
 
+  .global-p-short-product-all-price-container {
+    display: flex;
+    gap: 4px;
+    font-size: 48px;
+  }
+
   .global-p-short-product-old-price-container {
     @include flexbox($alignItems: center, $justify: center);
 

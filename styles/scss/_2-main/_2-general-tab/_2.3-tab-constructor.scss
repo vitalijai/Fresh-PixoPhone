@@ -55,9 +55,10 @@
           height: 44px;
 
           .device-color-block__img {
-            width: 36px;
+            max-width: 36px;
             height: 36px;
             flex-shrink: 0;
+            object-fit: contain;
 
             border-radius: 1px;
           }
@@ -124,28 +125,6 @@
       @include flexbox($alignItems: center);
 
       gap: 4px;
-
-      .gen-tab__device-version-a__more {
-        display: inline-flex;
-        padding: 4px 8px;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        border-radius: 24px;
-        background: var(--colors-blue-100, #e9f5ff);
-        cursor: pointer;
-
-        color: var(--colors-blue-400, #62a8ed);
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 10px; /* 100% */
-
-        &:hover {
-          background: var(--colors-blue-400, #62a8ed);
-
-          color: var(--colors-white, #fff);
-        }
-      }
     }
   }
 

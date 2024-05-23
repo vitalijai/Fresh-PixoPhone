@@ -253,6 +253,27 @@
   }
 }
 
+.button-a__more {
+  display: inline-flex;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  background: var(--colors-blue-100, #e9f5ff);
+  cursor: pointer;
+
+  color: var(--colors-blue-400, #62a8ed);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 10px; /* 100% */
+
+  &:hover {
+    background: var(--colors-blue-400, #62a8ed);
+
+    color: var(--colors-white, #fff);
+  }
+}
 //Прямоугольная ссылка показать все модели
 .global-all-models-button-a {
   @include flexbox();
@@ -284,6 +305,7 @@
 //Прямоугольная кнопки
 .global-button-notify,
 .global-button-reviews,
+.global-button-all-show-bu,
 .global-button-fast-buy {
   @include flexbox();
   flex: 1 0 0;
@@ -305,6 +327,7 @@
 }
 
 .global-button-notify,
+.global-button-all-show-bu,
 .global-button-fast-buy {
   button {
     &:hover {
@@ -426,6 +449,31 @@
       background: var(--colors-blue-600, #2672be);
     }
   }
+
+  &.gen-tab__to-all-product-button {
+    button {
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 100px;
+        opacity: 0;
+        width: 135px;
+        height: 135px;
+        z-index: 2;
+        -webkit-animation: pulseblob 1.5s 1s infinite linear;
+        -moz-animation: pulseblob 1.5s 1s infinite linear;
+        -ms-animation: pulseblob 1.5s 1s infinite linear;
+        -o-animation: pulseblob 1.5s 1s infinite linear;
+        animation: pulseblob 1.5s 1s infinite linear;
+        box-sizing: border-box;
+      }
+    }
+  }
 }
 
 //Вернуться к верху
@@ -535,5 +583,85 @@
   }
   &:active {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6564 15.0711C14.0469 15.4616 14.6801 15.4616 15.0706 15.0711C15.4611 14.6805 15.4611 14.0474 15.0706 13.6569L9.41377 8L15.0706 2.34315C15.4611 1.95262 15.4611 1.31946 15.0706 0.928932C14.6801 0.538408 14.0469 0.538408 13.6564 0.928932L7.99956 6.58579L2.3427 0.928932C1.95218 0.538408 1.31901 0.538408 0.92849 0.928932C0.537966 1.31946 0.537966 1.95262 0.92849 2.34315L6.58534 8L0.92849 13.6569C0.537965 14.0474 0.537966 14.6805 0.92849 15.0711C1.31901 15.4616 1.95218 15.4616 2.3427 15.0711L7.99956 9.41421L13.6564 15.0711Z" fill="%23F37D7D"/></svg>');
+  }
+}
+
+.global-span-checked {
+  display: flex;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  border-radius: var(--nums-block-radius, 32px);
+  background: var(--colors-gray-100, #f7f7f7);
+
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  &.check {
+    padding: 4px 16px 4px 8px;
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path d="M7 13.4407L10.2644 16.7051L19 8" stroke="%2362B378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.pixo-indx {
+  display: flex;
+  width: 21px;
+  height: 15px;
+  padding: 4.5px 7.5px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5px;
+
+  border-radius: 3px;
+
+  color: var(--colors-white, #fff);
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &.score-4__good {
+    background: var(--score-4, #94db5c);
+  }
+  &.score-4__good {
+    background: var(--score-4, #94db5c);
+  }
+  &.score-4__good {
+    background: var(--score-4, #94db5c);
+  }
+  &.score-4__good {
+    background: var(--score-4, #94db5c);
+  }
+  &.score-4__good {
+    background: var(--score-4, #94db5c);
+  }
+  &.score-4__good {
+    background: var(--score-4, #94db5c);
+  }
+}
+
+@keyframes pulseblob {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+
+  33% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 }

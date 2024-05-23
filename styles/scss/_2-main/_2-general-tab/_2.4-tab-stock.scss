@@ -116,6 +116,10 @@
     border-radius: 5.333px;
     background: var(--colors-gray-700, #2f2c2f);
 
+    &.new {
+      background: var(--colors-green-400, #62b278);
+    }
+
     .gen-tab__stock-used-text {
       @include flexbox(
         $alignItems: center,
