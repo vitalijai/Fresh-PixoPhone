@@ -5226,23 +5226,41 @@ a:visited {
   background: var(--colors-gray-100, #f7f7f7);
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-tab .offers-page-block__tabs-img {
-  width: 200px;
+  width: calc(100% - 48px);
   height: 346px;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-tab .offers-page-block__tabs-parametrs .offers-page-block__tabs-div {
   color: var(--colors-gray-300, #c0c0c0);
   font-weight: 500;
   user-select: none;
+  max-width: 200px;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-carusel {
   display: flex;
   align-items: flex-start;
   gap: 1px;
+  position: relative;
+}
+.common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-carusel .offers-page---item {
+  margin-left: 1px;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-carusel .offers-page-block__tabs-cover {
-  width: 370px;
   align-self: stretch;
   background: var(--colors-white, #fff);
+}
+.common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-carusel .offers-page-block__tabs-fade {
+  display: none;
+  width: 64px;
+  height: 1379px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 210.16%);
+}
+.common-template .offers-tab .offers-page-container .offers-page-block__comparison .offers-page-block__comparison-gen-carusel .splide__arrow {
+  top: 120px;
+  width: 48px;
+  height: 48px;
 }
 
 .footer {

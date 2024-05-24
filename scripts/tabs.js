@@ -170,6 +170,42 @@ $(".offers-page-header-switch-compare-block input[type='checkbox']").change(
 
       // Добавляем класс 'active' к блоку сравнения
       $(".offers-page-block__comparison").addClass("active");
+      const comparisonBlock = $(".offers-page-block__comparison");
+      let tabsCount;
+      if (comparisonBlock.length) {
+        tabsCount = comparisonBlock.find(".offers-page-block__tabs").length;
+      }
+      const comparisonCarusel = $(".offers-page-block__comparison-gen-carusel");
+      if (comparisonCarusel.length) {
+        const tabsCover = comparisonCarusel.find(
+          ".offers-page-block__tabs-cover"
+        );
+        if (tabsCover.length) {
+          const comparisonWith = $(".content-container");
+          const caruselWidth = comparisonWith.width();
+          const newWidth = caruselWidth - tabsCount * 248 - tabsCount; // вычитаем три блока по 248px
+          const splideWitdh = caruselWidth - 248;
+          tabsCover.css("width", newWidth + "px");
+
+          // Проверяем, если tabsCount больше 4, то добавляем класс splide
+          if (tabsCount > 5) {
+            $(".offers-page-block__comparison-gen-carusel").addClass("splide");
+            tabsCover.css("display", "none");
+            $(".offers-page-block__tabs-fade").css("display", "block");
+            $(".offers-page---item").css("margin-left", "0");
+
+            var offersSlider = new Splide("#offers-gen-carusel", {
+              pagination: false,
+              arrows: true,
+              fixedWidth: "248px",
+              width: splideWitdh,
+              gap: "1px",
+              perPage: 3,
+            });
+            offersSlider.mount();
+          }
+        }
+      }
     } else {
       // Если чекбокс не отмечен, возвращаем класс 'active' последнему активному блоку
       if (

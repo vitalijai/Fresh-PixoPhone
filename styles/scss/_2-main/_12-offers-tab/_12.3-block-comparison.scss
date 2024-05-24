@@ -107,7 +107,7 @@
 
   .offers-page-block__comparison-gen-tab {
     .offers-page-block__tabs-img {
-      width: 200px;
+      width: calc(100% - 48px);
       height: 346px;
     }
     .offers-page-block__tabs-parametrs {
@@ -116,6 +116,7 @@
         font-weight: 500;
 
         user-select: none;
+        max-width: 200px;
       }
     }
   }
@@ -124,12 +125,38 @@
     display: flex;
     align-items: flex-start;
     gap: 1px;
+    position: relative;
+
+    .offers-page---item {
+      margin-left: 1px;
+    }
 
     .offers-page-block__tabs-cover {
-      width: 370px;
       align-self: stretch;
 
       background: var(--colors-white, #fff);
+    }
+
+    .offers-page-block__tabs-fade {
+      display: none;
+
+      width: 64px;
+      height: 1379px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        #fff 210.16%
+      );
+    }
+
+    .splide__arrow {
+      top: 120px;
+      width: 48px;
+      height: 48px;
     }
   }
 }
