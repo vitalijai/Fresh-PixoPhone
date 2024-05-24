@@ -111,26 +111,37 @@ $(document).ready(function () {
 
 //Открытие фото
 $(document).ready(function () {
-  $(".cloud-zoom-wrap").on("click", function () {
-    $("#popUpPhotoModal").css("display", "flex").hide().fadeIn();
-    $("html").addClass("no-scroll");
-  });
-
-  $(".pop-up-photo-close").on("click", function () {
-    $("#popUpPhotoModal").fadeOut(function () {
-      $(this).css("display", "none");
+  function initPopUpPhoto(carouselImg, modalPopUp, modalClose) {
+    $(carouselImg).on("click", ".cloud-zoom-wrap", function () {
+      $(modalPopUp).css("display", "flex").hide().fadeIn();
+      $("html").addClass("no-scroll");
     });
-    $("html").removeClass("no-scroll");
-  });
 
-  $(window).on("click", function (event) {
-    if (!$(event.target).closest(".cloud-zoom-wrap")) {
-      $("#popUpPhotoModal").fadeOut(function () {
+    $(modalClose).on("click", function () {
+      $(modalPopUp).fadeOut(function () {
         $(this).css("display", "none");
       });
       $("html").removeClass("no-scroll");
-    }
-  });
+    });
+
+    $(window).on("click", function (event) {
+      if (
+        !$(event.target).closest(".cloud-zoom-wrap").length &&
+        !$(event.target).closest(modalPopUp).length
+      ) {
+        $(modalPopUp).fadeOut(function () {
+          $(this).css("display", "none");
+        });
+        $("html").removeClass("no-scroll");
+      }
+    });
+  }
+
+  initPopUpPhoto(
+    ".gen-tab__carousel-img",
+    "#popUpPhotoModal",
+    ".pop-up-photo-close"
+  );
 });
 
 //Универсальная логика для других попап

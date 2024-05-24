@@ -111,7 +111,7 @@
               align-items: center;
               align-self: unset;
 
-              border-radius: var(---radius-min, 8px);
+              border-radius: 8px;
               background: var(--colors-white, #fff);
 
               color: var(--colors-gray-700, #2f2c2f);
@@ -243,7 +243,7 @@
 
       .global-bottom-cart-left {
         display: flex;
-        height: var(--nums-block-radius, 32px);
+        height: 32px;
         align-items: center;
         gap: 4px;
         user-select: none;

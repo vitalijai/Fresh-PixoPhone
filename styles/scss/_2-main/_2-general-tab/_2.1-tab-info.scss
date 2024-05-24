@@ -21,39 +21,6 @@
     .gen-tab__info-btn {
       @include flexbox($alignItems: flex-start);
       gap: 8px;
-
-      .gen-tab-controls__btn {
-        @include flexbox($justify: center, $alignItems: center);
-        border: none;
-        border-radius: 8px;
-        background: var(--colors-white, #fff);
-        width: 32px;
-        height: 32px;
-        cursor: pointer;
-
-        &:hover {
-          path {
-            stroke: var(--colors-gray-700, #2f2c2f);
-          }
-        }
-
-        &.gen-tab__info-wishlist-btn.active {
-          path {
-            stroke: var(--colors-green-500-primary, #2ea84f);
-            fill: var(--colors-green-500-primary, #2ea84f);
-          }
-        }
-
-        &.gen-tab__info-compare-btn.active {
-          path {
-            stroke: var(--colors-green-500-primary, #2ea84f);
-          }
-
-          .gen-tab__info-compare-btn_fill {
-            fill: var(--colors-green-500-primary, #2ea84f);
-          }
-        }
-      }
     }
   }
 

@@ -27,7 +27,8 @@ html {
 
 body,
 input,
-textarea {
+textarea,
+button {
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -75,3 +76,4 @@ a:visited {
 @import "../_0-global/global-service-block";
 @import "../_0-global/global-label";
 @import "../_0-global/global-acces";
+@import "../_0-global/global-checkbox";

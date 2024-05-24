@@ -16,6 +16,7 @@
       $justify: space-between,
       $self: stretch
     );
+    user-select: none;
 
     height: 64px;
     padding: 0px 16px 0px 12px;
@@ -117,6 +118,7 @@
           $direction: column,
           $self: stretch
         );
+        user-select: none;
 
         gap: 8px;
 
@@ -534,14 +536,14 @@
     padding: 16px;
     justify-content: flex-end;
     align-items: center;
-    gap: var(--nums-block-radius, 32px);
+    gap: 32px;
     align-self: stretch;
 
     background: var(--colors-white, #fff);
 
     .global-p-short-product {
       display: flex;
-      height: var(--nums-block-radius, 32px);
+      height: 32px;
       padding: 6px 0px;
       justify-content: flex-end;
       align-items: center;

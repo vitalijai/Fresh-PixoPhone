@@ -78,7 +78,7 @@
       }
 
       &:hover {
-        border-radius: var(---radius-min, 8px) 0px 0px var(---radius-min, 8px);
+        border-radius: 8px 0px 0px 8px;
         background: var(--colors-white, #fff);
 
         .active-link {

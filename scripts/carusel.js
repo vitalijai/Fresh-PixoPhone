@@ -100,10 +100,38 @@ document.addEventListener("DOMContentLoaded", function () {
     gap: 8,
     pagination: false,
     arrows: false,
-    isNavigation: true,
+    isNavigation: false,
     focus: "center",
     // type: "loop",
   }).mount();
+
+  function initializeSplideSliders(gen, secondary) {
+    var buPhoto = new Splide(gen, {
+      // height: 800,
+
+      pagination: false,
+      arrows: false,
+      // type: "loop",
+    });
+
+    var bUecondSlider = new Splide(secondary, {
+      fixedWidth: 80,
+      height: 80,
+      gap: 8,
+      pagination: false,
+      arrows: false,
+      isNavigation: true,
+      drag: false,
+      // type: "loop",
+    }).mount();
+
+    buPhoto.sync(bUecondSlider).mount();
+  }
+
+  // Вызов функции для инициализации слайдеров
+  initializeSplideSliders("#bu-main-photo-slider", "#bu-secondary-slider");
+  initializeSplideSliders("#bu-main-photo-slider-2", "#bu-secondary-slider-2");
+  initializeSplideSliders("#bu-main-photo-slider-3", "#bu-secondary-slider-3");
 
   primarySlider.sync(secondarySlider).mount();
   popUpPhoto.sync(secondSlider).mount();

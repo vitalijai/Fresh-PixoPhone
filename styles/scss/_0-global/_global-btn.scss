@@ -1,7 +1,7 @@
 //Языковой переключатель
 .language_switch {
   @include flexbox($alignItems: center, $justify: center);
-
+  user-select: none;
   gap: 4px;
 
   .language_switch-container {
@@ -87,7 +87,7 @@
       border-radius: 16px;
       background-color: var(---white, #fff);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: top 300ms linear;
+      transition: left 300ms linear;
     }
 
     // move to right
@@ -97,6 +97,10 @@
         left: 18px;
         background-color: var(---white, #fff);
       }
+    }
+
+    &.blue:checked {
+      background: var(--colors-blue-500, #318ce7);
     }
   }
 
@@ -113,13 +117,13 @@
         $self: stretch
       );
 
-      height: var(--nums-block-radius, 32px);
+      height: 32px;
       padding-left: 16px;
       gap: 64px;
       flex-shrink: 0;
       flex: 1 0 0;
       cursor: pointer;
-      border-radius: var(---radius-min, 8px);
+      border-radius: 8px;
       border: var(---stroke-thickness, 2px) solid transparent;
       background: var(--colors-white, #fff);
     }
@@ -139,7 +143,7 @@
   align-items: center;
   cursor: pointer;
   border: none;
-  border-radius: var(---radius-min, 8px);
+  border-radius: 8px;
 
   &.add-product {
     background: var(--colors-green-500-primary, #2ea84f);
@@ -593,7 +597,7 @@
   align-items: center;
   gap: 2px;
 
-  border-radius: var(--nums-block-radius, 32px);
+  border-radius: 32px;
   background: var(--colors-gray-100, #f7f7f7);
 
   color: var(--colors-gray-700, #2f2c2f);
@@ -613,6 +617,39 @@
   }
 }
 
+.global-controls__btn {
+  @include flexbox($justify: center, $alignItems: center);
+  border: none;
+  border-radius: 8px;
+  background: var(--colors-white, #fff);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+
+  &:hover {
+    path {
+      stroke: var(--colors-gray-700, #2f2c2f);
+    }
+  }
+
+  &.global__info-wishlist-btn.active {
+    path {
+      stroke: var(--colors-green-500-primary, #2ea84f);
+      fill: var(--colors-green-500-primary, #2ea84f);
+    }
+  }
+
+  &.global__info-compare-btn.active {
+    path {
+      stroke: var(--colors-green-500-primary, #2ea84f);
+    }
+
+    .global__info-compare-btn_fill {
+      fill: var(--colors-green-500-primary, #2ea84f);
+    }
+  }
+}
+
 .pixo-indx {
   display: flex;
   width: 21px;
@@ -621,31 +658,34 @@
   justify-content: center;
   align-items: center;
   gap: 7.5px;
-
+  user-select: none;
   border-radius: 3px;
 
   color: var(--colors-white, #fff);
   font-size: 13.5px;
   font-weight: 700;
   text-transform: uppercase;
+}
 
-  &.score-4__good {
+.pixo-indx,
+.status-indicator {
+  &.score-0 {
+    background: var(--score, #f7f7f7);
+  }
+  &.score-1 {
+    background: var(--score-1, #fa8072);
+  }
+  &.score-2 {
+    background: var(--score-2, #ffce4f);
+  }
+  &.score-3 {
+    background: var(--score-3, #cde24d);
+  }
+  &.score-4 {
     background: var(--score-4, #94db5c);
   }
-  &.score-4__good {
-    background: var(--score-4, #94db5c);
-  }
-  &.score-4__good {
-    background: var(--score-4, #94db5c);
-  }
-  &.score-4__good {
-    background: var(--score-4, #94db5c);
-  }
-  &.score-4__good {
-    background: var(--score-4, #94db5c);
-  }
-  &.score-4__good {
-    background: var(--score-4, #94db5c);
+  &.score-5 {
+    background: var(--score-5, #62b278);
   }
 }
 

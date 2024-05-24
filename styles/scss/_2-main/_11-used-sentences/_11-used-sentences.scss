@@ -11,7 +11,7 @@
       .global-used-sentences-container {
         display: flex;
         width: var(---width, 1366px);
-        padding: 24px var(--nums-block-radius, 32px);
+        padding: 24px 32px;
         align-items: flex-start;
         gap: 24px;
 

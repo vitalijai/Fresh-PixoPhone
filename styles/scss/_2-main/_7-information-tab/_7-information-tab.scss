@@ -233,7 +233,7 @@
           align-self: stretch;
           width: calc(480px - ($padding * 2));
 
-          border-radius: var(---radius-min, 8px);
+          border-radius: 8px;
         }
 
         .inf-tab__specifications-photo-price {

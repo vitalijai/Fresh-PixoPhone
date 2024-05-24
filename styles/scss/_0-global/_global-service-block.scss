@@ -44,7 +44,7 @@
       left: 40px;
       top: 26px;
 
-      border-radius: var(---radius-min, 8px);
+      border-radius: 8px;
       background: var(--colors-white, #fff);
       padding: 0;
       /* pop-up_shadow */
@@ -98,7 +98,7 @@
             $justify: space-between,
             $self: stretch
           );
-          gap: var(--nums-block-radius, 32px);
+          gap: 32px;
 
           color: var(--colors-gray-700, #2f2c2f);
           font-size: 14px;

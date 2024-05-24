@@ -20,6 +20,7 @@
 
     color: var(--colors-gray-300, #c0c0c0);
     text-align: center;
+    user-select: none;
 
     span {
       margin-right: 2px;
@@ -32,6 +33,7 @@
 
     color: var(--colors-white, #fff);
     text-align: center;
+    user-select: none;
   }
 
   .global-p-short-product-new-price-container {

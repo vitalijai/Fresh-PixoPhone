@@ -110,6 +110,7 @@
 
 .global-list-articul {
   color: var(--colors-gray-400, #929292);
+  user-select: text;
 }
 
 .global-list-reviews {
