@@ -129,12 +129,12 @@ $(document).ready(function () {
 $(".offers-page-header-view-block button").click(function () {
   // Проверяем состояние чекбокса
   if (
-    $(".offers-page-header-switch-compare-block input[type='checkbox']").is(
+    $(".offers-page-switch-compare-guarantee input[type='checkbox']").is(
       ":checked"
     )
   ) {
     // Если чекбокс активен, снимаем его отметку
-    $(".offers-page-header-switch-compare-block input[type='checkbox']").prop(
+    $(".offers-page-switch-compare-guarantee input[type='checkbox']").prop(
       "checked",
       false
     );
