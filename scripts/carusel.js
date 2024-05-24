@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
     buPhoto.sync(bUecondSlider).mount();
   }
 
+  primarySlider.sync(secondarySlider).mount();
+  popUpPhoto.sync(secondSlider).mount();
+
   // Вызов функции для инициализации слайдеров
   initializeSplideSliders("#bu-main-photo-slider", "#bu-secondary-slider");
   initializeSplideSliders("#bu-main-photo-slider-2", "#bu-secondary-slider-2");
   initializeSplideSliders("#bu-main-photo-slider-3", "#bu-secondary-slider-3");
-
-  primarySlider.sync(secondarySlider).mount();
-  popUpPhoto.sync(secondSlider).mount();
 });
 
 //Zoom

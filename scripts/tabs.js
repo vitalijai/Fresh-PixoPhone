@@ -121,6 +121,7 @@ $(document).ready(function () {
 
   $(".filter.apply").click(function () {
     $(".offers-page-header-filter-block").removeClass("active");
+    $(".offers-filter-options").css("display", "none");
     $(".filter.BTN").addClass("active");
   });
 });

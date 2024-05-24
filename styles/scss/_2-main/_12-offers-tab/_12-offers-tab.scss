@@ -404,12 +404,12 @@
       .offers-page-block__comparison {
         display: none;
 
-        &.active {
-          display: block;
-        }
-        &.offers-page-block__column.active {
+        &.active:not(.offers-page-block__list) {
           display: flex;
         }
+      }
+      .offers-page-block__list.active {
+        display: block;
       }
     }
     @import "../_12-offers-tab/12.1-block-list";

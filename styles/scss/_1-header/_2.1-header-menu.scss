@@ -105,7 +105,7 @@
           position: absolute;
           top: 0;
           left: 296px;
-          background: #fff;
+          background: var(--colors-white, #fff);
           height: 100%;
           border-radius: 0px 0px 24px 0px;
           animation: slideOpation 0.5s ease forwards;
