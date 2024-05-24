@@ -172,7 +172,7 @@
         align-self: stretch;
 
         .gen-tab__info-price-cashback {
-          height: 100%;
+          height: 21px;
         }
 
         .offers-page-buy-guarantee {
@@ -204,11 +204,19 @@
 
           border-radius: 8px;
 
-          .global-block-container-bottom-new-price {
-            font-size: 16px;
-            font-weight: 500;
-            span {
-              font-size: 24px;
+          .gen-tab__info-list-guaran {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 16px;
+            align-self: stretch;
+
+            .global-block-container-bottom-new-price {
+              font-size: 16px;
+              font-weight: 500;
+              span {
+                font-size: 24px;
+              }
             }
           }
 

@@ -106,17 +106,25 @@
   }
 
   .offers-page-block__comparison-gen-tab {
+    border-radius: 0 0 0 24px;
+
     .offers-page-block__tabs-img {
       width: calc(100% - 48px);
       height: 346px;
     }
     .offers-page-block__tabs-parametrs {
+      border-radius: 0 0 0 24px;
+
       .offers-page-block__tabs-div {
         color: var(--colors-gray-300, #c0c0c0);
         font-weight: 500;
 
         user-select: none;
         max-width: 200px;
+
+        &:last-child {
+          border-radius: 0 0 0 24px;
+        }
       }
     }
   }
@@ -131,6 +139,10 @@
       margin-left: 1px;
     }
 
+    .splide__track {
+      border-radius: 0 0 24px 0;
+    }
+
     .offers-page-block__tabs-cover {
       align-self: stretch;
 
@@ -141,7 +153,9 @@
       display: none;
 
       width: 64px;
-      height: 1379px;
+      height: calc((346px + (24px * 2)) + (152px * 8) + 24px);
+      border-radius: 0 0 24px 0;
+
       position: absolute;
       right: 0px;
       top: 0px;
