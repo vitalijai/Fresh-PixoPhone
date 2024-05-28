@@ -301,6 +301,13 @@ $(document).ready(function () {
     ".pop-up-to-cart-button",
     ".pop-up-to-cart-bottom-left"
   );
+  //Показать блок заказа
+  initModal(
+    ".offers-page-description-show-more",
+    "#popUpBuProducts",
+    ".pop-up-bu-close",
+    "#popUpBuProducts"
+  );
 
   initOverlow(
     ".p-short-info-button",

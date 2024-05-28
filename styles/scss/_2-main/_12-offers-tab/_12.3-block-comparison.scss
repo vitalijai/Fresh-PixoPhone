@@ -75,7 +75,6 @@
       flex-direction: column;
       align-items: flex-end;
       align-self: stretch;
-
       background: var(--colors-white, #fff);
 
       .offers-page-block__tabs-div {
@@ -94,6 +93,7 @@
         font-weight: 400;
         line-height: 150%; /* 24px */
 
+        user-select: text;
         &:nth-child(odd) {
           background: var(--colors-white, #fff);
         }
