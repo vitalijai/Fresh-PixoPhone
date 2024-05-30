@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function initializeSplidePopUpBu() {
     new Splide("#pop-up-bu-main-photo-block-slider", {
-      width: 1640,
+      width: 1300,
 
       pagination: false,
       arrows: true,

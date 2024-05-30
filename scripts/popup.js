@@ -341,3 +341,20 @@ $(document).ready(function () {
     $(this).closest(".gen-tab__block").toggleClass("active");
   });
 });
+
+$(document).ready(function () {
+  $(".contain-submenu").click(function () {
+    // Remove active class from all menu items and content blocks
+    $(".contain-submenu").removeClass("active");
+    $(".nav-block").removeClass("active");
+
+    // Add active class to the clicked menu item
+    $(this).addClass("active");
+
+    // Get the target content block from data-target attribute
+    var target = $(this).data("target");
+
+    // Add active class to the corresponding content block
+    $("." + target).addClass("active");
+  });
+});
