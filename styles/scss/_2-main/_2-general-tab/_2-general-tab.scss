@@ -43,7 +43,7 @@
             $self: stretch
           );
 
-          gap: 16px;
+          gap: var(---gap-small, 16px);
           $border-w: 2px;
 
           .gen-tab__carousel-img {

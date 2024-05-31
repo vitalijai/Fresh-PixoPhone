@@ -461,7 +461,7 @@ a:visited {
   flex: 1 0 0;
   cursor: pointer;
   border-radius: 8px;
-  border: var(---stroke-thickness, 2px) solid transparent;
+  border: 2px solid transparent;
   background: var(--colors-white, #fff);
 }
 .global-horizontal-switch .gen-tab__add-services-price {
@@ -610,7 +610,7 @@ a:visited {
   cursor: pointer;
 }
 .global-all-models-button-a a:hover {
-  border: var(---stroke-thickness, 2px) solid var(--colors-blue-500, #318ce7);
+  border: 2px solid var(--colors-blue-500, #318ce7);
   background: var(--colors-white, #fff);
   color: var(--colors-blue-400, #62a8ed);
 }
@@ -643,7 +643,7 @@ a:visited {
 .global-button-notify button:hover,
 .global-button-all-show-bu button:hover,
 .global-button-fast-buy button:hover {
-  border: var(---stroke-thickness, 2px) solid var(--colors-blue-500, #318ce7);
+  border: 2px solid var(--colors-blue-500, #318ce7);
   background: var(--colors-white, #fff);
   color: var(--colors-blue-400, #62a8ed);
 }
@@ -1623,7 +1623,7 @@ a:visited {
   padding: 32px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   border-radius: 28px;
   background: var(--colors-white, #fff);
   box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
@@ -1633,7 +1633,7 @@ a:visited {
 }
 .global-pop-modal .global-pop-modal-content.user-fast-buy .global-modal-form-container {
   flex-direction: column;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .global-pop-modal .global-pop-modal-content.user-notify {
   width: 416px;
@@ -1848,7 +1848,7 @@ a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
   width: 100%;
 }
@@ -2036,13 +2036,13 @@ a:visited {
   font-weight: 500;
 }
 .gen-tab__add-services .gen-tab__add-services-block.default.active .gen-tab__add-services-text, .gen-tab__add-services .gen-tab__add-services-block.enable-check.active .gen-tab__add-services-text {
-  border: var(---stroke-thickness, 2px) solid var(--colors-gray-200, #e5e4e2) !important;
+  border: 2px solid var(--colors-gray-200, #e5e4e2) !important;
 }
 .gen-tab__add-services .gen-tab__add-services-block.default .gen-tab__add-services-text, .gen-tab__add-services .gen-tab__add-services-block.enable-check .gen-tab__add-services-text {
-  border: var(---stroke-thickness, 2px) solid var(--colors-gray-100, #e5e4e2) !important;
+  border: 2px solid var(--colors-gray-100, #e5e4e2) !important;
 }
 .gen-tab__add-services .gen-tab__add-services-block.default .gen-tab__add-services-text:hover, .gen-tab__add-services .gen-tab__add-services-block.enable-check .gen-tab__add-services-text:hover {
-  border: var(---stroke-thickness, 2px) solid var(--colors-gray-200, #e5e4e2) !important;
+  border: 2px solid var(--colors-gray-200, #e5e4e2) !important;
 }
 .gen-tab__add-services .gen-tab__add-services-block.default .gen-tab__add-services-text::after, .gen-tab__add-services .gen-tab__add-services-block.enable-check .gen-tab__add-services-text::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="%232F2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
@@ -2712,7 +2712,7 @@ a:visited {
   display: flex;
   align-items: flex-start;
   align-self: stretch;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   flex: 1 0 0;
   width: calc(var(---width, 1366px) - 91.89%);
   position: absolute;
@@ -2725,7 +2725,7 @@ a:visited {
 }
 .header .header-container .catalog_products_main .main-menu .vertical-list .js-menu-list.active .js-menu-col-left {
   padding: 28px 24px 24px 24px;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   flex: 1 0 0;
   align-self: stretch;
   columns: 3;
@@ -3013,7 +3013,7 @@ a:visited {
   align-items: center;
   flex-direction: column;
   align-self: stretch;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .common-template .general-tab .page-container .gen-tab__left-side .gen-tab__carousel .gen-tab__carousel-container-img .gen-tab__carousel-img {
   display: flex;
@@ -3172,7 +3172,7 @@ a:visited {
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__info .gen-tab__info-price .gen-tab__info-price-value {
   align-items: flex-end;
@@ -3247,7 +3247,7 @@ a:visited {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   padding: 24px 32px;
   background: var(---white, #fff);
   user-select: none;
@@ -3534,7 +3534,7 @@ a:visited {
   width: unset;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit.hide .gen-tab__credit-container .gen-tab__credit-block {
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__credit.hide .gen-tab__credit-container .gen-tab__credit-btn {
   display: none;
@@ -3808,7 +3808,7 @@ a:visited {
   align-self: stretch;
   padding: 48px;
   width: min(95%, var(---width, 1366px) - 96px);
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   border-radius: 32px;
   background: var(--colors-white, #fff);
   /* block-shadow */
@@ -3963,7 +3963,7 @@ a:visited {
   align-items: flex-start;
   align-self: stretch;
   text-align: justify;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .common-template .information-tab .information-page-container .inf-tab__left-side .inf-tab__information-block .inf-tab__specifications-container .specifications-block .specifications-block-header {
   font-size: 20px;
@@ -4016,7 +4016,7 @@ a:visited {
   padding: 48px;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
   background: var(---white, #fff);
   border-radius: 0 24px 24px 0;
@@ -4026,7 +4026,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   align-self: stretch;
   position: sticky;
   top: 156px;
@@ -4076,7 +4076,7 @@ a:visited {
 .common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .inf-tab__specifications-photo-price .inf-tab__to-order {
   display: flex;
   align-self: stretch;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .global-button-notify,
 .common-template .information-tab .information-page-container .inf-tab__right-side .inf-tab__specifications-photo .global-button-fast-buy,
@@ -4172,7 +4172,7 @@ a:visited {
   padding: 0;
   width: 100%;
   display: flex;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
@@ -4223,7 +4223,7 @@ a:visited {
 }
 .common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-right .global-p-short-product {
   justify-content: flex-end !important;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
 }
 .common-template .accessories-tab .accessories-page-container .accessories-page-content .accessories-page-content-right .global-button-show-more button {
   border-radius: 0 0 24px 0;
@@ -4267,7 +4267,7 @@ a:visited {
   display: flex;
   padding: 32px;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   align-self: stretch;
   background: var(--colors-white, #fff);
 }
@@ -4296,7 +4296,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-header p,
@@ -4324,7 +4324,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   align-self: stretch;
 }
 .common-template .service-tab .service-page-container .service-page-content .service-page-block .service-page-block-content .service-page-block-bottom .service-page-block-value {
@@ -4366,7 +4366,7 @@ a:visited {
   width: var(---width, 1366px);
   padding: 24px 32px;
   align-items: flex-start;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
 }
 .common-template .block-used-sentences .block-used-sentences-container .block-used-sentences-content .global-used-sentences-container img {
   display: flex;
@@ -4389,7 +4389,7 @@ a:visited {
 .common-template .block-used-sentences .block-used-sentences-container .block-used-sentences-content .global-used-sentences-container .global-used-sentences-block .global-used-sentences-block-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .common-template .block-used-sentences .block-used-sentences-container .block-used-sentences-content .global-used-sentences-container .global-used-sentences-block .global-used-sentences-block-content {
@@ -4424,7 +4424,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   align-self: stretch;
   color: var(--colors-gray-700, #2f2c2f);
   font-size: 48px;
@@ -4514,6 +4514,7 @@ a:visited {
   position: relative;
   min-width: 115px;
   height: 32px;
+  margin-left: 10px;
 }
 .common-template .offers-tab .offers-page-container .offers-page-header .offers-page-header-actions .offers-page-header-sorting-block .offers-page-header-sorting-container {
   border-radius: 48px;
@@ -4701,9 +4702,9 @@ a:visited {
 }
 .common-template .offers-tab .offers-page-container .offers-filter-options {
   display: none;
-  padding: var(--nums-block-radius, 32px) 48px;
+  padding: 32px 48px;
   align-items: flex-start;
-  gap: var(--nums-block-radius, 32px);
+  gap: 32px;
   align-self: stretch;
   background: var(--colors-white, #fff);
   user-select: none;
@@ -4768,7 +4769,7 @@ a:visited {
   display: flex;
   padding: 48px;
   align-items: flex-start;
-  gap: 48px;
+  gap: var(---gap-big, 48px);
   align-self: stretch;
   background: var(--colors-white, #fff);
 }
@@ -4776,7 +4777,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   flex: 1 0 0;
   align-self: stretch;
   user-select: none;
@@ -4853,7 +4854,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   flex: 1 0 0;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-parameter-block {
@@ -4865,7 +4866,7 @@ a:visited {
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-parameter-block .offers-page-parameter-indx {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   flex: 1 0 0;
   align-self: stretch;
   user-select: none;
@@ -4896,7 +4897,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-buy-block .offers-page-buy-header {
@@ -4913,7 +4914,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-buy-block .offers-page-buy-header .offers-page-buy-guarantee .global-block-container-bottom-value {
@@ -4927,7 +4928,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
   border-radius: 8px;
 }
@@ -4935,7 +4936,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-buy-block .offers-page-buy-header .offers-page-buy-guarantee-bottom .gen-tab__info-list-guaran .global-block-container-bottom-new-price {
@@ -4974,7 +4975,7 @@ a:visited {
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-description-block .offers-page-description-top .offers-page-description-container {
   display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__list-block .offers-page__right-side .offers-page-description-block .offers-page-description-top .offers-page-description-container .offers-page-description-name {
@@ -5100,7 +5101,7 @@ a:visited {
 .common-template .offers-tab .offers-page-container .offers-page-block__column .offers-page-block__column-container .offers-page-rating .block-rating-value .status-container .status-indicators .status-indicator {
   width: 20px;
   height: 8px;
-  border-radius: var(---stroke-thickness, 2px);
+  border-radius: 2px;
 }
 .common-template .offers-tab .offers-page-container .offers-page-block__column .offers-page-block__column-container .offers-page-rating .block-rating-value .status-container .status-number {
   text-align: center;
@@ -5118,7 +5119,7 @@ a:visited {
   display: flex;
   height: 32px;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   justify-content: space-between;
   align-self: stretch;
   white-space: nowrap;
@@ -5297,7 +5298,7 @@ a:visited {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
 }
 .footer .footer-container, .footer .footer-container a {
   color: var(--colors-gray-200, #e5e4e2);
@@ -5309,7 +5310,7 @@ a:visited {
   align-items: flex-start;
   flex-direction: center;
   align-self: stretch;
-  gap: 48px;
+  gap: var(---gap-big, 48px);
 }
 .footer .footer-container .footer-top .footer-nav__column {
   display: flex;
@@ -5377,7 +5378,7 @@ a:visited {
   align-items: center;
 }
 .footer .footer-container .footer-top .footer-logo-container {
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   user-select: none;
 }
 .footer .footer-container .footer-top .footer-logo-container .footer-logo-block-container {
@@ -5564,7 +5565,7 @@ a:visited {
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-  gap: 48px;
+  gap: var(---gap-big, 48px);
   min-height: 515px;
   height: 73.5vh;
   max-height: 825px;
@@ -5654,7 +5655,7 @@ a:visited {
 }
 .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content .menu-list-item .submenu-list__cont .submenu-list__cont-btn {
   display: flex;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content .menu-list-item .submenu-list__cont .submenu-list__cont-btn .submenu-list__btn {
   border: none;
@@ -5867,7 +5868,7 @@ a:visited {
   display: flex;
   padding: 16px;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content img {
@@ -5878,7 +5879,7 @@ a:visited {
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container {
   padding: 12px 0px;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   justify-content: unset;
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .global-p-short-product-span {
@@ -5890,14 +5891,14 @@ a:visited {
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .global-modal-price-container {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   align-self: stretch;
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-total-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   flex: 1 0 0;
 }
 .pop-up-cart-modal .global-pop-modal-content .global-modal-block .global-modal-block-content .global-modal-block-content-container .global-modal-price-container .global-modal-total-container .gen-tab__info-price-cashback {
@@ -5916,7 +5917,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
   padding: 10px 0 0 10px;
   border-radius: 16px;
@@ -6039,7 +6040,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
 }
 .pop-up-cart-modal .global-pop-modal-content .global-bottom-cart .global-bottom-cart-right .gen-tab__info-price-cashback {
   display: flex;
@@ -6207,17 +6208,17 @@ a:visited {
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container {
   display: flex;
-  padding: var(--nums-block-radius, 32px) var(--nums-block-radius, 32px) 24px var(--nums-block-radius, 32px);
+  padding: 32px 32px 24px 32px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
   background: var(---white, #fff);
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .pop-up-bu-main-parameter-block {
   display: flex;
   align-items: flex-start;
-  gap: 48px;
+  gap: var(---gap-big, 48px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .pop-up-bu-main-parameter-block h4 {
@@ -6240,7 +6241,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .offers-page-buy-block .offers-page-buy-header {
@@ -6254,7 +6255,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .offers-page-buy-block .offers-page-buy-header .offers-page-buy-guarantee .gen-tab__info-price-cashback {
@@ -6264,7 +6265,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: baseline;
-  gap: 24px;
+  gap: var(---gap-basic, 24px);
   margin-left: 8px;
   color: var(--colors-gray-700, #2f2c2f);
   font-size: 48px;
@@ -6273,7 +6274,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .offers-page-buy-block .offers-page-buy-header .offers-page-buy-guarantee-bottom, .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .offers-page-buy-block .offers-page-buy-header .offers-page-buy-guarantee-bottom span {
@@ -6283,7 +6284,7 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main-parameter-container .offers-page-buy-block .offers-page-buy-header .offers-page-buy-guarantee-bottom .gen-tab__info-list-guaran .gen-tab__info-price-cashback {
@@ -6299,7 +6300,7 @@ a:visited {
   display: flex;
   height: 48px;
   align-items: center;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container {
@@ -6350,7 +6351,7 @@ a:visited {
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.active.pop-up-bu-main-description-block {
   display: flex;
-  padding: 24px var(--nums-block-radius, 32px);
+  padding: 24px 32px;
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
@@ -6368,7 +6369,7 @@ a:visited {
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.active.pop-up-bu-main-description-block .pop-up-bu-main-description-top .pop-up-bu-main-description-container {
   display: flex;
   align-items: baseline;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.active.pop-up-bu-main-description-block .pop-up-bu-main-description-top .pop-up-bu-main-description-container .pop-up-bu-main-description-name {
@@ -6391,10 +6392,10 @@ a:visited {
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block {
   display: flex;
-  padding: 24px var(--nums-block-radius, 32px);
+  padding: 24px 32px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: var(---gap-small, 16px);
   align-self: stretch;
   background: var(--colors-white, #fff);
 }
@@ -6403,8 +6404,39 @@ a:visited {
   align-items: center;
   padding: 0;
 }
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services .gen-tab__add-services-block {
+  width: calc(var(---width, 1366px) / 2 - var(---width, 1366px) / 2.35 * 0.3);
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services .gen-tab__add-services-block .gen-tab__add-services-text {
+  width: 366px;
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services .gen-tab__add-services-block .gen-tab__add-services-ul {
+  top: 47px;
+}
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form {
   width: 100%;
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form .gen-tab__add-services-block {
+  height: unset;
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form .gen-tab__add-services-ul li {
+  overflow: unset;
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form .gen-tab__add-services-ul.scroll {
+  overflow-y: scroll;
+  max-height: 160px;
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form .gen-tab__add-services-ul.scroll::-webkit-scrollbar {
+  width: 8px; /* Ширина всего элемента навигации */
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form .gen-tab__add-services-ul.scroll::-webkit-scrollbar-track {
+  border-radius: 8px; /* Округление бегунка */
+  background: var(--colors-gray-100, #f7f7f7); /* Цвет дорожки */
+}
+.pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-services form .gen-tab__add-services-ul.scroll::-webkit-scrollbar-thumb {
+  background: var(--colors-gray-200, #e5e4e2);
+  /* Цвет бегунка */
+  border-radius: 8px; /* Округление бегунка */
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-product {
   display: flex;
@@ -6463,7 +6495,7 @@ a:visited {
   justify-content: center;
   align-items: flex-start;
   border-radius: 16px;
-  border: var(---stroke-thickness, 2px) solid var(--colors-gray-100, #f7f7f7);
+  border: 2px solid var(--colors-gray-100, #f7f7f7);
   background: var(--colors-white, #fff);
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__right-side .pop-up-bu-main__nav-container .active.gen-tab__block .gen-tab__add-product .carousel-container .gen-tab__add-product-accessories--item img {

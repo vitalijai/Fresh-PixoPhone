@@ -13,7 +13,7 @@
         width: var(---width, 1366px);
         padding: 24px 32px;
         align-items: flex-start;
-        gap: 24px;
+        gap: var(---gap-basic, 24px);
 
         img {
           display: flex;
@@ -38,7 +38,7 @@
           .global-used-sentences-block-header {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: var(---gap-small, 16px);
             align-self: stretch;
           }
 
@@ -78,7 +78,7 @@
             display: flex;
             justify-content: center;
             align-items: baseline;
-            gap: 24px;
+            gap: var(---gap-basic, 24px);
             align-self: stretch;
 
             color: var(--colors-gray-700, #2f2c2f);

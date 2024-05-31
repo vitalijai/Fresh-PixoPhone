@@ -63,6 +63,8 @@
           min-width: 115px;
           height: 32px;
 
+          margin-left: 10px;
+
           .offers-page-header-sorting-container {
             border-radius: 48px;
             display: flex;
@@ -338,9 +340,9 @@
 
     .offers-filter-options {
       display: none;
-      padding: var(--nums-block-radius, 32px) 48px;
+      padding: 32px 48px;
       align-items: flex-start;
-      gap: var(--nums-block-radius, 32px);
+      gap: 32px;
       align-self: stretch;
 
       background: var(--colors-white, #fff);

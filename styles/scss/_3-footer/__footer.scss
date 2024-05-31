@@ -7,7 +7,7 @@
 
   .footer-container {
     @include flexbox($alignItems: center, $direction: column);
-    gap: 24px;
+    gap: var(---gap-basic, 24px);
 
     &,
     & a {
@@ -24,7 +24,7 @@
         $self: stretch
       );
 
-      gap: 48px;
+      gap: var(---gap-big, 48px);
 
       .footer-nav__column {
         @include flexbox(
@@ -102,7 +102,7 @@
 
       .footer-logo-container {
         $width: 144px;
-        gap: 24px;
+        gap: var(---gap-basic, 24px);
 
         user-select: none;
 

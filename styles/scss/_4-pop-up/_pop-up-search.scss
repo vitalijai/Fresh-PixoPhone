@@ -77,7 +77,7 @@
       overflow: hidden;
       overflow-y: scroll;
       scrollbar-width: none;
-      gap: 48px;
+      gap: var(---gap-big, 48px);
       min-height: 515px;
       height: 73.5vh;
       max-height: 825px;
@@ -200,7 +200,7 @@
 
             .submenu-list__cont-btn {
               display: flex;
-              gap: 16px;
+              gap: var(---gap-small, 16px);
 
               .submenu-list__btn {
                 border: none;

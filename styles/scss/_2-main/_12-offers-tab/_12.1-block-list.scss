@@ -2,7 +2,7 @@
   display: flex;
   padding: 48px;
   align-items: flex-start;
-  gap: 48px;
+  gap: var(---gap-big, 48px);
   align-self: stretch;
 
   background: var(--colors-white, #fff);
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 16px;
+    gap: var(---gap-small, 16px);
     flex: 1 0 0;
     align-self: stretch;
 
@@ -110,7 +110,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 16px;
+    gap: var(---gap-small, 16px);
     flex: 1 0 0;
 
     .offers-page-parameter-block {
@@ -122,7 +122,7 @@
       .offers-page-parameter-indx {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: var(---gap-small, 16px);
         flex: 1 0 0;
         align-self: stretch;
 
@@ -161,7 +161,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      gap: 16px;
+      gap: var(---gap-small, 16px);
       align-self: stretch;
 
       .offers-page-buy-header {
@@ -179,7 +179,7 @@
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
-          gap: 16px;
+          gap: var(---gap-small, 16px);
           align-self: stretch;
 
           .global-block-container-bottom-value {
@@ -199,7 +199,7 @@
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
-          gap: 16px;
+          gap: var(---gap-small, 16px);
           align-self: stretch;
 
           border-radius: 8px;
@@ -208,7 +208,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
-            gap: 16px;
+            gap: var(---gap-small, 16px);
             align-self: stretch;
 
             .global-block-container-bottom-new-price {
@@ -257,7 +257,7 @@
         .offers-page-description-container {
           display: flex;
           align-items: baseline;
-          gap: 16px;
+          gap: var(---gap-small, 16px);
           align-self: stretch;
 
           .offers-page-description-name {

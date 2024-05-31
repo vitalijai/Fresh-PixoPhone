@@ -22,7 +22,7 @@
     padding: 32px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: var(---gap-basic, 24px);
 
     border-radius: 28px;
     background: var(--colors-white, #fff);
@@ -33,7 +33,7 @@
 
       .global-modal-form-container {
         flex-direction: column;
-        gap: 16px;
+        gap: var(---gap-small, 16px);
       }
     }
 
@@ -298,7 +298,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 16px;
+        gap: var(---gap-small, 16px);
         align-self: stretch;
         width: 100%;
 

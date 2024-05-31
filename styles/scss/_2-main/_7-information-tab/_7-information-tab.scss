@@ -139,7 +139,7 @@
 
             text-align: justify;
 
-            gap: 16px;
+            gap: var(---gap-small, 16px);
 
             .specifications-block-header {
               font-size: 20px;
@@ -209,7 +209,7 @@
       padding: $padding;
       flex-direction: column;
       align-items: center;
-      gap: 16px;
+      gap: var(---gap-small, 16px);
       align-self: stretch;
 
       background: var(---white, #fff);
@@ -220,7 +220,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 24px;
+        gap: var(---gap-basic, 24px);
         align-self: stretch;
 
         position: sticky;
@@ -279,7 +279,7 @@
           .inf-tab__to-order {
             display: flex;
             align-self: stretch;
-            gap: 16px;
+            gap: var(---gap-small, 16px);
           }
         }
 

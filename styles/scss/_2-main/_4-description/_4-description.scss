@@ -10,7 +10,7 @@
     );
     padding: $padding;
     width: min(95%, calc(var(---width, 1366px) - ($padding * 2)));
-    gap: 24px;
+    gap: var(---gap-basic, 24px);
     border-radius: 32px;
     background: var(--colors-white, #fff);
 

@@ -43,7 +43,7 @@
         display: flex;
         padding: 16px;
         align-items: flex-start;
-        gap: 16px;
+        gap: var(---gap-small, 16px);
         align-self: stretch;
 
         img {
@@ -56,7 +56,7 @@
 
         .global-modal-block-content-container {
           padding: 12px 0px;
-          gap: 16px;
+          gap: var(---gap-small, 16px);
           justify-content: unset;
 
           .global-p-short-product-span {
@@ -69,14 +69,14 @@
           .global-modal-price-container {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: var(---gap-basic, 24px);
             align-self: stretch;
 
             .global-modal-total-container {
               display: flex;
               justify-content: flex-end;
               align-items: center;
-              gap: 24px;
+              gap: var(---gap-basic, 24px);
               flex: 1 0 0;
 
               .gen-tab__info-price-cashback {
@@ -99,7 +99,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 16px;
+            gap: var(---gap-small, 16px);
             align-self: stretch;
             padding: 10px 0 0 10px;
             border-radius: 16px;
@@ -266,7 +266,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 16px;
+        gap: var(---gap-small, 16px);
 
         .gen-tab__info-price-cashback {
           display: flex;

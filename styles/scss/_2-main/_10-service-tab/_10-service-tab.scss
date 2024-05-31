@@ -39,7 +39,7 @@
         display: flex;
         padding: 32px;
         align-items: flex-start;
-        gap: 24px;
+        gap: var(---gap-basic, 24px);
         align-self: stretch;
 
         background: var(--colors-white, #fff);
@@ -72,7 +72,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 16px;
+            gap: var(---gap-small, 16px);
             align-self: stretch;
 
             p,
@@ -106,7 +106,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 24px;
+            gap: var(---gap-basic, 24px);
             align-self: stretch;
 
             .service-page-block-value {

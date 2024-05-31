@@ -40,7 +40,7 @@
       $self: stretch,
       $justify: space-between
     );
-    gap: 16px;
+    gap: var(---gap-small, 16px);
 
     .gen-tab__info-price-value {
       align-items: flex-end;

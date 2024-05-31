@@ -49,6 +49,19 @@ $(document).ready(function () {
     }
   });
 
+  // Event listener for the "Всі пропозиції" button
+  $("#allOffersButton").on("click", function () {
+    // Add the class "active" to the button if not already present
+    if (!$(this).hasClass("active")) {
+      $(".tabs__link").removeClass("active");
+      $(".tabs__link-offers").addClass("active");
+    }
+
+    // Show the offers-tab and hide other tabs
+    $(".general-tab, .accessories-tab, .service-tab").hide();
+    $(".offers-tab").show();
+  });
+
   // Устанавливаем начальное состояние для "tabs__link-description"
   $(".tabs__link-description").trigger("click");
 });

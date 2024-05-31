@@ -12,7 +12,7 @@
       width: unset;
 
       .gen-tab__credit-block {
-        gap: 16px;
+        gap: var(---gap-small, 16px);
       }
 
       .gen-tab__credit-btn {
