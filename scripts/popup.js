@@ -371,15 +371,23 @@ $(document).ready(function () {
   });
 
   // Обработчик изменения выбора предложения
-  $('input[name="credit-offer"]').on("change", function () {
-    var offerId = $(this).attr("id").replace("offerInput", ""); // Получаем ID offerId из ID радио-инпута
-    // Удаляем класс selected у всех блоков и добавляем его к выбранному блоку
-    $(".credit-offer-block").removeClass("selected");
-    $("#offer" + offerId)
-      .closest(".credit-offer-block")
-      .addClass("selected");
+  $(".info").on("click", function () {
+    // Находим радио-инпут внутри текущего элемента .info
+    var radio = $(this).find('input[name="credit-offer"]');
+    // Устанавливаем флажок, если радио-инпут найден
+    if (radio.length) {
+      radio.prop("checked", true);
+      // Получаем ID offerId из ID радио-инпута
+      var offerId = radio.attr("id").replace("offerInput", "");
+      // Удаляем класс selected у всех блоков и добавляем его к выбранному блоку
+      $(".credit-offer-block").removeClass("selected");
+      $("#offer" + offerId)
+        .closest(".credit-offer-block")
+        .addClass("selected");
+    }
   });
 });
+
 $(document).ready(function () {
   $(".pop-up-credit-calculator-buy-button").on("click", function () {
     var selectedOffer = $('input[name="credit-offer"]:checked').attr("id");
@@ -396,6 +404,27 @@ $(document).ready(function () {
     // Удаляем класс paperwork и добавляем класс choice у элемента credit-calculator
     $(".credit-offer-block").not(".selected").css("display", "flex");
     $(".credit-calculator").removeClass("paperwork").addClass("choice");
+  });
+});
+
+$(document).ready(function () {
+  $(".gen-tab__credit-block__btn").on("click", function () {
+    // Получаем ID кнопки и радио-инпута
+    var buttonId = $(this).attr("id");
+    var radioId = buttonId.replace("gen-tab__credit-", "#offerInput");
+    // console.log(buttonId);
+    // console.log(radioId);
+    $(".credit-offer-block").removeClass("selected");
+
+    $(radioId).closest(".credit-offer-block").addClass("selected open");
+    // Вызываем функцию initModal
+    $("#popUpCreditCalculator").fadeIn();
+    $("html").addClass("no-scroll");
+    $(".screen").addClass("overflow");
+    $(".screen.overflow").css("z-index", "22");
+
+    // Отмечаем соответствующий радио-инпут
+    $(radioId).prop("checked", true);
   });
 });
 

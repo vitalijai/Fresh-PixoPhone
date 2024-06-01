@@ -153,7 +153,7 @@
           input + label {
             font-size: 20px;
             cursor: pointer;
-            padding-left: 10px;
+            padding-left: 22px;
             position: relative;
           }
 
@@ -200,17 +200,21 @@
               align-items: center;
               gap: 32px;
               flex: 1 0 0;
+              justify-content: space-between;
               align-self: stretch;
               user-select: none;
 
               .info {
                 display: flex;
-                max-width: 160px;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
+                min-width: 210px;
+                width: 220px;
+                max-width: 230px;
                 flex: 1 0 0;
                 align-self: stretch;
+                justify-content: flex-starts;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
 
                 .credit-offer-bank-span {
                   color: var(--colors-gray-700, #2f2c2f);
@@ -220,6 +224,11 @@
                 .credit-offer-info-span {
                   color: var(--colors-gray-400, #929292);
                   font-size: 12px;
+                }
+
+                div {
+                  display: flex;
+                  flex-direction: column;
                 }
               }
 
@@ -265,7 +274,6 @@
                 justify-content: center;
                 align-items: flex-end;
                 gap: 4px;
-                flex: 1 0 0;
                 position: relative;
                 height: 48px;
 

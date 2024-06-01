@@ -6749,7 +6749,7 @@ a:visited {
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer input + label {
   font-size: 20px;
   cursor: pointer;
-  padding-left: 10px;
+  padding-left: 22px;
   position: relative;
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer input:checked + label {
@@ -6789,17 +6789,21 @@ a:visited {
   align-items: center;
   gap: 32px;
   flex: 1 0 0;
+  justify-content: space-between;
   align-self: stretch;
   user-select: none;
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info {
   display: flex;
-  max-width: 160px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  min-width: 210px;
+  width: 220px;
+  max-width: 230px;
   flex: 1 0 0;
   align-self: stretch;
+  justify-content: flex-starts;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info .credit-offer-bank-span {
   color: var(--colors-gray-700, #2f2c2f);
@@ -6808,6 +6812,10 @@ a:visited {
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info .credit-offer-info-span {
   color: var(--colors-gray-400, #929292);
   font-size: 12px;
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info div {
+  display: flex;
+  flex-direction: column;
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months {
   display: flex;
@@ -6840,7 +6848,6 @@ a:visited {
   justify-content: center;
   align-items: flex-end;
   gap: 4px;
-  flex: 1 0 0;
   position: relative;
   height: 48px;
 }
