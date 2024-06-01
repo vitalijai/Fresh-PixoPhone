@@ -308,6 +308,13 @@ $(document).ready(function () {
     ".pop-up-bu-close",
     "#popUpBuProducts"
   );
+  //Показать блок заказа
+  initModal(
+    ".gen-tab__credit-btn",
+    "#popUpCreditCalculator",
+    ".pop-up-credit-calculator-close",
+    "#popUpCreditCalculator"
+  );
 
   initOverlow(
     ".p-short-info-button",
@@ -339,6 +346,56 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".gen-tab__add-services-header").on("click", function () {
     $(this).closest(".gen-tab__block").toggleClass("active");
+  });
+});
+
+$(document).ready(function () {
+  // Обработчик клика по стрелке контейнера
+  $(".credit-offer-container-arrow").on("click", function () {
+    var $block = $(this).closest(".credit-offer-block");
+    // Проверяем, есть ли у блока класс open
+    if ($block.hasClass("open")) {
+      // Если есть, удаляем класс
+      $block.removeClass("open");
+    } else {
+      // Если нет, закрываем все открытые блоки и открываем текущий
+      $(".credit-offer-block.open").removeClass("open");
+      $block.addClass("open");
+    }
+  });
+
+  // Обработчик клика по элементу выбора количества месяцев
+  $(".months-select").on("click", function () {
+    // Добавляем класс active к выбранному элементу и удаляем его у остальных
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+
+  // Обработчик изменения выбора предложения
+  $('input[name="credit-offer"]').on("change", function () {
+    var offerId = $(this).attr("id").replace("offerInput", ""); // Получаем ID offerId из ID радио-инпута
+    // Удаляем класс selected у всех блоков и добавляем его к выбранному блоку
+    $(".credit-offer-block").removeClass("selected");
+    $("#offer" + offerId)
+      .closest(".credit-offer-block")
+      .addClass("selected");
+  });
+});
+$(document).ready(function () {
+  $(".pop-up-credit-calculator-buy-button").on("click", function () {
+    var selectedOffer = $('input[name="credit-offer"]:checked').attr("id");
+    // Проверяем, выбран ли какой-либо из радио-инпутов
+    if (selectedOffer) {
+      // Скрываем все блоки credit-offer-block, кроме выбранного
+      $(".credit-offer-block").not(".selected").css("display", "none");
+      // Убираем класс choice и добавляем класс paperwork у элемента credit-calculator
+      $(".credit-calculator").removeClass("choice").addClass("paperwork");
+    }
+  });
+
+  $(".cart-modal-sentences-show-more").on("click", function () {
+    // Удаляем класс paperwork и добавляем класс choice у элемента credit-calculator
+    $(".credit-offer-block").not(".selected").css("display", "flex");
+    $(".credit-calculator").removeClass("paperwork").addClass("choice");
   });
 });
 
