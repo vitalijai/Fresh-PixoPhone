@@ -3,11 +3,13 @@
 
   .block-block-description-container {
     $padding: 48px;
+
     @include flexbox(
       $direction: column,
       $alignItems: flex-start,
       $self: stretch
     );
+
     padding: $padding;
     width: min(95%, calc(var(---width, 1366px) - ($padding * 2)));
     gap: var(---gap-basic, 24px);
@@ -17,7 +19,11 @@
     /* block-shadow */
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
-    @media (max-width: 1152px) {
+    @media (max-width: 1440px) {
+      width: calc(100% - ($padding * 3.6));
+    }
+
+    @media (max-width: 1280px) {
       width: calc(100% - ($padding * 3.2));
     }
 

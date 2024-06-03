@@ -16,10 +16,22 @@
     margin: 2% auto;
     @include flexbox($alignItems: center, $direction: column);
 
-    width: calc(var(---width, 1366px) - (48px * 2));
-
+    // width: calc(var(---width, 1366px) - (48px * 2));
+    width: min(95%, var(---width, 1366px) - (48px * 2));
     padding: 48px;
     gap: 32px;
+
+    @media (max-width: 1440px) {
+      width: min(95%, var(---width, 1366px) - (48px * 4));
+    }
+
+    @media (max-width: 1280px) {
+      width: min(95%, var(---width, 1366px) - (48px * 7));
+    }
+
+    @media (max-width: 1152px) {
+      width: min(95%, var(---width, 1366px) - (48px * 10));
+    }
 
     border-radius: 32px;
     background: var(--modal-colors-white, #fff);
@@ -169,7 +181,8 @@
         }
       }
       .category-content {
-        width: calc((var(---width, 1366px) - 328px) - (48px * 2));
+        // width: calc((var(---width, 1366px) - 328px) - (48px * 2));
+        width: min(95%, (var(---width, 1366px) - 328px) - (48px * 2));
 
         flex: 1 0 0;
         display: none;
@@ -393,6 +406,11 @@
           flex-wrap: wrap;
           gap: 24px 48px;
           // columns: 3;
+
+          @media (max-width: 1280px) {
+            gap: 12px 24px;
+          }
+
           .search-menu-categories-list {
             @include flexbox($alignItems: flex-start, $direction: column);
 

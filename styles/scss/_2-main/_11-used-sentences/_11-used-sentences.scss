@@ -10,7 +10,7 @@
 
       .global-used-sentences-container {
         display: flex;
-        width: var(---width, 1366px);
+        width: min(95%, var(---width, 1366px));
         padding: 24px 32px;
         align-items: flex-start;
         gap: var(---gap-basic, 24px);
@@ -95,8 +95,8 @@
       }
 
       .fade {
-        width: var(---width, 1366px);
-        height: 449px;
+        width: min(100%, var(---width, 1366px));
+        height: 100%;
 
         position: absolute;
         top: -1px;

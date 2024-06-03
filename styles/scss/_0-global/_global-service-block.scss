@@ -28,6 +28,18 @@
     flex-shrink: 0;
     position: relative;
 
+    @media (max-width: 1562px) {
+      width: calc(
+        var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.18)
+      );
+    }
+
+    @media (max-width: 1290px) {
+      width: calc(
+        var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.28)
+      );
+    }
+
     &:not(:last-child) {
       padding-bottom: 10px;
     }

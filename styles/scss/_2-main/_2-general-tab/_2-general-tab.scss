@@ -12,7 +12,7 @@
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
     // width: min(95%, calc(var(---width, 1366px) - ($padding * 2)));
 
-    @media (max-width: 1152px) {
+    @media (max-width: 1279px) {
       flex-direction: column;
     }
 
@@ -25,7 +25,7 @@
       padding: 32px $padding;
       user-select: none;
 
-      @media (max-width: 1152px) {
+      @media (max-width: 1279px) {
         border-radius: 24px 24px 0 0;
       }
 
@@ -46,7 +46,19 @@
             var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.15)
           );
 
-          @media (max-width: 1152px) {
+          @media (max-width: 1562px) {
+            width: calc(
+              var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.25)
+            );
+          }
+
+          @media (max-width: 1290px) {
+            width: calc(
+              var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.35)
+            );
+          }
+
+          @media (max-width: 1279px) {
             width: 100%;
           }
 
@@ -216,7 +228,7 @@
         }
       }
 
-      @media (max-width: 1152px) {
+      @media (max-width: 1279px) {
         width: 100%;
 
         .gen-tab__block {
@@ -247,7 +259,19 @@
             var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.095
           );
 
-          @media (max-width: 1152px) {
+          @media (max-width: 1562px) {
+            width: calc(
+              var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.18
+            );
+          }
+
+          @media (max-width: 1290px) {
+            width: calc(
+              var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.28
+            );
+          }
+
+          @media (max-width: 1279px) {
             width: 100%;
           }
         }

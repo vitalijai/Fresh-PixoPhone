@@ -117,6 +117,10 @@
         max-width: 210px;
         gap: 8px;
 
+        @media (max-width: 1152px) {
+          display: none;
+        }
+
         img {
           width: 48px;
           height: 48px;

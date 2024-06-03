@@ -1,6 +1,10 @@
 .pop-up-bu-products-modal-content {
-  max-width: 1300px;
+  width: min(90%, 1300px);
   margin: 10% auto;
+
+  @media (max-width: 1280px) {
+    margin: 3% auto;
+  }
 
   .pop-up-bu-main-photo-block-slider {
     background: var(--colors-white, #fff);
@@ -68,7 +72,7 @@
 
           .pop-up-bu-main__left-side {
             display: flex;
-            width: 720px;
+            width: 55.38%;
             align-items: flex-start;
             align-self: stretch;
           }
@@ -80,7 +84,7 @@
               $self: stretch
             );
 
-            width: 720px;
+            width: 100%;
             border-radius: 8px;
 
             position: relative;
@@ -88,7 +92,6 @@
             img {
               width: 100%;
 
-              max-height: 800px;
               object-fit: cover;
 
               background: lightgray 50% / cover no-repeat;
@@ -168,7 +171,7 @@
 
         .pop-up-bu-main__right-side {
           display: flex;
-          width: 580px;
+          max-width: 44.62%;
           flex-direction: column;
           align-items: flex-start;
 
@@ -229,6 +232,10 @@
                   gap: var(---gap-small, 16px);
                   align-self: stretch;
 
+                  @media (max-width: 1280px) {
+                    gap: 8px;
+                  }
+
                   .gen-tab__info-price-cashback {
                     height: 21px;
                   }
@@ -243,6 +250,10 @@
                     color: var(--colors-gray-700, #2f2c2f);
 
                     font-size: 48px;
+
+                    @media (max-width: 1280px) {
+                      font-size: 26px;
+                    }
                   }
                 }
 
@@ -265,6 +276,9 @@
                     gap: var(---gap-small, 16px);
                     align-self: stretch;
 
+                    @media (max-width: 1280px) {
+                      flex-wrap: wrap;
+                    }
                     .gen-tab__info-price-cashback {
                       height: 21px;
                     }
@@ -274,6 +288,14 @@
 
                       span {
                         font-size: 24px;
+                      }
+
+                      @media (max-width: 1280px) {
+                        font-size: 14px;
+
+                        span {
+                          font-size: 20px;
+                        }
                       }
                     }
                   }

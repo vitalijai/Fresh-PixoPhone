@@ -397,6 +397,7 @@
     }
 
     .offers-page-content {
+      width: 100%;
       .offers-page-block__list-block:last-child {
         border-radius: 0 0 24px 24px;
       }
@@ -406,12 +407,9 @@
       .offers-page-block__comparison {
         display: none;
 
-        &.active:not(.offers-page-block__list) {
+        &.active {
           display: flex;
         }
-      }
-      .offers-page-block__list.active {
-        display: block;
       }
     }
     @import "../_12-offers-tab/12.1-block-list";

@@ -18,11 +18,13 @@
       gap: 8px;
 
       background: var(--colors-white, #fff);
+      height: 346px;
+      justify-content: space-between;
 
       img {
         display: flex;
         width: 200px;
-        height: 240px;
+        max-height: 240px;
         justify-content: center;
         align-items: center;
 

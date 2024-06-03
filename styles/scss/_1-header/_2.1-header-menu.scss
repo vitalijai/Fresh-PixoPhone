@@ -12,7 +12,9 @@
 
 .catalog_products_main {
   // width: 1390px;
-  width: calc(var(---width, 1366px) + 1.25%);
+  // width: calc(var(---width, 1366px) + 1.25%);
+
+  width: min(95%, (var(---width, 1366px) + 1.25%));
 
   align-items: flex-start;
   position: fixed;
