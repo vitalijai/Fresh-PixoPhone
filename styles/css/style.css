@@ -3602,80 +3602,98 @@ a:visited {
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options {
   display: flex;
-  align-items: flex-start;
+  padding: 24px 32px;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
   align-self: stretch;
-  padding: 24px 28px;
-  gap: var(---gap-small, 16px);
-  background: var(---white, #fff);
-  user-select: none;
   text-align: center;
+  background: var(--colors-white, #fff);
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .gen-tab__delivery-options-header {
-  color: var(---dark-gray, #333);
-  font-weight: 400;
-  line-height: 150%; /* 24px */
-}
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .gen-tab__delivery-options-header .delivery-options-header-location {
-  color: var(--colors-gray-700, #2f2c2f);
-}
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--pickup {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-  padding: 8px 4px;
-  font-weight: 400;
-}
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--pickup .delivery-options--pickup-left {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  color: var(---dark-gray, #333);
-  line-height: 150%; /* 24px */
-}
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--pickup .delivery-options--pickup-right {
   display: flex;
   align-items: center;
   gap: 4px;
+  align-self: stretch;
   color: var(--colors-gray-700, #2f2c2f);
+  font-weight: 400;
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--pickup .delivery-options--pickup-right .delivery-options--pickup-value {
-  color: var(---dark-gray, #333);
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .gen-tab__delivery-options-header .delivery-options-header-location {
+  color: var(--colors-green-400, #62b278);
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   align-self: stretch;
-  color: var(---dark-gray, #333);
+  gap: 12px;
   font-weight: 400;
-  line-height: 150%; /* 24px */
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--group-shipping {
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--group-header {
   display: flex;
-  align-items: flex-start;
-  align-self: stretch;
-  padding: 8px 4px;
+  align-items: center;
   gap: 8px;
-}
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .new-post-shipping-details-container {
   align-self: stretch;
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 16px;
+  font-weight: 400;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 12px;
   padding-left: 32px;
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .new-post-shipping-details-container .new-post-shipping-details {
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   align-self: stretch;
-  padding: 8px 4px;
-  color: var(--colors-gray-700, #2f2c2f);
+  border-radius: 16px;
+  border: 2px solid var(--colors-gray-100, #f7f7f7);
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options-header-location,
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .new-post-shipping-text,
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--pickup-value,
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .new-post-shipping-details-price {
-  user-select: text;
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  align-self: flex-start;
+  overflow: hidden;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-overflow: ellipsis;
+  font-weight: 400;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  align-self: stretch;
+  justify-content: space-between;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header .options-details-location {
+  overflow: hidden;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header .options-details-time {
+  color: var(--colors-gray-500, #696969);
+  font-size: 14px;
+  font-weight: 500;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.not-available {
+  background: var(--colors-gray-100, #f7f7f7);
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.not-available .options-details-location {
+  font-weight: 400;
+  color: var(--colors-gray-300, #c0c0c0);
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .options-details-time,
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options-header-label {
+  user-select: none;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__to-order-services {
   display: flex;

@@ -1,52 +1,27 @@
 .gen-tab__delivery-options {
-  @include flexbox($direction: column, $alignItems: flex-start, $self: stretch);
-
-  padding: 24px 28px;
-  gap: var(---gap-small, 16px);
-
-  background: var(---white, #fff);
-  user-select: none;
+  display: flex;
+  padding: 24px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
 
   text-align: center;
 
+  background: var(--colors-white, #fff);
+
   .gen-tab__delivery-options-header {
-    color: var(---dark-gray, #333);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+
+    color: var(--colors-gray-700, #2f2c2f);
+
     font-weight: 400;
-    line-height: 150%; /* 24px */
 
     .delivery-options-header-location {
-      color: var(--colors-gray-700, #2f2c2f);
-    }
-  }
-
-  .delivery-options--pickup {
-    @include flexbox(
-      $justify: space-between,
-      $alignItems: center,
-      $self: stretch
-    );
-
-    padding: 8px 4px;
-    font-weight: 400;
-
-    & .delivery-options--pickup-left {
-      @include flexbox($alignItems: flex-start);
-
-      gap: 8px;
-
-      color: var(---dark-gray, #333);
-      line-height: 150%; /* 24px */
-    }
-    & .delivery-options--pickup-right {
-      @include flexbox($alignItems: center);
-
-      gap: 4px;
-
-      color: var(--colors-gray-700, #2f2c2f);
-
-      & .delivery-options--pickup-value {
-        color: var(---dark-gray, #333);
-      }
+      color: var(--colors-green-400, #62b278);
     }
   }
 
@@ -57,39 +32,91 @@
       $self: stretch
     );
 
-    color: var(---dark-gray, #333);
+    gap: 12px;
     font-weight: 400;
-    line-height: 150%; /* 24px */
 
-    .delivery-options--group-shipping {
-      @include flexbox($alignItems: flex-start, $self: stretch);
-
-      padding: 8px 4px;
+    .delivery-options--group-header {
+      display: flex;
+      align-items: center;
       gap: 8px;
+      align-self: stretch;
+
+      color: var(--colors-gray-700, #2f2c2f);
+
+      font-size: 16px;
+      font-weight: 400;
     }
 
-    .new-post-shipping-details-container {
+    .delivery-options--container {
+      display: flex;
+      flex-direction: column;
       align-self: stretch;
+      gap: 12px;
+
       padding-left: 32px;
 
-      .new-post-shipping-details {
-        @include flexbox(
-          $alignItems: center,
-          $justify: space-between,
-          $self: stretch
-        );
+      .delivery-options-details {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
 
-        padding: 8px 4px;
+        border-radius: 16px;
+        border: 2px solid var(--colors-gray-100, #f7f7f7);
 
-        color: var(--colors-gray-700, #2f2c2f);
+        span {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          align-self: flex-start;
+
+          overflow: hidden;
+          color: var(--colors-gray-700, #2f2c2f);
+          text-overflow: ellipsis;
+
+          font-weight: 400;
+        }
+
+        .delivery-options-department-header {
+          display: flex;
+          align-items: baseline;
+          gap: 16px;
+          align-self: stretch;
+          justify-content: space-between;
+
+          .options-details-location {
+            overflow: hidden;
+            color: var(--colors-gray-700, #2f2c2f);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            font-weight: 500;
+          }
+
+          .options-details-time {
+            color: var(--colors-gray-500, #696969);
+
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+
+        &.not-available {
+          background: var(--colors-gray-100, #f7f7f7);
+
+          .options-details-location {
+            font-weight: 400;
+            color: var(--colors-gray-300, #c0c0c0);
+          }
+        }
       }
     }
   }
 
-  .delivery-options-header-location,
-  .new-post-shipping-text,
-  .delivery-options--pickup-value,
-  .new-post-shipping-details-price {
-    user-select: text;
+  .options-details-time,
+  .delivery-options-header-label {
+    user-select: none;
   }
 }
