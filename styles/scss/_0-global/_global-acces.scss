@@ -25,6 +25,10 @@
 
     transition: transform 0.3s ease;
 
+    @media (max-width: 1024px) {
+      width: 900px;
+    }
+
     & .slick-slide {
       margin-right: var(---gap-small, 16px);
     }

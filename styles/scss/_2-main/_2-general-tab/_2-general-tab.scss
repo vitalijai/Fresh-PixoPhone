@@ -12,6 +12,10 @@
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
     // width: min(95%, calc(var(---width, 1366px) - ($padding * 2)));
 
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
     .gen-tab__left-side {
       @include flexbox($direction: column, $alignItems: center, $self: stretch);
       flex: 1 0 0;
@@ -20,6 +24,10 @@
 
       padding: 32px $padding;
       user-select: none;
+
+      @media (max-width: 1024px) {
+        border-radius: 24px 24px 0 0;
+      }
 
       .gen-tab__carousel {
         @include flexbox(
@@ -37,6 +45,11 @@
           width: calc(
             var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.15)
           );
+
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
+
           @include flexbox(
             $direction: column,
             $alignItems: center,
@@ -203,6 +216,20 @@
         }
       }
 
+      @media (max-width: 1024px) {
+        width: 100%;
+
+        .gen-tab__block {
+          &:first-child {
+            border-radius: 0;
+          }
+
+          &:last-child {
+            border-radius: 0 0 24px 24px;
+          }
+        }
+      }
+
       @import "../_2-general-tab/2.1-tab-info";
       @import "../_2-general-tab/2.2-tab-to-order";
       @import "../_2-general-tab/2.3-tab-constructor";
@@ -219,6 +246,10 @@
           width: calc(
             var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.095
           );
+
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
         }
       }
 

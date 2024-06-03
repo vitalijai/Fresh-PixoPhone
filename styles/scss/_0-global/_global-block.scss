@@ -104,7 +104,7 @@
     .global-block-container {
       @include flexbox($alignItems: center, $direction: column);
 
-      min-width: 200px;
+      min-width: 190px;
       max-width: 260px;
       padding: 20px;
       gap: 8px;
@@ -490,7 +490,7 @@
 
       .global-block-container {
         min-width: 260px;
-        max-width: 300px;
+        max-width: 320px;
         padding: 16px;
         justify-content: space-between;
         align-self: stretch;
