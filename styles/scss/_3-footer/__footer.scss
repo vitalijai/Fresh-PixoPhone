@@ -32,8 +32,17 @@
           $direction: column,
           $self: stretch
         );
-        gap: var(---gap-small, 16px);
         flex: 1 0 0;
+        gap: var(---gap-small, 16px);
+
+        // &:not(.footer-logo-container, .footer-nav__contact) {
+        // display: flex;
+        // align-items: flex-start;
+        // align-self: stretch;
+        // gap: var(---gap-small, 16px);
+        // flex: 1 0 0;
+        // flex-wrap: wrap;
+        // }
 
         .footer-nav__title {
           @include flexbox($alignItems: center, $self: stretch);
@@ -56,6 +65,14 @@
           margin: 0;
           padding: 0;
         }
+      }
+
+      .footer-container {
+        display: flex;
+        align-items: flex-start;
+        align-self: stretch;
+        gap: 48px;
+        flex-direction: row;
       }
 
       .footer-nav__contact {

@@ -341,6 +341,14 @@ a:visited {
   width: min(95%, var(---width, 1366px));
 }
 
+@media (max-width: 1152px) {
+  header,
+  main,
+  footer {
+    width: 1152px;
+  }
+}
+
 .screen {
   display: none;
 }
@@ -1137,7 +1145,7 @@ a:visited {
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-width: 190px;
+  min-width: 196px;
   max-width: 260px;
   padding: 20px;
   gap: 8px;
@@ -2140,7 +2148,7 @@ a:visited {
   width: calc(var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.09);
   transition: transform 0.3s ease;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1152px) {
   .gen-tab__add-product .gen-tab__add-product-accessories-container {
     width: 900px;
   }
@@ -2306,7 +2314,7 @@ a:visited {
 }
 
 :root {
-  ---width: 1024px;
+  ---width: 1500px;
   ---width-desc: 1920px;
   ---gap-small: 16px;
   ---gap-basic: 24px;
@@ -2996,7 +3004,7 @@ a:visited {
   background: var(---disabled, #e9e9e9);
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1152px) {
   .common-template .general-tab .page-container {
     flex-direction: column;
   }
@@ -3012,7 +3020,7 @@ a:visited {
   padding: 32px 48px;
   user-select: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1152px) {
   .common-template .general-tab .page-container .gen-tab__left-side {
     border-radius: 24px 24px 0 0;
   }
@@ -3034,7 +3042,7 @@ a:visited {
   align-self: stretch;
   gap: var(---gap-small, 16px);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1152px) {
   .common-template .general-tab .page-container .gen-tab__left-side .gen-tab__carousel .gen-tab__carousel-container-img {
     width: 100%;
   }
@@ -3153,7 +3161,7 @@ a:visited {
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__block:last-child {
   border-radius: 0 0 24px 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1152px) {
   .common-template .general-tab .page-container .gen-tab__right-side {
     width: 100%;
   }
@@ -3793,7 +3801,7 @@ a:visited {
 .common-template .general-tab .page-container .gen-tab__right-side.no-acces .gen-tab__info {
   width: calc(var(---width, 1366px) / 2 - var(---width, 1366px) / 2 * 0.095);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1152px) {
   .common-template .general-tab .page-container .gen-tab__right-side.no-acces .gen-tab__info {
     width: 100%;
   }
@@ -3871,6 +3879,11 @@ a:visited {
   background: var(--colors-white, #fff);
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 1152px) {
+  .common-template .block-description .block-block-description-container {
+    width: calc(100% - 153.6px);
+  }
 }
 .common-template .block-description .block-block-description-container .block-block-description-paragraf {
   align-self: stretch;
@@ -4317,7 +4330,7 @@ a:visited {
 }
 .common-template .service-tab .service-page-container .service-page-content {
   display: flex;
-  width: var(---width, 1366px);
+  max-width: var(---width, 1366px);
   flex-direction: column;
   align-items: flex-start;
   gap: 1px;
@@ -5376,8 +5389,8 @@ a:visited {
   align-items: flex-start;
   flex-direction: column;
   align-self: stretch;
-  gap: var(---gap-small, 16px);
   flex: 1 0 0;
+  gap: var(---gap-small, 16px);
 }
 .footer .footer-container .footer-top .footer-nav__column .footer-nav__title {
   display: flex;
@@ -5397,6 +5410,13 @@ a:visited {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.footer .footer-container .footer-top .footer-container {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 48px;
+  flex-direction: row;
 }
 .footer .footer-container .footer-top .footer-nav__contact .footer-nav__contact-link {
   color: var(--colors-white, #fff);

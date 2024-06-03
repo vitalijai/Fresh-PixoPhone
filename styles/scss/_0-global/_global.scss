@@ -55,6 +55,13 @@ a:visited {
   width: min(95%, var(---width, 1366px));
 }
 
+header,
+main,
+footer {
+  @media (max-width: 1152px) {
+    width: 1152px;
+  }
+}
 .screen {
   display: none;
 
