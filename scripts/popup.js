@@ -316,6 +316,20 @@ $(document).ready(function () {
     "#popUpCreditCalculator"
   );
 
+  initModal(
+    ".delivery-options-header-location",
+    "#popUpLocation",
+    ".pop-up-location-close",
+    "#popUpLocation"
+  );
+
+  initModal(
+    ".city-switch",
+    "#popUpLocation",
+    ".pop-up-location-close",
+    "#popUpLocation"
+  );
+
   initOverlow(
     ".p-short-info-button",
     "#popUpToCart",
