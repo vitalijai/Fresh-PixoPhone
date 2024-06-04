@@ -12801,7 +12801,7 @@
             </div>
         </div>
         <!-- PopUp Smartphone Version End-->
-        <!-- PopUp Notify -->
+        <!-- PopUp Fast Buy -->
         <div id="popUpFastBuy" class="pop-up-fast-buy-modal global-pop-modal">
             <div class="pop-up-fast-buy-modal-content global-pop-modal-content user-fast-buy">
                 <div class="fast-buy-modal-header-block global-pop-modal-header">
@@ -12825,18 +12825,30 @@
                 </div>
                 <div class="fast-buy-modal-form-container global-modal-form-container">
                     <form method="get" action="#" target="_top" autocomplete="off" class="fast-buy-modal-form">
-                        <div>
-                            <input name="q" placeholder="Номер телефону" type="tel" inputmode="tel" value=""
-                                class="fast-buy-modal-form__number">
+                        <div class="form-contact-block check">
+                            <label>Номер телефону</label>
+                            <input type="text" class="form-control" name="userphone" inputmode="numeric" pattern="\d*"
+                                placeholder="+380" />
+                            <label class="checkbox-label"></label>
+                            <label class="error-label">помилка</label>
+
+                        </div>
+                        <div class="form-contact-block error">
+                            <label>Ім’я</label>
+                            <input type="text" class="form-control" name="username" inputmode="text" />
+                            <label class="checkbox-label"></label>
+                            <label class="error-label">помилка</label>
                         </div>
                     </form>
+                    <span class="global-modal-form-manager">Менеджер зателефонує Вам впродовж 30 хв. та допоможе із
+                        вибором.</span>
                     <div class="pop-up-fast-buy-button global-button-send-fast-buy">
                         <button>Оформити</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- PopUp Notify End-->
+        <!-- PopUp Fast Buy End-->
         <!-- PopUp Notify -->
         <div id="popUpNotify" class="pop-up-notify-modal global-pop-modal">
             <div class="pop-up-notify-modal-content global-pop-modal-content user-notify">
