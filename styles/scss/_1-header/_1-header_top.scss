@@ -43,6 +43,12 @@
         @include flexbox($alignItems: center);
 
         gap: 2px;
+
+        &:hover {
+          path {
+            fill: var(--colors-green-500-primary, #2ea84f);
+          }
+        }
       }
     }
 

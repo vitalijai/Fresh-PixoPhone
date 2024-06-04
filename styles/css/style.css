@@ -2465,6 +2465,9 @@ a:visited {
   align-items: center;
   gap: 2px;
 }
+.header .header-container .header_top .header_top-content .left_side .city-switch:hover path {
+  fill: var(--colors-green-500-primary, #2ea84f);
+}
 .header .header-container .header_top .header_top-content .right_side {
   display: flex;
   align-items: center;
@@ -3715,6 +3718,7 @@ a:visited {
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .gen-tab__delivery-options-header .delivery-options-header-location {
   color: var(--colors-green-400, #62b278);
+  cursor: pointer;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group {
   display: flex;
@@ -3735,18 +3739,17 @@ a:visited {
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container {
   display: flex;
-  flex-direction: column;
   align-self: stretch;
   gap: 12px;
   padding-left: 32px;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details {
   display: flex;
-  padding: 20px;
+  padding: 16px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
-  align-self: stretch;
+  gap: 12px;
+  flex: 1 0 0;
   border-radius: 16px;
   border: 2px solid var(--colors-gray-100, #f7f7f7);
 }
@@ -3762,10 +3765,12 @@ a:visited {
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header {
   display: flex;
-  align-items: baseline;
-  gap: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
   align-self: stretch;
-  justify-content: space-between;
+  font-size: 14px;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header .options-details-location {
   overflow: hidden;
@@ -3774,9 +3779,17 @@ a:visited {
   white-space: nowrap;
   font-weight: 500;
 }
-.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header .options-details-time {
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .delivery-options-department-header .delivery-options-details-phonetime {
   color: var(--colors-gray-500, #696969);
-  font-size: 14px;
+  font-weight: 400;
+}
+.common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .options-details-time {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  align-self: stretch;
+  color: var(--colors-gray-400, #929292);
+  font-size: 12px;
   font-weight: 500;
 }
 .common-template .general-tab .page-container .gen-tab__right-side .gen-tab__delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.not-available {

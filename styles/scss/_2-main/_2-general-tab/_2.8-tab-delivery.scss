@@ -22,6 +22,8 @@
 
     .delivery-options-header-location {
       color: var(--colors-green-400, #62b278);
+
+      cursor: pointer;
     }
   }
 
@@ -49,7 +51,6 @@
 
     .delivery-options--container {
       display: flex;
-      flex-direction: column;
       align-self: stretch;
       gap: 12px;
 
@@ -57,11 +58,11 @@
 
       .delivery-options-details {
         display: flex;
-        padding: 20px;
+        padding: 16px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
-        align-self: stretch;
+        gap: 12px;
+        flex: 1 0 0;
 
         border-radius: 16px;
         border: 2px solid var(--colors-gray-100, #f7f7f7);
@@ -81,10 +82,12 @@
 
         .delivery-options-department-header {
           display: flex;
-          align-items: baseline;
-          gap: 16px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 4px;
           align-self: stretch;
-          justify-content: space-between;
+          font-size: 14px;
 
           .options-details-location {
             overflow: hidden;
@@ -95,12 +98,22 @@
             font-weight: 500;
           }
 
-          .options-details-time {
+          .delivery-options-details-phonetime {
             color: var(--colors-gray-500, #696969);
 
-            font-size: 14px;
-            font-weight: 500;
+            font-weight: 400;
           }
+        }
+
+        .options-details-time {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          align-self: stretch;
+
+          color: var(--colors-gray-400, #929292);
+          font-size: 12px;
+          font-weight: 500;
         }
 
         &.not-available {
