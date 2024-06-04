@@ -3106,6 +3106,12 @@ a:visited {
   position: relative;
   padding: 20px;
 }
+@media (max-width: 1279px) {
+  .common-template .general-tab .page-container .gen-tab__left-side .gen-tab__carousel .gen-tab__carousel-container-img .gen-tab__carousel-img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 .common-template .general-tab .page-container .gen-tab__left-side .gen-tab__carousel .gen-tab__carousel-container-img .gen-tab__carousel-img img {
   width: 100%;
   min-height: 430px;
@@ -5695,6 +5701,7 @@ a:visited {
 @media (max-width: 1280px) {
   .pop-up-search-modal .pop-up-search-container {
     width: min(95%, var(---width, 1366px) - 336px);
+    margin: 0.5% auto;
   }
 }
 @media (max-width: 1152px) {
@@ -5754,9 +5761,14 @@ a:visited {
   display: flex;
 }
 .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .catalog_products_main {
-  width: 280px;
+  width: min(95%, 505px);
   height: 100%;
   font-size: 16px;
+}
+@media (max-width: 1280px) {
+  .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .catalog_products_main {
+    width: min(95%, 380px);
+  }
 }
 .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .catalog_products_main .main-menu {
   display: flex;
@@ -5814,6 +5826,11 @@ a:visited {
   flex: 1 0 0;
   display: none;
   align-self: stretch;
+}
+@media (max-width: 1152px) {
+  .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content {
+    justify-content: center;
+  }
 }
 .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content .menu-list-item {
   display: flex;
@@ -5999,7 +6016,7 @@ a:visited {
 }
 @media (max-width: 1280px) {
   .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content.all-category {
-    gap: 12px 24px;
+    gap: 12px;
   }
 }
 .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content.all-category .search-menu-categories-list {
@@ -6251,11 +6268,11 @@ a:visited {
 
 .pop-up-bu-products-modal-content {
   width: min(90%, 1300px);
-  margin: 10% auto;
+  margin: 4% auto;
 }
 @media (max-width: 1280px) {
   .pop-up-bu-products-modal-content {
-    margin: 3% auto;
+    margin: 2% auto;
   }
 }
 .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider {

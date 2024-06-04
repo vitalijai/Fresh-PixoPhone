@@ -27,6 +27,7 @@
 
     @media (max-width: 1280px) {
       width: min(95%, var(---width, 1366px) - (48px * 7));
+      margin: 0.5% auto;
     }
 
     @media (max-width: 1152px) {
@@ -99,10 +100,14 @@
       }
 
       .catalog_products_main {
-        width: 280px;
+        width: min(95%, 505px);
         height: 100%;
 
         font-size: 16px;
+
+        @media (max-width: 1280px) {
+          width: min(95%, 380px);
+        }
 
         .main-menu {
           @include flexbox(
@@ -187,6 +192,10 @@
         flex: 1 0 0;
         display: none;
         align-self: stretch;
+
+        @media (max-width: 1152px) {
+          justify-content: center;
+        }
 
         .menu-list-item {
           @include flexbox(
@@ -408,7 +417,7 @@
           // columns: 3;
 
           @media (max-width: 1280px) {
-            gap: 12px 24px;
+            gap: 12px;
           }
 
           .search-menu-categories-list {
