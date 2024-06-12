@@ -2,6 +2,9 @@
   @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
 
   user-select: none;
+
+  margin-bottom: -32px;
+
   .breadcrumbs {
     @include flexbox($alignItems: center);
 
