@@ -5,6 +5,8 @@ html {
   // scrollbar-color: var(--colors-green-500-primary, #2ea84f)
   //   var(--colors-white, #fff);
 
+  scroll-behavior: smooth;
+
   &.no-scroll {
     overflow: hidden;
   }
@@ -60,13 +62,20 @@ main {
   @media (max-width: 1152px) {
     width: 1152px;
   }
+  @media (max-width: 719px) {
+    width: unset;
+  }
 }
 
 footer {
   @media (max-width: 1152px) {
     width: calc(1152px - (10px * 2));
   }
+  @media (max-width: 719px) {
+    width: unset;
+  }
 }
+
 .screen {
   display: none;
 

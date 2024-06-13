@@ -27,6 +27,10 @@
       width: calc(100% - ($padding * 3.2));
     }
 
+    @media (max-width: 719px) {
+      width: min(95%, var(---width, 1366px));
+    }
+
     .block-block-description-paragraf {
       align-self: stretch;
 

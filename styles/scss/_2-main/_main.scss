@@ -18,4 +18,37 @@
   @import "../_2-main/_10-service-tab/10-service-tab";
   @import "../_2-main/_11-used-sentences/11-used-sentences";
   @import "../_2-main/_12-offers-tab/12-offers-tab";
+
+  @media (max-width: 719px) {
+    .common-template__tabs {
+      order: -2;
+      position: unset;
+    }
+    .common-template__content-top {
+      order: -1;
+      margin-bottom: 0;
+    }
+
+    .gen-tab__block {
+      order: 6;
+    }
+    .gen-tab__info {
+      order: 0;
+    }
+    .gen-tab__promo {
+      order: 1;
+    }
+    .gen-tab__constructor {
+      order: 2;
+    }
+    .gen-tab__to-order {
+      order: 3;
+    }
+    .gen-tab__credit {
+      order: 4;
+    }
+    .gen-tab__delivery-options {
+      order: 5;
+    }
+  }
 }

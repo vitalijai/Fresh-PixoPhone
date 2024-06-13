@@ -7,6 +7,11 @@
   background: var(---white, #fff);
   user-select: none;
 
+  @media (max-width: 719px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .gen-tab__stock-trade-in {
     @include flexbox($self: stretch, $alignItems: center, $justify: center);
 

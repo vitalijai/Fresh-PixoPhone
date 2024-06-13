@@ -247,6 +247,22 @@
         }
       }
 
+      .gen-tab__promo {
+        display: none;
+      }
+
+      @media (max-width: 719px) {
+        .gen-tab__promo {
+          display: block;
+          width: 100%;
+
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+
       @import "../_2-general-tab/2.1-tab-info";
       @import "../_2-general-tab/2.2-tab-to-order";
       @import "../_2-general-tab/2.3-tab-constructor";

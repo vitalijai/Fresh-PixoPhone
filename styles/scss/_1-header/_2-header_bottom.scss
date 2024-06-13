@@ -21,6 +21,7 @@
 
       .header_bottom-catalog {
         position: relative;
+
         .header-bottom-catalog__desc {
           @include flexbox($alignItems: center);
 
@@ -43,6 +44,10 @@
         }
       }
     }
+
+    @media (max-width: 719px) {
+      gap: 16px;
+    }
   }
   .header_bottom-content__right {
     @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
@@ -50,6 +55,10 @@
     padding-left: 48px;
     gap: var(---gap-small, 16px);
     flex: 1 0 0;
+
+    @media (max-width: 719px) {
+      padding-left: 0;
+    }
 
     .header-bottom-search {
       background: var(--colors-white, #fff);

@@ -138,4 +138,13 @@
       }
     }
   }
+
+  @media (max-width: 719px) {
+    .gen-tab__info-name,
+    .gen-tab__info-list,
+    .gen-tab__info-price,
+    .gen-tab__info-discount {
+      display: none;
+    }
+  }
 }

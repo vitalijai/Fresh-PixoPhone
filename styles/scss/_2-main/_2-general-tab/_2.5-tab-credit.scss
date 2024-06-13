@@ -44,6 +44,11 @@
     gap: var(---gap-small, 16px);
     width: 100%;
 
+    @media (max-width: 719px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
     .gen-tab__credit-block {
       @include flexbox($justify: space-between, $alignItems: center);
       flex: 1 0 0;

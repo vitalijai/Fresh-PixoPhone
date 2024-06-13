@@ -6,6 +6,9 @@
 
   background: var(---white, #fff);
 
+  @media (max-width: 719px) {
+    display: none;
+  }
   .gen-tab__to-order-services-pay-block {
     @include flexbox($justify: center, $alignItems: center, $self: stretch);
 

@@ -40,6 +40,10 @@
       );
     }
 
+    @media (max-width: 719px) {
+      width: min(95%, var(---width, 1366px));
+    }
+
     &:not(:last-child) {
       padding-bottom: 10px;
     }
