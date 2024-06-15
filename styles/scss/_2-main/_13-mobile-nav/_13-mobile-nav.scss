@@ -1,0 +1,84 @@
+.mobile-nav__tabs {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  background: var(--colors-gray-200, #e5e4e2);
+  width: 100%;
+  .mobile-tabs {
+    width: 100%;
+    .tablist {
+      display: flex;
+
+      .tabs__link {
+        display: flex;
+        padding: 10px 12px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1 0 0;
+        border-top: 1px solid var(--colors-gray-200, #e5e4e2);
+        background: var(---white, #fff);
+        align-self: stretch;
+
+        .tabs__link-menu-container {
+          display: flex;
+          width: 32px;
+          height: 32px;
+          padding: 0 9px;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .tabs__link-menu-counter {
+            position: absolute;
+
+            padding: 1px 3px;
+
+            color: var(--colors-white, #fff);
+            text-align: center;
+            font-family: Rubik;
+            font-size: 6px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 6px; /* 100% */
+
+            border-radius: 28px;
+            border: 1px solid var(--colors-white, #fff);
+            background: var(--colors-green-400, #62b278);
+            right: 8px;
+
+            &.tabs__link-menu-counter-accaunt {
+              bottom: 1px;
+            }
+            &.tabs__link-menu-counter-cart {
+              top: 3px;
+            }
+          }
+        }
+
+        .tabs__link-span {
+          color: var(--colors-gray-700, #2f2c2f);
+          font-size: 9px;
+        }
+
+        &.active {
+          background: var(--colors-green-100, #e9f9e9);
+
+          .tabs__link-menu-container {
+            path {
+              stroke: var(--colors-green-600, #25863f);
+            }
+          }
+
+          .tabs__link-span {
+            color: var(--colors-green-600, #25863f);
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}

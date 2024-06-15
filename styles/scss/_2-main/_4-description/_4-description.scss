@@ -53,7 +53,7 @@
         overflow: hidden;
         padding: 0 24px;
 
-        transition: max-height 0.5s ease;
+        transition: max-height 2s ease;
       }
     }
 
@@ -81,7 +81,7 @@
 
       &.show {
         .block-block-description {
-          max-height: unset;
+          max-height: 5000px;
         }
         .fade,
         .global-all-view-button {
