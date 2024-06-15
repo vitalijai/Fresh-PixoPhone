@@ -5,6 +5,10 @@
 
   background: var(---white, #fff);
 
+  @media (max-width: 719px) {
+    padding: 0;
+  }
+
   .gen-tab__info-name {
     @include flexbox($alignItems: flex-start, $self: stretch);
     gap: var(---gap-big, 48px);
@@ -95,6 +99,10 @@
     text-align: justify;
     font-size: 12px;
     font-weight: 400;
+
+    @media (max-width: 719px) {
+      border-radius: 24px;
+    }
   }
 
   .gen-tab__info-delivery {
@@ -109,6 +117,10 @@
       var(---blue, #0eb7d4);
 
     user-select: none;
+
+    @media (max-width: 719px) {
+      border-radius: 24px;
+    }
 
     .gen-tab__info-delivery-text {
       @include flexbox(
@@ -127,6 +139,11 @@
       line-height: normal;
 
       background: url(/images/delivery\ Europe.png) no-repeat right;
+
+      @media (max-width: 719px) {
+        height: 96px;
+        background: url(/images/delivery\ Europe-mobile.png) no-repeat right;
+      }
 
       .gen-tab__info-delivery-top {
         font-size: 18px;

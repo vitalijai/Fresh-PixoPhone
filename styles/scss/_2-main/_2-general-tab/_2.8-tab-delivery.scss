@@ -10,6 +10,10 @@
 
   background: var(--colors-white, #fff);
 
+  @media (max-width: 719px) {
+    padding: 24px;
+  }
+
   .gen-tab__delivery-options-header {
     display: flex;
     align-items: center;
@@ -24,6 +28,11 @@
       color: var(--colors-green-400, #62b278);
 
       cursor: pointer;
+    }
+
+    @media (max-width: 719px) {
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 
@@ -47,6 +56,11 @@
 
       font-size: 16px;
       font-weight: 400;
+
+      @media (max-width: 719px) {
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
 
     .delivery-options--container {
@@ -101,6 +115,10 @@
             white-space: nowrap;
 
             font-weight: 500;
+
+            @media (max-width: 719px) {
+              font-weight: 500;
+            }
           }
 
           .delivery-options-details-phonetime {
@@ -128,6 +146,10 @@
             font-weight: 400;
             color: var(--colors-gray-300, #c0c0c0);
           }
+        }
+
+        @media (max-width: 719px) {
+          background: var(--colors-gray-100, #f7f7f7);
         }
       }
     }

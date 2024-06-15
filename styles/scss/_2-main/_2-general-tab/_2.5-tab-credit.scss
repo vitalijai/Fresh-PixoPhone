@@ -7,6 +7,16 @@
   background: var(--colors-white, #fff);
   user-select: none;
 
+  @media (max-width: 719px) {
+    padding: 24px 24px 16px 24px;
+
+    .gen-tab__credit-header {
+      order: 1;
+      justify-content: center;
+      align-self: stretch;
+    }
+  }
+
   &.hide {
     .gen-tab__credit-container {
       width: unset;
@@ -52,6 +62,10 @@
     .gen-tab__credit-block {
       @include flexbox($justify: space-between, $alignItems: center);
       flex: 1 0 0;
+
+      @media (max-width: 719px) {
+        justify-content: space-evenly;
+      }
 
       .gen-tab__credit-block__btn {
         @include flexbox($justify: center, $alignItems: center);

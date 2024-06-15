@@ -5,6 +5,15 @@
 
   margin-bottom: -32px;
 
+  @media (max-width: 719px) {
+    margin-top: -12px;
+    margin-bottom: -12px;
+
+    .breadcrumbs-content {
+      width: min(100%, var(---width, 1366px));
+    }
+  }
+
   .breadcrumbs {
     @include flexbox($alignItems: center);
 
@@ -13,7 +22,9 @@
     flex-shrink: 0;
 
     @media (max-width: 719px) {
-      overflow-x: scroll;
+      overflow-x: auto;
+      scrollbar-width: none;
+      height: 40px;
     }
 
     .breadcrumbs__item {

@@ -7,11 +7,6 @@
   background: var(---white, #fff);
   user-select: none;
 
-  @media (max-width: 719px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   .gen-tab__stock-trade-in {
     @include flexbox($self: stretch, $alignItems: center, $justify: center);
 
@@ -41,6 +36,10 @@
       font-size: 14px;
       font-weight: 700;
 
+      @media (max-width: 719px) {
+        padding: 16px 0;
+      }
+
       .gen-tab__stock-trade-in-bottom {
         font-size: 10px;
         font-weight: 500;
@@ -53,6 +52,10 @@
         right: 7px;
         top: -14px;
         background: url(/images/trade\ in.png) no-repeat center right/cover;
+
+        @media (max-width: 719px) {
+          top: -7px;
+        }
       }
     }
 
@@ -136,6 +139,10 @@
       width: 100%;
       color: var(--colors-white, #fff);
 
+      @media (max-width: 719px) {
+        padding: 16px 0;
+      }
+
       .gen-tab__stock-used-left {
         @include flexbox(
           $alignItems: flex-start,
@@ -151,6 +158,18 @@
           font-size: 13.333px;
           font-weight: 500;
           text-transform: lowercase;
+        }
+
+        @media (max-width: 719px) {
+          flex-direction: unset;
+          align-items: center;
+          text-transform: unset;
+          gap: 4px;
+
+          span {
+            font-weight: 700 !important;
+            font-size: 16px !important;
+          }
         }
       }
 
@@ -190,6 +209,19 @@
           transition-delay: 0s; /* Сброс задержки для плавного появления */
         }
       }
+    }
+  }
+
+  @media (max-width: 719px) {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    background: transparent;
+
+    .gen-tab__stock-used,
+    .gen-tab__stock-trade-in {
+      border-radius: 24px;
+      padding: 10px 16px;
     }
   }
 }

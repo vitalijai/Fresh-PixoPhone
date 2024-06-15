@@ -18,15 +18,45 @@
   @import "../_2-main/_10-service-tab/10-service-tab";
   @import "../_2-main/_11-used-sentences/11-used-sentences";
   @import "../_2-main/_12-offers-tab/12-offers-tab";
+  @import "../_2-main/inf-tab__information-block";
+  @import "../_2-main/acces-mobile";
+  @import "../_2-main/popular-questions";
 
   @media (max-width: 719px) {
+    gap: 12px;
+
     .common-template__tabs {
-      order: -2;
       position: unset;
     }
     .common-template__content-top {
-      order: -1;
-      margin-bottom: 0;
+      order: 1;
+    }
+    .general-tab {
+      order: 2;
+    }
+    .block-on-sale-soon {
+      order: 3;
+    }
+    .block-description {
+      order: 4;
+    }
+    .inf-tab__information-block#box-specifications {
+      order: 5;
+    }
+    .block-recently-viewed {
+      order: 6;
+    }
+    .block-novelty {
+      order: 7;
+    }
+    .inf-tab__information-block#box-reviews {
+      order: 8;
+    }
+    .block-cheaper-together {
+      order: 9;
+    }
+    .inf-tab__information-block#box-questions {
+      order: 10;
     }
 
     .gen-tab__block {
@@ -49,6 +79,13 @@
     }
     .gen-tab__delivery-options {
       order: 5;
+    }
+
+    .add-product-mobile {
+      order: 11;
+    }
+    .gen-tab__popular {
+      order: 12;
     }
   }
 }

@@ -16,6 +16,10 @@
       flex-direction: column;
     }
 
+    @media (max-width: 719px) {
+      gap: 12px;
+    }
+
     .gen-tab__left-side {
       @include flexbox($direction: column, $alignItems: center, $self: stretch);
       flex: 1 0 0;
@@ -29,6 +33,10 @@
         border-radius: 24px 24px 0 0;
       }
 
+      @media (max-width: 719px) {
+        border-radius: 24px;
+      }
+
       .gen-tab__carousel {
         @include flexbox(
           $direction: column,
@@ -40,6 +48,10 @@
 
         position: sticky;
         top: 128px;
+
+        @media (max-width: 719px) {
+          display: none;
+        }
 
         .gen-tab__carousel-container-img {
           width: calc(
@@ -252,6 +264,15 @@
       }
 
       @media (max-width: 719px) {
+        gap: 12px;
+
+        background: unset;
+
+        &,
+        .gen-tab__block {
+          border-radius: 24px;
+        }
+
         .gen-tab__promo {
           display: block;
           width: 100%;

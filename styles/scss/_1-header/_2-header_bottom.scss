@@ -47,6 +47,8 @@
 
     @media (max-width: 719px) {
       gap: 16px;
+      padding: 16px;
+      font-size: 12px;
     }
   }
   .header_bottom-content__right {
@@ -86,6 +88,10 @@
           padding: 0 16px;
           text-overflow: ellipsis;
           outline: none;
+
+          @media (max-width: 719px) {
+            padding: 0 8px;
+          }
         }
         .header-search-form__search-btn {
           background: var(--colors-white, #fff);

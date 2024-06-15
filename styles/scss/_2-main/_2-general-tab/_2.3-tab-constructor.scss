@@ -7,6 +7,10 @@
   background: var(---white, #fff);
   user-select: none;
 
+  @media (max-width: 719px) {
+    padding: 24px;
+  }
+
   .constructor-container {
     @include flexbox(
       $direction: column,
@@ -22,6 +26,11 @@
       color: var(---dark-gray, #333);
 
       font-weight: 400;
+
+      @media (max-width: 719px) {
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
 
     .constructor-container__list {
@@ -47,6 +56,12 @@
         text-align: center;
 
         font-weight: 400;
+
+        @media (max-width: 719px) {
+          height: 44px;
+          padding: 0px 14px;
+          font-weight: 500;
+        }
 
         .device-color-block__img-container {
           @include flexbox($alignItems: center, $justify: center);
