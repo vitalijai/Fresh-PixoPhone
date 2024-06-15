@@ -55,6 +55,9 @@ a:visited {
 
 .content-container {
   width: min(95%, var(---width, 1366px));
+  @media (max-width: 719px) {
+    width: min(93%, var(---width, 1366px));
+  }
 }
 
 header,

@@ -23,18 +23,15 @@
         display: block;
         width: 100%;
         height: 48px;
-
+        background: linear-gradient(90deg, #04060c, #6b1416);
         img {
           width: 100%;
           object-fit: contain;
+          height: 48px;
         }
       }
 
       .header_bottom {
-        &.fixed {
-          position: unset;
-        }
-
         .main_logo-bottom {
           display: block !important;
           width: 63.429px !important;

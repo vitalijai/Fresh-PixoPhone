@@ -531,7 +531,9 @@
 
   border-radius: 32px;
   background: var(--colors-green-500-primary, #2ea84f);
-
+  @media (max-width: 719px) {
+    bottom: 96px;
+  }
   &:hover {
     background: var(--colors-green-600, #25863f);
   }
