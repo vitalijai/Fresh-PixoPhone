@@ -2829,55 +2829,165 @@
                     <div class="flip">
                         <div class="front">
                             <div class="gen-tab__carousel">
-                                <div class="gen-tab__carousel-container-img">
+                                <div class="gen-tab__carousel-header gen-tab__carousel-header-front">
+                                    <div class="gen-tab__info-list">
+                                        <!-- <div class="gen-tab__info-list-status--to-order global-list-status--to-order global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Під замовлення
+                                            </span>
+                                        </div> -->
+                                        <div
+                                            class="gen-tab__info-list-status--in-stock global-list-status--in-stock global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                В наявності
+                                            </span>
+                                        </div>
+                                        <!-- <div class="gen-tab__info-list-status--available-propositions global-list-status--available-propositions global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Доступні пропозиції
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--expected global-list-status--expected global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Очікуємо <span
+                                                    class="gen-tab__info-list-expected global-list-line-expected">15.04.2024</span>
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Аутлет
+                                            </span>
+                                        </div> -->
+                                        <!-- <div
+                                            class="gen-tab__info-list-status--not-available global-list-status--not-available global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Немає в наявності
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--no-offers global-list-status--no-offers global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Немає пропозицій
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--discontinued global-list-status--discontinued global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Знято з виробництва
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-guarantee global-list-guarantee global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Гарантія <span
+                                                    class="gen-tab__info-list-guarantee-days global-list-guarantee-days">14
+                                                    днів</span>
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-articul global-list-articul global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Код. 1234567
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-reviews-container">
+                                            <div class="gen-tab__info-list-rating global-list-rating global-list">
+                                                <span class="gen-tab__info-list-line global-list-line">
+                                                    <span id="gen-tab__info-list-rating global-list-rating value">4,5</span>
+                                                </span>
+                                            </div>
+                                            <div class="gen-tab__info-list-reviews global-list-reviews global-list">
+                                                <a href="#" class="gen-tab__info-list-line global-list-line">
+                                                    <span id="gen-tab__info-list-reviews-value global-list-reviews-value">4
+                                                        відгуки</span>
+                                                </a>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="gen-tab__info-btn">
+                                        <div class="gen-tab__info-compare">
+                                            <button type="submit" title="Список порівняння"
+                                                onclick="toggleTabInfoBtn(event, this)" id="gen-tab___compare"
+                                                class="gen-tab__info-compare-btn gen-tab-controls__btn global__info-compare-btn global-controls__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22"
+                                                    viewBox="0 0 26 22" fill="none">
+                                                    <path
+                                                        class="gen-tab__info-compare-btn_fill  global__info-compare-btn_fill"
+                                                        d="M1 16.0664H10.6C10.6 18.7197 8.45335 20.8664 5.80001 20.8664C3.14667 20.8664 1 18.7197 1 16.0664Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                                    </path>
+                                                    <path
+                                                        d="M5.80001 6.4668L8.20001 11.2668L10.6 16.0668H5.80001H1L3.4 11.2668L5.80001 6.4668Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        class="gen-tab__info-compare-btn_fill global__info-compare-btn_fill"
+                                                        d="M15.4004 13.666H25.0004C25.0004 16.3194 22.8537 18.466 20.2004 18.466C17.5471 18.466 15.4004 16.3194 15.4004 13.666Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                                    </path>
+                                                    <path
+                                                        d="M20.2004 4.06641L22.6004 8.86642L25.0004 13.6664H20.2004H15.4004L17.8004 8.86642L20.2004 4.06641Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M2.35938 4.74667L23.6394 1"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M13.0008 4.067C13.6635 4.067 14.2008 3.52974 14.2008 2.86699C14.2008 2.20425 13.6635 1.66699 13.0008 1.66699C12.338 1.66699 11.8008 2.20425 11.8008 2.86699C11.8008 3.52974 12.338 4.067 13.0008 4.067Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="gen-tab__info-wishlist">
+                                            <span>209</span>
+                                            <button type="submit" title="Список бажань" id="gen-tab___wishlist"
+                                                onclick="toggleTabInfoBtn(event, this)"
+                                                class="gen-tab__info-wishlist-btn global__info-wishlist-btn gen-tab-controls__btn global-controls__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                                    viewBox="0 0 22 20" fill="none">
+                                                    <path
+                                                        d="M10.6537 18.6458L2.64317 10.7102C2.30575 10.3978 2.03081 10.0229 1.79337 9.63548C0.481187 7.4735 0.818606 4.68667 2.64317 2.88711C3.69291 1.83736 5.10507 1.25 6.59222 1.25C8.92915 1.25 10.3913 2.61217 11.0037 3.39948C11.616 2.62467 13.0782 1.25 15.4151 1.25C16.9022 1.25 18.3144 1.83736 19.3641 2.88711C21.1637 4.68667 21.5261 7.461 20.2139 9.63548C19.9765 10.0229 19.7016 10.3853 19.3641 10.7102L11.3536 18.6458C11.1536 18.8458 10.8662 18.8458 10.6662 18.6458H10.6537Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gen-tab__carousel-name gen-tab__carousel-name-front">
+                                    <span class="gen-tab__carousel-name-span">Смартфон Google Pixel 7 Pro 12/512GB
+                                        Obsidian (Global Version)</span>
+                                </div>
+                                <div class="gen-tab__carousel-container-img gen-tab__carousel-container">
                                     <div class="gen-tab__carousel-img">
                                         <div id="main-photo-slider-mobile" class="splide">
                                             <div class="splide__track">
                                                 <ul class="splide__list">
                                                     <li class="gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Obsidian.jpg">
-                                                            <img src="/images/p8pro-Obsidian.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
                                                     </li>
                                                     <li class=" gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Bay.jpg">
-                                                            <img src="/images/p8pro-Bay.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Bay.jpg" alt="product">
                                                     </li>
                                                     <li class="gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Parcelian.jpg">
-                                                            <img src="/images/p8pro-Parcelian.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Parcelian.jpg" alt="product">
                                                     </li>
                                                     <li class="gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Obsidian.jpg">
-                                                            <img src="/images/p8pro-Obsidian.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
                                                     </li>
                                                     <li class=" gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Bay.jpg">
-                                                            <img src="/images/p8pro-Bay.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Bay.jpg" alt="product">
                                                     </li>
                                                     <li class="gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Parcelian.jpg">
-                                                            <img src="/images/p8pro-Parcelian.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Parcelian.jpg" alt="product">
                                                     </li>
                                                     <li class="gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Obsidian.jpg">
-                                                            <img src="/images/p8pro-Obsidian.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
                                                     </li>
                                                     <li class=" gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Bay.jpg">
-                                                            <img src="/images/p8pro-Bay.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Bay.jpg" alt="product">
                                                     </li>
                                                     <li class="gen-tab__carousel--item splide__slide">
-                                                        <a href="/images/p8pro-Parcelian.jpg">
-                                                            <img src="/images/p8pro-Parcelian.jpg" alt="product">
-                                                        </a>
+                                                        <img src="/images/p8pro-Parcelian.jpg" alt="product">
                                                     </li>
                                                 </ul>
                                             </div>
@@ -2900,12 +3010,348 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="gen-tab__carousel-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none">
+                                        <g filter="url(#filter0_i_12125_7763)">
+                                            <circle cx="48" cy="48" r="48" fill="#E5E4E2" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_i_12125_7763" x="0" y="0" width="98" height="98"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                    result="shape" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dx="2" dy="2" />
+                                                <feGaussianBlur stdDeviation="2" />
+                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.12549 0 0 0 0 0.12549 0 0 0 0 0.12549 0 0 0 0.16 0" />
+                                                <feBlend mode="normal" in2="shape"
+                                                    result="effect1_innerShadow_12125_7763" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"
+                                        fill="none" class="gen-tab__carousel-arrows">
+                                        <path d="M1 1L5 5" stroke="#696969" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M1 9L5 5" stroke="#696969" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                         <div class="back">
-                            <h2>Angular</h2>
-                            <p>Good tools make application development quicker and easier to maintain than if you did
-                                everything by hand..</p>
+                            <div class="gen-tab__carousel">
+                                <div class="gen-tab__carousel-header gen-tab__carousel-header-back">
+                                    <div class="gen-tab__info-list">
+                                        <!-- <div class="gen-tab__info-list-status--to-order global-list-status--to-order global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Під замовлення
+                                            </span>
+                                        </div> -->
+                                        <div
+                                            class="gen-tab__info-list-status--in-stock global-list-status--in-stock global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                В наявності
+                                            </span>
+                                        </div>
+                                        <!-- <div class="gen-tab__info-list-status--available-propositions global-list-status--available-propositions global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Доступні пропозиції
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--expected global-list-status--expected global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Очікуємо <span
+                                                    class="gen-tab__info-list-expected global-list-line-expected">15.04.2024</span>
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Аутлет
+                                            </span>
+                                        </div> -->
+                                        <!-- <div
+                                            class="gen-tab__info-list-status--not-available global-list-status--not-available global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Немає в наявності
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--no-offers global-list-status--no-offers global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Немає пропозицій
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-status--discontinued global-list-status--discontinued global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Знято з виробництва
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-guarantee global-list-guarantee global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Гарантія <span
+                                                    class="gen-tab__info-list-guarantee-days global-list-guarantee-days">14
+                                                    днів</span>
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-articul global-list-articul global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                Код. 1234567
+                                            </span>
+                                        </div> -->
+                                        <!-- <div class="gen-tab__info-list-reviews-container">
+                                            <div class="gen-tab__info-list-rating global-list-rating global-list">
+                                                <span class="gen-tab__info-list-line global-list-line">
+                                                    <span id="gen-tab__info-list-rating global-list-rating value">4,5</span>
+                                                </span>
+                                            </div>
+                                            <div class="gen-tab__info-list-reviews global-list-reviews global-list">
+                                                <a href="#" class="gen-tab__info-list-line global-list-line">
+                                                    <span id="gen-tab__info-list-reviews-value global-list-reviews-value">4
+                                                        відгуки</span>
+                                                </a>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    <div class="gen-tab__info-btn">
+                                        <div class="gen-tab__info-compare">
+                                            <button type="submit" title="Список порівняння"
+                                                onclick="toggleTabInfoBtn(event, this)" id="gen-tab___compare"
+                                                class="gen-tab__info-compare-btn gen-tab-controls__btn global__info-compare-btn global-controls__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22"
+                                                    viewBox="0 0 26 22" fill="none">
+                                                    <path
+                                                        class="gen-tab__info-compare-btn_fill  global__info-compare-btn_fill"
+                                                        d="M1 16.0664H10.6C10.6 18.7197 8.45335 20.8664 5.80001 20.8664C3.14667 20.8664 1 18.7197 1 16.0664Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                                    </path>
+                                                    <path
+                                                        d="M5.80001 6.4668L8.20001 11.2668L10.6 16.0668H5.80001H1L3.4 11.2668L5.80001 6.4668Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        class="gen-tab__info-compare-btn_fill global__info-compare-btn_fill"
+                                                        d="M15.4004 13.666H25.0004C25.0004 16.3194 22.8537 18.466 20.2004 18.466C17.5471 18.466 15.4004 16.3194 15.4004 13.666Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" fill="none">
+                                                    </path>
+                                                    <path
+                                                        d="M20.2004 4.06641L22.6004 8.86642L25.0004 13.6664H20.2004H15.4004L17.8004 8.86642L20.2004 4.06641Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M2.35938 4.74667L23.6394 1"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M13.0008 4.067C13.6635 4.067 14.2008 3.52974 14.2008 2.86699C14.2008 2.20425 13.6635 1.66699 13.0008 1.66699C12.338 1.66699 11.8008 2.20425 11.8008 2.86699C11.8008 3.52974 12.338 4.067 13.0008 4.067Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="gen-tab__info-wishlist">
+                                            <span>209</span>
+                                            <button type="submit" title="Список бажань" id="gen-tab___wishlist"
+                                                onclick="toggleTabInfoBtn(event, this)"
+                                                class="gen-tab__info-wishlist-btn global__info-wishlist-btn gen-tab-controls__btn global-controls__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                                    viewBox="0 0 22 20" fill="none">
+                                                    <path
+                                                        d="M10.6537 18.6458L2.64317 10.7102C2.30575 10.3978 2.03081 10.0229 1.79337 9.63548C0.481187 7.4735 0.818606 4.68667 2.64317 2.88711C3.69291 1.83736 5.10507 1.25 6.59222 1.25C8.92915 1.25 10.3913 2.61217 11.0037 3.39948C11.616 2.62467 13.0782 1.25 15.4151 1.25C16.9022 1.25 18.3144 1.83736 19.3641 2.88711C21.1637 4.68667 21.5261 7.461 20.2139 9.63548C19.9765 10.0229 19.7016 10.3853 19.3641 10.7102L11.3536 18.6458C11.1536 18.8458 10.8662 18.8458 10.6662 18.6458H10.6537Z"
+                                                        stroke="var(--colors-gray-300, #c0c0c0)" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gen-tab__carousel-name gen-tab__carousel-name-back">
+                                    <div class="gen-tab__info-list-articul global-list-articul global-list">
+                                        <span class="gen-tab__info-list-line global-list-line">
+                                            Код. 1234567
+                                        </span>
+                                    </div>
+                                    <div class="gen-tab__info-list-reviews-container">
+                                        <div class="gen-tab__info-list-rating global-list-rating global-list">
+                                            <span class="gen-tab__info-list-line global-list-line">
+                                                <span id="gen-tab__info-list-rating global-list-rating value">4,5</span>
+                                            </span>
+                                        </div>
+                                        <div class="gen-tab__info-list-reviews global-list-reviews global-list">
+                                            <a href="#" class="gen-tab__info-list-line global-list-line">
+                                                <span id="gen-tab__info-list-reviews-value global-list-reviews-value">4
+                                                    відгуки</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gen-tab__carousel-container-back gen-tab__carousel-container">
+                                    <div class="gen-tab__carousel-container-top">
+                                        <div class="gen-tab__carousel-button global-button-send-fast-buy">
+                                            <button>Кнопка <span class="gen-tab__carousel-bank">monobank</span></button>
+                                        </div>
+                                        <div class="gen-tab__carousel-button-bottom">
+                                            <div class="gen-tab__stock-used">
+                                                <a href="#" class="gen-tab__stock-used-text">
+                                                    <span class="gen-tab__stock-used-left">
+                                                        <span class="gen-tab__stock-used-left-top">Вживаний</span>
+                                                        <span class="gen-tab__stock-used-left-bottom">з економією</span>
+                                                    </span>
+                                                    <span class="gen-tab__stock-used-right">
+                                                        <span id="gen-tab__stock-used-value">4600</span>
+                                                        <span class="gen-tab__stock-used-simb"> ₴</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="gen-tab__carousel-btn global-button-credit">
+                                                <button>Оплата частинами</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gen-tab__carousel-container-bottom">
+                                        <span>Основні характеристики</span>
+                                        <div class="gen-tab__carousel-specs">
+                                            <div class="gen-tab__carousel-spec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="30"
+                                                    viewBox="0 0 18 30" fill="none">
+                                                    <rect x="1" y="1" width="16" height="28" rx="2" stroke="#2F2C2F"
+                                                        stroke-width="1.5" />
+                                                    <path d="M4.5 19.5L13.5 10.5" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M13.5 13.5V10.5" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M10.5 10.5L13.5 10.5" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M4.5 16.5L4.5 19.5" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M7.5 19.5L4.5 19.5" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <span class="gen-tab__carousel-spec-span">6.7”, 120 Гц, 3840x2160 4K
+                                                    UHD</span>
+                                            </div>
+                                            <div class="gen-tab__carousel-spec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20"
+                                                    viewBox="0 0 27 20" fill="none">
+                                                    <path
+                                                        d="M8.4165 3C8.4165 2.30964 8.97615 1.75 9.6665 1.75V0.25C8.14772 0.25 6.9165 1.48122 6.9165 3H8.4165ZM8.4165 3.5V3H6.9165V3.5H8.4165ZM3.6665 4.75H7.1665V3.25H3.6665V4.75ZM2.4165 6C2.4165 5.30964 2.97615 4.75 3.6665 4.75V3.25C2.14772 3.25 0.916504 4.48122 0.916504 6H2.4165ZM2.4165 17V6H0.916504V17H2.4165ZM3.6665 18.25C2.97615 18.25 2.4165 17.6904 2.4165 17H0.916504C0.916504 18.5188 2.14772 19.75 3.6665 19.75V18.25ZM23.6665 18.25H3.6665V19.75H23.6665V18.25ZM24.9165 17C24.9165 17.6904 24.3569 18.25 23.6665 18.25V19.75C25.1853 19.75 26.4165 18.5188 26.4165 17H24.9165ZM24.9165 6V17H26.4165V6H24.9165ZM23.6665 4.75C24.3569 4.75 24.9165 5.30964 24.9165 6H26.4165C26.4165 4.48122 25.1853 3.25 23.6665 3.25V4.75ZM20.1665 4.75H23.6665V3.25H20.1665V4.75ZM18.9165 3V3.5H20.4165V3H18.9165ZM17.6665 1.75C18.3569 1.75 18.9165 2.30964 18.9165 3H20.4165C20.4165 1.48122 19.1853 0.25 17.6665 0.25V1.75ZM9.6665 1.75H17.6665V0.25H9.6665V1.75ZM20.1665 3.25C20.3046 3.25 20.4165 3.36193 20.4165 3.5H18.9165C18.9165 4.19036 19.4761 4.75 20.1665 4.75V3.25ZM6.9165 3.5C6.9165 3.36193 7.02843 3.25 7.1665 3.25V4.75C7.85686 4.75 8.4165 4.19036 8.4165 3.5H6.9165Z"
+                                                        fill="#2F2C2F" />
+                                                    <circle cx="13.6665" cy="11" r="5" stroke="#2F2C2F"
+                                                        stroke-width="1.5" />
+                                                    <circle cx="22.6665" cy="7" r="1" fill="#2F2C2F" />
+                                                </svg>
+                                                <span class="gen-tab__carousel-spec-span">Основна: 50 Мп + 48 Мп + 12
+                                                    Мп. Фронтальна: 10.8 Мп</span>
+                                            </div>
+                                            <div class="gen-tab__carousel-spec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="30"
+                                                    viewBox="0 0 17 30" fill="none">
+                                                    <rect x="1.3335" y="4" width="14" height="25" rx="2"
+                                                        stroke="#2F2C2F" stroke-width="1.5" />
+                                                    <path
+                                                        d="M5.3335 2C5.3335 1.44772 5.78121 1 6.3335 1H10.3335C10.8858 1 11.3335 1.44772 11.3335 2V4H5.3335V2Z"
+                                                        stroke="#2F2C2F" stroke-width="1.5" />
+                                                    <path d="M9.18408 10.5L6.18408 16.5" stroke="#2F2C2F"
+                                                        stroke-width="1.5" stroke-linecap="round" />
+                                                    <path d="M10.5132 16.1641L6.18408 16.4995" stroke="#2F2C2F"
+                                                        stroke-width="1.5" stroke-linecap="round" />
+                                                    <path d="M10.5132 16.1641L7.51318 22.1641" stroke="#2F2C2F"
+                                                        stroke-width="1.5" stroke-linecap="round" />
+                                                </svg>
+                                                <span class="gen-tab__carousel-spec-span">5000 mAh</span>
+                                            </div>
+                                            <div class="gen-tab__carousel-spec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"
+                                                    viewBox="0 0 26 20" fill="none">
+                                                    <rect x="1" y="4" width="24" height="12" rx="2" stroke="#2F2C2F"
+                                                        stroke-width="1.5" />
+                                                    <path d="M4 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M7 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M10 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M13 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M16 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M19 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M22 4V1" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M4 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M7 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M10 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M13 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M16 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M19 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                    <path d="M22 19V16" stroke="#2F2C2F" stroke-width="1.5"
+                                                        stroke-linecap="round" />
+                                                </svg>
+                                                <span class="gen-tab__carousel-spec-span">Оперативна: 12 Гб
+                                                    Вбудована: 512 Гб</span>
+                                            </div>
+                                            <div class="gen-tab__carousel-spec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26"
+                                                    viewBox="0 0 25 26" fill="none">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M12.2679 1.95272C12.3593 1.90118 12.4717 1.90118 12.5632 1.95272C15.5921 3.65981 18.9334 4.71334 22.3784 5.04826C22.5384 5.06381 22.6211 5.17853 22.6259 5.27448C22.7485 7.73775 22.6385 11.0896 21.6625 14.3385C22.0231 14.888 22.372 15.4537 22.6831 16.0125C24.1156 12.1503 24.266 8.05211 24.1241 5.19994C24.0792 4.29745 23.3586 3.63648 22.5236 3.5553C19.2873 3.24068 16.1473 2.25091 13.2996 0.645967C12.751 0.336761 12.08 0.336761 11.5314 0.645967C8.6839 2.25079 5.54419 3.24053 2.30815 3.55523C1.47263 3.63648 0.751788 4.29824 0.707618 5.20135C0.566296 8.09081 0.72465 12.2777 2.22377 16.1976C3.73265 20.1431 6.60935 23.8316 11.8692 25.6103C12.2208 25.7293 12.6102 25.7292 12.9618 25.6104C14.0004 25.2592 14.9462 24.8337 15.8069 24.3467C15.3169 24.0829 14.8721 23.7468 14.4863 23.3523C13.8649 23.6666 13.1977 23.9472 12.4813 24.1894C12.4413 24.2029 12.3897 24.2029 12.3497 24.1894C7.59731 22.5822 5.0087 19.2805 3.62481 15.6618C2.23116 12.0177 2.06927 8.06659 2.20583 5.27463C2.21052 5.17861 2.29323 5.06376 2.45334 5.04819C5.89815 4.71318 9.23915 3.65969 12.2679 1.95272Z"
+                                                        fill="#2F2C2F" />
+                                                    <path
+                                                        d="M19.1548 10.9022C18.772 10.422 18.0601 10.4211 17.6764 10.9006C16.1758 12.7758 12.9165 17.1202 12.9165 19.4787C12.9165 22.5426 15.3645 25 18.4165 25C21.4685 25 23.9165 22.5106 23.9165 19.4787C23.9165 17.1438 20.6545 12.7835 19.1548 10.9022Z"
+                                                        stroke="#2F2C2F" stroke-width="1.5" />
+                                                </svg>
+                                                <span class="gen-tab__carousel-spec-span">IP68</span>
+                                            </div>
+                                            <a href="#" class="gen-tab__carousel-spec tab__carousel-button-a">Більше</a>
+                                        </div>
+                                        <!-- <div class="gen-tab__carousel-all-show global-all-models-button-a">
+                                            <a href="#">Всі характеристики</a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="gen-tab__carousel-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none">
+                                        <g filter="url(#filter0_i_12125_7763)">
+                                            <circle cx="48" cy="48" r="48" fill="#E5E4E2" />
+                                        </g>
+                                        <defs>
+                                            <filter id="filter0_i_12125_7763" x="0" y="0" width="98" height="98"
+                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
+                                                    result="shape" />
+                                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                    result="hardAlpha" />
+                                                <feOffset dx="2" dy="2" />
+                                                <feGaussianBlur stdDeviation="2" />
+                                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                                                <feColorMatrix type="matrix"
+                                                    values="0 0 0 0 0.12549 0 0 0 0 0.12549 0 0 0 0 0.12549 0 0 0 0.16 0" />
+                                                <feBlend mode="normal" in2="shape"
+                                                    result="effect1_innerShadow_12125_7763" />
+                                            </filter>
+                                        </defs>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10"
+                                        fill="none" class="gen-tab__carousel-arrows">
+                                        <path d="M1 1L5 5" stroke="#696969" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M1 9L5 5" stroke="#696969" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

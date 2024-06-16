@@ -364,6 +364,11 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $(".gen-tab__carousel-arrow").on("click", function () {
+    $(".flip").toggleClass("active");
+  });
+});
+$(document).ready(function () {
   // Обработчик клика по стрелке контейнера
   $(".credit-offer-container-arrow").on("click", function () {
     var $block = $(this).closest(".credit-offer-block");

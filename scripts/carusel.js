@@ -108,10 +108,6 @@ $(document).ready(function () {
 
 //Главное фото
 document.addEventListener("DOMContentLoaded", function () {
-  new Splide("#main-photo-slider-mobile", {
-    pagination: true,
-  }).mount();
-
   var primarySlider = new Splide("#main-photo-slider", {
     pagination: false,
   });
@@ -694,3 +690,7 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustY: 0,
   };
 })(jQuery);
+
+new Splide("#main-photo-slider-mobile", {
+  pagination: true,
+}).mount();
