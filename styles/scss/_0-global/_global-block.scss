@@ -172,6 +172,10 @@
 
       @media (max-width: 719px) {
         padding: 16px !important;
+
+        &.block-cheaper-waiting-container {
+          padding-top: 8px !important;
+        }
       }
 
       .global-block-container-header {
@@ -430,6 +434,12 @@
           color: var(--colors-gray-700, #2f2c2f);
         }
 
+        @media (max-width: 719px) {
+          height: 80px;
+          justify-content: space-around;
+          font-size: 12px !important;
+        }
+
         .global-block-container-buy {
           @include flexbox(
             $alignItems: center,
@@ -459,10 +469,6 @@
           text-overflow: ellipsis;
 
           font-weight: 400;
-
-          @media (max-width: 719px) {
-            font-size: 12px;
-          }
         }
 
         .global-block-container-bottom-list-status {
@@ -561,6 +567,21 @@
                 gap: 2px;
                 flex: 1 0 0;
                 align-self: stretch;
+
+                .global-p-short-product-rom-price-container {
+                  color: var(--colors-gray-700, #2f2c2f);
+                  font-size: 12px;
+
+                  span {
+                    font-size: 20px;
+                  }
+                }
+
+                .global-p-short-product-to-price-container {
+                  color: var(--colors-gray-700, #2f2c2f);
+                  font-size: 12px;
+                  align-self: flex-end;
+                }
               }
             }
           }
@@ -626,7 +647,7 @@
       align-self: stretch;
 
       .global-block-container {
-        min-width: 220px;
+        min-width: 200px;
         max-width: 320px;
         padding: 16px;
         justify-content: space-between;
@@ -713,6 +734,7 @@
     @media (max-width: 719px) {
       flex-direction: column;
       gap: 8px;
+      padding-top: 0;
       padding-bottom: 24px;
     }
 
@@ -728,6 +750,7 @@
       @media (max-width: 719px) {
         justify-content: space-around;
       }
+
       .global-p-short-product-discount-container {
         display: flex;
         padding: 4px 12px;

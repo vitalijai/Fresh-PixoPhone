@@ -718,6 +718,35 @@ a:visited {
   color: var(--colors-white, #fff);
 }
 
+.global-button-used {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.global-button-used button {
+  width: 48px;
+  height: 48px;
+  border-radius: var(---radius-min, 8px);
+  background: var(--colors-blue-500, #318ce7);
+  border: none;
+  position: relative;
+}
+.global-button-used button::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none"><path d="M9 1H23.5C27.0899 1 30 3.91015 30 7.5V22" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M1.75 8.75C1.75 6.54086 3.54086 4.75 5.75 4.75H22.25C24.4591 4.75 26.25 6.54086 26.25 8.75V25.25C26.25 27.4591 24.4591 29.25 22.25 29.25H5.75C3.54086 29.25 1.75 27.4591 1.75 25.25V8.75Z" fill="%23318CE7"/><path d="M5.75 5.75H22.25V3.75H5.75V5.75ZM25.25 8.75V25.25H27.25V8.75H25.25ZM22.25 28.25H5.75V30.25H22.25V28.25ZM2.75 25.25V8.75H0.75V25.25H2.75ZM5.75 28.25C4.09315 28.25 2.75 26.9069 2.75 25.25H0.75C0.75 28.0114 2.98858 30.25 5.75 30.25V28.25ZM25.25 25.25C25.25 26.9069 23.9069 28.25 22.25 28.25V30.25C25.0114 30.25 27.25 28.0114 27.25 25.25H25.25ZM22.25 5.75C23.9069 5.75 25.25 7.09315 25.25 8.75H27.25C27.25 5.98858 25.0114 3.75 22.25 3.75V5.75ZM5.75 3.75C2.98858 3.75 0.75 5.98858 0.75 8.75H2.75C2.75 7.09315 4.09315 5.75 5.75 5.75V3.75Z" fill="white"/></svg>');
+  width: 28.25px;
+  height: 28.25px;
+}
+.global-button-used button span {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  color: var(--colors-white, #fff);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .global-button-notify button {
   gap: 8px;
 }
@@ -1034,6 +1063,11 @@ a:visited {
   align-items: center;
   gap: 4px;
 }
+@media (max-width: 719px) {
+  .global-list {
+    font-size: 12px;
+  }
+}
 
 .global-list-status--expected .global-list-line-expected {
   font-weight: 500;
@@ -1285,6 +1319,9 @@ a:visited {
   .global-block-content-container .global-block-content .global-block-container {
     padding: 16px !important;
   }
+  .global-block-content-container .global-block-content .global-block-container.block-cheaper-waiting-container {
+    padding-top: 8px !important;
+  }
 }
 .global-block-content-container .global-block-content .global-block-container .global-block-container-header {
   display: flex;
@@ -1476,6 +1513,13 @@ a:visited {
 .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom a {
   color: var(--colors-gray-700, #2f2c2f);
 }
+@media (max-width: 719px) {
+  .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom {
+    height: 80px;
+    justify-content: space-around;
+    font-size: 12px !important;
+  }
+}
 .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-buy {
   display: flex;
   align-items: center;
@@ -1502,11 +1546,6 @@ a:visited {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 400;
-}
-@media (max-width: 719px) {
-  .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-bottom-list-header {
-    font-size: 12px;
-  }
 }
 .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-bottom-list-status {
   display: flex;
@@ -1591,6 +1630,18 @@ a:visited {
     flex: 1 0 0;
     align-self: stretch;
   }
+  .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-bottom-value .global-p-short-product.all-price .global-p-short-product-rom-price-container {
+    color: var(--colors-gray-700, #2f2c2f);
+    font-size: 12px;
+  }
+  .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-bottom-value .global-p-short-product.all-price .global-p-short-product-rom-price-container span {
+    font-size: 20px;
+  }
+  .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-bottom-value .global-p-short-product.all-price .global-p-short-product-to-price-container {
+    color: var(--colors-gray-700, #2f2c2f);
+    font-size: 12px;
+    align-self: flex-end;
+  }
 }
 .global-block-content-container .global-block-content .global-block-container .global-block-container-bottom .global-block-container-button {
   display: flex;
@@ -1646,7 +1697,7 @@ a:visited {
   align-self: stretch;
 }
 .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container {
-  min-width: 220px;
+  min-width: 200px;
   max-width: 320px;
   padding: 16px;
   justify-content: space-between;
@@ -1720,6 +1771,7 @@ a:visited {
   .global-block-content-container .global-block-price-container {
     flex-direction: column;
     gap: 8px;
+    padding-top: 0;
     padding-bottom: 24px;
   }
 }
@@ -5492,6 +5544,11 @@ a:visited {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
+}
+@media (max-width: 719px) {
+  .common-template .inf-tab__information-block .inf-tab__reviews-container .reviews-block-header .reviews-block-rating-container {
+    font-size: 14px;
+  }
 }
 .common-template .inf-tab__information-block .inf-tab__specifications-container .specifications-block {
   display: flex;

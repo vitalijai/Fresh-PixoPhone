@@ -379,6 +379,38 @@
   }
 }
 
+//Прямоугольная кнопка бу предложений
+.global-button-used {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border-radius: var(---radius-min, 8px);
+    background: var(--colors-blue-500, #318ce7);
+    border: none;
+    position: relative;
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none"><path d="M9 1H23.5C27.0899 1 30 3.91015 30 7.5V22" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M1.75 8.75C1.75 6.54086 3.54086 4.75 5.75 4.75H22.25C24.4591 4.75 26.25 6.54086 26.25 8.75V25.25C26.25 27.4591 24.4591 29.25 22.25 29.25H5.75C3.54086 29.25 1.75 27.4591 1.75 25.25V8.75Z" fill="%23318CE7"/><path d="M5.75 5.75H22.25V3.75H5.75V5.75ZM25.25 8.75V25.25H27.25V8.75H25.25ZM22.25 28.25H5.75V30.25H22.25V28.25ZM2.75 25.25V8.75H0.75V25.25H2.75ZM5.75 28.25C4.09315 28.25 2.75 26.9069 2.75 25.25H0.75C0.75 28.0114 2.98858 30.25 5.75 30.25V28.25ZM25.25 25.25C25.25 26.9069 23.9069 28.25 22.25 28.25V30.25C25.0114 30.25 27.25 28.0114 27.25 25.25H25.25ZM22.25 5.75C23.9069 5.75 25.25 7.09315 25.25 8.75H27.25C27.25 5.98858 25.0114 3.75 22.25 3.75V5.75ZM5.75 3.75C2.98858 3.75 0.75 5.98858 0.75 8.75H2.75C2.75 7.09315 4.09315 5.75 5.75 5.75V3.75Z" fill="white"/></svg>');
+      width: 28.25px;
+      height: 28.25px;
+    }
+
+    span {
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      color: var(--colors-white, #fff);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
 //Прямоугольная кнопка Оповестить
 .global-button-notify {
   button {

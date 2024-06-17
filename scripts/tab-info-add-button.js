@@ -11,16 +11,19 @@ function toggleBayBtn(event, button) {
   var currentText = button.textContent.trim();
 
   // Устанавливаем новый текст в зависимости от текущего
-  if (currentText === "Купити") {
-    button.textContent = "В кошику";
-  } else {
-    button.textContent = "Купити";
+  if (window.innerWidth > 719) {
+    if (currentText === "Купити") {
+      button.textContent = "В кошику";
+    } else {
+      button.textContent = "Купити";
+    }
   }
 }
 function toggleTabInfoBtn(event, button) {
   event.preventDefault();
   button.classList.toggle("active");
 }
+
 function toggleBayCheaperBtn(event, button) {
   event.preventDefault();
   button.classList.toggle("global-button-buy");
@@ -30,9 +33,11 @@ function toggleBayCheaperBtn(event, button) {
   var currentText = button.textContent.trim();
 
   // Устанавливаем новый текст в зависимости от текущего
-  if (currentText === "Купити разом") {
-    button.textContent = "В кошику";
-  } else {
-    button.textContent = "Купити разом";
+  if (window.innerWidth > 719) {
+    if (currentText === "Купити разом") {
+      button.textContent = "В кошику";
+    } else {
+      button.textContent = "Купити разом";
+    }
   }
 }
