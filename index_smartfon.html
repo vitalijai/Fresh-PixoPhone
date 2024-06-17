@@ -13360,9 +13360,32 @@
         <!-- Button TOP -->
         <a href="#top" id="back-to-top" class="back-to-top" title="Догори"></a>
         <!-- Button TOP End-->
-
+        <div class="video-container">
+            <div class="video-block">
+                <video type="video/mp4" controls>
+                    <source id="video" src="/images/Work Hard Baby.mp4" preload type="video/mp4">
+                </video>
+                <div class="closet">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <path d="M0.666992 7.33301L7.33366 0.666341" stroke="#696969" stroke-width="1.33333"
+                            stroke-linecap="round" />
+                        <path d="M0.666992 0.66626L7.33366 7.33293" stroke="#696969" stroke-width="1.33333"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
         <!-- scripts -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const closet = document.querySelector('.closet');
+                const videoContainer = document.querySelector('.video-container');
 
+                closet.addEventListener('click', function () {
+                    videoContainer.classList.add('closing');
+                });
+            });
+        </script>
         <script>
             window.addEventListener('load', function () {
                 const scrollContainer = document.querySelector('.breadcrumbs');

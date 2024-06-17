@@ -70,10 +70,10 @@
       max-width: 580px;
       gap: var(---gap-basic, 24px);
       flex: 1 0 0;
-
+      height: 36px;
       border-radius: 8px;
       border: 2px solid var(--colors-gray-100, #f7f7f7);
-
+      margin: auto 0;
       .header-search-form {
         @include flexbox();
         width: 100%;

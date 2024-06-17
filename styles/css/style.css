@@ -2836,8 +2836,10 @@ a:visited {
   max-width: 580px;
   gap: var(---gap-basic, 24px);
   flex: 1 0 0;
+  height: 36px;
   border-radius: 8px;
   border: 2px solid var(--colors-gray-100, #f7f7f7);
+  margin: auto 0;
 }
 .header .header-container .header_bottom .header_bottom-content__right .header-bottom-search .header-search-form {
   display: flex;
@@ -3811,7 +3813,7 @@ a:visited {
     align-items: center;
     gap: 4px;
     flex: 0 1 calc(30.33% - 10px);
-    min-width: 93px;
+    min-width: 90px;
     border-radius: 8px;
     background: var(--colors-gray-100, #f7f7f7);
   }
@@ -8973,4 +8975,41 @@ a:visited {
   to {
     transform: rotate(0deg);
   }
+}
+.video-container {
+  position: fixed;
+  top: 300px;
+  right: 0;
+  display: flex;
+  align-items: flex-start;
+  z-index: 100;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.video-container.closing {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.video-container .video-block {
+  padding: 12px;
+  padding-bottom: 8px;
+  border-radius: 12px 0px 0px 12px;
+  background: var(--colors-white, #fff);
+  box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.24);
+  position: relative;
+}
+.video-container .video-block video {
+  width: 80px;
+  border-radius: 4px;
+}
+.video-container .video-block .closet {
+  display: flex;
+  padding: 4px;
+  align-items: flex-start;
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  border-radius: var(--nums-block-radius, 32px);
+  background: var(--colors-gray-100, #f7f7f7);
+  /* micro */
+  box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.24);
 }/*# sourceMappingURL=style.css.map */
