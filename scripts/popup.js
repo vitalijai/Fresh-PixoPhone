@@ -9,6 +9,28 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".closet").click(function () {
+    $(".video-container").addClass("closing");
+  });
+
+  $(".tabs__link").on("click", function () {
+    var $this = $(this);
+
+    if ($this.hasClass("active")) {
+      $this.removeClass("active");
+      $("html").removeClass("no-scroll");
+      $(".screen").removeClass("overflow");
+      $(".video-container").removeClass("closing");
+    } else {
+      $(".tabs__link").removeClass("active");
+      $this.addClass("active");
+      $("html").addClass("no-scroll");
+      $(".screen").addClass("overflow");
+      $(".video-container").addClass("closing");
+    }
+  });
+});
 //Открытие меню
 $(document).ready(function () {
   // Функция для открытия/закрытия меню
@@ -368,6 +390,7 @@ $(document).ready(function () {
     $(".flip").toggleClass("active");
   });
 });
+
 $(document).ready(function () {
   // Обработчик клика по стрелке контейнера
   $(".credit-offer-container-arrow").on("click", function () {
