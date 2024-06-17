@@ -68,6 +68,24 @@ $(document).ready(function () {
     $(".carousel-wrapper").slick("slickNext");
   });
 
+  //все предложения
+
+  $(".multiple-items").each(function () {
+    $(this).slick({
+      infinite: false,
+      slidesToShow: 1.5,
+      slidesToScroll: 1,
+      arrows: false,
+    });
+  });
+  // Инициализация слайдера
+  $(".multiple-item").slick({
+    infinite: false,
+    slidesToShow: 1.2,
+    slidesToScroll: 1,
+    arrows: false,
+  });
+
   //Аксы корзина
   // Инициализация слайдера
   $(".cart-carousel-wrapper").slick({
@@ -105,7 +123,6 @@ $(document).ready(function () {
   $(".people-watching-text-span").text(text);
   $(".people-watching-secondary-span").text(secondary);
 });
-
 //Главное фото
 document.addEventListener("DOMContentLoaded", function () {
   var primarySlider = new Splide("#main-photo-slider", {
