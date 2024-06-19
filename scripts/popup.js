@@ -10,6 +10,27 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  // Определите блок gen-tab__to-order
+  var targetBlock = $(".gen-tab__to-order");
+
+  // Функция для проверки положения прокрутки
+  function checkScroll() {
+    // Определите высоту и положение блока
+    var blockOffset =
+      targetBlock.offset().top * 1.4 + targetBlock.outerHeight();
+    var scrollPosition = $(window).scrollTop() + $(window).height();
+
+    // Проверьте, если прокрутка ниже блока
+    if (scrollPosition > blockOffset) {
+      $(".p-short-info-mobile").addClass("visible");
+    } else {
+      $(".p-short-info-mobile").removeClass("visible");
+    }
+  }
+
+  // Добавьте обработчик события прокрутки
+  $(window).on("scroll", checkScroll);
+
   $(".closet").click(function () {
     $(".video-container").addClass("closing");
   });
@@ -27,9 +48,11 @@ $(document).ready(function () {
       $(".back-to-top").removeClass("mobile");
       $(".p-short-info-mobile").removeClass("mobile");
       $(".video-container").removeClass("closing");
+      $this.find(".tabs__link-menu-list-bottom-arrow").removeClass("active");
     } else {
       // Если текущий элемент не активен, активируем его и обновляем классы на других элементах
       $(".tabs__link-mobile").removeClass("active");
+      $(".tabs__link-menu-list-bottom-arrow").removeClass("active"); // Remove 'activ' from all arrows
       $this.addClass("active");
       $("html").addClass("no-scroll");
       $(".screen").addClass("overflow-mobile");
@@ -37,6 +60,19 @@ $(document).ready(function () {
       $(".p-short-info-mobile").addClass("mobile");
       $(".back-to-top").addClass("mobile");
       $(".video-container").addClass("closing");
+      // $this.find(".tabs__link-menu-list-bottom-arrow").addClass("activ");
+
+      // Проверяем, есть ли скролл у tabs__link-menu-list только на мобильных устройствах
+      if ($(window).width() <= 767) {
+        var $menuList = $this.find(".tabs__link-menu-list");
+        if ($menuList[0].scrollHeight > $menuList.height()) {
+          $this.find(".tabs__link-menu-list-bottom-arrow").addClass("active");
+        } else {
+          $this
+            .find(".tabs__link-menu-list-bottom-arrow")
+            .removeClass("active");
+        }
+      }
     }
   });
 
@@ -48,7 +84,30 @@ $(document).ready(function () {
       event.stopPropagation();
     }
   );
+
+  // Обработчик прокрутки для tabs__link-menu-list
+  $(".tabs__link-menu-list").on("scroll", function () {
+    var $this = $(this);
+    var scrollHeight = $this[0].scrollHeight;
+    var scrollTop = $this.scrollTop();
+    var clientHeight = $this.height();
+    var scrollPercentage = (scrollTop + clientHeight) / scrollHeight;
+
+    // Проверка, если содержимое прокручено на 95%
+    if (scrollPercentage > 0.95) {
+      $this
+        .closest(".tabs__link-mobile")
+        .find(".tabs__link-menu-list-bottom-arrow")
+        .addClass("hide");
+    } else {
+      $this
+        .closest(".tabs__link-mobile")
+        .find(".tabs__link-menu-list-bottom-arrow")
+        .removeClass("hide");
+    }
+  });
 });
+
 //Открытие меню
 $(document).ready(function () {
   // Функция для открытия/закрытия меню
