@@ -2,19 +2,12 @@ window.addEventListener("scroll", function () {
   var headerBottoms = document.querySelectorAll(".header_bottom");
   var headerTabs = document.querySelectorAll(".common-template__tabs");
   var videoContainer = document.querySelector(".video-container");
+  var pShort = document.querySelector(".p-short-info-mobile");
   var tabs = document.querySelectorAll(".tabs");
   var mainMenu = document.querySelectorAll(".catalog_products_main");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   const backToTop = document.getElementById("back-to-top");
   const vw50 = window.innerWidth / 2; // 50vw in pixels
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= 64) {
-      videoContainer.style.top = "93px";
-    } else {
-      videoContainer.style.top = "300px";
-    }
-  });
 
   var isFixed =
     window.innerWidth < 719 ? scrollPosition > 48 : scrollPosition > 64;
@@ -36,10 +29,15 @@ window.addEventListener("scroll", function () {
   });
 
   if (scrollPosition > vw50) {
-    backToTop.style.display = "inline-flex";
+    backToTop.classList.add("visible");
+    pShort.classList.add("visible");
+    videoContainer.classList.add("normall");
   } else {
-    backToTop.style.display = "none";
+    backToTop.classList.remove("visible");
+    pShort.classList.remove("visible");
+    videoContainer.classList.remove("normall");
   }
+
   backToTop.addEventListener("click", function (event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });

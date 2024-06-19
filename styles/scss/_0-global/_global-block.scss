@@ -208,6 +208,17 @@
             object-fit: contain;
 
             border-radius: 8px;
+
+            @media (max-width: 719px) {
+              max-width: 168px;
+              height: 168px;
+            }
+          }
+
+          .global-block-discount-group {
+            @media (max-width: 719px) {
+              display: none;
+            }
           }
 
           .global-block-credit__btn {

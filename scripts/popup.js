@@ -14,22 +14,40 @@ $(document).ready(function () {
     $(".video-container").addClass("closing");
   });
 
-  $(".tabs__link").on("click", function () {
+  $(".tabs__link-mobile").on("click", function (event) {
+    event.stopPropagation();
     var $this = $(this);
 
     if ($this.hasClass("active")) {
+      // Если текущий элемент активен, деактивируем его и удаляем классы
       $this.removeClass("active");
       $("html").removeClass("no-scroll");
-      $(".screen").removeClass("overflow");
+      $(".screen").removeClass("overflow-mobile");
+      $(".header_bottom").removeClass("mobile");
+      $(".back-to-top").removeClass("mobile");
+      $(".p-short-info-mobile").removeClass("mobile");
       $(".video-container").removeClass("closing");
     } else {
-      $(".tabs__link").removeClass("active");
+      // Если текущий элемент не активен, активируем его и обновляем классы на других элементах
+      $(".tabs__link-mobile").removeClass("active");
       $this.addClass("active");
       $("html").addClass("no-scroll");
-      $(".screen").addClass("overflow");
+      $(".screen").addClass("overflow-mobile");
+      $(".header_bottom").addClass("mobile");
+      $(".p-short-info-mobile").addClass("mobile");
+      $(".back-to-top").addClass("mobile");
       $(".video-container").addClass("closing");
     }
   });
+
+  // Предотвращаем закрытие при клике на дочерние элементы
+  $(".tabs__link-mobile").on(
+    "click",
+    ".tabs__link-menu-list",
+    function (event) {
+      event.stopPropagation();
+    }
+  );
 });
 //Открытие меню
 $(document).ready(function () {
