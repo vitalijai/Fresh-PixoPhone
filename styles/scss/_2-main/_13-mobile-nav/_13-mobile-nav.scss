@@ -285,7 +285,7 @@
           bottom: -50px;
           right: 5%;
           z-index: 100;
-          transition: bottom 0.5s ease;
+          transition: right 0.5s ease, bottom 0.5s ease;
 
           border: 1px solid var(--colors-gray-300, #e5e4e2);
           border-radius: 50%;
@@ -305,7 +305,7 @@
           }
 
           &.hide {
-            bottom: -50px !important;
+            right: -50px !important;
           }
         }
 

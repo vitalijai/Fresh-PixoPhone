@@ -7448,7 +7448,7 @@ a:visited {
   bottom: -50px;
   right: 5%;
   z-index: 100;
-  transition: bottom 0.5s ease;
+  transition: right 0.5s ease, bottom 0.5s ease;
   border: 1px solid var(--colors-gray-300, #e5e4e2);
   border-radius: 50%;
   padding: 3px 3px;
@@ -7464,7 +7464,7 @@ a:visited {
   bottom: 83px;
 }
 .common-template .mobile-nav__tabs .mobile-tabs .tablist .tabs__link .tabs__link-menu-list-bottom-arrow.hide {
-  bottom: -50px !important;
+  right: -50px !important;
 }
 .common-template .mobile-nav__tabs .mobile-tabs .tablist .tabs__link.active {
   background: var(--colors-green-100, #e9f9e9);
