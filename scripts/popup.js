@@ -10,6 +10,39 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $(".add-acces").on("click", function () {
+    var parentBlock = $(this).closest(".tabs__link-menu-containers");
+    var tabsLinkProductMobile = parentBlock.find(".tabs__link-product-mobile");
+    var tabsLinkServices = parentBlock.find(".tabs__link-services");
+    var addService = parentBlock.find(".add-service");
+
+    if (tabsLinkProductMobile.hasClass("active")) {
+      tabsLinkProductMobile.removeClass("active");
+      $(this).removeClass("active");
+    } else {
+      tabsLinkProductMobile.addClass("active");
+      tabsLinkServices.removeClass("active");
+      $(this).addClass("active");
+      addService.removeClass("active");
+    }
+  });
+
+  $(".add-service").on("click", function () {
+    var parentBlock = $(this).closest(".tabs__link-menu-containers");
+    var tabsLinkServices = parentBlock.find(".tabs__link-services");
+    var tabsLinkProductMobile = parentBlock.find(".tabs__link-product-mobile");
+    var addAcces = parentBlock.find(".add-acces");
+
+    if (tabsLinkServices.hasClass("active")) {
+      tabsLinkServices.removeClass("active");
+      $(this).removeClass("active");
+    } else {
+      tabsLinkServices.addClass("active");
+      tabsLinkProductMobile.removeClass("active");
+      $(this).addClass("active");
+      addAcces.removeClass("active");
+    }
+  });
   // Определите блок gen-tab__to-order
   var targetBlock = $(".gen-tab__to-order");
 
