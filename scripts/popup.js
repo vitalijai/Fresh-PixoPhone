@@ -170,6 +170,8 @@ $(document).ready(function () {
     // Удаляем классы 'right' и 'active' при переключении табов
     $(".tabs__link-menu-position").removeClass("active");
     $(".tabs__link-menu-list").removeClass("right");
+    // Инициализация маски для поля ввода номера телефона
+    $("#contact-phone").mask("+38 (999) 99-99-999");
   });
 
   // Предотвращаем закрытие при клике на дочерние элементы
