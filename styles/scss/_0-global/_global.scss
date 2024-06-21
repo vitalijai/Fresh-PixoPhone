@@ -80,11 +80,14 @@ footer {
 }
 
 .screen {
-  display: none;
-
+  // display: none;
+  transition: all 0.5s ease;
+  opacity: 0;
   &.overflow,
   &.overflow-mobile {
-    display: block;
+    // display: block;
+    opacity: 1;
+
     position: absolute;
     width: 100%;
     height: 10000vh;

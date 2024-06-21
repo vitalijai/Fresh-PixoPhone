@@ -68,6 +68,54 @@ $(document).ready(function () {
     $(".video-container").addClass("closing");
   });
 
+  function updateArrow($element) {
+    // Проверяем, есть ли скролл у tabs__link-menu-list только на мобильных устройствах
+    if ($(window).width() <= 719) {
+      var $menuList = $element.find(".tabs__link-menu-list");
+      if ($menuList[0].scrollHeight > $menuList.height()) {
+        $element.find(".tabs__link-menu-list-bottom-arrow").addClass("active");
+      } else {
+        $element
+          .find(".tabs__link-menu-list-bottom-arrow")
+          .removeClass("active");
+      }
+    }
+  }
+
+  $(".gen-block-mobile-position-header").on("click", function () {
+    // Найти соответствующий блок для текущего заголовка
+    var $block = $(this).closest(".gen-block-mobile-position-block");
+
+    // Переключить класс 'active' для выбранного блока
+    $block.toggleClass("active");
+  });
+
+  $(".tlmsh").on("click", function () {
+    var $container = $(this).closest(".tabs__link-menu-containers");
+
+    $(".tabs__link-menu-list").addClass("right");
+    $(".tabs__link-menu-list").removeClass("left");
+
+    // Добавляем класс 'active' к соседнему .tabs__link-menu-position внутри текущего контейнера
+    $container.find(".tabs__link-menu-position").addClass("active");
+
+    // Update arrow state for active link menu
+    updateArrow($(".tabs__link-mobile.active"));
+  });
+
+  $(".tabs__link-menu-header-arrow").on("click", function () {
+    // Добавляем класс 'right' к '.tabs__link-menu-list'
+    var $container = $(this).closest(".tabs__link-menu-containers");
+    $(".tabs__link-menu-list").removeClass("right");
+    $(".tabs__link-menu-list").addClass("left");
+
+    $container.find(".tabs__link-menu-position").addClass("left");
+    $container.find(".tabs__link-menu-position").removeClass("active");
+    // $(".tabs__link-menu-list-bottom-arrow").removeClass("active");
+    // // Update arrow state for active link menu
+    updateArrow($(".tabs__link-mobile.active"));
+  });
+
   $(".tabs__link-mobile").on("click", function (event) {
     event.stopPropagation();
     var $this = $(this);
@@ -93,20 +141,13 @@ $(document).ready(function () {
       $(".p-short-info-mobile").addClass("mobile");
       $(".back-to-top").addClass("mobile");
       $(".video-container").addClass("closing");
-      // $this.find(".tabs__link-menu-list-bottom-arrow").addClass("activ");
 
-      // Проверяем, есть ли скролл у tabs__link-menu-list только на мобильных устройствах
-      if ($(window).width() <= 767) {
-        var $menuList = $this.find(".tabs__link-menu-list");
-        if ($menuList[0].scrollHeight > $menuList.height()) {
-          $this.find(".tabs__link-menu-list-bottom-arrow").addClass("active");
-        } else {
-          $this
-            .find(".tabs__link-menu-list-bottom-arrow")
-            .removeClass("active");
-        }
-      }
+      // Update arrow state for this element
+      updateArrow($this);
     }
+    // Удаляем классы 'right' и 'active' при переключении табов
+    $(".tabs__link-menu-position").removeClass("active");
+    $(".tabs__link-menu-list").removeClass("right");
   });
 
   // Предотвращаем закрытие при клике на дочерние элементы
