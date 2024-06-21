@@ -2,6 +2,7 @@ function toggleTabInfoBtn(event, button) {
   event.preventDefault();
   button.classList.toggle("active");
 }
+
 function toggleBayBtn(event, button) {
   event.preventDefault();
   button.classList.toggle("global-button-buy");
@@ -19,6 +20,7 @@ function toggleBayBtn(event, button) {
     }
   }
 }
+
 function toggleTabInfoBtn(event, button) {
   event.preventDefault();
   button.classList.toggle("active");

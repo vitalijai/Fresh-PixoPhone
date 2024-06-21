@@ -10071,4 +10071,97 @@ a:visited {
 .video-container.video-fullscreen .fullscreen-closet svg {
   width: 8.889px;
   height: 8.889px;
+}
+
+.pop-up-cart-mobile {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  z-index: 101;
+  transition: top 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container {
+  display: flex;
+  padding: 12px 24px 12px 12px;
+  align-items: flex-start;
+  width: calc(95% - 44px);
+  margin: 0 auto;
+  border-radius: 16px;
+  background: var(--colors-white, #fff);
+  /* pop-up_shadow */
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block svg {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--nums-block-radius, 32px);
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.succes svg {
+  background: var(--colors-green-100, #e9f9e9);
+  padding: 4px;
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.succes .pop-up-cart-mobile-group-top {
+  color: var(--colors-green-400, #62b278);
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.deleted svg {
+  background: var(--colors-red-100, #ffe4e1);
+  width: 16px;
+  height: 16px;
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.deleted .pop-up-cart-mobile-group-top {
+  color: var(--colors-red-300, #fa8072);
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.error svg {
+  background: var(--colors-blue-100, #e9f5ff);
+  padding: 4px;
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.error .pop-up-cart-mobile-group-top {
+  color: var(--colors-blue-400, #62a8ed);
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block .pop-up-cart-mobile-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block .pop-up-cart-mobile-group .pop-up-cart-mobile-group-top {
+  font-size: 12px;
+}
+.pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block .pop-up-cart-mobile-group .pop-up-cart-mobile-group-bottom span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  align-self: stretch;
+  overflow: hidden;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-overflow: ellipsis;
+  font-size: 10px;
+  font-weight: 400;
+}
+.pop-up-cart-mobile.hidden {
+  top: -100%;
+}
+.pop-up-cart-mobile.visible {
+  top: 10px;
+}
+.pop-up-cart-mobile.add .pop-up-cart-mobile-block.deleted, .pop-up-cart-mobile.add .pop-up-cart-mobile-block.error {
+  display: none;
+}
+.pop-up-cart-mobile.delete .pop-up-cart-mobile-block.succes, .pop-up-cart-mobile.delete .pop-up-cart-mobile-block.error {
+  display: none;
+}
+.pop-up-cart-mobile.info .pop-up-cart-mobile-block.deleted, .pop-up-cart-mobile.info .pop-up-cart-mobile-block.succes {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

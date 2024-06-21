@@ -90,6 +90,28 @@ $(document).ready(function () {
     $block.toggleClass("active");
   });
 
+  $(".p-short-info-button, .gen-tab__to-buy-button").on("click", function () {
+    var $popupCart = $(".pop-up-cart-mobile");
+
+    // Проверяем, есть ли уже класс "add"
+    if ($popupCart.hasClass("add")) {
+      // Удаляем класс "add" и добавляем класс "delete"
+      $popupCart.removeClass("add").addClass("delete");
+    } else {
+      // Удаляем класс "delete" и добавляем класс "add"
+      $popupCart.removeClass("delete").addClass("add");
+    }
+
+    // Добавляем класс 'visible'
+    $popupCart.removeClass("hidden");
+    $popupCart.addClass("visible");
+
+    // Удаляем класс 'visible' и добавляем класс 'hidden' через 2 секунды (2000 миллисекунд)
+    setTimeout(function () {
+      $popupCart.removeClass("visible").addClass("hidden");
+    }, 2000);
+  });
+
   $(".tlmsh").on("click", function () {
     var $container = $(this).closest(".tabs__link-menu-containers");
 
@@ -466,14 +488,14 @@ $(document).ready(function () {
     ".pop-up-fast-buy-button"
   );
   //Показать блок заказа
-  initOverlow(
-    ".gen-tab__to-buy-button",
-    "#popUpToCart",
-    ".pop-up-to-cart-close",
-    "#popUpToCart",
-    ".pop-up-to-cart-button",
-    ".pop-up-to-cart-bottom-left"
-  );
+  // initOverlow(
+  //   ".gen-tab__to-buy-button",
+  //   "#popUpToCart",
+  //   ".pop-up-to-cart-close",
+  //   "#popUpToCart",
+  //   ".pop-up-to-cart-button",
+  //   ".pop-up-to-cart-bottom-left"
+  // );
   //Показать блок заказа
   initModal(
     ".offers-page-description-show-more",
@@ -503,31 +525,31 @@ $(document).ready(function () {
     "#popUpLocation"
   );
 
-  initOverlow(
-    ".p-short-info-button",
-    "#popUpToCart",
-    ".pop-up-to-cart-close",
-    "#popUpToCart",
-    ".pop-up-to-cart-button",
-    ".pop-up-to-cart-bottom-left"
-  );
-  initOverlow(
-    ".inf-tab__to-buy-button",
-    "#popUpToCart",
-    ".pop-up-to-cart-close",
-    "#popUpToCart",
-    ".pop-up-to-cart-button",
-    ".pop-up-to-cart-bottom-left"
-  );
-  //Показать блок корзины
-  initOverlow(
-    ".header-bottom__cart-btn",
-    "#popUpCart",
-    ".pop-up-cart-close",
-    "#popUpCart",
-    ".pop-up-cart-button",
-    ".pop-up-cart-bottom-left"
-  );
+  // initOverlow(
+  //   ".p-short-info-button",
+  //   "#popUpToCart",
+  //   ".pop-up-to-cart-close",
+  //   "#popUpToCart",
+  //   ".pop-up-to-cart-button",
+  //   ".pop-up-to-cart-bottom-left"
+  // );
+  // initOverlow(
+  //   ".inf-tab__to-buy-button",
+  //   "#popUpToCart",
+  //   ".pop-up-to-cart-close",
+  //   "#popUpToCart",
+  //   ".pop-up-to-cart-button",
+  //   ".pop-up-to-cart-bottom-left"
+  // );
+  // //Показать блок корзины
+  // initOverlow(
+  //   ".header-bottom__cart-btn",
+  //   "#popUpCart",
+  //   ".pop-up-cart-close",
+  //   "#popUpCart",
+  //   ".pop-up-cart-button",
+  //   ".pop-up-cart-bottom-left"
+  // );
 });
 
 $(document).ready(function () {
