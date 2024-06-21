@@ -959,7 +959,7 @@
           transform: translateX(0%) translate3d(0, 0, 0);
 
           .tabs__link-menu-position {
-            &.left {
+            &.right {
               transform: translateX(200%) translate3d(0, 0, 0);
               height: 0;
             }
