@@ -16,6 +16,26 @@
     }
   }
 
+  &.pop-up-credit-calculator-modal {
+    @media (max-width: 719px) {
+      left: 0;
+      top: 0;
+      right: unset;
+      bottom: unset;
+      text-rendering: optimizeLegibility;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      position: fixed;
+      transform: translate(0, 0%);
+      transition: all 0.5s ease;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      z-index: 50;
+    }
+  }
+
   .global-pop-modal-content {
     display: flex;
     margin: 14.5% auto;
@@ -247,6 +267,14 @@
     &.credit-calculator {
       width: 840px;
       margin: 0.5% auto;
+
+      @media (max-width: 719px) {
+        gap: 8px !important;
+        background: unset !important;
+        width: calc(100% - 16px);
+        margin: 8px;
+        box-shadow: unset !important;
+      }
     }
 
     &.user-cart,

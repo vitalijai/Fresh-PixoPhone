@@ -140,19 +140,24 @@ $(document).ready(function () {
     updateArrow($(".tabs__link-mobile.active"));
   });
 
-  $(".header-bottom-search").on("click", function () {
+  $(
+    ".header-bottom-search, .gen-tab__credit-btn, .gen-tab__credit-block__btn"
+  ).on("click", function () {
     $(".p-short-info-mobile").addClass("mobile");
     $(".back-to-top").addClass("mobile");
     $(".video-container").addClass("closing");
     $(".mobile-nav__tabs").addClass("video");
   });
 
-  $("#pop-up-search-form__btn-close").on("click", function () {
-    $(".p-short-info-mobile").removeClass("mobile");
-    $(".back-to-top").removeClass("mobile");
-    $(".video-container").removeClass("closing");
-    $(".mobile-nav__tabs").removeClass("video");
-  });
+  $("#pop-up-search-form__btn-close, .pop-up-credit-calculator-close").on(
+    "click",
+    function () {
+      $(".p-short-info-mobile").removeClass("mobile");
+      $(".back-to-top").removeClass("mobile");
+      $(".video-container").removeClass("closing");
+      $(".mobile-nav__tabs").removeClass("video");
+    }
+  );
 
   $(".search-list.contain-submenu").not(".all_category").hide();
 
@@ -610,10 +615,23 @@ $(document).ready(function () {
     }
   });
 
-  // Обработчик клика по элементу выбора количества месяцев
+  // Инициализация: копируем значение активного элемента months-select в months-mini-span-block
+  $(".credit-offer-block").each(function () {
+    var activeMonth = $(this).find(".months-select.active").text().trim();
+    $(this).find(".months-mini-span-block").text(activeMonth);
+  });
+
+  // Обработка клика по элементам months-select
   $(".months-select").on("click", function () {
     // Добавляем класс active к выбранному элементу и удаляем его у остальных
     $(this).addClass("active").siblings().removeClass("active");
+
+    // Находим ближайший родительский блок .credit-offer-block
+    var parentBlock = $(this).closest(".credit-offer-block");
+
+    // Находим внутри этого блока элемент .months-mini-span-block и копируем содержимое
+    var selectedMonth = $(this).text().trim();
+    parentBlock.find(".months-mini-span-block").text(selectedMonth);
   });
 
   // Обработчик изменения выбора предложения

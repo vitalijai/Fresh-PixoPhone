@@ -2004,6 +2004,25 @@ a:visited {
 .global-pop-modal.pop-up-cart-modal.overflow {
   visibility: visible;
 }
+@media (max-width: 719px) {
+  .global-pop-modal.pop-up-credit-calculator-modal {
+    left: 0;
+    top: 0;
+    right: unset;
+    bottom: unset;
+    text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    position: fixed;
+    transform: translate(0, 0%);
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 50;
+  }
+}
 .global-pop-modal .global-pop-modal-content {
   display: flex;
   margin: 14.5% auto;
@@ -2188,6 +2207,15 @@ a:visited {
 .global-pop-modal .global-pop-modal-content.credit-calculator {
   width: 840px;
   margin: 0.5% auto;
+}
+@media (max-width: 719px) {
+  .global-pop-modal .global-pop-modal-content.credit-calculator {
+    gap: 8px !important;
+    background: unset !important;
+    width: calc(100% - 16px);
+    margin: 8px;
+    box-shadow: unset !important;
+  }
 }
 .global-pop-modal .global-pop-modal-content.user-cart, .global-pop-modal .global-pop-modal-content.user-to-cart {
   width: 896px;
@@ -8895,7 +8923,7 @@ a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--nums-block-radius, 32px);
+    gap: 32px;
     align-self: stretch;
   }
   .pop-up-search-modal .pop-up-search-container .catalog_products_main-container .category-content .menu-list-item .submenu-list__cont-btn-mob .submenu-list__btn {
@@ -9833,6 +9861,49 @@ a:visited {
 .pop-up-credit-calculator-modal-content .cart-modal-header-block .global-modal-block-content-container .gen-tab__add-services form .gen-tab__add-services-block .gen-tab__add-services-price {
   font-weight: 500;
 }
+.pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers {
+  display: none;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block {
+    padding: 24px;
+    border-radius: 24px;
+    width: unset;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-p-short-product-span {
+    font-size: 12px !important;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers img {
+    width: 64px;
+    max-height: 64px;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-modal-counter-container {
+    display: none;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-modal-price-container {
+    justify-content: flex-end !important;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-modal-total-container {
+    display: flex;
+    gap: 8px;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-modal-total-container .gen-tab__info-price-cashback {
+    justify-content: center;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-modal-total-container .gen-tab__info-price-cashback .gen-tab__info-price-cashback-span {
+    font-size: 10px !important;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-header-block .tabs__link-menu-containers .global-modal-total-container .gen-tab__info-price-cashback .gen-tab__info-price-cashback-span svg {
+    width: 16px;
+    height: 16px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank {
   display: flex;
   padding: 24px;
@@ -9852,6 +9923,15 @@ a:visited {
   overflow-y: scroll;
   padding-right: 12px;
   height: 370px;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container {
+    overflow: unset;
+    overflow-y: unset;
+    padding-right: unset;
+    height: unset;
+    width: calc(100% - 24px);
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container::-webkit-scrollbar {
   width: 8px; /* Ширина всего элемента навигации */
@@ -9876,11 +9956,25 @@ a:visited {
   border-radius: 8px;
   border: 2px solid transparent;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block {
+    border: unset;
+    background: var(--colors-gray-100, #f7f7f7);
+    width: 100%;
+    padding: 12px;
+    align-self: stretch;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer {
   display: flex;
   align-items: center;
   gap: 16px;
   align-self: stretch;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer {
+    gap: 8px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer input {
   display: none;
@@ -9890,6 +9984,11 @@ a:visited {
   cursor: pointer;
   padding-left: 22px;
   position: relative;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer input + label {
+    padding-left: 10px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer input:checked + label {
   color: #17aa1c;
@@ -9923,6 +10022,13 @@ a:visited {
   height: 48px;
   object-fit: contain;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container img {
+    width: 24px;
+    height: unset;
+    max-height: 24px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block {
   display: flex;
   align-items: center;
@@ -9932,6 +10038,12 @@ a:visited {
   align-self: stretch;
   user-select: none;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block {
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info {
   display: flex;
   min-width: 210px;
@@ -9939,24 +10051,77 @@ a:visited {
   max-width: 230px;
   flex: 1 0 0;
   align-self: stretch;
-  justify-content: flex-starts;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
   cursor: pointer;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info {
+    min-width: 148px;
+    width: unset;
+    max-width: unset;
+    flex: unset;
+    gap: 8px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info .credit-offer-bank-span {
   color: var(--colors-gray-700, #2f2c2f);
   font-size: 20px;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info .credit-offer-bank-span {
+    font-size: 14px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info .credit-offer-info-span {
   color: var(--colors-gray-400, #929292);
   font-size: 12px;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info .credit-offer-info-span {
+    font-size: 8px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .info div {
   display: flex;
   flex-direction: column;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months {
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow:hover {
+  background: var(--colors-gray-100, #f7f7f7);
+  border-radius: 20%;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow:hover {
+    background: unset;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="%232F2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 32px;
+  height: 32px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 6.5L8 9.5L11 6.5" stroke="%232F2C2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 16px;
+    height: 16px;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9964,7 +10129,12 @@ a:visited {
   align-self: stretch;
   position: relative;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months .months-select {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months {
+    justify-content: space-between;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months .months-select {
   display: flex;
   width: 48px;
   height: 32px;
@@ -9974,13 +10144,25 @@ a:visited {
   border-radius: 8px;
   cursor: pointer;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months .months-select.active, .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months .months-select:hover {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months .months-select {
+    background: var(--colors-white, #fff);
+    padding: 0 4px;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months .months-select.active, .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months .months-select:hover {
   background: linear-gradient(0deg, var(--colors-green-100, #e9f9e9) 0%, var(--colors-green-100, #e9f9e9) 100%), var(--colors-white, #fff);
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months .months-select.active {
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months .months-select.active {
   color: var(--colors-green-500-primary, #2ea84f);
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .price {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months .months-select.active {
+    color: var(--colors-white, #fff);
+    background: linear-gradient(0deg, var(--colors-green-500-primary, #2ea84f) 0%, var(--colors-green-500-primary, #2ea84f) 100%), var(--colors-white, #fff);
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price {
   display: flex;
   width: 140px;
   flex-direction: column;
@@ -9990,7 +10172,13 @@ a:visited {
   position: relative;
   height: 48px;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .price .price-span-block {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price {
+    width: unset;
+    height: unset;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price .price-span-block {
   display: flex;
   max-width: 140px;
   justify-content: flex-end;
@@ -10003,39 +10191,80 @@ a:visited {
   font-weight: 400;
   user-select: text;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .price .price-span-block .price-span-simb {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price .price-span-block {
+    width: unset;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price .price-span-block .price-span-simb {
   font-size: 24px;
   margin-bottom: -8px;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months-affter,
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .price-affter {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price .price-span-block .price-span-simb {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price .price-span-block {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price .price-span-block .price-span-beffore {
+    display: none;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-mini {
+  position: relative;
+  font-size: 14px;
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-affter,
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-mini-affter,
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price-affter {
   position: absolute;
   bottom: -4px;
   color: var(--colors-gray-500, #696969);
   font-size: 9px;
-  width: 100px;
   transform: translateX(-50%);
+  text-wrap: nowrap;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .months-affter {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-affter,
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-mini-affter,
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price-affter {
+    font-size: 8px;
+    width: unset;
+    top: 18px;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-affter {
   left: 54%;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-select-container .credit-offer-select-block .price-affter {
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-affter {
+    display: none;
+  }
+}
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price-affter {
   left: 80%;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .price-affter {
+    left: 50%;
+    text-wrap: nowrap;
+  }
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow:hover {
-  background: var(--colors-gray-100, #f7f7f7);
-  border-radius: 20%;
+.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-mini-affter {
+  display: none;
 }
-.pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .credit-offer .credit-offer-container-arrow::before {
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="%232F2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-  width: 32px;
-  height: 32px;
-  transform: rotate(0deg);
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .months-mini-affter {
+    left: 50%;
+    display: block;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .terms {
   display: none;
@@ -10047,6 +10276,12 @@ a:visited {
   align-self: stretch;
   transition: all 0.3s ease;
   color: var(--colors-gray-700, #2f2c2f);
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .terms {
+    padding: 0;
+    font-size: 12px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .terms span {
   align-self: stretch;
@@ -10060,11 +10295,28 @@ a:visited {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block .terms p {
+    font-size: 12px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.selected, .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.selected.open {
   border: 2px solid var(--colors-gray-700, #2f2c2f);
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.selected, .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.selected.open {
+    border: unset;
+    background: var(--colors-green-100, #e9f9e9);
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.open, .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block:hover:not(.selected) {
   border: 2px solid var(--colors-gray-100, #f7f7f7);
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.open, .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block:hover:not(.selected) {
+    border: unset;
+    background: var(--colors-gray-100, #f7f7f7);
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.open .terms {
   display: flex;
@@ -10075,6 +10327,13 @@ a:visited {
   height: 32px;
   transform: rotate(-90deg);
   transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-bank .credit-offer-container .credit-offer-block.open .credit-offer-container-arrow::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11 9.5L8 6.5L5 9.5" stroke="%232F2C2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 16px;
+    height: 16px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-bank .fade {
   width: 772px;
@@ -10088,12 +10347,18 @@ a:visited {
 }
 .pop-up-credit-calculator-modal-content .cart-modal-form-contact-container {
   display: flex;
-  padding: 24px var(--nums-block-radius, 32px);
+  padding: 24px 32px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
   background: var(--colors-white, #fff);
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-form-contact-container {
+    padding: 24px;
+    border-radius: 24px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-form-contact-container .form-contact {
   display: flex;
@@ -10111,6 +10376,11 @@ a:visited {
   align-self: stretch;
   width: 364px;
   border-radius: 8px;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-form-contact-container .form-contact .form-contact-block {
+    width: 100%;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-form-contact-container .form-contact .form-contact-block label {
   color: var(--colors-gray-500, #696969);
@@ -10130,9 +10400,15 @@ a:visited {
   border: 1px solid var(--colors-gray-700, #2f2c2f);
   outline: none;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-form-contact-container .form-contact .form-contact-block input {
+    color: var(--colors-gray-300, #c0c0c0);
+    font-weight: 400;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-checking {
   display: flex;
-  padding: 24px var(--nums-block-radius, 32px);
+  padding: 24px 32px;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
@@ -10140,17 +10416,37 @@ a:visited {
   border-radius: 0 0 24px 24px;
   background: var(--colors-white, #fff);
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking {
+    border-radius: 24px;
+    padding: 24px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container {
   display: flex;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-block {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   flex: 1 0 0;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-block {
+    flex-direction: column;
+    align-self: stretch;
+    gap: 8px;
+    padding: 0 8px;
+  }
 }
 .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box {
   display: flex;
@@ -10160,6 +10456,21 @@ a:visited {
   color: var(--colors-gray-700, #2f2c2f);
   font-weight: 400;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box {
+    flex-direction: unset;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box.bottom {
+    border-top: 1px solid var(--colors-gray-200, #e5e4e2);
+    padding: 16px 8px 0px 8px;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box.bottom span {
+    font-size: 16px;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box .cart-modal-checking-value {
   text-align: center;
   font-size: 32px;
@@ -10167,8 +10478,26 @@ a:visited {
 .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box .cart-modal-checking-value .cart-modal-checking-simb {
   font-size: 24px;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box .cart-modal-checking-value .cart-modal-checking-simb {
+    font-size: 14px;
+  }
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box .cart-modal-checking-value {
+    order: 2;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
 .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box .cart-modal-checking-info {
   font-size: 10px;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-checking .cart-modal-checking-container .cart-modal-checking-box .cart-modal-checking-info {
+    order: 1;
+    font-size: 14px;
+  }
 }
 .pop-up-credit-calculator-modal-content.choice .cart-modal-bank-head-paperwork,
 .pop-up-credit-calculator-modal-content.choice .cart-modal-sentences-show-more,
@@ -10188,11 +10517,71 @@ a:visited {
 .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected.open, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.open, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block:hover {
   border: 2px solid transparent;
 }
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected.open, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.open, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block:hover {
+    border: unset;
+    background: var(--colors-gray-100, #f7f7f7);
+  }
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected .info input,
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected .info label, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected.open .info input,
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected.open .info label, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.open .info input,
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.open .info label, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block:hover .info input,
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block:hover .info label {
+    display: none;
+  }
+  .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected .price, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected.open .price, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.open .price, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block:hover .price {
+    margin-right: 16px;
+  }
+}
 .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected .credit-offer-container-arrow, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.selected.open .credit-offer-container-arrow, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block.open .credit-offer-container-arrow, .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block:hover .credit-offer-container-arrow {
   display: none;
 }
 .pop-up-credit-calculator-modal-content.paperwork .credit-offer-container .credit-offer-block .terms {
   display: flex !important;
+}
+.pop-up-credit-calculator-modal-content .gen-tab__block-mobile {
+  display: none;
+}
+@media (max-width: 719px) {
+  .pop-up-credit-calculator-modal-content .cart-modal-block-content,
+  .pop-up-credit-calculator-modal-content .global-pop-modal-header-top,
+  .pop-up-credit-calculator-modal-content .cart-modal-bank {
+    display: none !important;
+  }
+  .pop-up-credit-calculator-modal-content .cart-modal-bank.mobile {
+    display: flex !important;
+    border-radius: 14px;
+  }
+  .pop-up-credit-calculator-modal-content .containers-header {
+    color: var(--colors-gray-700, #2f2c2f);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+  }
+  .pop-up-credit-calculator-modal-content .gen-tab__block-mobile {
+    display: flex;
+    order: unset !important;
+    border-radius: 24px;
+    padding: 24px;
+  }
+  .pop-up-credit-calculator-modal-content .gen-tab__block-mobile form {
+    width: 100%;
+  }
+  .pop-up-credit-calculator-modal-content .gen-tab__block-mobile form .gen-tab__add-services-block {
+    padding-bottom: 5px;
+    width: unset;
+  }
+  .pop-up-credit-calculator-modal-content .gen-tab__block-mobile form .gen-tab__add-services-text {
+    padding-left: 0;
+  }
+  .pop-up-credit-calculator-modal-content .gen-tab__block-mobile form .gen-tab__add-services-ul {
+    margin: 0;
+    margin-top: 5px;
+  }
+  .pop-up-credit-calculator-modal-content .gen-tab__block-mobile form .gen-tab__add-services-text {
+    border: unset;
+  }
 }
 
 @keyframes rotateArrow {
@@ -10235,7 +10624,7 @@ a:visited {
   position: absolute;
   left: -6px;
   top: -6px;
-  border-radius: var(--nums-block-radius, 32px);
+  border-radius: 32px;
   background: var(--colors-gray-100, #f7f7f7);
   /* micro */
   box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.24);
@@ -10316,7 +10705,7 @@ a:visited {
   padding: 8px;
   align-items: center;
   gap: 10px;
-  border-radius: var(--nums-block-radius, 32px);
+  border-radius: 32px;
 }
 .pop-up-cart-mobile .pop-up-cart-mobile-container .pop-up-cart-mobile-block.succes svg {
   background: var(--colors-green-100, #e9f9e9);

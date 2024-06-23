@@ -39,6 +39,7 @@
       margin: 2%;
       width: calc(100% - (48px * 3));
     }
+
     @media (max-width: 719px) {
       width: calc(95% - 32px);
       max-height: calc(100% - 56px);
@@ -495,7 +496,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              gap: var(--nums-block-radius, 32px);
+              gap: 32px;
               align-self: stretch;
 
               .submenu-list__btn {
