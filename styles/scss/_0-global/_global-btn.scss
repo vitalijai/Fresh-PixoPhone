@@ -410,6 +410,28 @@
       font-weight: 700;
     }
   }
+
+  &.general {
+    button {
+      background: unset;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+
+      &::before {
+        content: url('data:image/svg+xml;utf8,<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="35" height="35" fill="%23909090"/><rect width="393" height="9668.5" transform="translate(-56 -1347)" fill="%23F7F7F7"/><rect x="-44" y="-24.5" width="369" height="220" rx="24" fill="white"/><path id="Rectangle 122" d="M9.28516 1.21423H25.8566C29.9593 1.21423 33.2852 4.54012 33.2852 8.6428V25.2142" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><rect id="Rectangle 121" x="1" y="5.5" width="28" height="28" rx="4.57143" stroke="%2362A8ED" stroke-width="2"/></svg>');
+        width: 32.285px;
+        height: 32.286px;
+      }
+
+      span {
+        color: var(--colors-blue-400, #62a8ed);
+        font-size: 16px;
+        top: 11px;
+        left: 6px;
+      }
+    }
+  }
 }
 //Прямоугольная кнопка Оповестить
 .global-button-notify {

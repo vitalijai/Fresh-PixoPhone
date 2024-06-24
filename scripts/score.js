@@ -43,21 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
     statusNumber.textContent = rating;
     statusContainer.appendChild(statusNumber);
   }
+
+  // Получаем все элементы с классом offers-page-block__column-container
+  const columnContainers = document.querySelectorAll(
+    ".offers-page-block__column-container"
+  );
+
+  // Вычисляем индексы элементов в последнем ряду для добавления класса
+  const lastIndex = columnContainers.length - 1;
+  const firstIndex = Math.max(lastIndex - 4, 0);
+
+  // Удаляем класс у всех элементов
+  columnContainers.forEach((container) => {
+    container.classList.remove("bordered");
+  });
+
+  // Добавляем класс к элементам в последнем ряду
+  columnContainers[firstIndex].classList.add("bordered-left");
+  columnContainers[lastIndex].classList.add("bordered-right");
 });
-// Получаем все элементы с классом offers-page-block__column-container
-const containers = document.querySelectorAll(
-  ".offers-page-block__column-container"
-);
-
-// Вычисляем индексы элементов в последнем ряду для добавления класса
-const lastIndex = containers.length - 1;
-const firstIndex = Math.max(lastIndex - 4, 0);
-
-// Удаляем класс у всех элементов
-containers.forEach((container) => {
-  container.classList.remove("bordered");
-});
-
-// Добавляем класс к элементам в последнем ряду
-containers[firstIndex].classList.add("bordered-left");
-containers[lastIndex].classList.add("bordered-right");

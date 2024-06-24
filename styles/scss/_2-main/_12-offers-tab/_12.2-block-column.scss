@@ -114,6 +114,10 @@
               height: 8px;
 
               border-radius: 2px;
+
+              @media (max-width: 719px) {
+                width: 19px;
+              }
             }
           }
           .status-number {

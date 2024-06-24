@@ -48,6 +48,11 @@
     background: var(--colors-white, #fff);
     box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
 
+    @media (max-width: 719px) {
+      padding: 24px;
+      margin: 2% auto;
+    }
+
     &.user-fast-buy {
       width: calc(480px - (32px * 2));
 
@@ -151,14 +156,26 @@
 
     &.user-notify {
       width: calc(480px - (32px * 2));
+
+      @media (max-width: 719px) {
+        width: calc(100% - 64px);
+      }
     }
 
     &.user-response {
       width: calc(640px - (32px * 2));
+
+      @media (max-width: 719px) {
+        width: calc(100% - 64px);
+      }
     }
 
     &.user-location {
       width: calc(640px - (32px * 2));
+
+      @media (max-width: 719px) {
+        width: calc(100% - 64px);
+      }
 
       .location-modal-form-container {
         display: flex;

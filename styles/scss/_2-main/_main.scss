@@ -22,6 +22,7 @@
   @import "../_2-main/acces-mobile";
   @import "../_2-main/popular-questions";
   @import "../_2-main/_13-mobile-nav/13-mobile-nav";
+  @import "../_2-main/offers-page-mobile";
 
   @media (max-width: 719px) {
     gap: 12px;
@@ -71,6 +72,9 @@
     }
     .gen-tab__constructor {
       order: 2;
+    }
+    .offers-page-mobile {
+      order: 3;
     }
     .gen-tab__to-order {
       order: 3;
