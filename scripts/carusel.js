@@ -125,43 +125,43 @@ $(document).ready(function () {
 });
 //Главное фото
 document.addEventListener("DOMContentLoaded", function () {
-  var primarySlider = new Splide("#main-photo-slider", {
-    pagination: false,
-  });
+  // var primarySlider = new Splide("#main-photo-slider", {
+  //   pagination: false,
+  // });
 
-  var secondarySlider = new Splide("#secondary-slider", {
-    fixedWidth: 90,
-    height: 90,
-    gap: 8,
-    pagination: false,
-    arrows: true,
-    isNavigation: true,
-    focus: "center",
-  }).mount();
+  // var secondarySlider = new Splide("#secondary-slider", {
+  //   fixedWidth: 90,
+  //   height: 90,
+  //   gap: 8,
+  //   pagination: false,
+  //   arrows: true,
+  //   isNavigation: true,
+  //   focus: "center",
+  // }).mount();
 
-  var popUpPhoto = new Splide("#popUpPhoto", {
-    pagination: false,
-  });
+  // var popUpPhoto = new Splide("#popUpPhoto", {
+  //   pagination: false,
+  // });
 
-  var secondSlider = new Splide("#second-slider", {
-    fixedWidth: 90,
-    height: 90,
-    gap: 8,
-    pagination: false,
-    arrows: false,
-    isNavigation: false,
-    focus: "center",
-  }).mount();
+  // var secondSlider = new Splide("#second-slider", {
+  //   fixedWidth: 90,
+  //   height: 90,
+  //   gap: 8,
+  //   pagination: false,
+  //   arrows: false,
+  //   isNavigation: false,
+  //   focus: "center",
+  // }).mount();
 
-  primarySlider.sync(secondarySlider).mount();
-  popUpPhoto.sync(secondSlider).mount();
+  // primarySlider.sync(secondarySlider).mount();
+  // popUpPhoto.sync(secondSlider).mount();
 
-  var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
-    perPage: 3,
-    pagination: false,
-    arrows: true,
-  });
-  popUpAcces.mount();
+  // var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
+  //   perPage: 3,
+  //   pagination: false,
+  //   arrows: true,
+  // });
+  // popUpAcces.mount();
 
   // Вызов функции для инициализации слайдеров
 
@@ -214,6 +214,12 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: false,
       arrows: true,
       drag: false,
+      classes: {
+        arrows: "splide__arrows bu-splide__arrows",
+        arrow: "splide__arrow bu-splide__arrow",
+        prev: "splide__arrow--prev bu-splide__arrow--prev",
+        next: "splide__arrow--next bu-splide__arrow--next",
+      },
     }).mount();
 
     var elms = document.getElementsByClassName("pop-up-bu-main-photo-slider");
@@ -231,7 +237,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }).mount();
     }
   }
+  function initializeSplidePopUpBuCards() {
+    new Splide("#pop-up-bu-cards-main-photo-block-slider", {
+      width: 1300,
+      direction: "ttb",
+      pagination: false,
+      arrows: false,
+      drag: true,
+    }).mount();
+
+    var elms = document.getElementsByClassName(
+      "pop-up-bu-cards-main-photo-slider"
+    );
+
+    for (var i = 0; i < elms.length; i++) {
+      new Splide(elms[i], {
+        pagination: false,
+        arrows: false,
+      }).mount();
+    }
+  }
+
   initializeSplidePopUpBu();
+  initializeSplidePopUpBuCards();
   initializeAndSyncSliders();
 });
 

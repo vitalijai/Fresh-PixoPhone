@@ -7,6 +7,13 @@
   top: 0;
   bottom: 0;
 
+  @media (max-width: 719px) {
+    &.pop-up-location-modal {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+    }
+  }
+
   &.pop-up-cart-modal {
     display: block;
     visibility: hidden;

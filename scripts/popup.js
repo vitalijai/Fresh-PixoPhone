@@ -141,7 +141,7 @@ $(document).ready(function () {
   });
 
   $(
-    ".header-bottom-search, .gen-tab__credit-btn, .gen-tab__credit-block__btn"
+    ".header-bottom-search, .gen-tab__credit-btn, .gen-tab__credit-block__btn, .gen-tab__to-all-product-button"
   ).on("click", function () {
     $(".p-short-info-mobile").addClass("mobile");
     $(".back-to-top").addClass("mobile");
@@ -149,15 +149,14 @@ $(document).ready(function () {
     $(".mobile-nav__tabs").addClass("video");
   });
 
-  $("#pop-up-search-form__btn-close, .pop-up-credit-calculator-close").on(
-    "click",
-    function () {
-      $(".p-short-info-mobile").removeClass("mobile");
-      $(".back-to-top").removeClass("mobile");
-      $(".video-container").removeClass("closing");
-      $(".mobile-nav__tabs").removeClass("video");
-    }
-  );
+  $(
+    "#pop-up-search-form__btn-close, .pop-up-credit-calculator-close, .pop-up-bu-cards-close"
+  ).on("click", function () {
+    $(".p-short-info-mobile").removeClass("mobile");
+    $(".back-to-top").removeClass("mobile");
+    $(".video-container").removeClass("closing");
+    $(".mobile-nav__tabs").removeClass("video");
+  });
 
   $(".search-list.contain-submenu").not(".all_category").hide();
 
@@ -534,6 +533,13 @@ $(document).ready(function () {
   // );
   //Показать блок заказа
   initModal(
+    ".gen-tab__to-all-product-button",
+    "#popUpBuCardsProducts",
+    ".pop-up-bu-cards-close",
+    "#popUpBuCardsProducts"
+  );
+  //Показать блок заказа
+  initModal(
     ".offers-page-description-show-more",
     "#popUpBuProducts",
     ".pop-up-bu-close",
@@ -587,6 +593,50 @@ $(document).ready(function () {
   //   ".pop-up-cart-bottom-left"
   // );
 });
+$(document).ready(function () {
+  $(".bu-splide__span").on("click", function () {
+    $("#popUpBuProducts").fadeOut();
+    $("#popUpBuCardsProducts").fadeIn();
+  });
+
+  $(".pop-up-bu-cards-close").on("click", function () {
+    $("#popUpBuProducts").fadeOut();
+  });
+
+  $(".offers-page-description-show-more").on("click", function () {
+    $("#popUpBuProducts").fadeIn();
+    $("#popUpBuCardsProducts").fadeOut();
+  });
+});
+
+$(document).ready(function () {
+  // Attach a click event listener to each span
+  $(".pop-up-bu-main-spec-span").click(function () {
+    // Extract the class ending from the clicked span
+    const classList = $(this).attr("class").split(" ");
+    let specificClass = "";
+    classList.forEach((cls) => {
+      if (cls.startsWith("pop-up-bu-main-spec-span__")) {
+        specificClass = cls.replace("pop-up-bu-main-spec-span__", "");
+      }
+    });
+    // Hide all bu-main-spec-container elements and show only the containers with the specific class
+    $(".bu-main-spec-block").fadeIn();
+    $(`.bu-main-spec-container-${specificClass}`)
+      .fadeIn()
+      .css("display", "flex");
+  });
+
+  // Attach a click event listener to the close button
+  $(".bu-main-spec-btn-close").click(function () {
+    // Hide all bu-main-spec-container elements with animation
+    $(".bu-main-spec-block").fadeOut();
+    $(".bu-main-block-mobile-container").fadeOut();
+  });
+});
+$(".offers-page-buy-guarantee-switch-compare").change(function () {
+  $(".offers-page-buy-guarantee").toggleClass("hide");
+});
 
 // Логика для фильтра и сортировки мобайл
 $(document).ready(function () {
@@ -594,8 +644,10 @@ $(document).ready(function () {
     if (!$(this).hasClass("active")) {
       removeButtonActiveClasses();
       $(this).addClass("active");
+      $(".offers-page-block__sorting").addClass("active");
     } else {
       $(this).removeClass("active");
+      $(".offers-page-block__sorting").removeClass("active");
     }
     $(".offers-page-block__sorting").fadeToggle("slow"); // Анимация открытия и закрытия
   });
@@ -604,8 +656,10 @@ $(document).ready(function () {
     if (!$(this).hasClass("active")) {
       removeButtonActiveClasses();
       $(this).addClass("active");
+      $(".offers-page-block__filter").addClass("active");
     } else {
       $(this).removeClass("active");
+      $(".offers-page-block__filter").removeClass("active");
     }
     $(".offers-page-block__filter").fadeToggle("slow"); // Анимация открытия и закрытия
   });

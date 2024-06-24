@@ -1051,6 +1051,8 @@
 
       &.visible {
         bottom: 63px;
+        width: calc(100% - 16px);
+        justify-content: space-around;
       }
       &.mobile {
         bottom: -63px;
