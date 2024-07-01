@@ -150,7 +150,7 @@ $(document).ready(function () {
   });
 
   $(
-    "#pop-up-search-form__btn-close, .pop-up-credit-calculator-close, .pop-up-bu-cards-close"
+    "#pop-up-search-form__btn-close, .pop-up-credit-calculator-close, .pop-up-bu-cards-close, .pop-up-bu-close"
   ).on("click", function () {
     $(".p-short-info-mobile").removeClass("mobile");
     $(".back-to-top").removeClass("mobile");
@@ -716,6 +716,7 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".gen-tab__carousel-arrow").on("click", function () {
     $(".flip").toggleClass("active");
+    $(".video-container").toggleClass("closing");
   });
 });
 
@@ -751,6 +752,9 @@ $(document).ready(function () {
     // Находим внутри этого блока элемент .months-mini-span-block и копируем содержимое
     var selectedMonth = $(this).text().trim();
     parentBlock.find(".months-mini-span-block").text(selectedMonth);
+
+    // Имитируем клик на .info в текущем блоке
+    parentBlock.find(".info").trigger("click");
   });
 
   // Обработчик изменения выбора предложения

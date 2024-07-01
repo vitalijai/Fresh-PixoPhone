@@ -8032,6 +8032,49 @@ a:visited {
   will-change: transform;
   overscroll-behavior: contain;
 }
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  flex-direction: unset;
+  justify-content: space-between;
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .gen-block-mobile-header {
+  width: unset;
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-direction: unset;
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container input[type=checkbox] {
+  background: var(--colors-green-500-primary, #2ea84f);
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container input[type=checkbox]:checked {
+  background: var(--colors-gray-500, #696969);
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container input[type=checkbox]:checked::before {
+  top: 2px;
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container .language_switch-span {
+  color: var(--colors-gray-200, #e5e4e2);
+  font-size: 14px;
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container .language_switch-span.active {
+  color: var(--colors-green-500-primary, #2ea84f);
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container .language_switch-span.language_switch-span-ru.active {
+  color: var(--colors-gray-500, #696969);
+  font-weight: 500;
+}
+.common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__location .language_switch .language_switch-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list.messenger {
   height: calc(100% - 75px);
 }
@@ -9636,10 +9679,28 @@ a:visited {
 .pop-up-bu-products-modal .bu-splide__arrows .bu-splide__arrow svg {
   display: none;
 }
-.pop-up-bu-products-modal .global-pop-up-close {
+.pop-up-bu-products-modal .pop-up-bu-cards-close,
+.pop-up-bu-products-modal .pop-up-bu-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  right: 16px;
+  top: 16px;
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+  border-radius: var(---radius-min, 8px);
+  background: rgba(47, 44, 47, 0.6);
+}
+.pop-up-bu-products-modal .pop-up-bu-cards-close::before,
+.pop-up-bu-products-modal .pop-up-bu-close::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.6569 15.0711C14.0474 15.4616 14.6806 15.4616 15.0711 15.0711C15.4616 14.6805 15.4616 14.0474 15.0711 13.6569L9.41426 8L15.0711 2.34315C15.4616 1.95262 15.4616 1.31946 15.0711 0.928932C14.6806 0.538408 14.0474 0.538408 13.6569 0.928932L8.00005 6.58579L2.34319 0.928932C1.95267 0.538408 1.3195 0.538408 0.928978 0.928932C0.538454 1.31946 0.538454 1.95262 0.928978 2.34315L6.58583 8L0.928978 13.6569C0.538454 14.0474 0.538454 14.6805 0.928978 15.0711C1.3195 15.4616 1.95267 15.4616 2.34319 15.0711L8.00005 9.41421L13.6569 15.0711Z" fill="%23E5E4E2"/></svg>');
+  width: 20px;
+  height: 20px;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pop-up-bu-products-modal .pop-up-bu-main-bottom-container {
   display: flex;

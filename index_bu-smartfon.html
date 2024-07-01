@@ -2769,10 +2769,23 @@
                                     </span>
                                 </div>
                                 <div class="tabs__link-menu-containers gen-block-mobile-container content-container">
-                                    <span class="tabs__link-menu-span gen-block-mobile-header">Вибір міста
-                                    </span>
-                                    <span class="tabs__link-menu-span gen-block-mobile-header">Перемикач мови
-                                    </span>
+                                    <div class="tabs__link-menu__content gen-block__content tabs__link-menu__location">
+                                        <span class="tabs__link-menu-span gen-block-mobile-header">Вибір міста
+                                        </span>
+                                        <div class="language_switch-top language_switch global-horizontal-switch">
+                                            <div class="language_switch-top-container language_switch-container">
+                                                <span id="language_switch-top-ua"
+                                                    class="language_switch-span language_switch-span-ua">UA</span>
+                                                <div>
+
+                                                    <input type="checkbox" title="Мова" id="language_switch"
+                                                        class="language_switch-input">
+                                                </div>
+                                                <span id="language_switch-top-ru"
+                                                    class="language_switch-span language_switch-span-ru active">RU</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="tabs__link-menu-containers gen-block-mobile-container content-container">
                                     <span class="tabs__link-menu-span gen-block-mobile-header">Контакти
@@ -16017,347 +16030,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- <div class="cart-modal-bank">
-                    <span class="cart-modal-bank-head-choice cart-modal-span">Доступні кредитні пропозиції</span>
-                    <span class="cart-modal-bank-head-paperwork cart-modal-span">Кредитна пропозиція</span>
-                    <div class="credit-offer-container">
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offermono">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputmono">
-                                            <label for="offerInputmono"></label>
-                                            <img src="/images/bank mono.png" alt="monobank">
-                                            <div>
-                                                <span class="credit-offer-bank-span">monobank</span>
-                                                <span class="credit-offer-info-span">Покупка частинами</span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offermono">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offerprivat">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputprivat">
-                                            <label for="offerInputprivat"></label>
-                                            <img src="/images/bank privat.png" alt="PrivatBank">
-                                            <div>
-                                                <span class="credit-offer-bank-span">ПриватБанк</span>
-                                                <span class="credit-offer-info-span">Оплата частинами</span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offerprivat">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offerinstallment-plan">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputinstallment-plan">
-                                            <label for="offerInputinstallment-plan"></label>
-                                            <img src="/images/bank installment plan.png" alt="PrivatBank">
-                                            <div>
-                                                <span class="credit-offer-bank-span">ПриватБанк</span>
-                                                <span class="credit-offer-info-span">Миттєва розстрочка</span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offerinstallment-plan">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offersense">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputsense">
-                                            <label for="offerInputsense"></label>
-                                            <img src="/images/bank sense.png" alt="Sense Bank">
-                                            <div>
-                                                <span class="credit-offer-bank-span">Sense Bank</span>
-                                                <span class="credit-offer-info-span">Легка розстрочка</span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offersense">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offera-bank">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputa-bank">
-                                            <label for="offerInputa-bank"></label>
-                                            <img src="/images/bank a bank.png" alt="a bank">
-                                            <div>
-                                                <span class="credit-offer-bank-span">А банк</span>
-                                                <span class="credit-offer-info-span">Плати частинами</span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offera-bank">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offerpumb">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputpumb">
-                                            <label for="offerInputpumb"></label>
-                                            <img src="/images/bank pumb.png" alt="pumb">
-                                            <div>
-                                                <span class="credit-offer-bank-span">ПУМБ</span>
-                                                <span class="credit-offer-info-span">Сплачуйте частинами</span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offerpumb">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                        <div class="credit-offer-block">
-                            <div class="credit-offer" id="offerpl">
-                                <div class="credit-offer-select-container">
-                                    <div class="credit-offer-select-block">
-                                        <div class="info">
-                                            <input type="radio" name="credit-offer" class="radio-input"
-                                                id="offerInputpl">
-                                            <label for="offerInputpl"></label>
-                                            <img src="/images/bank pl.png" alt="pl">
-                                            <div>
-                                                <span class="credit-offer-bank-span">Плати пізніше</span>
-                                                <span class="credit-offer-info-span"></span>
-                                            </div>
-                                        </div>
-                                        <div class="months">
-                                            <span class="months-select active">3</span>
-                                            <span class="months-select">6</span>
-                                            <span class="months-select">9</span>
-                                            <span class="months-select">12</span>
-                                            <span class="months-affter">Кількість платежів</span>
-                                        </div>
-                                        <div class="price">
-                                            <span class="price-span-block">
-                                                <span class="price-span-beffore">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                        viewBox="0 0 16 16" fill="none">
-                                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                                            d="M10.9232 3.37784C11.3919 2.90921 12.1517 2.90921 12.6203 3.37784C13.0889 3.84647 13.0889 4.60627 12.6203 5.0749L9.69799 7.9972L12.6211 10.9203C13.0897 11.3889 13.0897 12.1487 12.6211 12.6174C12.1525 13.086 11.3927 13.086 10.924 12.6174L8.00094 9.69426L5.07783 12.6174C4.6092 13.086 3.8494 13.086 3.38077 12.6174C2.91214 12.1487 2.91214 11.3889 3.38077 10.9203L6.30388 7.9972L3.38157 5.0749C2.91295 4.60627 2.91295 3.84647 3.38157 3.37784C3.8502 2.90921 4.61 2.90921 5.07863 3.37784L8.00094 6.30014L10.9232 3.37784Z"
-                                                            fill="#2F2C2F" />
-                                                    </svg>
-                                                </span>
-                                                <span class="price-span-value">6875</span>
-                                                <span class="price-span-simb"> ₴</span>
-                                            </span>
-                                            <span class="price-affter">регулярний платіж</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="credit-offer-container-arrow"></div>
-                            </div>
-                            <div class="terms" id="terms-offerpl">
-                                <span>Умови користування</span>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fade"></div>
-                    <div class="cart-modal-sentences-show-more global-button-all-show-bu">
-                        <button>
-                            Всі кредитні пропозиції
-                        </button>
-                    </div>
-                </div> -->
                 <div class="cart-modal-bank mobile">
                     <span class="cart-modal-bank-head-choice cart-modal-span containers-header">Доступні кредитні
                         пропозиції</span>
@@ -16883,7 +16555,7 @@
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                        <span class="pop-up-bu-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <button class="bu-splide__span">всі пропозиції</button>
@@ -17751,7 +17423,7 @@
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                        <span class="pop-up-bu-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <button class="bu-splide__span">всі пропозиції</button>
@@ -18619,7 +18291,7 @@
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                        <span class="pop-up-bu-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <button class="bu-splide__span">всі пропозиції</button>
@@ -19487,7 +19159,7 @@
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                        <span class="pop-up-bu-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <button class="bu-splide__span">всі пропозиції</button>
@@ -20477,7 +20149,7 @@
                                                         <div class="pop-up-bu-main-parameter-indx">
                                                             <span class="pixo-indx score-4">3,8</span>
                                                         </div>
-                                                        <span class="pop-up-bu-cards-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-cards-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <div class="pop-up-bu-main-spec-block">
@@ -20763,7 +20435,7 @@
                                                         <div class="pop-up-bu-main-parameter-indx">
                                                             <span class="pixo-indx score-4">3,8</span>
                                                         </div>
-                                                        <span class="pop-up-bu-cards-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-cards-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <div class="pop-up-bu-main-spec-block">
@@ -21049,7 +20721,7 @@
                                                         <div class="pop-up-bu-main-parameter-indx">
                                                             <span class="pixo-indx score-4">3,8</span>
                                                         </div>
-                                                        <span class="pop-up-bu-cards-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-cards-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <div class="pop-up-bu-main-spec-block">
@@ -21335,7 +21007,7 @@
                                                         <div class="pop-up-bu-main-parameter-indx">
                                                             <span class="pixo-indx score-4">3,8</span>
                                                         </div>
-                                                        <span class="pop-up-bu-cards-close global-pop-up-close"></span>
+                                                        <span class="pop-up-bu-cards-close"></span>
                                                         <span class="pop-up-bu-product-span">Смартфон Google Pixel 7 Pro
                                                             12/512GB Obsidian</span>
                                                         <div class="pop-up-bu-main-spec-block">
