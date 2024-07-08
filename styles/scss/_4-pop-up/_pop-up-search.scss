@@ -131,12 +131,14 @@
       overflow-y: scroll;
       scrollbar-width: none;
       gap: var(---gap-big, 48px);
-      min-height: 515px;
-      height: 73.5vh;
+      // min-height: 515px;
+      // height: 73.5vh;
       max-height: 825px;
+      width: 100%;
 
       &.active {
         @include flexbox();
+
         @media (max-width: 719px) {
           flex-direction: column;
           min-height: unset;
@@ -146,18 +148,14 @@
         }
       }
 
+      .submenu-list__i-container {
+        display: flex;
+      }
+
       .catalog_products_main {
-        width: min(95%, 505px);
         height: 100%;
-
         font-size: 16px;
-
-        @media (max-width: 1280px) {
-          width: min(95%, 380px);
-        }
-        @media (max-width: 719px) {
-          width: unset;
-        }
+        // width: 280px;
 
         .main-menu {
           @include flexbox(
@@ -165,13 +163,15 @@
             $direction: column,
             $self: stretch
           );
-
+          width: 280px;
           padding: 0;
           list-style: none;
           margin: 0;
 
           position: relative;
-
+          @media (max-width: 719px) {
+            width: unset;
+          }
           .contain-submenu {
             width: 100%;
 
@@ -238,19 +238,14 @@
 
       .category-content {
         // width: calc((var(---width, 1366px) - 328px) - (48px * 2));
-        width: min(95%, (var(---width, 1366px) - 328px) - (48px * 2));
+        // width: min(95%, (var(---width, 1366px) - 328px) - (48px * 2));
 
         flex: 1 0 0;
         display: none;
         align-self: stretch;
 
-        @media (max-width: 1152px) {
-          justify-content: center;
-        }
-
         @media (max-width: 719px) {
-          width: unset;
-          justify-content: space-between;
+          justify-content: center;
         }
 
         .menu-list-item {
@@ -259,6 +254,7 @@
             $self: stretch,
             $direction: column
           );
+          flex: 0 1 20%;
 
           break-inside: avoid-column;
           padding: 0;
@@ -266,8 +262,13 @@
           background: var(--modal-colors-white, #fff);
 
           @media (max-width: 719px) {
-            width: 100%;
             gap: 24px;
+            flex: 0 1 49%;
+          }
+
+          @media (max-width: 665px) {
+            width: min(100%, 370px);
+            flex: unset;
           }
 
           .submenu-list__cont {
