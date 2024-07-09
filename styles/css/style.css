@@ -8421,9 +8421,6 @@ a:visited {
   color: var(--colors-gray-500, #696969);
   font-size: 12px;
 }
-.common-template .offers-page-mobile .offers-page-mobile-container .offers-page-block__con.active {
-  display: flex !important;
-}
 .common-template .offers-page-mobile .offers-page-mobile-container .offers-page-block__column {
   display: flex;
   max-height: 600px;

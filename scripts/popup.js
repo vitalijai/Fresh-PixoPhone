@@ -221,6 +221,7 @@ $(document).ready(function () {
     var $this = $(this);
     var scrollHeight = $this[0].scrollHeight;
     var scrollTop = $this.scrollTop();
+    // scrollTop = Math.abs(scrollTop);
     var clientHeight = $this.height();
     var scrollPercentage = (scrollTop + clientHeight) / scrollHeight;
 
@@ -345,6 +346,22 @@ $(document).ready(function () {
     $(carouselImg).on("click", ".cloud-zoom-wrap", function () {
       $(modalPopUp).css("display", "flex").hide().fadeIn();
       $("html").addClass("no-scroll");
+
+      // Добавляем обработчик клика для закрытия модального окна при клике вне его
+      $(document).on("click.closeModal", function (event) {
+        if (
+          !$(event.target).closest(".cloud-zoom-wrap").length &&
+          !$(event.target).closest(modalPopUp).length
+        ) {
+          $(modalPopUp).fadeOut(function () {
+            $(this).css("display", "none");
+          });
+          $("html").removeClass("no-scroll");
+
+          // Удаляем этот обработчик после его выполнения
+          $(document).off("click.closeModal");
+        }
+      });
     });
 
     $(modalClose).on("click", function () {
@@ -352,21 +369,11 @@ $(document).ready(function () {
         $(this).css("display", "none");
       });
       $("html").removeClass("no-scroll");
-    });
 
-    $(window).on("click", function (event) {
-      if (
-        !$(event.target).closest(".cloud-zoom-wrap").length &&
-        !$(event.target).closest(modalPopUp).length
-      ) {
-        $(modalPopUp).fadeOut(function () {
-          $(this).css("display", "none");
-        });
-        $("html").removeClass("no-scroll");
-      }
+      // Удаляем обработчик клика для закрытия модального окна при клике вне его
+      $(document).off("click.closeModal");
     });
   }
-
   initPopUpPhoto(
     ".gen-tab__carousel-img",
     "#popUpPhotoModal",

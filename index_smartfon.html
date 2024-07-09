@@ -16607,12 +16607,14 @@
                         video.play();
                         document.querySelector(".header_bottom").classList.add("mobile");
                         document.querySelector(".mobile-nav__tabs").classList.add("video");
+                        document.documentElement.classList.add("no-scroll");
                         document.querySelector(".p-short-info-mobile").classList.add("visible");
                     } else {
                         video.pause();
                         closet.style.display = 'flex';
                         document.querySelector(".header_bottom").classList.remove("mobile");
                         document.querySelector(".p-short-info-mobile").classList.remove("visible");
+                        document.documentElement.classList.remove("no-scroll");
                         document.querySelector(".mobile-nav__tabs").classList.remove("video");
                     }
                 });
@@ -16622,6 +16624,8 @@
                     video.removeAttribute('controls');
                     document.querySelector(".header_bottom").classList.remove("mobile");
                     document.querySelector(".p-short-info-mobile").classList.remove("visible");
+                    document.documentElement.classList.remove("no-scroll");
+
                     document.querySelector(".mobile-nav__tabs").classList.remove("video");
                 });
             });
