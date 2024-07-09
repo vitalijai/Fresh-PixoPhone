@@ -11706,6 +11706,10 @@ a:visited {
     display: flex !important;
     border-radius: 14px;
   }
+  .pop-up-credit-calculator-modal-content .global-pop-modal-header-mobile-top {
+    display: flex;
+    justify-content: space-between;
+  }
   .pop-up-credit-calculator-modal-content .containers-header {
     color: var(--colors-gray-700, #2f2c2f);
     font-size: 14px;

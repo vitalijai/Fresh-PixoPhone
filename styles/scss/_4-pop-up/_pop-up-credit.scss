@@ -863,6 +863,10 @@
       border-radius: 14px;
     }
 
+    .global-pop-modal-header-mobile-top {
+      display: flex;
+      justify-content: space-between;
+    }
     .containers-header {
       color: var(--colors-gray-700, #2f2c2f);
       font-size: 14px;
