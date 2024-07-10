@@ -3128,6 +3128,12 @@ a:visited {
   background: var(--colors-white, #fff);
   color: var(--colors-green-500-primary, #2ea84f);
 }
+.header .header-container .header_bottom .header_bottom-content .header_bottom-content__center .header_bottom-content__center-item.ckeck::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none"><path d="M1.3335 5.02261L3.14706 6.83618L8.00016 2" stroke="%232EA84F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 9px;
+  height: 8px;
+  margin-bottom: 6px;
+}
 .header .header-container .header_bottom .header_bottom-content .header_bottom-content__center .header_bottom-content__center-line {
   width: 16px;
   height: 1.5px;
