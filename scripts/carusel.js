@@ -240,7 +240,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function initializeSplidePopUpBuCards() {
     new Splide("#pop-up-bu-cards-main-photo-block-slider", {
       width: 1300,
+      height: "100vh",
       direction: "ttb",
+      focus: "center",
       pagination: false,
       arrows: false,
       drag: true,
@@ -262,6 +264,14 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeSplidePopUpBuCards();
   initializeAndSyncSliders();
 });
+
+new Splide("#main-photo-slider-mobile", {
+  pagination: true,
+}).mount();
+
+new Splide("#popUpPhoto", {
+  pagination: true,
+}).mount();
 
 //Zoom
 (function ($) {
@@ -735,7 +745,3 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustY: 0,
   };
 })(jQuery);
-
-new Splide("#main-photo-slider-mobile", {
-  pagination: true,
-}).mount();

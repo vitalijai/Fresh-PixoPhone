@@ -8868,6 +8868,12 @@ a:visited {
   min-height: 500px;
   height: 65vh;
 }
+@media (max-width: 719px) {
+  .pop-up-photo-modal .pop-up-photo-modal-content img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
 .pop-up-photo-modal .second-slider {
   position: absolute;
   bottom: 30px;
@@ -8917,6 +8923,12 @@ a:visited {
   right: 2em;
   cursor: pointer;
   z-index: 100;
+}
+@media (max-width: 719px) {
+  .pop-up-photo-modal .pop-up-photo-close {
+    top: 0em;
+    right: 0.5em;
+  }
 }
 .pop-up-photo-modal .pop-up-photo-close:hover, .pop-up-photo-modal .pop-up-photo-close:focus {
   color: var(---black, #2b2b2b);

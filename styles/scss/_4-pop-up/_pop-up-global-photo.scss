@@ -32,6 +32,11 @@
       cursor: pointer;
       min-height: 500px;
       height: 65vh;
+
+      @media (max-width: 719px) {
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
 
@@ -92,6 +97,11 @@
     right: 2em;
     cursor: pointer;
     z-index: 100;
+
+    @media (max-width: 719px) {
+      top: 0em;
+      right: 0.5em;
+    }
 
     &:hover,
     &:focus {
