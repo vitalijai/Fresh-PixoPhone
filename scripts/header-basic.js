@@ -40,3 +40,21 @@ window.addEventListener("scroll", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+window.addEventListener("load", function () {
+  const scrollContainer = document.querySelector(".breadcrumbs");
+  scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+});
+
+(function () {
+  const elements = document.querySelectorAll(".tabs__link-description");
+  if (window.innerWidth < 719) {
+    elements.forEach((element) => element.classList.remove("active"));
+  }
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 719) {
+      elements.forEach((element) => element.classList.remove("active"));
+    }
+  });
+})();
