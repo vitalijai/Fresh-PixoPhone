@@ -9789,7 +9789,7 @@ a:visited {
   gap: 4px;
   align-self: stretch;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .pop-up-bu-products-modal .gen-tab-pop-up__block .pop-up-bu-main-spec-block .pop-up-bu-main-spec-span {
   display: flex;
@@ -10121,16 +10121,16 @@ a:visited {
   position: absolute;
   top: 24px;
   right: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .pop-up-bu-products-modal .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__left-side .pop-up-bu-main__carousel-img .pop-up-bu-main-spec-block .pop-up-bu-main-spec-span {
   display: flex;
-  height: 48px;
   max-width: 120px;
   padding: 0 16px;
   justify-content: center;
   align-items: center;
   gap: 2px;
-  flex: 1 0 0;
   border-radius: var(---radius-min, 8px);
   background: var(--colors-gray-100, #f7f7f7);
   color: var(--colors-gray-300, #c0c0c0);
@@ -10907,7 +10907,6 @@ a:visited {
 .pop-up-bu-cards-products-modal .pop-up-bu-main-spec-span {
   padding: 6px 10px 6px 6px !important;
   gap: 4px !important;
-  height: unset !important;
   max-width: unset !important;
   text-wrap: nowrap;
 }

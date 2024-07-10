@@ -150,7 +150,7 @@
       gap: 4px;
       align-self: stretch;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
 
       .pop-up-bu-main-spec-span {
         display: flex;
@@ -533,16 +533,17 @@
                 position: absolute;
                 top: 24px;
                 right: 24px;
+                flex-wrap: wrap;
+                justify-content: space-between;
 
                 .pop-up-bu-main-spec-span {
                   display: flex;
-                  height: 48px;
+                  // height: 48px;
                   max-width: 120px;
                   padding: 0 16px;
                   justify-content: center;
                   align-items: center;
                   gap: 2px;
-                  flex: 1 0 0;
 
                   border-radius: var(---radius-min, 8px);
                   background: var(--colors-gray-100, #f7f7f7);
@@ -1519,7 +1520,7 @@
   .pop-up-bu-main-spec-span {
     padding: 6px 10px 6px 6px !important;
     gap: 4px !important;
-    height: unset !important;
+    // height: unset !important;
     max-width: unset !important;
     text-wrap: nowrap;
   }
