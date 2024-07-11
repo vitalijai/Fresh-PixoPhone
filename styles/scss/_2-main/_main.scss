@@ -1,9 +1,9 @@
 .common-template {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 
   @import "../_2-main/0-breadcrumbs";
+  @import "../_2-main/1-checkout";
 }

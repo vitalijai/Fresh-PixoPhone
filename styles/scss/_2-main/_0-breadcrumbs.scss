@@ -2,9 +2,9 @@
   @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
 
   user-select: none;
+  margin-top: 64px;
 
   @media (max-width: 719px) {
-    margin-top: 64px;
     .breadcrumbs-content {
       width: min(100%, var(---width, 1366px));
     }

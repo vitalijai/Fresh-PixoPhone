@@ -155,8 +155,188 @@
       <!-- checkout tab-->
       <div class="checkout-tab">
         <div class="page-container content-container">
-          <div class="gen-tab__left-side"></div>
-          <div class="gen-tab__right-side"></div>
+          <div class="checkout-tab__left-side">
+            <div class="check-contact-information check-left-side-block unhide">
+              <div
+                class="check-contact-information__header check-left-side-header"
+              >
+                <span>Контактна інформація</span>
+              </div>
+              <div
+                class="check-contact-information__content check-left-side-content"
+              >
+                <form class="check-form-contact" action="">
+                  <div class="check-form-contact-content">
+                    <div class="check-form-contact-block">
+                      <label>Номер телефону</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="userphone"
+                        inputmode="numeric"
+                        placeholder="+380"
+                        id="check-form-contact-phone"
+                        pattern="[+()0-9]+"
+                        required
+                      />
+                      <label class="checkbox-label"></label>
+                    </div>
+                    <div class="check-form-contact-block">
+                      <label>E-mail</label>
+                      <input
+                        type="email"
+                        class="check-form-control"
+                        name="useremail"
+                        inputmode="email"
+                        required
+                      />
+                    </div>
+                    <div class="check-form-contact-block">
+                      <label>Ім’я</label>
+                      <input
+                        type="text"
+                        class="check-form-control"
+                        name="username"
+                        inputmode="text"
+                        pattern="[A-Za-zА-Яа-яЁё]+"
+                        required
+                      />
+                    </div>
+                    <div class="check-form-contact-block">
+                      <label>Прізвище</label>
+                      <input
+                        type="text"
+                        class="check-form-control"
+                        name="userfirstname"
+                        inputmode="text"
+                        pattern="[A-Za-zА-Яа-яЁё]+"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="check-form-next-button global-button-send-fast-buy"
+                  >
+                    <button>Продовжити</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="check-contact-delivery check-left-side-block">
+              <div
+                class="check-contact-delivery__header check-left-side-header"
+              >
+                <span>Спосіб доставки</span>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-tab__right-side">
+            <div class="checkout-tab-products">
+              <div class="checkout-tab-products__header">
+                <div class="checkout-tab-products__header-left">
+                  <span class="checkout-tab-products__header-title">
+                    Товарів в замовленні
+                  </span>
+                  <span class="checkout-tab-products__header-count"> 4 </span>
+                </div>
+                <div class="checkout-tab-products__header-right">
+                  <span>змінити</span>
+                </div>
+              </div>
+              <div class="checkout-tab-products__content">
+                <div class="fsdf">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dignissimos nam asperiores molestias dolore, sed ad harum
+                  commodi totam doloremque temporibus consequuntur quidem,
+                  aliquid molestiae cumque voluptatum quasi suscipit illo
+                  ratione? Officiis reprehenderit unde reiciendis earum nostrum
+                  ipsa, sit ipsam, a quae vero aliquid magnam odio quisquam
+                  officia architecto, quo temporibus exercitationem porro
+                  distinctio quaerat aliquam. Eligendi aperiam magni ab rem!
+                  Nulla possimus laborum expedita laboriosam, eos id debitis
+                  maiores eum neque est dicta voluptate quaerat sit dolorum
+                  tenetur eligendi sunt unde ratione nostrum incidunt asperiores
+                  fugit ut. Facere, et nulla! Fugit recusandae debitis
+                  voluptatum nisi mollitia minima quasi amet sit ut maxime ab
+                  odit possimus, dolores, explicabo placeat iusto esse ducimus
+                  perspiciatis sequi? Esse corrupti at eius suscipit quibusdam
+                  harum!
+                </div>
+              </div>
+            </div>
+            <div class="checkout-tab-promocode">
+              <form class="check-form-promocode" action="">
+                <div class="check-form-contact-block">
+                  <input
+                    type="text"
+                    class="check-form-promocode"
+                    name="promocode"
+                    inputmode="text"
+                    placeholder="Маєте промокод?"
+                    required
+                  />
+                </div>
+                <div
+                  class="checkout-tab-promocode-button global-button-send-fast-buy"
+                >
+                  <button>Застосувати</button>
+                </div>
+              </form>
+            </div>
+            <div class="checkout-tab-checking">
+              <span class="checkout-tab-checking-head">Разом до оплати</span>
+              <div class="checkout-tab-checking-container">
+                <div class="checkout-tab-checking-block">
+                  <div class="checkout-tab-checking-box">
+                    <span class="checkout-tab-checking-info">
+                      Товари на суму
+                    </span>
+                    <span class="checkout-tab-checking-value">
+                      21430
+                      <span class="checkout-tab-checking-simb"> ₴</span>
+                    </span>
+                  </div>
+                  <div class="checkout-tab-checking-box">
+                    <span class="checkout-tab-checking-info">Знижка</span>
+                    <span class="checkout-tab-checking-value">
+                      215
+                      <span class="checkout-tab-checking-simb"> ₴</span>
+                    </span>
+                  </div>
+                  <div class="checkout-tab-checking-box">
+                    <span class="checkout-tab-checking-info">
+                      Кешбек з покупки
+                    </span>
+                    <span class="checkout-tab-checking-value">
+                      430
+                      <span class="checkout-tab-checking-simb"> ₴</span>
+                    </span>
+                  </div>
+                  <div class="checkout-tab-checking-box">
+                    <span class="checkout-tab-checking-info">Доставка</span>
+                    <span class="checkout-tab-checking-value">
+                      69
+                      <span class="checkout-tab-checking-simb"> ₴</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="checkout-tab-checking-box bottom">
+                  <span class="checkout-tab-checking-info">
+                    Разом до сплати
+                  </span>
+                  <span class="checkout-tab-checking-value">
+                    21284
+                    <span class="checkout-tab-checking-simb"> ₴</span>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="pop-up-credit-calculator-buy-button global-button-send-fast-buy"
+              >
+                <button>Оформити</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- checkout tab end-->

@@ -3228,8 +3228,7 @@ a:visited {
 .common-template {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 .common-template .common-template__content-top {
   display: flex;
@@ -3237,11 +3236,9 @@ a:visited {
   align-items: flex-start;
   align-self: stretch;
   user-select: none;
+  margin-top: 64px;
 }
 @media (max-width: 719px) {
-  .common-template .common-template__content-top {
-    margin-top: 64px;
-  }
   .common-template .common-template__content-top .breadcrumbs-content {
     width: min(100%, var(---width, 1366px));
   }
@@ -3287,6 +3284,61 @@ a:visited {
 }
 .common-template .common-template__content-top .breadcrumbs .breadcrumbs__item:hover:not(:last-child)::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 11L9.5 8L6.5 5" stroke="%23696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+.common-template .checkout-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .checkout-tab .page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 1px;
+  border-radius: 32px;
+  background: var(--colors-gray-200, #e5e4e2);
+  /* block-shadow */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block {
+  display: flex;
+  padding: 32px 48px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  background: var(--colors-white, #fff);
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .check-left-side-content {
+  display: none;
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block.unhide .check-left-side-content {
+  display: flex;
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block:first-child {
+  border-radius: 32px 0 0 0;
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block:last-child {
+  border-radius: 0 0 0 32px;
+}
+.common-template .checkout-tab .page-container .checkout-tab__right-side {
+  display: flex;
+  flex: 0 0 29.33%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  flex-shrink: 0;
+  align-self: stretch;
 }
 
 .footer {

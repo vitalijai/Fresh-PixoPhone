@@ -21,3 +21,6 @@ checkboxes.forEach((checkbox) => {
     }
   });
 });
+$(document).ready(function () {
+  $("#check-form-contact-phone").mask("+38 (999) 99-99-999");
+});
