@@ -21,6 +21,19 @@ checkboxes.forEach((checkbox) => {
     }
   });
 });
+
+//отключение сскачивание изображений
+$(document).ready(function () {
+  $("img").on("contextmenu", function (e) {
+    return false; // Отключение правого клика
+  });
+
+  $("img").on("dragstart", function (e) {
+    return false; // Отключение перетаскивания
+  });
+});
+
+//маска телефона
 $(document).ready(function () {
   $("#check-form-contact-phone").mask("+38 (999) 99-99-999");
 });

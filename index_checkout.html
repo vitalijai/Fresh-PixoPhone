@@ -13,9 +13,6 @@
       rel="icon"
     />
 
-    <!-- splide -->
-    <link rel="stylesheet" href="/styles/css/splide-default.min.css" />
-
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -156,7 +153,7 @@
       <div class="checkout-tab">
         <div class="page-container content-container">
           <div class="checkout-tab__left-side">
-            <div class="check-contact-information check-left-side-block unhide">
+            <div class="check-contact-information check-left-side-block">
               <div
                 class="check-contact-information__header check-left-side-header"
               >
@@ -167,7 +164,7 @@
               >
                 <form class="check-form-contact" action="">
                   <div class="check-form-contact-content">
-                    <div class="check-form-contact-block">
+                    <div class="check-form-contact-block check">
                       <label>Номер телефону</label>
                       <input
                         type="text"
@@ -180,6 +177,7 @@
                         required
                       />
                       <label class="checkbox-label"></label>
+                      <label class="error-label">помилка</label>
                     </div>
                     <div class="check-form-contact-block">
                       <label>E-mail</label>
@@ -190,32 +188,38 @@
                         inputmode="email"
                         required
                       />
+                      <label class="checkbox-label"></label>
+                      <label class="error-label">помилка</label>
                     </div>
                     <div class="check-form-contact-block">
                       <label>Ім’я</label>
                       <input
                         type="text"
-                        class="check-form-control"
+                        class="check-form-control disable"
                         name="username"
                         inputmode="text"
                         pattern="[A-Za-zА-Яа-яЁё]+"
                         required
                       />
+                      <label class="checkbox-label"></label>
+                      <label class="error-label">помилка</label>
                     </div>
-                    <div class="check-form-contact-block">
+                    <div class="check-form-contact-block error">
                       <label>Прізвище</label>
                       <input
                         type="text"
-                        class="check-form-control"
+                        class="check-form-control disable"
                         name="userfirstname"
                         inputmode="text"
                         pattern="[A-Za-zА-Яа-яЁё]+"
                         required
                       />
+                      <label class="checkbox-label"></label>
+                      <label class="error-label">помилка</label>
                     </div>
                   </div>
                   <div
-                    class="check-form-next-button global-button-send-fast-buy"
+                    class="check-form-next-button global-button-send-fast-buy disable"
                   >
                     <button>Продовжити</button>
                   </div>
@@ -229,61 +233,329 @@
                 <span>Спосіб доставки</span>
               </div>
             </div>
+            <div class="check-contact-fill check-left-side-block"></div>
           </div>
           <div class="checkout-tab__right-side">
-            <div class="checkout-tab-products">
+            <div class="checkout-tab-products check-right-side-block">
               <div class="checkout-tab-products__header">
                 <div class="checkout-tab-products__header-left">
                   <span class="checkout-tab-products__header-title">
                     Товарів в замовленні
                   </span>
-                  <span class="checkout-tab-products__header-count"> 4 </span>
+                  <span class="checkout-tab-products__header-count">4</span>
                 </div>
                 <div class="checkout-tab-products__header-right">
-                  <span>змінити</span>
+                  <a href="#">змінити</a>
                 </div>
               </div>
               <div class="checkout-tab-products__content">
-                <div class="fsdf">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dignissimos nam asperiores molestias dolore, sed ad harum
-                  commodi totam doloremque temporibus consequuntur quidem,
-                  aliquid molestiae cumque voluptatum quasi suscipit illo
-                  ratione? Officiis reprehenderit unde reiciendis earum nostrum
-                  ipsa, sit ipsam, a quae vero aliquid magnam odio quisquam
-                  officia architecto, quo temporibus exercitationem porro
-                  distinctio quaerat aliquam. Eligendi aperiam magni ab rem!
-                  Nulla possimus laborum expedita laboriosam, eos id debitis
-                  maiores eum neque est dicta voluptate quaerat sit dolorum
-                  tenetur eligendi sunt unde ratione nostrum incidunt asperiores
-                  fugit ut. Facere, et nulla! Fugit recusandae debitis
-                  voluptatum nisi mollitia minima quasi amet sit ut maxime ab
-                  odit possimus, dolores, explicabo placeat iusto esse ducimus
-                  perspiciatis sequi? Esse corrupti at eius suscipit quibusdam
-                  harum!
+                <div class="checkout-tab-product-container">
+                  <div class="checkout-tab-product-block">
+                    <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                    <div class="checkout-tab-product-box">
+                      <div class="checkout-tab-product-header">
+                        <span class="checkout-tab-product-span"
+                          >Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span
+                        >
+                      </div>
+                      <div class="checkout-tab-product-bottom">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>1</span>
+                            шт.
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-tab-product-container">
+                  <div class="checkout-tab-product-block">
+                    <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                    <div class="checkout-tab-product-box">
+                      <div class="checkout-tab-product-header">
+                        <span class="checkout-tab-product-span"
+                          >Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span
+                        >
+                      </div>
+                      <div class="checkout-tab-product-bottom">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>1</span>
+                            шт.
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout-tab-present-blocks">
+                    <div class="checkout-tab-present-arrow"></div>
+                    <div class="checkout-tab-present-conteiner">
+                      <div
+                        class="checkout-tab-present-block checkout-tab-product-block"
+                      >
+                        <img src="/images/present.jpg" alt="present" />
+                        <div class="checkout-tab-product-box">
+                          <div
+                            class="checkout-tab-present-header checkout-tab-product-header"
+                          >
+                            <span
+                              class="checkout-tab-present-span checkout-tab-product-span"
+                            >
+                              Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                            </span>
+                          </div>
+                          <div
+                            class="checkout-tab-present-bottom checkout-tab-product-bottom"
+                          >
+                            <div
+                              class="checkout-tab-present-count-block checkout-tab-product-count-block"
+                            >
+                              <span
+                                class="checkout-tab-present-count checkout-tab-product-count"
+                              >
+                                Подарунок
+                              </span>
+                            </div>
+                            <div
+                              class="checkout-tab-present-price-block checkout-tab-product-price-block"
+                            >
+                              <span
+                                class="checkout-tab-present-price checkout-tab-product-price"
+                              >
+                                <span>1</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-tab-product-container cheaper-together">
+                  <div class="checkout-tab-product-block">
+                    <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                    <div class="checkout-tab-product-box">
+                      <div class="checkout-tab-product-header">
+                        <span class="checkout-tab-product-span">
+                          Смартфон Samsung Galaxy S24+ 12/256GB Amber Yellow
+                          (SM-S926BZYD) (UA)
+                        </span>
+                      </div>
+                      <div class="checkout-tab-product-bottom">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>1</span>
+                            шт.
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout-tab-product-plus-container"></div>
+                  <div class="checkout-tab-product-block">
+                    <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                    <div class="checkout-tab-product-box">
+                      <div class="checkout-tab-product-header">
+                        <span class="checkout-tab-product-span">
+                          Навушники TWS Google Pixel Buds A-Series Olive
+                          (GA02372) (Global)
+                        </span>
+                      </div>
+                      <div class="checkout-tab-product-bottom">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>1</span>
+                            шт.
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout-tab-product-bottom cheaper-together">
+                    <div class="checkout-tab-product-count-block">
+                      <span class="checkout-tab-product-count">
+                        <span>Разом дешевше</span>
+                      </span>
+                    </div>
+                    <div class="checkout-tab-product-price-block">
+                      <span class="checkout-tab-product-saving">
+                        економія
+                        <span>2109</span>
+                        ₴
+                      </span>
+                      <span class="checkout-tab-product-price">
+                        <span>38430</span>
+                        ₴
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-tab-product-container">
+                  <div class="checkout-tab-product-block">
+                    <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                    <div class="checkout-tab-product-box">
+                      <div class="checkout-tab-product-header">
+                        <span class="checkout-tab-product-span"
+                          >Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span
+                        >
+                      </div>
+                      <div class="checkout-tab-product-bottom">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>1</span>
+                            шт.
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout-tab-present-blocks">
+                    <div class="checkout-tab-present-arrow"></div>
+                    <div class="checkout-tab-present-conteiner">
+                      <div
+                        class="checkout-tab-present-block checkout-tab-product-block"
+                      >
+                        <img src="/images/present.jpg" alt="present" />
+                        <div class="checkout-tab-product-box">
+                          <div
+                            class="checkout-tab-present-header checkout-tab-product-header"
+                          >
+                            <span
+                              class="checkout-tab-present-span checkout-tab-product-span"
+                            >
+                              Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                            </span>
+                          </div>
+                          <div
+                            class="checkout-tab-present-bottom checkout-tab-product-bottom"
+                          >
+                            <div
+                              class="checkout-tab-present-count-block checkout-tab-product-count-block"
+                            >
+                              <span
+                                class="checkout-tab-present-count checkout-tab-product-count"
+                              >
+                                Подарунок
+                              </span>
+                            </div>
+                            <div
+                              class="checkout-tab-present-price-block checkout-tab-product-price-block"
+                            >
+                              <span
+                                class="checkout-tab-present-price checkout-tab-product-price"
+                              >
+                                <span>1</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="checkout-tab-present-block checkout-tab-product-block"
+                      >
+                        <img src="/images/present.jpg" alt="present" />
+                        <div class="checkout-tab-product-box">
+                          <div
+                            class="checkout-tab-present-header checkout-tab-product-header"
+                          >
+                            <span
+                              class="checkout-tab-present-span checkout-tab-product-span"
+                            >
+                              Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                            </span>
+                          </div>
+                          <div
+                            class="checkout-tab-present-bottom checkout-tab-product-bottom"
+                          >
+                            <div
+                              class="checkout-tab-present-count-block checkout-tab-product-count-block"
+                            >
+                              <span
+                                class="checkout-tab-present-count checkout-tab-product-count"
+                              >
+                                Подарунок
+                              </span>
+                            </div>
+                            <div
+                              class="checkout-tab-present-price-block checkout-tab-product-price-block"
+                            >
+                              <span
+                                class="checkout-tab-present-price checkout-tab-product-price"
+                              >
+                                <span>1</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="checkout-tab-promocode">
+            <div class="checkout-tab-promocode check-right-side-block">
               <form class="check-form-promocode" action="">
-                <div class="check-form-contact-block">
-                  <input
-                    type="text"
-                    class="check-form-promocode"
-                    name="promocode"
-                    inputmode="text"
-                    placeholder="Маєте промокод?"
-                    required
-                  />
+                <div class="check-form-contact-container">
+                  <div class="check-form-contact-block">
+                    <input
+                      type="text"
+                      class="check-form-promocode"
+                      name="promocode"
+                      inputmode="text"
+                      placeholder="Маєте промокод?"
+                      required
+                    />
+                    <label class="checkbox-label"></label>
+                  </div>
+                  <div
+                    class="checkout-tab-promocode-button global-button-send-fast-buy"
+                  >
+                    <button>Застосувати</button>
+                  </div>
                 </div>
-                <div
-                  class="checkout-tab-promocode-button global-button-send-fast-buy"
+                <label class="error-label"
+                  >Ви отримали знижка 5% на суму замовлення</label
                 >
-                  <button>Застосувати</button>
-                </div>
+                <label class="check-label"
+                  >Введений промокод не є дійсним</label
+                >
               </form>
             </div>
-            <div class="checkout-tab-checking">
+            <div class="checkout-tab-checking check-right-side-block">
               <span class="checkout-tab-checking-head">Разом до оплати</span>
               <div class="checkout-tab-checking-container">
                 <div class="checkout-tab-checking-block">
@@ -333,7 +605,7 @@
               <div
                 class="pop-up-credit-calculator-buy-button global-button-send-fast-buy"
               >
-                <button>Оформити</button>
+                <button>Оформити замовлення</button>
               </div>
             </div>
           </div>
@@ -413,7 +685,6 @@
         type="text/javascript"
         src="https://code.jquery.com/jquery-1.10.2.min.js"
       ></script>
-      <script type="text/javascript" src="/scripts/splide.min.js"></script>
       <script type="text/javascript" src="/scripts/header-basic.js"></script>
       <!-- scripts end -->
     </main>

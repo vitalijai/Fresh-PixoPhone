@@ -499,6 +499,19 @@
       background: var(--colors-green-600, #25863f);
     }
   }
+
+  &.disable {
+    button {
+      background: var(--colors-gray-100, #f7f7f7);
+
+      color: var(--colors-gray-300, #c0c0c0);
+      cursor: inherit;
+
+      &:hover {
+        background: var(--colors-gray-100, #f7f7f7);
+      }
+    }
+  }
 }
 
 //Кнопка показать все содержимое
