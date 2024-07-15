@@ -205,8 +205,10 @@
 
                 div {
                   display: flex;
-                  align-items: center;
                   gap: 8px;
+                  span {
+                    margin-top: 4px;
+                  }
                 }
 
                 .delivery-options-pay {
@@ -219,7 +221,6 @@
                     gap: 8px;
 
                     color: var(--colors-green-400, #62b278);
-
                     font-size: 12px;
 
                     &::after {
@@ -227,6 +228,7 @@
                       width: 16px;
                       height: 16px;
                       display: flex;
+                      transition: transform 0.5s ease;
                     }
                   }
                 }
@@ -245,6 +247,10 @@
                   &:not(.check-contact-pay-details-container) {
                     display: none;
                   }
+                }
+
+                @media (max-width: 459px) {
+                  padding-left: 0;
                 }
 
                 .delivery-options-details {
@@ -285,6 +291,9 @@
 
                     &:hover {
                       border: 2px solid var(--colors-gray-700, #2f2c2f);
+                      @media (max-width: 719px) {
+                        border: 2px solid transparent;
+                      }
                     }
 
                     @media (max-width: 719px) {
@@ -375,8 +384,10 @@
 
                 &.unhide {
                   .delivery-options--group-header {
-                    &::after {
-                      transform: rotate(180deg);
+                    .delivery-options-pay {
+                      &::after {
+                        transform: rotate(180deg);
+                      }
                     }
                   }
 
@@ -1019,12 +1030,17 @@
                   display: flex;
                   gap: 8px;
 
+                  .checkout-tab-product-price {
+                    display: flex;
+                  }
+
                   .checkout-tab-product-saving {
                     display: flex;
                     padding: 0 7px;
                     justify-content: center;
                     align-items: center;
                     gap: 4px;
+                    height: 19px;
 
                     border-radius: 28px;
                     background: var(--colors-red-300, #fa8072);
@@ -1054,20 +1070,17 @@
       @media (max-width: 719px) {
         padding: 24px;
         flex-direction: column;
-        gap: 16px;
+        gap: 0px;
         background: var(--colors-white, #fff);
         border-radius: 32px;
         order: 2;
 
         &.unhide {
+          gap: 16px;
           .checkout-tab-promocode-head {
             &::after {
               transform: rotate(180deg);
             }
-          }
-
-          .check-form-promocode {
-            display: flex;
           }
         }
       }
@@ -1086,6 +1099,7 @@
             width: 16px;
             height: 16px;
             display: flex;
+            transition: transform 0.5s ease;
           }
         }
       }
@@ -1099,8 +1113,10 @@
         flex-direction: column;
 
         @media (max-width: 719px) {
-          align-self: stretch;
           display: none;
+
+          align-self: stretch;
+          flex: unset;
         }
 
         .check-form-contact-container {

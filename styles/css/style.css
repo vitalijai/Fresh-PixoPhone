@@ -3508,8 +3508,10 @@ a:visited {
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--group-header div {
   display: flex;
-  align-items: center;
   gap: 8px;
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--group-header div span {
+  margin-top: 4px;
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--group-header .delivery-options-pay {
   display: none;
@@ -3526,6 +3528,7 @@ a:visited {
     width: 16px;
     height: 16px;
     display: flex;
+    transition: transform 0.5s ease;
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container {
@@ -3540,6 +3543,11 @@ a:visited {
 @media (max-width: 719px) {
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container:not(.check-contact-pay-details-container) {
     display: none;
+  }
+}
+@media (max-width: 459px) {
+  .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container {
+    padding-left: 0;
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details {
@@ -3574,6 +3582,11 @@ a:visited {
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked:hover {
   border: 2px solid var(--colors-gray-700, #2f2c2f);
+}
+@media (max-width: 719px) {
+  .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked:hover {
+    border: 2px solid transparent;
+  }
 }
 @media (max-width: 719px) {
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked {
@@ -3644,7 +3657,7 @@ a:visited {
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options-department-time {
     display: none;
   }
-  .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group.unhide .delivery-options--group-header::after {
+  .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group.unhide .delivery-options--group-header .delivery-options-pay::after {
     transform: rotate(180deg);
   }
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group.unhide .delivery-options--container {
@@ -4190,12 +4203,16 @@ a:visited {
   display: flex;
   gap: 8px;
 }
+.common-template .checkout-tab .page-container .checkout-tab-products .checkout-tab-products__content .checkout-tab-product-container.cheaper-together .checkout-tab-product-bottom.cheaper-together .checkout-tab-product-price-block .checkout-tab-product-price {
+  display: flex;
+}
 .common-template .checkout-tab .page-container .checkout-tab-products .checkout-tab-products__content .checkout-tab-product-container.cheaper-together .checkout-tab-product-bottom.cheaper-together .checkout-tab-product-price-block .checkout-tab-product-saving {
   display: flex;
   padding: 0 7px;
   justify-content: center;
   align-items: center;
   gap: 4px;
+  height: 19px;
   border-radius: 28px;
   background: var(--colors-red-300, #fa8072);
   color: var(--colors-white, #fff);
@@ -4216,16 +4233,16 @@ a:visited {
   .common-template .checkout-tab .page-container .checkout-tab-promocode {
     padding: 24px;
     flex-direction: column;
-    gap: 16px;
+    gap: 0px;
     background: var(--colors-white, #fff);
     border-radius: 32px;
     order: 2;
   }
+  .common-template .checkout-tab .page-container .checkout-tab-promocode.unhide {
+    gap: 16px;
+  }
   .common-template .checkout-tab .page-container .checkout-tab-promocode.unhide .checkout-tab-promocode-head::after {
     transform: rotate(180deg);
-  }
-  .common-template .checkout-tab .page-container .checkout-tab-promocode.unhide .check-form-promocode {
-    display: flex;
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab-promocode .checkout-tab-promocode-head {
@@ -4243,6 +4260,7 @@ a:visited {
     width: 16px;
     height: 16px;
     display: flex;
+    transition: transform 0.5s ease;
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab-promocode .check-form-promocode {
@@ -4255,8 +4273,9 @@ a:visited {
 }
 @media (max-width: 719px) {
   .common-template .checkout-tab .page-container .checkout-tab-promocode .check-form-promocode {
-    align-self: stretch;
     display: none;
+    align-self: stretch;
+    flex: unset;
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab-promocode .check-form-promocode .check-form-contact-container {
@@ -4405,11 +4424,11 @@ a:visited {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.common-template .check-form-next-button {
+.common-template .check-next-button {
   display: none;
 }
 @media (max-width: 719px) {
-  .common-template .check-form-next-button {
+  .common-template .check-next-button {
     position: fixed;
     bottom: 0px;
     padding: 12px 16px;
@@ -4417,7 +4436,7 @@ a:visited {
     box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
     backdrop-filter: blur(16px);
   }
-  .common-template .check-form-next-button button {
+  .common-template .check-next-button button {
     width: calc(100% - 32px);
   }
 }
