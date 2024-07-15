@@ -8,9 +8,10 @@
   @import "../_2-main/1-checkout";
 
   .control {
-    display: block;
+    display: flex;
     position: relative;
-    padding-left: 24px;
+    width: calc(100% - 32px);
+    justify-content: space-between;
     cursor: pointer;
 
     input {

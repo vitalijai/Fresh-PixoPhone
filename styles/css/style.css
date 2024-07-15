@@ -3557,12 +3557,20 @@ a:visited {
     background: var(--colors-gray-100, #f7f7f7);
   }
 }
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details:hover:not(.new-post-shipping-another) {
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid var(--colors-gray-100, #f7f7f7);
+}
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked {
   border-radius: 8px;
   border: 2px solid var(--colors-gray-700, #2f2c2f);
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked .new-post-shipping-department-selection {
   display: flex;
+}
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked:hover {
+  border: 2px solid var(--colors-gray-700, #2f2c2f);
 }
 @media (max-width: 719px) {
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details.checked {
@@ -3584,6 +3592,7 @@ a:visited {
   display: flex;
   align-self: stretch;
   justify-content: space-between;
+  position: relative;
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .new-post-shipping-department-selection {
   display: none;
@@ -3611,9 +3620,10 @@ a:visited {
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options .delivery-options--group .delivery-options--container .delivery-options-details .options-details-location {
   display: flex;
   gap: 8px;
-  flex: 1 0 0;
   color: var(--colors-gray-700, #2f2c2f);
   text-overflow: ellipsis;
+  position: relative;
+  padding-left: 24px;
   font-weight: 400;
 }
 @media (max-width: 719px) {
@@ -4298,9 +4308,10 @@ a:visited {
   }
 }
 .common-template .control {
-  display: block;
+  display: flex;
   position: relative;
-  padding-left: 24px;
+  width: calc(100% - 32px);
+  justify-content: space-between;
   cursor: pointer;
 }
 .common-template .control input {

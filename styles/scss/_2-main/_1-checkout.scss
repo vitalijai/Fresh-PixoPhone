@@ -265,12 +265,22 @@
                     }
                   }
 
+                  &:hover:not(.new-post-shipping-another) {
+                    cursor: pointer;
+                    border-radius: 8px;
+                    border: 2px solid var(--colors-gray-100, #f7f7f7);
+                  }
+
                   &.checked {
                     border-radius: 8px;
                     border: 2px solid var(--colors-gray-700, #2f2c2f);
 
                     .new-post-shipping-department-selection {
                       display: flex;
+                    }
+
+                    &:hover {
+                      border: 2px solid var(--colors-gray-700, #2f2c2f);
                     }
 
                     @media (max-width: 719px) {
@@ -296,6 +306,7 @@
                     display: flex;
                     align-self: stretch;
                     justify-content: space-between;
+                    position: relative;
                   }
 
                   .new-post-shipping-department-selection {
@@ -330,11 +341,11 @@
                   .options-details-location {
                     display: flex;
                     gap: 8px;
-                    flex: 1 0 0;
                     color: var(--colors-gray-700, #2f2c2f);
                     text-overflow: ellipsis;
                     // user-select: none;
-
+                    position: relative;
+                    padding-left: 24px;
                     font-weight: 400;
 
                     @media (max-width: 719px) {
