@@ -26,4 +26,25 @@ $(document).ready(function () {
     // Закрываем элемент с классом popUpLocation
     $("#popUpLocation").fadeOut();
   });
+
+  $(".check-left-side-header").on("click", function () {
+    // Проверка ширины экрана
+    if ($(window).width() > 720) {
+      // Находим родительский блок .check-left-side-block
+      var $parentBlock = $(this).closest(".check-left-side-block");
+      // Находим .check-left-side-content внутри текущего .check-left-side-block
+      var $contentForm = $parentBlock.find(".global-check-form");
+
+      // Проверяем, есть ли у текущего .check-left-side-block класс .unhide
+      if ($parentBlock.hasClass("unhide")) {
+        // Если есть, убираем класс и скрываем элемент с анимацией
+        $parentBlock.removeClass("unhide");
+        $contentForm.slideUp();
+      } else {
+        // Если нет, добавляем класс и отображаем элемент с анимацией
+        $parentBlock.addClass("unhide");
+        $contentForm.slideDown().css("display", "flex");
+      }
+    }
+  });
 });

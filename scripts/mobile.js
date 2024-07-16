@@ -22,10 +22,19 @@ $(document).ready(function () {
     }
 
     // Добавление/удаление класса анимации для кнопки формы
-    if (scrollPosition > scrollThreshold) {
-      $checkFormNextButton.fadeIn();
-    } else {
-      $checkFormNextButton.fadeOut();
+    if (window.matchMedia("(max-width: 719px)").matches) {
+      if (scrollPosition > scrollThreshold) {
+        $checkFormNextButton.fadeIn();
+      } else {
+        $checkFormNextButton.fadeOut();
+      }
+    }
+    if (window.matchMedia("(max-width: 719px)").matches) {
+      if (scrollPosition > scrollThreshold) {
+        $checkFormNextButton.fadeIn();
+      } else {
+        $checkFormNextButton.fadeOut();
+      }
     }
   });
 
@@ -64,7 +73,8 @@ $(document).ready(function () {
         $(".check-form-promocode").slideDown("fast").css("display", "flex");
       }
     });
-    // При клике на элемент с классом checkout-tab-promocode-head
+
+    // При клике на элемент с классом delivery-options--group-header
     $(".delivery-options--group-header").on("click", function () {
       // Находим родительский блок .delivery-options--group
       var $parentGroup = $(this).closest(".delivery-options--group");

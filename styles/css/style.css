@@ -3365,8 +3365,9 @@ a:visited {
   padding: 32px 48px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 0px;
   align-self: stretch;
+  transition: gap 0.5s ease;
   background: var(--colors-white, #fff);
 }
 @media (max-width: 719px) {
@@ -3405,7 +3406,6 @@ a:visited {
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .check-left-side-content {
-  display: none;
   width: 100%;
 }
 @media (max-width: 719px) {
@@ -3413,11 +3413,15 @@ a:visited {
     display: flex;
   }
 }
+.common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block.unhide {
+  gap: 24px;
+}
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block.unhide .check-left-side-header {
   color: var(--colors-gray-700, #2f2c2f);
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block.unhide .check-left-side-header::after {
   transform: rotate(180deg);
+  transition: transform 0.5s ease;
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block.unhide .check-left-side-content {
   display: flex;
@@ -3439,7 +3443,7 @@ a:visited {
     display: none;
   }
 }
-@media (min-width: 719px) {
+@media (min-width: 720px) {
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block:first-child {
     border-radius: 32px 0 0 0;
   }
@@ -3448,7 +3452,7 @@ a:visited {
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -3458,6 +3462,7 @@ a:visited {
 @media (max-width: 719px) {
   .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form {
     gap: 16px;
+    display: flex;
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-left-side-block .global-check-form .check-contact-delivery-options {
@@ -3684,12 +3689,16 @@ a:visited {
   }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-contact-information .check-form-contact {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
   align-self: stretch;
-  flex: 1 0 0;
+}
+@media (max-width: 719px) {
+  .common-template .checkout-tab .page-container .checkout-tab__left-side .check-contact-information .check-form-contact {
+    display: flex;
+  }
 }
 .common-template .checkout-tab .page-container .checkout-tab__left-side .check-contact-information .check-form-contact .check-form-contact-content {
   display: flex;
@@ -3806,6 +3815,7 @@ a:visited {
   align-items: flex-start;
   align-self: stretch;
   resize: none;
+  overflow: hidden;
   border-radius: 8px;
   border: 1px solid var(--colors-gray-200, #e5e4e2);
   background: var(--colors-white, #fff);
@@ -4358,7 +4368,7 @@ a:visited {
 .common-template .control {
   display: flex;
   position: relative;
-  width: calc(100% - 32px);
+  width: calc(100% - 36px);
   justify-content: space-between;
   cursor: pointer;
 }
