@@ -3322,16 +3322,16 @@ a:visited {
   align-items: center;
   gap: 2px;
 }
-.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn .header-bottom__profile-login {
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn .header-bottom__profile-authorized {
   display: none;
 }
-.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.login .header-bottom__profile-login {
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.authorized .header-bottom__profile-authorized {
   display: block;
 }
-.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.login .header-bottom__profile-unlogin {
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.authorized .header-bottom__profile-login {
   display: none;
 }
-.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.login svg {
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.authorized svg {
   fill: #fff;
 }
 .header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-cart .header-bottom-counter {

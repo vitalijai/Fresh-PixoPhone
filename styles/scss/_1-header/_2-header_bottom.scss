@@ -141,15 +141,15 @@
           align-items: center;
           gap: 2px;
 
-          .header-bottom__profile-login {
+          .header-bottom__profile-authorized {
             display: none;
           }
 
-          &.login {
-            .header-bottom__profile-login {
+          &.authorized {
+            .header-bottom__profile-authorized {
               display: block;
             }
-            .header-bottom__profile-unlogin {
+            .header-bottom__profile-login {
               display: none;
             }
             svg {
