@@ -5,6 +5,10 @@
 
   background: var(--colors-green-900, #1c4427);
 
+  @media (max-width: 719px) {
+    padding-bottom: 70px;
+  }
+
   .footer-content-container {
     @include flexbox($alignItems: center, $direction: column);
     gap: var(---gap-basic, 24px);
