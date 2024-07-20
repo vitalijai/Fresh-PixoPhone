@@ -4812,7 +4812,7 @@ a:visited {
 }
 .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block {
   display: none;
-  padding: 0px 128px 32px 32px;
+  padding: 0px 96px 12px 0;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -4911,7 +4911,7 @@ a:visited {
     font-size: 12px;
   }
 }
-.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-container .right-block-container-ul {
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-container-ul {
   margin: 0;
   padding-left: 24px;
   display: flex;
@@ -4919,10 +4919,22 @@ a:visited {
   align-items: flex-start;
   gap: 8px;
 }
-.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-container .right-block-container-ul li {
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-container-ul li {
   color: var(--colors-gray-700, #2f2c2f);
   font-weight: 400;
   line-height: 150%;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-img.right-block-img-min {
+  height: 120px;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-img.right-block-img-mid {
+  object-fit: cover;
+  height: 240px;
 }
 .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active {
   display: flex;
