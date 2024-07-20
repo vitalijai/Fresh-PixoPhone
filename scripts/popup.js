@@ -43,30 +43,6 @@ $(document).ready(function () {
       addAcces.removeClass("active");
     }
   });
-  // Определите блок gen-tab__to-order
-  var targetBlock = $(".gen-tab__to-order");
-
-  // Функция для проверки положения прокрутки
-  function checkScroll() {
-    // Определите высоту и положение блока
-    var blockOffset =
-      targetBlock.offset().top * 1.4 + targetBlock.outerHeight();
-    var scrollPosition = $(window).scrollTop() + $(window).height();
-
-    // Проверьте, если прокрутка ниже блока
-    if (scrollPosition > blockOffset) {
-      $(".p-short-info-mobile").addClass("visible");
-    } else {
-      $(".p-short-info-mobile").removeClass("visible");
-    }
-  }
-
-  // Добавьте обработчик события прокрутки
-  $(window).on("scroll", checkScroll);
-
-  $(".closet").click(function () {
-    $(".video-container").addClass("closing");
-  });
 
   function updateArrow($element) {
     // Проверяем, есть ли скролл у tabs__link-menu-list только на мобильных устройствах

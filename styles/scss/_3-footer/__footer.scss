@@ -1,7 +1,7 @@
 .footer {
   @include flexbox($alignItems: center, $direction: column, $self: stretch);
-  padding: 32px 10px 16px 10px;
-  gap: var(---gap-small, 16px);
+  padding: 32px 10px;
+  gap: 16px;
 
   background: var(--colors-green-900, #1c4427);
 
@@ -33,13 +33,13 @@
           $self: stretch
         );
         flex: 1 0 0;
-        gap: var(---gap-small, 16px);
+        gap: 16px;
 
         // &:not(.footer-logo-container, .footer-nav__contact) {
         // display: flex;
         // align-items: flex-start;
         // align-self: stretch;
-        // gap: var(---gap-small, 16px);
+        // gap: 16px;
         // flex: 1 0 0;
         // flex-wrap: wrap;
         // }
@@ -143,7 +143,7 @@
             $self: stretch
           );
 
-          gap: var(---gap-small, 16px);
+          gap: 16px;
         }
       }
 

@@ -55,6 +55,32 @@
   }
 }
 
+//Кнопка входа\выхода
+.global__authorized-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  cursor: pointer;
+  border: none;
+
+  border-radius: 8px;
+  background: transparent;
+
+  span {
+    font-size: 12px;
+  }
+
+  .left-home__authorized-login {
+    color: var(--colors-green-400, #62b278);
+  }
+
+  .left-home__authorized-logout {
+    color: var(--colors-red-300, #fa8072);
+  }
+}
+
 //Горизонтальный переключатель
 .global-horizontal-switch {
   @include flexbox($alignItems: center, $self: stretch);
@@ -413,7 +439,7 @@
   button {
     width: 48px;
     height: 48px;
-    border-radius: var(---radius-min, 8px);
+    border-radius: 8px;
     background: var(--colors-blue-500, #318ce7);
     border: none;
     position: relative;

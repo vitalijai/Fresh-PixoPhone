@@ -1,7 +1,6 @@
 window.addEventListener("scroll", function () {
   var headerBottoms = document.querySelectorAll(".header_bottom");
   var headerTabs = document.querySelectorAll(".common-template__tabs");
-  var videoContainer = document.querySelector(".video-container");
   var tabs = document.querySelectorAll(".tabs");
   var mainMenu = document.querySelectorAll(".catalog_products_main");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
@@ -29,10 +28,8 @@ window.addEventListener("scroll", function () {
 
   if (scrollPosition > vw50) {
     backToTop.classList.add("visible");
-    videoContainer.classList.add("normall");
   } else {
     backToTop.classList.remove("visible");
-    videoContainer.classList.remove("normall");
   }
 
   backToTop.addEventListener("click", function (event) {
