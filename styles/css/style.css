@@ -4834,6 +4834,10 @@ a:visited {
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block p .details-link {
+  color: var(--colors-green-400, #62b278);
+  font-weight: 500;
+}
 @media (max-width: 719px) {
   .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block p {
     font-size: 14px;
@@ -4940,6 +4944,173 @@ a:visited {
   display: flex;
   padding: 0;
   margin-top: 0;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions {
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  flex-direction: unset;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions {
+    flex-direction: column;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .header .area__right-block-header {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 16px;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .header .area__right-block-header {
+    font-size: 14px;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .header .area__right-block-bottom {
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .header .area__right-block-bottom {
+    margin-top: 16px;
+    line-height: 150%;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .block-active-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  flex: 1 0 0;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .block-active-right {
+  flex: 1 0 0;
+  align-self: stretch;
+  max-height: 480px;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .block-active-right {
+    display: none;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .block-active-right img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact {
+    display: flex;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content {
+    gap: 16px;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  align-self: stretch;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block label {
+  display: flex;
+  padding: 0px 4px;
+  align-items: flex-end;
+  gap: 4px;
+  align-self: stretch;
+  color: var(--colors-gray-500, #696969);
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block label {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block input {
+  display: flex;
+  height: 44px;
+  padding: 0px 12px;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--colors-gray-200, #e5e4e2);
+  background: var(--colors-white, #fff);
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block input.disable {
+  background: var(--colors-gray-100, #f7f7f7);
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block .error-label,
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block .checkbox-label {
+  display: none;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block.check .checkbox-label {
+  display: block;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block.check .checkbox-label::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20C4.47715 20 0 15.5228 0 10Z" fill="%2362B378"/><path d="M5.25 11.0339L7.97035 13.7543L15.25 6.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 63%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block.error label {
+  color: var(--colors-red-300, #fa8072);
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block.error input {
+  border: 1px solid var(--colors-red-300, #fa8072);
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-contact-content .check-form-contact-block.error .error-label {
+  display: block;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-contact .check-form-next-button button {
+  padding: 16px 32px;
+  height: 48px;
+}
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-comment__textarea {
+  display: flex;
+  height: 120px;
+  padding: 16px 12px;
+  align-items: flex-start;
+  align-self: stretch;
+  resize: none;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--colors-gray-200, #e5e4e2);
+  background: var(--colors-white, #fff);
+}
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .check-form-comment__textarea {
+    height: 88px;
+    font-size: 14px;
+  }
 }
 @media (max-width: 719px) {
   .common-template .personal-area .personal-area-container .personal-area__right-side .area__right {
