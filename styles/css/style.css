@@ -4928,6 +4928,11 @@ a:visited {
   font-weight: 400;
   line-height: 150%;
 }
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-container-ul li {
+    font-size: 14px;
+  }
+}
 .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block .right-block-img {
   width: 100%;
   object-fit: contain;

@@ -391,6 +391,10 @@
                 color: var(--colors-gray-700, #2f2c2f);
                 font-weight: 400;
                 line-height: 150%;
+
+                @media (max-width: 719px) {
+                  font-size: 14px;
+                }
               }
             }
 
