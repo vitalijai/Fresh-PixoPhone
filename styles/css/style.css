@@ -5239,6 +5239,9 @@ a:visited {
   gap: 4px;
   align-self: stretch;
 }
+.common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.billing .billing-link-container .billing-history__link:hover {
+  background: var(--colors-gray-100, #f7f7f7);
+}
 .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active .global-square-pagination {
   display: flex;
   padding: 24px 32px;
