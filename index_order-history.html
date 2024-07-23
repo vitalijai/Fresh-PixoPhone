@@ -21,7 +21,7 @@
     as="style" onload="this.onload=null;this.rel='stylesheet'" />
 
   <!-- title -->
-  <title>Історія нарахувань</title>
+  <title>Історія замовлень</title>
 </head>
 
 <body>
@@ -4618,10 +4618,10 @@
             <span>Головна</span>
           </a>
           <a href="../index_guarantee.html" class="breadcrumbs__item" title="Перейти в лічний кабінет">
-            <span>Бонус</span>
+            <span>Кабінет</span>
           </a>
-          <a href="../index_billing-history.html" class="breadcrumbs__item" title="Перейти в гарантійні умови">
-            <span>Історія нарахувань</span>
+          <a href="../index_order-history.html" class="breadcrumbs__item" title="Перейти в гарантійні умови">
+            <span>Історія замовлень</span>
           </a>
         </nav>
       </div>
@@ -4660,7 +4660,7 @@
             <a href="../index_guarantee.html" class="left-home__personal-data area-left__link login">
               Особисті дані
             </a>
-            <a href="../index_order-history.html" class="left-home__order-history area-left__link login">
+            <a href="../index_order-history.html" class="left-home__order-history area-left__link login active">
               Історія замовлень
             </a>
             <a href="../index_wishlist.html" class="left-home__wishlist area-left__link login">
@@ -4695,7 +4695,7 @@
             <a href="../index_loyalty-program.html" class="left-bonus__loyalty area-left__link">
               Програма лояльності
             </a>
-            <a href="../index_billing-history.html" class="left-bonus__billing-history area-left__link login active">
+            <a href="../index_billing-history.html" class="left-bonus__billing-history area-left__link login">
               Історія нарахувань
             </a>
           </div>
@@ -4719,267 +4719,1364 @@
           <div class="area__left-fill area__left"></div>
         </div>
         <div class="personal-area__right-side">
-          <div class="area__right-header area__right header-side">
-            <h3>Історія нарахувань</h3>
+          <!-- 
+          Добавить к header-side и order-history
+          --empty - когда нет истории
+          --complete - когда есть история и нужна пагинация
+          -- пусто - когда есть история и не нужна пагинация
+          -->
+          <div class="area__right-header area__right header-side ">
+            <h3>Історія замовлень</h3>
+            <div class="search-container">
+              <form class="search-box">
+                <input type="text" id="search-bar" placeholder="Пошук за товаром">
+                <button class="search-btn"></button>
+              </form>
+              <button class="global-button-date"></button>
+            </div>
           </div>
-          <div class="area__right-billing-history area__right area__right-active">
-            <div class="area__right-block area__right-block-active billing">
-              <span class="area__right-block-header">
-                Історія нарахувань
-              </span>
-              <div class="billing-link-container">
-                <a href="#" class="billing-history__link">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order arrow">
-                      <span>
-                        Замовлення
-                        <span class="billing__order-number"> №12345678 </span>
-                      </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
-                          ₴
+          <div class="area__right-order-history-filter">
+            <span class="order-history-filter-list">Показати замовлення за період:</span>
+            <div class="order-history-filters">
+              <button class="all-time filter-list">
+                весь час
+              </button>
+              <button class="last-week filter-list">
+                останній тиждень
+              </button>
+              <button class="last-month filter-list">
+                останній місць
+              </button>
+              <button class="last-year filter-list">
+                останній рік
+              </button>
+            </div>
+            <button class="formared">
+              скинути
+            </button>
+          </div>
+          <div class="area__right-order-history area__right area__right-active">
+            <div class="area__right-block area__right-block-active order-history complete">
+              <div class="right-block-header">
+                <div class="right-block-header-box">
+                  <span class="area__right-block-header">
+                    Історія замовлень
+                    <span class="left-home__wishlist-counter area-left__counter">16</span>
+                  </span>
+                  <button class="global-button-date"></button>
+                </div>
+                <div class="search-container">
+                  <form class="search-box">
+                    <input type="text" id="search-bar" placeholder="Пошук за товаром">
+                    <button class="search-btn"></button>
+                  </form>
+                </div>
+              </div>
+              <div class="area__right-order-history-empty">
+                <img class="right-block-img-mid right-block-img" src="../images/no_img-2.png" alt="no img" />
+                <p>
+                  Ви ще не зробили жодного замовлення.
+                  <br />
+                  Перегляньте наші
+                  <a href="#" class="details-link">вигідні пропозиції</a>
+                </p>
+              </div>
+              <div class="area__right-order-history area__right-order-history-complete">
+                <div class="area__right-order-history area__right">
+                  <div class="area__right-header-side">
+                    <div class="area__right-header-side-top">
+                      <span class="order-history__order arrow">
+                        <span class="order-history__order-top">
+                          <span class="order-history__order-number"> №12345678 </span>
+                          <span class="order-history__order-date">від 13 липня 2024 </span>
                         </span>
                       </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
-                        </span>
+                      <span class="order-history__order-status processing">
+                        В обробці
                       </span>
                     </div>
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
-                  </div>
-                </a>
-                <a href="#" class="billing-history__link prohibit-transition">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order">
-                      <span> Бонуси до дня народження </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
-                          ₴
-                        </span>
-                      </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
-                        </span>
-                      </span>
+                    <div class="order-history__order-img-min">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                      <img src="/images/p8pro-Parcelian.jpg" alt="product">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
                     </div>
                   </div>
-                </a>
-                <a href="#" class="billing-history__link">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order arrow">
-                      <span>
-                        Замовлення
-                        <span class="billing__order-number"> №12345678 </span>
-                      </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
+                  <div class="area__right-block area__right-order-history-content checkout-tab-products__content">
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container cheaper-together">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Смартфон Samsung Galaxy S24+ 12/256GB Amber Yellow
+                              (SM-S926BZYD) (UA)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-plus-container"></div>
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Навушники TWS Google Pixel Buds A-Series Olive
+                              (GA02372) (Global)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-bottom cheaper-together">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>Разом дешевше</span>
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-saving">
+                            економія
+                            <span>2109</span>
+                            ₴
+                          </span>
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area__right-bottom">
+                      <div class="area__right-value-block">
+                        <span class="area__right-value">
+                          Сума замовлення
+                        </span>
+                      </div>
+                      <div class="area__right-price-block">
+                        <span class="area__right-price">
+                          <span>38430</span>
                           ₴
                         </span>
-                      </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="area__right-order-history area__right">
+                  <div class="area__right-header-side">
+                    <div class="area__right-header-side-top">
+                      <span class="order-history__order arrow">
+                        <span class="order-history__order-top">
+                          <span class="order-history__order-number"> №12345678 </span>
+                          <span class="order-history__order-date">від 13 липня 2024 </span>
                         </span>
                       </span>
+                      <span class="order-history__order-status delivered">
+                        Передано в доставу
+                      </span>
                     </div>
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
+                    <div class="order-history__order-img-min">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                      <img src="/images/p8pro-Parcelian.jpg" alt="product">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                    </div>
                   </div>
-                </a>
-                <a href="#" class="billing-history__link prohibit-transition">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order">
-                      <span> Термін дії бонусів закінчився </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
-                  </div>
-                </a>
-                <a href="#" class="billing-history__link">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order arrow">
-                      <span>
-                        Замовлення
-                        <span class="billing__order-number"> №12345678 </span>
-                      </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
+                  <div class="area__right-block area__right-order-history-content checkout-tab-products__content">
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container cheaper-together">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Смартфон Samsung Galaxy S24+ 12/256GB Amber Yellow
+                              (SM-S926BZYD) (UA)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-plus-container"></div>
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Навушники TWS Google Pixel Buds A-Series Olive
+                              (GA02372) (Global)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-bottom cheaper-together">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>Разом дешевше</span>
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-saving">
+                            економія
+                            <span>2109</span>
+                            ₴
+                          </span>
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area__right-bottom">
+                      <div class="area__right-value-block">
+                        <span class="area__right-value">
+                          Сума замовлення
+                        </span>
+                      </div>
+                      <div class="area__right-price-block">
+                        <span class="area__right-price">
+                          <span>38430</span>
                           ₴
                         </span>
-                      </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="area__right-order-history area__right">
+                  <div class="area__right-header-side">
+                    <div class="area__right-header-side-top">
+                      <span class="order-history__order arrow">
+                        <span class="order-history__order-top">
+                          <span class="order-history__order-number"> №12345678 </span>
+                          <span class="order-history__order-date">від 13 липня 2024 </span>
                         </span>
                       </span>
+                      <span class="order-history__order-status success">
+                        Виконане
+                      </span>
                     </div>
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
+                    <div class="order-history__order-img-min">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                      <img src="/images/p8pro-Parcelian.jpg" alt="product">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                    </div>
                   </div>
-                </a>
-                <a href="#" class="billing-history__link">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order arrow">
-                      <span>
-                        Замовлення
-                        <span class="billing__order-number"> №12345678 </span>
-                      </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
+                  <div class="area__right-block area__right-order-history-content checkout-tab-products__content">
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container cheaper-together">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Смартфон Samsung Galaxy S24+ 12/256GB Amber Yellow
+                              (SM-S926BZYD) (UA)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-plus-container"></div>
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Навушники TWS Google Pixel Buds A-Series Olive
+                              (GA02372) (Global)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-bottom cheaper-together">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>Разом дешевше</span>
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-saving">
+                            економія
+                            <span>2109</span>
+                            ₴
+                          </span>
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area__right-bottom">
+                      <div class="area__right-value-block">
+                        <span class="area__right-value">
+                          Сума замовлення
+                        </span>
+                      </div>
+                      <div class="area__right-price-block">
+                        <span class="area__right-price">
+                          <span>38430</span>
                           ₴
                         </span>
-                      </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="area__right-order-history area__right">
+                  <div class="area__right-header-side">
+                    <div class="area__right-header-side-top">
+                      <span class="order-history__order arrow">
+                        <span class="order-history__order-top">
+                          <span class="order-history__order-number"> №12345678 </span>
+                          <span class="order-history__order-date">від 13 липня 2024 </span>
                         </span>
                       </span>
+                      <span class="order-history__order-status dismiss">
+                        Скасоване
+                      </span>
                     </div>
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
+                    <div class="order-history__order-img-min">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                      <img src="/images/p8pro-Parcelian.jpg" alt="product">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                    </div>
                   </div>
-                </a>
-                <a href="#" class="billing-history__link">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order arrow">
-                      <span>
-                        Замовлення
-                        <span class="billing__order-number"> №12345678 </span>
-                      </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
+                  <div class="area__right-block area__right-order-history-content checkout-tab-products__content">
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container cheaper-together">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Смартфон Samsung Galaxy S24+ 12/256GB Amber Yellow
+                              (SM-S926BZYD) (UA)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-plus-container"></div>
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Навушники TWS Google Pixel Buds A-Series Olive
+                              (GA02372) (Global)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-bottom cheaper-together">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>Разом дешевше</span>
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-saving">
+                            економія
+                            <span>2109</span>
+                            ₴
+                          </span>
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area__right-bottom">
+                      <div class="area__right-value-block">
+                        <span class="area__right-value">
+                          Сума замовлення
+                        </span>
+                      </div>
+                      <div class="area__right-price-block">
+                        <span class="area__right-price">
+                          <span>38430</span>
                           ₴
                         </span>
-                      </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="area__right-order-history area__right">
+                  <div class="area__right-header-side">
+                    <div class="area__right-header-side-top">
+                      <span class="order-history__order arrow">
+                        <span class="order-history__order-top">
+                          <span class="order-history__order-number"> №12345678 </span>
+                          <span class="order-history__order-date">від 13 липня 2024 </span>
                         </span>
                       </span>
+                      <span class="order-history__order-status delivered">
+                        Передано в доставу
+                      </span>
                     </div>
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
+                    <div class="order-history__order-img-min">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                      <img src="/images/p8pro-Parcelian.jpg" alt="product">
+                      <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                      <img src="/images/p8pro-Bay.jpg" alt="product">
+                    </div>
                   </div>
-                </a>
-                <a href="#" class="billing-history__link last">
-                  <div class="billing-history__link-header">
-                    <span class="billing__order arrow">
-                      <span>
-                        Замовлення
-                        <span class="billing__order-number"> №12345678 </span>
-                      </span>
-                    </span>
-                    <span class="billing__order-date"> 13 липня 2024 </span>
-                  </div>
-                  <div class="billing-history__link-bonus">
-                    <div class="link-bonus-top">
-                      <span class="bonuses-accrued link-bonus">
-                        Бонусів нараховано:
-                        <span class="bonuses-accrued-value bonuses-value">
-                          <span>96</span>
+                  <div class="area__right-block area__right-order-history-content checkout-tab-products__content">
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container cheaper-together">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Смартфон Samsung Galaxy S24+ 12/256GB Amber Yellow
+                              (SM-S926BZYD) (UA)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-plus-container"></div>
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">
+                              Навушники TWS Google Pixel Buds A-Series Olive
+                              (GA02372) (Global)
+                            </span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-product-bottom cheaper-together">
+                        <div class="checkout-tab-product-count-block">
+                          <span class="checkout-tab-product-count">
+                            <span>Разом дешевше</span>
+                          </span>
+                        </div>
+                        <div class="checkout-tab-product-price-block">
+                          <span class="checkout-tab-product-saving">
+                            економія
+                            <span>2109</span>
+                            ₴
+                          </span>
+                          <span class="checkout-tab-product-price">
+                            <span>38430</span>
+                            ₴
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-tab-product-container">
+                      <div class="checkout-tab-product-block">
+                        <img src="/images/p8pro-Obsidian.jpg" alt="product">
+                        <div class="checkout-tab-product-box">
+                          <div class="checkout-tab-product-header">
+                            <span class="checkout-tab-product-span">Смартфон Google Pixel 8 Pro 12/512GB Obsidian</span>
+                          </div>
+                          <div class="checkout-tab-product-bottom">
+                            <div class="checkout-tab-product-count-block">
+                              <span class="checkout-tab-product-count">
+                                <span>1</span>
+                                шт.
+                              </span>
+                            </div>
+                            <div class="checkout-tab-product-price-block">
+                              <span class="checkout-tab-product-price">
+                                <span>38430</span>
+                                ₴
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="checkout-tab-present-blocks">
+                        <div class="checkout-tab-present-arrow"></div>
+                        <div class="checkout-tab-present-conteiner">
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="checkout-tab-present-block checkout-tab-product-block">
+                            <img src="/images/present.jpg" alt="present">
+                            <div class="checkout-tab-product-box">
+                              <div class="checkout-tab-present-header checkout-tab-product-header">
+                                <span class="checkout-tab-present-span checkout-tab-product-span">
+                                  Смартфон Google Pixel 8 Pro 12/512GB Obsidian
+                                </span>
+                              </div>
+                              <div class="checkout-tab-present-bottom checkout-tab-product-bottom">
+                                <div class="checkout-tab-present-count-block checkout-tab-product-count-block">
+                                  <span class="checkout-tab-present-count checkout-tab-product-count">
+                                    Подарунок
+                                  </span>
+                                </div>
+                                <div class="checkout-tab-present-price-block checkout-tab-product-price-block">
+                                  <span class="checkout-tab-present-price checkout-tab-product-price">
+                                    <span>1</span>
+                                    ₴
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area__right-bottom">
+                      <div class="area__right-value-block">
+                        <span class="area__right-value">
+                          Сума замовлення
+                        </span>
+                      </div>
+                      <div class="area__right-price-block">
+                        <span class="area__right-price">
+                          <span>38430</span>
                           ₴
                         </span>
-                      </span>
-                      <span class="bonuses-valid-until">
-                        дійсні до
-                        <span class="bonuses-valid-until-date">
-                          31.08.2024
-                        </span>
-                      </span>
+                      </div>
                     </div>
-                    <span class="link-bonus-bottom bonuses-written-off link-bonus">
-                      Бонусів списано:
-                      <span class="bonuses-written-off-value bonuses-value">
-                        <span>96</span>
-                        ₴
-                      </span>
-                    </span>
                   </div>
-                </a>
+                </div>
               </div>
               <div class="global-square-pagination">
                 <a href="#" class="arrow-pagination-left arrow-pagination disable prohibit-transition">
@@ -4993,7 +6090,7 @@
                       <li>2</li>
                     </a>
                     <a href="#">
-                      <li class="hide_page">. . . </li>
+                      <li class="hide_page">. . .</li>
                     </a>
                   </ul>
                 </div>
