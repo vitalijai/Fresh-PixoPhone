@@ -45,6 +45,7 @@ $(document).ready(function () {
     $(".area__right-order-history-filter").slideUp();
   });
 
+  // Перемещение фильтра в истории заказов
   function moveFilter() {
     if ($(window).width() < 719) {
       if (
@@ -87,5 +88,41 @@ $(document).ready(function () {
   // Вызвать функцию при изменении размера окна
   $(window).resize(function () {
     moveFilter();
+  });
+
+  $(".global-button-edit").on("click", function () {
+    var $block = $(".area__right-block-active");
+    var $formContainer = $block.find(".form-container");
+    var $personalData = $block.find(".area__right-personal-data-filled");
+
+    $block.toggleClass("edit");
+
+    if ($block.hasClass("edit")) {
+      // Hide area__right-personal-data-filled first
+      $personalData
+        .fadeOut()
+        .promise()
+        .done(function () {
+          // After .area__right-personal-data-filled is hidden, show .form-container
+          $formContainer.slideDown().css("display", "flex");
+        });
+    } else {
+      // Hide .form-container first
+      $formContainer
+        .slideUp()
+        .promise()
+        .done(function () {
+          // After .form-container is hidden, show .area__right-personal-data-filled
+          $personalData.fadeIn();
+        });
+    }
+  });
+
+  $(".radio-payment").on("click", function () {
+    // Удаляем класс 'active' у всех кнопок
+    $(".radio-payment").removeClass("active");
+
+    // Добавляем класс 'active' только к нажатой кнопке
+    $(this).addClass("active");
   });
 });
