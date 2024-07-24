@@ -4553,6 +4553,9 @@ a:visited {
     color: var(--colors-gray-700, #2f2c2f);
     gap: 8px;
   }
+  .common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers span {
+    width: 100%;
+  }
   .common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers.promo {
     background: unset;
     padding: 0;

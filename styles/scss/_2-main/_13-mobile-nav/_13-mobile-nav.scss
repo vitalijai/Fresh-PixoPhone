@@ -767,6 +767,10 @@
 
           gap: 8px;
 
+          span {
+            width: 100%;
+          }
+
           &.promo {
             background: unset;
             padding: 0;
