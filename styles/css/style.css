@@ -6790,6 +6790,9 @@ a:visited {
   width: 16px;
   height: 16px;
 }
+.common-template .personal-area .personal-area-container .personal-area__right-side.clients .area__right .area__right-header-side::after {
+  transform: rotate(270deg);
+}
 .common-template .personal-area.authorized .personal-area__left-side .left-home__authorized-btn svg path {
   stroke: var(--colors-red-300, #fa8072);
 }

@@ -2380,6 +2380,16 @@
           // }
         }
       }
+
+      &.clients {
+        .area__right {
+          .area__right-header-side {
+            &::after {
+              transform: rotate(270deg);
+            }
+          }
+        }
+      }
     }
   }
 
