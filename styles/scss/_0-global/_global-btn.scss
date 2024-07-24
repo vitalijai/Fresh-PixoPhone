@@ -675,7 +675,7 @@
       background: var(--colors-gray-100, #f7f7f7);
 
       color: var(--colors-gray-300, #c0c0c0);
-      cursor: inherit;
+      pointer-events: none;
 
       &:hover {
         background: var(--colors-gray-100, #f7f7f7);
@@ -860,6 +860,29 @@
   }
 }
 
+.global-button-user-login {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.global-button-user-to-login {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  color: var(--colors-green-400, #62b278);
+  text-align: center;
+
+  font-size: 12px;
+}
 //Закрытие попап
 .global-pop-up-close {
   display: flex;
