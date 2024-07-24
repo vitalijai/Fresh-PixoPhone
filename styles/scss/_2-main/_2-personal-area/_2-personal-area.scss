@@ -883,6 +883,10 @@
                 align-items: flex-start;
                 gap: 16px;
                 flex: 1 0 0;
+
+                @media (max-width: 719px) {
+                  align-self: stretch;
+                }
               }
 
               .block-active-right {

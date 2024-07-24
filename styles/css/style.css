@@ -5550,6 +5550,11 @@ a:visited {
   gap: 16px;
   flex: 1 0 0;
 }
+@media (max-width: 719px) {
+  .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .block-active-left {
+    align-self: stretch;
+  }
+}
 .common-template .personal-area .personal-area-container .personal-area__right-side .area__right:not(.header-side) .area__right-block-active.questions .block-active-right {
   flex: 1 0 0;
   align-self: stretch;
