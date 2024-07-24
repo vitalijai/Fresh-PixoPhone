@@ -1135,6 +1135,7 @@
                       @media (max-width: 719px) {
                         font-size: 12px;
                         flex: unset;
+                        text-align: start;
 
                         .bonuses-value {
                           display: flex;
@@ -2390,6 +2391,126 @@
           }
         }
       }
+
+      &.bonus {
+        .area__right {
+          position: relative;
+          padding: 24px 24px 16px 24px !important;
+          gap: 16px;
+
+          .area__right-block-active {
+            max-height: 481px;
+            overflow: hidden;
+            justify-content: flex-start;
+
+            // pointer-events: none;
+
+            .global-square-pagination {
+              display: none;
+            }
+
+            &.billing {
+              padding: 0;
+            }
+          }
+
+          .fade {
+            position: absolute;
+            left: 0px;
+            bottom: 64px;
+
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(
+              0deg,
+              #fff 0%,
+              rgba(255, 255, 255, 0.75) 25%,
+              rgba(255, 255, 255, 0) 100%
+            );
+          }
+        }
+
+        .area__left-bonus-container {
+          display: none;
+
+          @media (max-width: 719px) {
+            display: flex;
+            padding: 24px 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+
+            border-radius: 24px;
+            background: var(---white, #fff);
+
+            .area__right-block-header {
+              color: var(--colors-gray-700, #2f2c2f);
+              font-size: 14px;
+            }
+
+            .tabs__link-menu__bonus {
+              display: flex;
+              padding: 20px 16px;
+              justify-content: center;
+              align-items: center;
+              gap: 16px;
+              align-self: stretch;
+
+              .left {
+                span {
+                  color: var(--colors-green-400, #62b278);
+                  leading-trim: both;
+                  text-edge: cap;
+                  font-size: 16px;
+                  font-weight: 500;
+                }
+              }
+
+              .price-bonus {
+                color: var(--colors-green-400, #62b278);
+                leading-trim: both;
+                text-edge: cap;
+                font-size: 48px;
+                font-weight: 500;
+              }
+            }
+
+            .area__left-bonus-bottom {
+              display: flex;
+              padding: 0px 16px;
+              align-items: center;
+              gap: 4px;
+              align-self: stretch;
+
+              color: var(--colors-gray-700, #2f2c2f);
+              font-size: 12px;
+              font-weight: 400;
+
+              .area__left-bonus-info {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                &::before {
+                  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 8C13.75 11.1756 11.1756 13.75 8 13.75C4.82436 13.75 2.25 11.1756 2.25 8C2.25 4.82436 4.82436 2.25 8 2.25C11.1756 2.25 13.75 4.82436 13.75 8ZM15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8ZM7.37484 4.11102V7.98792C7.37439 8.01266 7.37541 8.03735 7.37787 8.06184C7.38678 8.15247 7.41506 8.23742 7.4585 8.31249C7.50179 8.38763 7.56121 8.45457 7.63522 8.50759C7.6552 8.52197 7.67607 8.53519 7.69773 8.54717L10.2854 10.0412C10.5843 10.2138 10.9666 10.1113 11.1392 9.81241C11.3118 9.51348 11.2093 9.13124 10.9104 8.95865L8.62484 7.63907V4.11102C8.62484 3.76585 8.34502 3.48602 7.99984 3.48602C7.65466 3.48602 7.37484 3.76585 7.37484 4.11102Z" fill="%232F2C2F"/></svg>');
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+
+              .area__left-bonus-info-value {
+                display: flex;
+                gap: 2px;
+                flex-wrap: nowrap;
+                color: var(--colors-green-400, #62b278);
+
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -2418,21 +2539,20 @@
           display: flex !important;
         }
       }
-
-      .tabs__link-menu__bonus {
-        .left {
-          .top-unlogin,
-          .bottom {
-            display: none;
-          }
-          .top-login {
-            display: flex;
-          }
+    }
+    .tabs__link-menu__bonus {
+      .left {
+        .top-unlogin,
+        .bottom {
+          display: none;
         }
-
-        .price-bonus {
-          font-size: 40px;
+        .top-login {
+          display: flex;
         }
+      }
+
+      .price-bonus {
+        font-size: 40px;
       }
     }
   }

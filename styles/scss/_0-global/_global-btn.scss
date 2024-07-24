@@ -694,7 +694,8 @@
   font-size: 12px;
   font-weight: 500;
 
-  button {
+  button,
+  span {
     color: var(--colors-gray-400, #929292);
     text-align: justify;
     display: flex;
