@@ -767,10 +767,6 @@
 
           gap: 8px;
 
-          span {
-            width: 100%;
-          }
-
           &.promo {
             background: unset;
             padding: 0;
@@ -799,6 +795,9 @@
             gap: 8px;
             align-self: stretch;
 
+            span {
+              width: 100%;
+            }
             a {
               width: 100%;
 
