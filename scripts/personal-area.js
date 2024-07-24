@@ -20,6 +20,18 @@ $(document).ready(function () {
     }
   });
 
+  $(".header-switch-compare").on("change", function () {
+    // Найти блок, который содержит чекбокс и блок для отображения
+    var parentBlock = $(this)
+      .closest(".area__right-header-side-compare")
+      .next(".area__right-compare-content");
+
+    // Переключить видимость блока с анимацией и установить display: flex
+    parentBlock.slideToggle().css("display", "flex");
+
+    $(this).closest(".area__right-header-side-compare").toggleClass("active");
+  });
+
   // Фильтр десктоп
   $(".global-button-date").on("click", function () {
     $(".area__right-order-history-filter").slideToggle().css("display", "flex");
@@ -125,4 +137,27 @@ $(document).ready(function () {
     // Добавляем класс 'active' только к нажатой кнопке
     $(this).addClass("active");
   });
+
+  function checkWidthAndLanguage() {
+    var lang = $("html").attr("lang");
+    var buttonText = lang === "uk" ? "Купити" : "Купить";
+
+    if ($(window).width() < 719) {
+      $(".wishlist-container-order-button")
+        .removeClass("min")
+        .addClass("compare");
+      $(".wishlist-container-order-button button").text(buttonText);
+    } else {
+      $(".wishlist-container-order-button")
+        .addClass("min")
+        .removeClass("compare");
+      $(".wishlist-container-order-button button").text("");
+    }
+  }
+
+  // Проверка ширины и языка при загрузке страницы
+  checkWidthAndLanguage();
+
+  // Проверка ширины и языка при изменении размера окна
+  $(window).resize(checkWidthAndLanguage);
 });
