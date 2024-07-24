@@ -6229,6 +6229,126 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
       </div>
     </div>
     <!-- PopUp Login End-->
+    <!-- PopUp Registred -->
+    <div id="popUpRegistred" class="pop-up-login-modal global-pop-modal">
+      <div class="pop-up-registred-modal-content global-pop-modal-content user-login">
+        <div class="login-modal-header-block global-pop-modal-header">
+          <div class="global-pop-modal-header-top">
+            <span>Реєстрація</span>
+            <span class="pop-up-login-close global-pop-up-close"></span>
+          </div>
+        </div>
+        <div class="login-modal-form-container">
+          <form method="get" action="#" target="_top" autocomplete="off" class="login-modal-form">
+            <p>На вказаний номер ви отримаєте
+              код підтвердження для входу</p>
+            <div class="form-group">
+              <label for="name" class="form-label">Ім’я</label>
+              <input type="text" class="form-control form-control-name " name="username" inputmode="text"
+                pattern="[A-Za-zА-Яа-яЁё]+" required />
+              <label class="checkbox-label"></label>
+              <label class="error-label">помилка</label>
+            </div>
+            <div class="form-group">
+              <label for="firstname" class="form-label">Прізвище</label>
+              <input type="text" class="form-control form-control-firstname " name="userfirstname" inputmode="text"
+                pattern="[A-Za-zА-Яа-яЁё]+" required />
+              <label class="checkbox-label"></label>
+              <label class="error-label">помилка</label>
+            </div>
+            <div class="form-group ">
+              <label for="phone" class="form-label">Номер телефону</label>
+              <input type="text" class="form-control form-control-phone " name="userphone" inputmode="numeric"
+                id="check-form-contact-phone" placeholder="+38 (073) 55 50 305" pattern="[+()0-9]+" required>
+              <label class="checkbox-label"></label>
+              <label class="error-label">Номер не зареєстровано</label>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control form-control-email" name="useremail" inputmode="email" required />
+              <label class="checkbox-label"></label>
+              <label class="error-label">помилка</label>
+            </div>
+            <div class="form-group-container global-button-send-fast-buy disable">
+              <button type="submit">Продовжити</button>
+            </div>
+          </form>
+        </div>
+        <div class="login-modal-bootom-block">
+          <span>
+            Повернутись та
+            <button class="global-button-login global-button-user-to-login">увійти</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- PopUp Registred End-->
+    <!-- PopUp RegistredNumber -->
+    <div id="popUpRegistredNumber" class="pop-up-login-modal global-pop-modal">
+      <div class="pop-up-login-modal-content global-pop-modal-content user-login">
+        <div class="login-modal-header-block global-pop-modal-header">
+          <div class="global-pop-modal-header-top">
+            <span>Реєстрація</span>
+            <span class="pop-up-login-close global-pop-up-close"></span>
+          </div>
+        </div>
+        <div class="login-modal-form-container">
+          <form method="get" action="#" target="_top" autocomplete="off" class="login-modal-form">
+            <p>
+              Код підтвердження надіслано на номер
+              <br>
+              <span class="phone-number">
+                +38 073 555 03 05
+              </span>
+            </p>
+            <fieldset class="verification__field form-group ">
+              <div>
+                <input type="text" class="verification__input verification__input--1" id="verification-input-1"
+                  maxlength="1" />
+                <input type="text" class="verification__input verification__input--2" id="verification-input-2"
+                  maxlength="1" />
+                <input type="text" class="verification__input verification__input--3" id="verification-input-3"
+                  maxlength="1" />
+                <input type="text" class="verification__input verification__input--4" id="verification-input-4"
+                  maxlength="1" />
+              </div>
+              <label class="error-label">Неправильний код підтвердження</label>
+            </fieldset>
+            <div class="form-group-container global-button-send-fast-buy disable">
+              <button type="submit">Увійти</button>
+            </div>
+          </form>
+        </div>
+        <div class="login-modal-bootom-block">
+          <button class="global-button-registred-message global-button-user-to-login">проверка</button>
+          <span>
+            Повернутись до
+            <button class="global-button-sign-up global-button-user-to-login">реєстрації</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- PopUp RegistredNumber End-->
+    <!-- PopUp RegistredMessage -->
+    <div id="popUpRegistredMessage" class="pop-up-login-modal global-pop-modal">
+      <div class="pop-up-recovery-message-modal-content global-pop-modal-content user-login">
+        <div class="login-modal-header-block global-pop-modal-header">
+          <div class="global-pop-modal-header-top">
+            <span>Вхід</span>
+            <span class="pop-up-login-close global-pop-up-close"></span>
+          </div>
+        </div>
+        <div class="login-modal-form-container">
+          <img src="/images/no_img.png" alt="no_img">
+        </div>
+        <div class="login-modal-bootom-block">
+          <p>
+            Реєстрація успішна
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- PopUp RegistredMessage End-->
     <!-- PopUp LoginNumber -->
     <div id="popUpLoginNumber" class="pop-up-login-modal global-pop-modal">
       <div class="pop-up-login-modal-content global-pop-modal-content user-login">
@@ -6287,7 +6407,6 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
         </div>
         <div class="login-modal-form-container">
           <form method="get" action="#" target="_top" autocomplete="off" class="login-modal-form">
-
             <div class="form-group ">
               <label for="email" class="form-label">E-mail</label>
               <input type="email" class="form-control form-control-email" name="useremail" inputmode="email" required />

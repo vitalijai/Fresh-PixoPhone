@@ -7,7 +7,8 @@ $(document).ready(function () {
   const $popUpLoginNumber = $("#popUpLoginNumber");
   const $popUpLoginEmail = $("#popUpLoginEmail");
   const $popUpRecoverPassword = $("#popUpRecoverPassword");
-  const $popUpRecoverMessage = $("#popUpRecoverMessage"); // Добавлено
+  const $popUpRecoverMessage = $("#popUpRecoverMessage");
+  const $popUpRegistred = $("#popUpRegistred");
   const $formGroupContainer = $(
     ".form-group-container.global-button-send-fast-buy"
   );
@@ -37,13 +38,14 @@ $(document).ready(function () {
     updateClasses("add");
   });
 
-  // Close modal
+  // Close modals
   function closeModals() {
     toggleModalVisibility($popUpLoginNumber, "hide");
     toggleModalVisibility($popUpLogin, "hide");
     toggleModalVisibility($popUpLoginEmail, "hide");
     toggleModalVisibility($popUpRecoverPassword, "hide");
-    toggleModalVisibility($popUpRecoverMessage, "hide"); // Закрытие popUpRecoverMessage
+    toggleModalVisibility($popUpRecoverMessage, "hide");
+    toggleModalVisibility($popUpRegistred, "hide");
     updateClasses("remove");
   }
 
@@ -52,7 +54,7 @@ $(document).ready(function () {
   $(window).click(function (event) {
     if (
       $(event.target).is(
-        "#popUpLogin, #popUpLoginNumber, #popUpLoginEmail, #popUpRecoverPassword, #popUpRecoverMessage"
+        "#popUpLogin, #popUpLoginNumber, #popUpLoginEmail, #popUpRecoverPassword, #popUpRecoverMessage, #popUpRegistred"
       )
     ) {
       closeModals();
@@ -65,7 +67,7 @@ $(document).ready(function () {
     $formGroupContainer.toggleClass("disable", phoneInputLength < 19);
   });
 
-  // Show popUpLoginNumber or popUpLoginEmail
+  // Show modals
   function showModal(modal) {
     closeModals();
     toggleModalVisibility(modal, "show");
@@ -93,8 +95,22 @@ $(document).ready(function () {
 
   // Show popUpRecoverMessage on recover message button click
   $(".global-button-recover-message").click(function () {
-    closeModals(); // Close other modals
-    toggleModalVisibility($popUpRecoverMessage, "show"); // Open popUpRecoverMessage
+    closeModals();
+    toggleModalVisibility($popUpRecoverMessage, "show");
+    updateClasses("add");
+  });
+
+  // Show popUpRegistred on sign up button click
+  $(".global-button-sign-up").click(function () {
+    closeModals();
+    toggleModalVisibility($popUpRegistred, "show");
+    updateClasses("add");
+  });
+
+  // Show popUpLogin on login button click
+  $(".global-button-login").click(function () {
+    closeModals();
+    toggleModalVisibility($popUpLogin, "show");
     updateClasses("add");
   });
 
@@ -148,16 +164,16 @@ $(document).ready(function () {
     $(this).toggleClass("show-password hide-password");
   });
 
-  // Validate inputs
+  // Validate inputs in popUpRegistred
   function validateInputs() {
-    const allFilled = $(".verification__field input")
+    const allFilled = $("#popUpRegistred .form-group input")
       .toArray()
       .every((input) => $(input).val().trim() !== "");
     $formGroupContainer.toggleClass("disable", !allFilled);
   }
 
   // Check inputs on change and on page load
-  $(".verification__field input").on("input", validateInputs);
+  $("#popUpRegistred .form-group input").on("input", validateInputs);
   validateInputs();
 
   // Handle email input for password recovery

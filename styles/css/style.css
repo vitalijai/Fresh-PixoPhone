@@ -2556,6 +2556,9 @@ a:visited {
 .global-pop-modal .global-pop-modal-content.user-login.pop-up-recovery-modal-content {
   min-height: 320px;
 }
+.global-pop-modal .global-pop-modal-content.user-login.pop-up-registred-modal-content {
+  min-height: 520px;
+}
 .global-pop-modal .global-pop-modal-content.user-login.pop-up-recovery-message-modal-content {
   min-height: unset;
 }
