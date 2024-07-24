@@ -6,6 +6,8 @@ $(document).ready(function () {
   const $popUpLogin = $("#popUpLogin");
   const $popUpLoginNumber = $("#popUpLoginNumber");
   const $popUpLoginEmail = $("#popUpLoginEmail");
+  const $popUpRecoverPassword = $("#popUpRecoverPassword");
+  const $popUpRecoverMessage = $("#popUpRecoverMessage"); // Добавлено
   const $formGroupContainer = $(
     ".form-group-container.global-button-send-fast-buy"
   );
@@ -40,6 +42,8 @@ $(document).ready(function () {
     toggleModalVisibility($popUpLoginNumber, "hide");
     toggleModalVisibility($popUpLogin, "hide");
     toggleModalVisibility($popUpLoginEmail, "hide");
+    toggleModalVisibility($popUpRecoverPassword, "hide");
+    toggleModalVisibility($popUpRecoverMessage, "hide"); // Закрытие popUpRecoverMessage
     updateClasses("remove");
   }
 
@@ -47,7 +51,9 @@ $(document).ready(function () {
 
   $(window).click(function (event) {
     if (
-      $(event.target).is("#popUpLogin, #popUpLoginNumber, #popUpLoginEmail")
+      $(event.target).is(
+        "#popUpLogin, #popUpLoginNumber, #popUpLoginEmail, #popUpRecoverPassword, #popUpRecoverMessage"
+      )
     ) {
       closeModals();
     }
@@ -77,6 +83,20 @@ $(document).ready(function () {
   $(".global-button-send-sms, .global-button-send-number").click(() =>
     showModal($popUpLogin)
   );
+
+  // Show popUpRecoverPassword on reset password button click
+  $(".global-button-reset-password").click(function () {
+    closeModals();
+    toggleModalVisibility($popUpRecoverPassword, "show");
+    updateClasses("add");
+  });
+
+  // Show popUpRecoverMessage on recover message button click
+  $(".global-button-recover-message").click(function () {
+    closeModals(); // Close other modals
+    toggleModalVisibility($popUpRecoverMessage, "show"); // Open popUpRecoverMessage
+    updateClasses("add");
+  });
 
   // Handle verification inputs
   $verificationInputs.each(function (index) {
@@ -139,4 +159,13 @@ $(document).ready(function () {
   // Check inputs on change and on page load
   $(".verification__field input").on("input", validateInputs);
   validateInputs();
+
+  // Handle email input for password recovery
+  $("#popUpRecoverPassword input[type='email']").on("input", function () {
+    const emailInput = $(this).val().trim();
+    const submitButtonContainer = $(this)
+      .closest("#popUpRecoverPassword")
+      .find(".form-group-container.global-button-send-fast-buy");
+    submitButtonContainer.toggleClass("disable", emailInput === "");
+  });
 });

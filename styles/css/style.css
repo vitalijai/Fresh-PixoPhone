@@ -2553,6 +2553,12 @@ a:visited {
   width: 272px;
   min-height: 360px;
 }
+.global-pop-modal .global-pop-modal-content.user-login.pop-up-recovery-modal-content {
+  min-height: 320px;
+}
+.global-pop-modal .global-pop-modal-content.user-login.pop-up-recovery-message-modal-content {
+  min-height: unset;
+}
 @media (max-width: 719px) {
   .global-pop-modal .global-pop-modal-content.user-login {
     width: 70%;
@@ -2561,9 +2567,21 @@ a:visited {
 .global-pop-modal .global-pop-modal-content.user-login .global-pop-modal-header .global-pop-modal-header-top {
   font-size: 14px;
 }
+.global-pop-modal .global-pop-modal-content.user-login p {
+  margin: 0;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+}
 .global-pop-modal .global-pop-modal-content.user-login .login-modal-form-container {
   flex: 1 0 0;
   width: 100%;
+}
+.global-pop-modal .global-pop-modal-content.user-login .login-modal-form-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 152px;
 }
 .global-pop-modal .global-pop-modal-content.user-login .login-modal-form-container .phone-number {
   color: var(--colors-gray-700, #2f2c2f);
@@ -2577,13 +2595,6 @@ a:visited {
   gap: 16px;
   flex: 1 0 0;
   align-self: stretch;
-}
-.global-pop-modal .global-pop-modal-content.user-login .login-modal-form-container .login-modal-form p {
-  margin: 0;
-  color: var(--colors-gray-700, #2f2c2f);
-  text-align: center;
-  font-size: 12px;
-  font-weight: 400;
 }
 .global-pop-modal .global-pop-modal-content.user-login .login-modal-form-container .login-modal-form .form-group {
   display: flex;
