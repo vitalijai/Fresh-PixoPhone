@@ -4576,7 +4576,7 @@ a:visited {
     gap: 8px;
     align-self: stretch;
   }
-  .common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__content span {
+  .common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__content span:not(.price-bonus) {
     width: 100%;
   }
   .common-template .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .tabs__link-menu-containers .tabs__link-menu__content a {

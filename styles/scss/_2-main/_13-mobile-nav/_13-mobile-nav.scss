@@ -795,7 +795,7 @@
             gap: 8px;
             align-self: stretch;
 
-            span {
+            span:not(.price-bonus) {
               width: 100%;
             }
             a {
