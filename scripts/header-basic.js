@@ -38,11 +38,6 @@ window.addEventListener("scroll", function () {
   });
 });
 
-window.addEventListener("load", function () {
-  const scrollContainer = document.querySelector(".breadcrumbs");
-  scrollContainer.scrollLeft = scrollContainer.scrollWidth;
-});
-
 (function () {
   const elements = document.querySelectorAll(".tabs__link-description");
   if (window.innerWidth < 719) {

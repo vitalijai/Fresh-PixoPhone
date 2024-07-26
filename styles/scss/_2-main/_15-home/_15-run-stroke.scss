@@ -4,11 +4,14 @@
   background-color: #333;
   color: #fff;
   padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 
   > div {
     animation: marquee linear infinite;
     display: inline-block;
     width: fit-content;
+    animation-play-state: running; // По умолчанию анимация работает
   }
 
   a {
@@ -24,11 +27,12 @@
     animation-duration: 15s; // Быстрая скорость
   }
 
-  &.slow {
-    background-color: #fff;
-  }
   &.slow > div {
     animation-duration: 15s; // Медленная скорость
+  }
+
+  &:hover > div {
+    animation-play-state: paused; // Остановить анимацию при наведении
   }
 }
 

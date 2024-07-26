@@ -5,8 +5,10 @@
 
   padding-bottom: 32px;
 
-  @import "../_2-main/15-home";
-  @import "../_2-main/15-run-stroke";
+  @import "../_2-main/_15-home/15-mini-header";
+  @import "../_2-main/_15-home/15-promo-baners";
+  @import "../_2-main/_15-home/15-run-stroke";
+  @import "../_2-main/_15-home/15-home";
 
   @media (max-width: 719px) {
     gap: 12px;
