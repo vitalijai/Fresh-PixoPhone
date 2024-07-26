@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     autoWidth: true,
     drag: true,
     gap: 24,
-    // autoScroll: {
-    //   speed: 0.3,
-    //   pauseOnHover: true,
-    // },
+    autoScroll: {
+      speed: 0.3,
+      pauseOnHover: true,
+    },
   });
-  splide.mount();
-  //   splide.mount(window.splide.Extensions);
+  //   splide.mount();
+  splide.mount(window.splide.Extensions);
 });
