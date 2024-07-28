@@ -3518,6 +3518,7 @@ a:visited {
   --colors-red-300: #fa8072;
   --colors-red-500: #dc343b;
   --colors-violet-300: #b57edc;
+  --colors-yellow-500: #ffbf00;
   --modal-colors-white: #fff;
   --modal-colors-blue-400: #62a8ed;
   --modal-colors-gray-100: #f7f7f7;
@@ -3528,4 +3529,25 @@ a:visited {
   --modal-colors-green-100: #e9f9e9;
   --modal-colors-green-400: #62b278;
   --modal-colors-red-300: #fa8072;
+  --smartphone: #b57edc;
+  --smartphone-hover: #9f6fc2;
+  --laptops: #3d9af6;
+  --laptops-hover: #3789db;
+  --keyboards: #d981e7;
+  --keyboards-hover: #c273cf;
+  --access: #81d8d0;
+  --access-hover: #72bfb8;
+  --audio: #81d88f;
+  --audio-hover: #72bf7f;
+  --charging-stations: #ffbf00;
+  --charging-stations-hover: #e5ac00;
+  --tablets: #3d9af6;
+  --tablets-hover: #3789db;
+  --gaming: #52dce5;
+  --gaming-hover: #49c4cc;
+  --smart-gadgets: #eee967;
+  --smart-gadgets-hover: #d4cf5c;
+  --computers: #d981e7;
+  --computers-hover: #c273cf;
+  --promotions: #dc343b;
 }/*# sourceMappingURL=global.css.map */
