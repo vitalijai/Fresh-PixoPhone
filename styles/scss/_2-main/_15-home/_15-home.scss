@@ -223,7 +223,22 @@
               transition: top 0.5s ease;
               width: 185px;
               height: 185px;
-              animation: resizeAnimation 1000ms infinite alternate ease-out;
+              animation: resizeAnimation 1000ms infinite alternate ease-in-out;
+            }
+            svg {
+              position: absolute;
+              top: 40%;
+              left: 50%;
+              transform: translate(-50%, 0);
+              width: 381px;
+              height: 390px;
+              fill: var(--colors-white, #fff);
+              z-index: -1;
+              opacity: 0.75;
+              mix-blend-mode: soft-light;
+              transition: opacity 0.5s ease, top 0.5s ease;
+
+              animation: rotateClockwise 10s linear infinite;
             }
 
             @keyframes resizeAnimation {
@@ -234,6 +249,14 @@
               100% {
                 width: 172px;
                 height: 172px;
+              }
+            }
+            @keyframes rotateClockwise {
+              from {
+                transform: translate(-50%, 0) rotate(0deg);
+              }
+              to {
+                transform: translate(-50%, 0) rotate(360deg);
               }
             }
 
@@ -248,6 +271,13 @@
                 top: 50px;
                 width: 200px;
                 height: 200px;
+                animation: none;
+              }
+
+              svg {
+                top: 30%;
+                opacity: 1;
+                mix-blend-mode: unset;
                 animation: none;
               }
             }
@@ -877,6 +907,7 @@
         .mini-promo--item {
           display: flex;
           position: relative;
+          overflow: hidden;
 
           .medium {
             display: flex;
@@ -1006,8 +1037,9 @@
                 width: 109px;
                 height: 109px;
                 transform: translate(-50%, 0);
+                z-index: 1;
 
-                animation: resizeAnimation 1000ms infinite alternate ease-out;
+                animation: resizeAnimation 1000ms infinite alternate ease-in-out;
               }
 
               @keyframes resizeAnimation {
@@ -1018,6 +1050,31 @@
                 100% {
                   width: 100px;
                   height: 100px;
+                }
+              }
+
+              svg {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 211px;
+                height: 215px;
+                fill: var(--colors-white, #fff);
+                z-index: 0;
+                opacity: 0.75;
+                mix-blend-mode: soft-light;
+                transition: opacity 0.5s ease, top 0.5s ease;
+
+                animation: rotateClockwise 10s linear infinite;
+              }
+
+              @keyframes rotateClockwise {
+                from {
+                  transform: translate(-50%, 0) rotate(0deg);
+                }
+                to {
+                  transform: translate(-50%, 0) rotate(360deg);
                 }
               }
             }
