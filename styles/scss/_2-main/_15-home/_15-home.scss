@@ -5,8 +5,12 @@
   .home-content-container {
     @include flexbox($justify: center, $self: stretch);
     display: flex;
-    flex-wrap: wrap;
+
     gap: 10px;
+
+    @media (max-width: 719px) {
+      flex-direction: column;
+    }
 
     .grid-container {
       display: grid;
@@ -28,6 +32,17 @@
         "smartphone smartphone keyboards access access"
         "audio charging-stations tablets smart-gadgets computers"
         "audio gaming gaming smart-gadgets promotions";
+
+      @media (max-width: 719px) {
+        grid-template-columns: minmax(200px, 700px);
+        grid-template-rows: 100px 100px 100px 100px 100px;
+        grid-template-areas:
+          "smartphone "
+          "gaming "
+          "smart-gadgets "
+          "audio "
+          "access ";
+      }
 
       .grid-item {
         display: flex;
@@ -55,6 +70,9 @@
         }
 
         &.medium {
+          @media (max-width: 719px) {
+            display: none;
+          }
           .top {
             display: flex;
             padding: 32px 16px 0px 16px;
@@ -287,6 +305,11 @@
               background: var(--colors-white, #fff);
 
               font-size: 20px;
+
+              @media (max-width: 1280px) {
+                padding: 8px 16px;
+                font-size: 16px;
+              }
             }
           }
 
@@ -379,6 +402,16 @@
               height: 513.766px;
               transform: rotate(5deg) translate(-50%, 0);
               transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease; /* Add transition for smooth transform changes */
+
+              @media (max-width: 719px) {
+                width: 193.51px;
+                height: 193.51px;
+                transform: rotate(2deg);
+                top: unset;
+                left: unset;
+                right: -25.454px;
+                bottom: -99.752px;
+              }
             }
           }
 
@@ -390,6 +423,16 @@
               height: 513.766px;
               transform: rotate(-3deg) translate(-50%, 0);
               transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease; /* Add transition for smooth transform changes */
+
+              @media (max-width: 719px) {
+                width: 176.92px;
+                height: 176.92px;
+                transform: rotate(-2.459deg);
+                top: unset;
+                left: unset;
+                right: -21.844px;
+                bottom: -85.563px;
+              }
             }
           }
         }
@@ -431,6 +474,16 @@
               height: 279.621px;
               transform: rotate(3deg) translate(-50%, 0);
               transition: transform 0.5s ease, top 0.5s ease; /* Add transition for smooth transform changes */
+
+              @media (max-width: 719px) {
+                width: 120.591px;
+                height: 120.591px;
+                transform: rotate(4.577deg);
+                top: unset;
+                left: unset;
+                right: 0.594px;
+                bottom: -21.169px;
+              }
             }
 
             .animation {
@@ -446,6 +499,15 @@
               height: 286px;
               transform: rotate(-13.994deg) translate(-50%, 0);
               transition: transform 0.5s ease, top 0.5s ease; /* Add transition for smooth transform changes */
+
+              @media (max-width: 719px) {
+                width: 155px;
+                height: 155px;
+                transform: rotate(8.51deg);
+                left: unset;
+                right: 4.384px;
+                top: -52.616px;
+              }
             }
 
             .animation {
@@ -488,81 +550,127 @@
             height: 306.544px;
             transform: rotate(6.095deg) translate(-50%, 0);
             transition: transform 0.5s ease, top 0.5s ease, left 0.5s ease; /* Add transition for smooth transform changes */
+
+            @media (max-width: 719px) {
+              width: 120px;
+              height: 120px;
+              transform: rotate(8.648deg);
+              top: unset;
+              left: unset;
+              right: 0px;
+              bottom: -36.679px;
+            }
           }
         }
 
         &:hover {
-          .top {
-            opacity: 0.8;
-          }
-          .container-links {
-            transform: translateY(0);
-          }
-          .arrow {
-            opacity: 0;
-          }
-
-          &.large {
-            .animation {
-              &.left {
-                right: 800px;
-              }
-              &.right {
-                left: 800px;
-              }
+          @media (min-width: 720px) {
+            .top {
+              opacity: 0.8;
+            }
+            .container-links {
+              transform: translateY(0);
+            }
+            .arrow {
+              opacity: 0;
             }
 
-            img {
-              top: 50px;
-              left: 50%;
-              width: 497px;
-              height: 621px;
-              transform: rotate(0deg) translate(-50%, 0);
-            }
-          }
-
-          &.inverted-rectangle {
-            .animation {
-              &.right {
-                left: 400px;
+            &.large {
+              .animation {
+                &.left {
+                  right: 800px;
+                }
+                &.right {
+                  left: 800px;
+                }
               }
-              &.left {
-                right: 400px;
-              }
-            }
 
-            &.smart-gadgets {
               img {
-                top: 140px;
-                width: 266.084px;
-                height: 266.084px;
-                transform: rotate(18deg) translate(-50%, 0);
-              }
-            }
-
-            &.audio {
-              img {
-                top: 90px;
-                width: 260px;
-                height: 260px;
+                top: 50px;
+                left: 50%;
+                width: 497px;
+                height: 621px;
                 transform: rotate(0deg) translate(-50%, 0);
               }
             }
-          }
 
-          &.rectangle {
-            .animation {
-              &.right {
-                left: 800px;
+            &.inverted-rectangle {
+              .animation {
+                &.right {
+                  left: 400px;
+                }
+                &.left {
+                  right: 400px;
+                }
+              }
+
+              &.smart-gadgets {
+                img {
+                  top: 140px;
+                  width: 266.084px;
+                  height: 266.084px;
+                  transform: rotate(18deg) translate(-50%, 0);
+                }
+              }
+
+              &.audio {
+                img {
+                  top: 90px;
+                  width: 260px;
+                  height: 260px;
+                  transform: rotate(0deg) translate(-50%, 0);
+                }
               }
             }
 
-            img {
-              top: 15px;
-              left: 68%;
-              width: 242px;
-              height: 242px;
-              transform: rotate(8.648deg) translate(-50%, 0);
+            &.rectangle {
+              .animation {
+                &.right {
+                  left: 800px;
+                }
+              }
+
+              img {
+                top: 15px;
+                left: 68%;
+                width: 242px;
+                height: 242px;
+                transform: rotate(8.648deg) translate(-50%, 0);
+              }
+            }
+          }
+        }
+
+        @media (max-width: 719px) {
+          border-radius: 16px;
+
+          .top {
+            opacity: 0.9 !important;
+            padding: 12px 0px 0px 16px !important;
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            justify-content: flex-start !important;
+          }
+
+          .animation,
+          .arrow {
+            display: none !important;
+          }
+
+          .container-links {
+            width: calc(100% - 12px) !important;
+            padding: 32px 0px 12px 12px !important;
+            gap: 4px !important;
+            transform: unset !important;
+            flex-direction: unset !important;
+            justify-content: flex-start !important;
+            overflow: auto;
+
+            .grid__link {
+              height: 28px !important;
+              padding: 0px 16px !important;
+
+              font-size: 14px !important;
             }
           }
         }
@@ -756,6 +864,164 @@
         &.promotions {
           grid-area: promotions;
           background: var(--promotions, #dc343b);
+        }
+      }
+    }
+
+    .mini-promo-baner {
+      display: none;
+
+      @media (max-width: 719px) {
+        display: block;
+
+        .mini-promo--item {
+          display: flex;
+          position: relative;
+
+          .medium {
+            display: flex;
+            width: 150px;
+            height: 100px;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: hidden;
+            width: 150px;
+            height: 100px;
+            border-radius: 16px;
+            background: #d981e7;
+
+            .top {
+              display: flex;
+              padding: 8px 8px 0px 8px;
+              align-items: center;
+              justify-content: center;
+              align-self: stretch;
+
+              mix-blend-mode: soft-light;
+              text-wrap: nowrap;
+              opacity: 0.8;
+
+              color: #fff;
+              font-size: 16px;
+              font-weight: 600;
+            }
+
+            img {
+              position: absolute;
+              object-fit: contain;
+            }
+
+            &.laptops {
+              img {
+                top: 16px;
+                left: 50%;
+                width: 106px;
+                height: 106px;
+                transform: translate(-50%, 0);
+              }
+
+              background: var(--laptops, #3d9af6);
+
+              &:hover {
+                background: var(--laptops-hover, #3789db);
+              }
+            }
+
+            &.keyboards {
+              img {
+                top: -10px;
+                left: 40%;
+                width: 118.535px;
+                height: 118.535px;
+                transform: rotate(-23.348deg) translate(-50%, 0);
+              }
+
+              background: var(--keyboards, #d981e7);
+
+              &:hover {
+                background: var(--keyboards-hover, #c273cf);
+              }
+            }
+
+            &.charging-stations {
+              img {
+                top: 16px;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                width: 90px;
+                height: 111px;
+              }
+
+              background: var(--charging-stations, #ffbf00);
+
+              &:hover {
+                background: var(--charging-stations-hover, #e5ac00);
+              }
+            }
+
+            &.tablets {
+              img {
+                top: 16px;
+                left: 50%;
+                width: 119px;
+                height: 119px;
+                transform: translate(-50%, 0);
+              }
+
+              background: var(--tablets, #3d9af6);
+
+              &:hover {
+                background: var(--tablets-hover, #3789db);
+              }
+            }
+
+            &.computers {
+              img {
+                top: 21px;
+                left: 50%;
+                width: 123px;
+                height: 123px;
+                transform: translate(-50%, 0);
+              }
+
+              background: var(--computers, #d981e7);
+
+              &:hover {
+                background: var(--computers-hover, #c273cf);
+              }
+            }
+
+            &.promotions {
+              background: var(--promotions, #dc343b);
+
+              .top {
+                padding: 8px 8px 0px 8px;
+                mix-blend-mode: unset;
+              }
+
+              img {
+                top: 32px;
+                left: 50%;
+                width: 109px;
+                height: 109px;
+                transform: translate(-50%, 0);
+
+                animation: resizeAnimation 1000ms infinite alternate ease-out;
+              }
+
+              @keyframes resizeAnimation {
+                0% {
+                  width: 109px;
+                  height: 109px;
+                }
+                100% {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+            }
+          }
         }
       }
     }

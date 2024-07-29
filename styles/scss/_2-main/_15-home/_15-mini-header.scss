@@ -9,10 +9,32 @@
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
+  @media (max-width: 719px) {
+    overflow-x: auto;
+    background: unset;
+    box-shadow: unset;
+  }
+
   .header-popular-page-container {
     display: flex;
     align-items: center;
     padding: 8px 0px;
+
+    .menu_pixocoin {
+      display: none;
+    }
+
+    @media (max-width: 719px) {
+      gap: 8px;
+
+      .menu_pixocoin {
+        display: flex;
+
+        .circle {
+          background: var(--bg-color, #f5f5f5);
+        }
+      }
+    }
 
     .popular-page-container {
       display: flex;
@@ -30,8 +52,28 @@
         height: 32px;
       }
 
+      @media (max-width: 719px) {
+        padding: 4px 8px 4px 4px;
+        align-items: center;
+        gap: 4px;
+
+        border-radius: 8px;
+        background: var(--colors-white, #fff);
+        font-size: 12px;
+        text-wrap: nowrap;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
       &:not(:last-child) {
         border-right: 1px solid var(--colors-gray-200, #e5e4e2);
+
+        @media (max-width: 719px) {
+          border-right: unset;
+        }
       }
 
       //   &:hover {

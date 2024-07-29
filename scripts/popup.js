@@ -160,6 +160,7 @@ $(document).ready(function () {
       $(".back-to-top").removeClass("mobile");
       $(".p-short-info-mobile").removeClass("mobile");
       $(".video-container").removeClass("closing");
+      $(".pop-up-promo-modal").css("z-index", "99");
       $this.find(".tabs__link-menu-list-bottom-arrow").removeClass("active");
     } else {
       // Если текущий элемент не активен, активируем его и обновляем классы на других элементах
@@ -172,6 +173,7 @@ $(document).ready(function () {
       $(".p-short-info-mobile").addClass("mobile");
       $(".back-to-top").addClass("mobile");
       $(".video-container").addClass("closing");
+      $(".pop-up-promo-modal").css("z-index", "19");
 
       // Update arrow state for this element
       updateArrow($this);
