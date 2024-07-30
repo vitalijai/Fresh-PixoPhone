@@ -1535,6 +1535,12 @@
   right: 30px;
   width: 140px;
 }
+.common-template .exclusive-recently-viewed {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
 @media (max-width: 719px) {
   .common-template {
     gap: 12px;
