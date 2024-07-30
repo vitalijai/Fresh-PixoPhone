@@ -59,7 +59,7 @@
 
   &.about-gadget {
     background: linear-gradient(0deg, #6cffdc 0%, #6cffdc 100%),
-      radial-gradient(134.79% 51.12% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+      radial-gradient(51.12% 134.79% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
 
     img {
       top: -10px;
@@ -72,7 +72,7 @@
 
   &.old-smartphone {
     background: radial-gradient(
-      134.79% 51.12% at 83.82% 50%,
+      51.12% 134.79% at 83.82% 50%,
       #81dcec 0%,
       #0eb7d4 100%
     );
@@ -87,7 +87,7 @@
 
   &.delivery-europe {
     background: linear-gradient(0deg, #8b78ff 0%, #8b78ff 100%),
-      radial-gradient(134.79% 51.12% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+      radial-gradient(51.12% 134.79% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
 
     img {
       top: -10px;
@@ -112,6 +112,14 @@
     }
 
     &.about-gadget {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.16) 0%,
+          rgba(255, 255, 255, 0.16) 100%
+        ),
+        linear-gradient(0deg, #6cffdc 0%, #6cffdc 100%),
+        radial-gradient(51.12% 134.79% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+
       img {
         top: -20px;
         right: 10px;
@@ -122,6 +130,12 @@
     }
 
     &.old-smartphone {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.16) 0%,
+          rgba(255, 255, 255, 0.16) 100%
+        ),
+        radial-gradient(51.12% 134.79% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
       img {
         top: -30px;
 
@@ -130,6 +144,14 @@
     }
 
     &.delivery-europe {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.16) 0%,
+          rgba(255, 255, 255, 0.16) 100%
+        ),
+        linear-gradient(0deg, #8b78ff 0%, #8b78ff 100%),
+        radial-gradient(51.12% 134.79% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+
       img {
         top: -45px;
         right: 30px;
