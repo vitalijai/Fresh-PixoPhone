@@ -101,6 +101,17 @@
   justify-content: center;
   align-items: center;
 }
+.footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__social-media-container .footer-nav__contact-link:hover:not(.footer-nav__link-viber) svg path:not(:last-child) {
+  fill: var(--colors-green-700, #1d6d33);
+}
+.footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__social-media-container .footer-nav__contact-link:hover.footer-nav__link-viber {
+  background: var(--colors-green-700, #1d6d33);
+  border-radius: 50%;
+}
+.footer .footer-content-container .footer-top .footer-container a:hover,
+.footer .footer-content-container .footer-top .footer-nav__contact a:hover {
+  color: var(--colors-green-600, #25863f);
+}
 .footer .footer-content-container .footer-top .footer-logo-container {
   gap: var(---gap-basic, 24px);
   user-select: none;

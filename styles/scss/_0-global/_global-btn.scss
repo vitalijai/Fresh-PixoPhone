@@ -813,11 +813,10 @@
 }
 
 //Вернуться к верху
-.back-to-top {
+.back-to-top,
+.messenger {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
-  right: -52px;
+
   display: inline-flex;
 
   padding: 13px 12px 11px 12px;
@@ -844,6 +843,24 @@
   &:hover {
     background: var(--colors-green-600, #25863f);
   }
+}
+
+.messenger {
+  bottom: 84px;
+  right: 32px;
+  // right: -64px;
+  border: unset;
+
+  &::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M27.4667 25.2H11.168C10.6667 25.2 10.1867 25.3707 9.80267 25.6907L4 30.5333V8.13333C4 6.96 4.96 6 6.13333 6H27.4667C28.64 6 29.6 6.96 29.6 8.13333V23.0667C29.6 24.24 28.64 25.2 27.4667 25.2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.4 29.4775V30.5335C10.4 31.7068 11.36 32.6668 12.5333 32.6668H28.832C29.3333 32.6668 29.8133 32.8375 30.1973 33.1575L36 38.0001V15.6001C36 14.4268 35.04 13.4668 33.8667 13.4668H32.9387" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.6801 17.3069C12.6227 17.3069 13.3868 16.5428 13.3868 15.6002C13.3868 14.6577 12.6227 13.8936 11.6801 13.8936C10.7376 13.8936 9.97345 14.6577 9.97345 15.6002C9.97345 16.5428 10.7376 17.3069 11.6801 17.3069Z" fill="white"/><path d="M16.7997 17.3069C17.7423 17.3069 18.5064 16.5428 18.5064 15.6002C18.5064 14.6577 17.7423 13.8936 16.7997 13.8936C15.8571 13.8936 15.093 14.6577 15.093 15.6002C15.093 16.5428 15.8571 17.3069 16.7997 17.3069Z" fill="white"/><path d="M21.92 17.3069C22.8626 17.3069 23.6267 16.5428 23.6267 15.6002C23.6267 14.6577 22.8626 13.8936 21.92 13.8936C20.9774 13.8936 20.2133 14.6577 20.2133 15.6002C20.2133 16.5428 20.9774 17.3069 21.92 17.3069Z" fill="white"/></svg>');
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.back-to-top {
+  bottom: 32px;
+  right: -52px;
 
   &::before {
     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 10L8 4L2 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');

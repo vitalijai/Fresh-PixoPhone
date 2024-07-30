@@ -36,6 +36,17 @@ $(document).ready(function () {
     gap: 8,
   });
 
+  // Инициализация третьего слайдера
+  var splideMonoBrand = new Splide("#monoBrand", {
+    width: 930, // Устанавливаем начальную ширину
+    autoWidth: true,
+
+    pagination: false,
+    arrows: true,
+    drag: true,
+    gap: 16,
+  });
+
   // Функция для обновления ширины слайдера
   function updateSplideWidth() {
     splideMobile.options.width = getWindowWidth(); // Обновляем ширину слайдера
@@ -54,6 +65,7 @@ $(document).ready(function () {
   // Инициализация слайдеров
   splide.mount(window.splide.Extensions);
   splideMobile.mount();
+  splideMonoBrand.mount();
   splideMiniMobile.mount();
 
   $(".promo--item").on("click", function () {

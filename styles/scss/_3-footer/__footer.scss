@@ -112,10 +112,30 @@
             width: 32px;
             height: 32px;
             @include flexbox($alignItems: center, $justify: center);
+
+            &:hover:not(.footer-nav__link-viber) {
+              svg {
+                path:not(:last-child) {
+                  fill: var(--colors-green-700, #1d6d33);
+                }
+              }
+            }
+            &:hover.footer-nav__link-viber {
+              background: var(--colors-green-700, #1d6d33);
+              border-radius: 50%;
+            }
           }
         }
       }
 
+      .footer-container,
+      .footer-nav__contact {
+        & a {
+          &:hover {
+            color: var(--colors-green-600, #25863f);
+          }
+        }
+      }
       .footer-logo-container {
         $width: 144px;
         gap: var(---gap-basic, 24px);
