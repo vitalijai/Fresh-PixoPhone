@@ -1434,6 +1434,107 @@
   bottom: 24px;
   right: 32px;
 }
+.common-template .promo-rectangle-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .promo-rectangle-content .promo-rectangle-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 32px;
+}
+.common-template .promo-rectangle-content.mobile {
+  display: none;
+}
+.common-template .promo-rectangle-block {
+  display: flex;
+  min-width: 380px;
+  max-width: 480px;
+  height: 64px;
+  padding: 8px 8px 8px 24px;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 0 0;
+  position: relative;
+  border-radius: 16px;
+  background-blend-mode: hue, normal;
+}
+.common-template .promo-rectangle-block span {
+  color: var(--colors-white, #fff);
+  font-size: 20px;
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+.common-template .promo-rectangle-block .promo-rectangle-span__hover {
+  position: absolute;
+  opacity: 0;
+}
+.common-template .promo-rectangle-block img {
+  position: absolute;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.common-template .promo-rectangle-block svg {
+  position: absolute;
+  right: 0;
+  opacity: 0.5;
+}
+.common-template .promo-rectangle-block.about-gadget {
+  background: linear-gradient(0deg, #6cffdc 0%, #6cffdc 100%), radial-gradient(134.79% 51.12% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+}
+.common-template .promo-rectangle-block.about-gadget img {
+  top: -10px;
+  right: 20px;
+  width: 100px;
+  transform: rotate(-15deg);
+}
+.common-template .promo-rectangle-block.old-smartphone {
+  background: radial-gradient(134.79% 51.12% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+}
+.common-template .promo-rectangle-block.old-smartphone img {
+  top: -5px;
+  right: 20px;
+  width: 132px;
+}
+.common-template .promo-rectangle-block.delivery-europe {
+  background: linear-gradient(0deg, #8b78ff 0%, #8b78ff 100%), radial-gradient(134.79% 51.12% at 83.82% 50%, #81dcec 0%, #0eb7d4 100%);
+}
+.common-template .promo-rectangle-block.delivery-europe img {
+  top: -10px;
+  right: 10px;
+  width: 116px;
+}
+.common-template .promo-rectangle-block:hover .promo-rectangle-span {
+  opacity: 0;
+}
+.common-template .promo-rectangle-block:hover .promo-rectangle-span__hover {
+  opacity: 1;
+  font-weight: 400;
+}
+.common-template .promo-rectangle-block:hover .promo-rectangle-span__hover span {
+  font-weight: 700;
+}
+.common-template .promo-rectangle-block:hover.about-gadget img {
+  top: -20px;
+  right: 10px;
+  width: 116px;
+  transform: rotate(0deg);
+}
+.common-template .promo-rectangle-block:hover.old-smartphone img {
+  top: -30px;
+  width: 156px;
+}
+.common-template .promo-rectangle-block:hover.delivery-europe img {
+  top: -45px;
+  right: 30px;
+  width: 140px;
+}
 @media (max-width: 719px) {
   .common-template {
     gap: 12px;
