@@ -730,6 +730,16 @@
               content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%23B57EDC" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%23B57EDC" stroke-width="4" stroke-linecap="round"/></svg>');
             }
           }
+
+          @media (max-width: 719px) {
+            .container-links {
+              background: linear-gradient(
+                180deg,
+                rgba(181, 126, 220, 0) 20%,
+                rgba(181, 126, 220, 0.8) 100%
+              );
+            }
+          }
         }
 
         &.laptops {
@@ -777,6 +787,16 @@
               content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%2381D8D0" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%2381D8D0" stroke-width="4" stroke-linecap="round"/></svg>');
             }
           }
+
+          @media (max-width: 719px) {
+            .container-links {
+              background: linear-gradient(
+                180deg,
+                rgba(129, 216, 208, 0) 20%,
+                rgba(129, 216, 208, 0.8) 100%
+              );
+            }
+          }
         }
 
         &.audio {
@@ -803,6 +823,16 @@
           .arrow {
             &::after {
               content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%2381D88F" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%2381D88F" stroke-width="4" stroke-linecap="round"/></svg>');
+            }
+          }
+
+          @media (max-width: 719px) {
+            .container-links {
+              background: linear-gradient(
+                180deg,
+                rgba(129, 216, 143, 0) 20%,
+                rgba(129, 216, 143, 0.8) 100%
+              );
             }
           }
         }
@@ -851,6 +881,16 @@
               content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%2352DCE5" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%2352DCE5" stroke-width="4" stroke-linecap="round"/></svg>');
             }
           }
+
+          @media (max-width: 719px) {
+            .container-links {
+              background: linear-gradient(
+                180deg,
+                rgba(82, 220, 229, 0) 20%,
+                rgba(82, 220, 229, 0.8) 100%
+              );
+            }
+          }
         }
 
         &.smart-gadgets {
@@ -877,6 +917,16 @@
           .arrow {
             &::after {
               content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%23EEE967" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%23EEE967" stroke-width="4" stroke-linecap="round"/></svg>');
+            }
+          }
+
+          @media (max-width: 719px) {
+            .container-links {
+              background: linear-gradient(
+                180deg,
+                rgba(238, 233, 103, 0) 20%,
+                rgba(238, 233, 103, 0.8) 100%
+              );
             }
           }
         }

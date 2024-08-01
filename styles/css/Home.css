@@ -985,6 +985,11 @@
 .common-template .home-content .home-content-container .grid-container .grid-item.smartphone .arrow::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%23B57EDC" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%23B57EDC" stroke-width="4" stroke-linecap="round"/></svg>');
 }
+@media (max-width: 719px) {
+  .common-template .home-content .home-content-container .grid-container .grid-item.smartphone .container-links {
+    background: linear-gradient(180deg, rgba(181, 126, 220, 0) 20%, rgba(181, 126, 220, 0.8) 100%);
+  }
+}
 .common-template .home-content .home-content-container .grid-container .grid-item.laptops {
   grid-area: laptops;
   background: var(--laptops, #3d9af6);
@@ -1016,6 +1021,11 @@
 .common-template .home-content .home-content-container .grid-container .grid-item.access .arrow::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%2381D8D0" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%2381D8D0" stroke-width="4" stroke-linecap="round"/></svg>');
 }
+@media (max-width: 719px) {
+  .common-template .home-content .home-content-container .grid-container .grid-item.access .container-links {
+    background: linear-gradient(180deg, rgba(129, 216, 208, 0) 20%, rgba(129, 216, 208, 0.8) 100%);
+  }
+}
 .common-template .home-content .home-content-container .grid-container .grid-item.audio {
   grid-area: audio;
   background: var(--audio, #81d88f);
@@ -1031,6 +1041,11 @@
 }
 .common-template .home-content .home-content-container .grid-container .grid-item.audio .arrow::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%2381D88F" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%2381D88F" stroke-width="4" stroke-linecap="round"/></svg>');
+}
+@media (max-width: 719px) {
+  .common-template .home-content .home-content-container .grid-container .grid-item.audio .container-links {
+    background: linear-gradient(180deg, rgba(129, 216, 143, 0) 20%, rgba(129, 216, 143, 0.8) 100%);
+  }
 }
 .common-template .home-content .home-content-container .grid-container .grid-item.charging-stations {
   grid-area: charging-stations;
@@ -1062,6 +1077,11 @@
 .common-template .home-content .home-content-container .grid-container .grid-item.gaming .arrow::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%2352DCE5" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%2352DCE5" stroke-width="4" stroke-linecap="round"/></svg>');
 }
+@media (max-width: 719px) {
+  .common-template .home-content .home-content-container .grid-container .grid-item.gaming .container-links {
+    background: linear-gradient(180deg, rgba(82, 220, 229, 0) 20%, rgba(82, 220, 229, 0.8) 100%);
+  }
+}
 .common-template .home-content .home-content-container .grid-container .grid-item.smart-gadgets {
   grid-area: smart-gadgets;
   background: var(--smart-gadgets, #eee967);
@@ -1077,6 +1097,11 @@
 }
 .common-template .home-content .home-content-container .grid-container .grid-item.smart-gadgets .arrow::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10 4L18 12" stroke="%23EEE967" stroke-width="4" stroke-linecap="round"/><path d="M10 20L18 12" stroke="%23EEE967" stroke-width="4" stroke-linecap="round"/></svg>');
+}
+@media (max-width: 719px) {
+  .common-template .home-content .home-content-container .grid-container .grid-item.smart-gadgets .container-links {
+    background: linear-gradient(180deg, rgba(238, 233, 103, 0) 20%, rgba(238, 233, 103, 0.8) 100%);
+  }
 }
 .common-template .home-content .home-content-container .grid-container .grid-item.computers {
   grid-area: computers;
