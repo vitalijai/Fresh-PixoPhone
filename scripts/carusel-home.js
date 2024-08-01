@@ -116,19 +116,19 @@ $(document).ready(function () {
   splideMonoBrand.mount();
   splideMiniMobile.mount();
 
-  $(".promo--item").on("click", function () {
-    $("#popPromoBaner").fadeIn();
-    $("html").addClass("no-scroll");
-    $(".screen").addClass("overflow");
-  });
-
-  $(".closing").on("click", function () {
-    $("#popPromoBaner").fadeOut();
-    $("html").removeClass("no-scroll");
-    $(".screen").removeClass("overflow");
-  });
-
   if ($(window).width() <= 719) {
+    $(".promo--item").on("click", function () {
+      $("#popPromoBaner").fadeIn();
+      $("html").addClass("no-scroll");
+      $(".screen").addClass("overflow");
+    });
+
+    $(".closing").on("click", function () {
+      $("#popPromoBaner").fadeOut();
+      $("html").removeClass("no-scroll");
+      $(".screen").removeClass("overflow");
+    });
+
     $(".multiple-items").each(function () {
       $(this).slick({
         infinite: false,
