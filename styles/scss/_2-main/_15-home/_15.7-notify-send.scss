@@ -24,6 +24,18 @@
     /* block-shadow */
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
+    width: min(88%, var(---width, 1366px) - 80px);
+
+    @media (max-width: 1380px) {
+      flex-direction: column;
+    }
+    @media (max-width: 719px) {
+      padding: 24px;
+
+      gap: 20px;
+      width: min(82%, var(---width, 1366px) - 80px);
+    }
+
     img {
       position: absolute;
       width: 120px;
@@ -33,6 +45,13 @@
       &.left-img {
         top: -25px;
         left: 48px;
+
+        @media (max-width: 719px) {
+          position: unset;
+
+          width: 48px;
+          height: 48px;
+        }
       }
 
       &.right-img {
@@ -40,16 +59,29 @@
         right: 24px;
         width: 90px;
         height: 90px;
+
+        @media (max-width: 719px) {
+          top: -8px;
+          right: 0px;
+          width: 48px;
+          height: 48px;
+        }
       }
     }
 
     .head {
       display: flex;
-      justify-content: flex-stat;
+      justify-content: flex-start;
       align-items: center;
       gap: 32px;
       margin-left: 148px;
       flex: 1 0 0;
+
+      @media (max-width: 719px) {
+        margin-left: unset;
+        gap: 8px;
+        justify-content: center;
+      }
 
       div {
         display: flex;
@@ -59,11 +91,19 @@
         color: var(--colors-white, #fff);
         font-size: 24px;
 
+        @media (max-width: 719px) {
+          font-size: 18px;
+        }
+
         .span-bottom {
           color: var(--colors-white, #fff);
 
           font-size: 16px;
           font-weight: 400;
+
+          @media (max-width: 719px) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -77,6 +117,14 @@
       align-self: stretch;
       margin-right: 112px;
 
+      @media (max-width: 1380px) {
+        margin-right: unset;
+      }
+      @media (max-width: 719px) {
+        flex-direction: column;
+        margin-right: unset;
+      }
+
       .check-form-contact-block {
         display: flex;
         flex: 0 0 48%;
@@ -87,7 +135,8 @@
         position: relative;
 
         @media (max-width: 719px) {
-          flex: 1 0 0;
+          flex: unset;
+          align-self: stretch;
         }
 
         label {
@@ -124,6 +173,10 @@
 
           &.disable {
             background: var(--colors-gray-100, #f7f7f7);
+          }
+
+          @media (max-width: 719px) {
+            min-width: unset;
           }
         }
 
@@ -164,6 +217,13 @@
       }
 
       .global-button-credit {
+        align-self: stretch;
+        align-items: center;
+
+        @media (max-width: 1380px) {
+          flex: unset;
+        }
+
         button {
           display: flex;
           width: 197px;
@@ -183,6 +243,10 @@
             background: var(--colors-white, #fff);
 
             color: var(--colors-green-500-primary, #2ea84f);
+          }
+
+          @media (max-width: 719px) {
+            width: 100%;
           }
         }
       }

@@ -14,7 +14,6 @@
   }
 
   @media (max-width: 719px) {
-    overflow-x: auto;
     background: unset;
     box-shadow: unset;
     flex-direction: column;
@@ -40,7 +39,8 @@
 
     @media (max-width: 719px) {
       gap: 8px;
-
+      overflow-x: auto;
+      padding-left: 16px;
       .menu_pixocoin {
         display: flex;
 

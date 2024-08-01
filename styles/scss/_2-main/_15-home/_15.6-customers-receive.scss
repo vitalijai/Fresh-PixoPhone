@@ -20,6 +20,10 @@
       color: var(--colors-gray-700, #2f2c2f);
       text-align: center;
       font-size: 32px;
+
+      @media (max-width: 719px) {
+        font-size: 24px;
+      }
     }
 
     .blocks-container {
@@ -32,6 +36,11 @@
       align-self: stretch;
       flex-wrap: wrap;
 
+      @media (max-width: 719px) {
+        padding: 0px 12px;
+        gap: 0px 16px;
+      }
+
       .block-box {
         display: flex;
         min-width: 300px;
@@ -41,15 +50,33 @@
         gap: 8px;
         flex: 1 0 0;
 
+        @media (max-width: 719px) {
+          flex-direction: column;
+          min-width: 135px;
+          max-width: 170px;
+
+          height: unset;
+          padding: 0;
+        }
+
         img {
           width: 80px;
           height: 80px;
           object-fit: contain;
+
+          @media (max-width: 719px) {
+            width: 64px;
+            height: 64px;
+          }
         }
 
         span {
           color: var(--colors-gray-500, #696969);
           font-size: 18px;
+          @media (max-width: 719px) {
+            font-size: 12px;
+            text-align: center;
+          }
         }
       }
     }

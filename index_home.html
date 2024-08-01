@@ -19,6 +19,7 @@
 
   <!-- splide -->
   <link rel="stylesheet" href="/styles/css/splide-default.min.css" />
+  <link rel="stylesheet" href="/styles/css/slick.css" />
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -5512,7 +5513,7 @@
     </div>
     <!-- promo-rectangle end -->
 
-    <!-- exclusive-recently-->
+    <!-- popular-new-->
     <div class="exclusive-recently-viewed">
       <div class="exclusive-recently-viewed-container global-block-content-container content-container">
         <div class="exclusive-recently-viewed-header global-block-header">
@@ -5534,7 +5535,8 @@
             </div>
           </div>
         </div>
-        <div class="exclusive-recently-viewed-content global-block-content multiple-items">
+        <div class="exclusive-recently-viewed-content global-block-content multiple-items slick">
+
           <div class="exclusive-recently-viewed-waiting-container global-block-container">
             <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
               <div class="viewed-waiting-img global-block-img">
@@ -5609,453 +5611,484 @@
                 </div>
               </div>
             </div>
-            <div class="exclusive-recently-viewed-waiting-bottom global-block-container-bottom">
-              <div class="viewed-waiting-list-header global-block-container-bottom-list-header">
-                <a href="#">
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
                   <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
                 </a>
               </div>
-              <div class="viewed-waiting-list-status global-block-container-bottom-list-status">
-                <div class="viewed-waiting__info-list-status--to-order global-list-status--to-order global-list">
-                  <span class="viewed-waiting__info-list-line global-list-line">
-                    Під замовлення
-                  </span>
-                </div>
-                <div class="viewed-waiting-list-rating global-list-rating global-list">
-                  <span class="viewed-waiting-list-line global-list-line">
-                    <span id="viewed-waiting-list-rating global-list-rating value">4,5</span>
-                  </span>
-                </div>
-              </div>
-              <div class="viewed-waiting-list-block-value global-block-container-bottom-value">
-                <div class="global-p-short-product">
-                  <span class="global-p-short-product-new-price-container"><span>38499</span> ₴</span>
-                </div>
-              </div>
-              <div class="viewed-waiting-order-button global-button global-block-container-button">
-                <button>Хочу купити</button>
-              </div>
-            </div>
-          </div>
-          <div class="exclusive-recently-viewed-waiting-container global-block-container">
-            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
-              <div class="viewed-waiting-img global-block-img">
-                <a href="#">
-                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
-                  <div class="viewed-waiting-discount-group global-block-discount-group">
-                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
-                      Новинка
-                    </div>
-                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
-                      Хіт продаж
-                    </div>
-                    <!-- <div
-                                  class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                  SALE
-                              </div> -->
-                  </div>
-                </a>
-                <div class="viewed-waiting-credit-group global-block-credit-group">
-                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
-                    <button id="viewed-waiting__credit-mono"
-                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-mono-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
-                    <button id="viewed-waiting__credit-privat"
-                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-privat-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
-                    <button id="viewed-waiting__credit-a-bank"
-                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-a-bank-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
-                    <button id="viewed-waiting__credit-sense"
-                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-sense-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="viewed-waiting-add-group global-block-add-group">
-                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
-                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
-                  </div>
-                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
-                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
-                <div class="viewed-waiting-color global-block-color black checked">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color blue disabled">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color gray">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color pink">
-                  <div></div>
-                </div>
-              </div>
-            </div>
-            <div class="exclusive-recently-viewed-waiting-bottom global-block-container-bottom">
-              <div class="viewed-waiting-list-header global-block-container-bottom-list-header">
-                <a href="#">
-                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
-                </a>
-              </div>
-              <div class="viewed-waiting-list-status global-block-container-bottom-list-status">
-                <div
-                  class="viewed-waiting__info-list-status--not-available global-list-status--not-available global-list">
-                  <span class="viewed-waiting__info-list-line global-list-line">
-                    Немає в наявності
-                  </span>
-                </div>
-                <div class="viewed-waiting-list-rating global-list-rating global-list">
-                  <span class="viewed-waiting-list-line global-list-line">
-                    <span id="viewed-waiting-list-rating global-list-rating value">4,5</span>
-                  </span>
-                </div>
-              </div>
-              <div class="viewed-waiting-list-block-value global-block-container-bottom-value">
-                <div class="global-p-short-product">
-                  <span
-                    class="global-p-short-product-new-price-container global-p-short-product-formed"><span>38499</span>
-                    ₴</span>
-                </div>
-              </div>
-              <div class="viewed-waiting-order-button global-button-notify global-block-container-button">
-                <button>Сповістити</button>
-              </div>
-            </div>
-          </div>
-          <div class="exclusive-recently-viewed-waiting-container global-block-container">
-            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
-              <div class="viewed-waiting-img global-block-img">
-                <a href="#">
-                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
-                  <div class="viewed-waiting-discount-group global-block-discount-group">
-                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
-                      Новинка
-                    </div>
-                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
-                      Хіт продаж
-                    </div>
-                    <!-- <div
-                                  class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                  SALE
-                              </div> -->
-                  </div>
-                </a>
-                <div class="viewed-waiting-credit-group global-block-credit-group">
-                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
-                    <button id="viewed-waiting__credit-mono"
-                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-mono-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
-                    <button id="viewed-waiting__credit-privat"
-                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-privat-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
-                    <button id="viewed-waiting__credit-a-bank"
-                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-a-bank-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
-                    <button id="viewed-waiting__credit-sense"
-                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-sense-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="viewed-waiting-add-group global-block-add-group">
-                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
-                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
-                  </div>
-                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
-                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
-                <div class="viewed-waiting-color global-block-color black checked">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color blue disabled">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color gray">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color pink">
-                  <div></div>
-                </div>
-              </div>
-            </div>
-            <div class="exclusive-recently-viewed-waiting-bottom global-block-container-bottom">
-              <div class="viewed-waiting-list-header global-block-container-bottom-list-header">
-                <a href="#">
-                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
-                </a>
-              </div>
-              <div class="viewed-waiting-list-status global-block-container-bottom-list-status">
-                <div class="gen-tab__info-list-status--in-stock global-list-status--in-stock global-list">
-                  <span class="gen-tab__info-list-line global-list-line">
-                    В наявності
-                  </span>
-                </div>
-                <div class="viewed-waiting-list-rating global-list-rating global-list">
-                  <span class="viewed-waiting-list-line global-list-line">
-                    <span id="viewed-waiting-list-rating global-list-rating value">4,5</span>
-                  </span>
-                </div>
-              </div>
-              <div class="viewed-waiting-list-block-value global-block-container-bottom-value">
-                <div class="global-p-short-product all-price">
-                  <div>
-                    <span class="global-p-short-product-old-price-container"><span>42699</span> ₴</span>
-                    <span class="global-p-short-product-discount-container">-8%</span>
-                  </div>
-                  <span
-                    class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
-                    ₴</span>
-                </div>
-              </div>
-              <div class="viewed-waiting-order-button global-button global-block-container-button">
-                <button onclick="toggleBayBtn(event, this)">Купити</button>
-              </div>
-            </div>
-          </div>
-          <div class="exclusive-recently-viewed-waiting-container global-block-container">
-            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
-              <div class="viewed-waiting-img global-block-img">
-                <a href="#">
-                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
-                  <div class="viewed-waiting-discount-group global-block-discount-group">
-                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
-                      Новинка
-                    </div>
-                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
-                      Хіт продаж
-                    </div>
-                    <!-- <div
-                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
-                              SALE
-                          </div> -->
-                  </div>
-                </a>
-                <div class="viewed-waiting-credit-group global-block-credit-group">
-                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
-                    <button id="viewed-waiting__credit-mono"
-                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-mono-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
-                    <button id="viewed-waiting__credit-privat"
-                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-privat-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
-                    <button id="viewed-waiting__credit-a-bank"
-                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-a-bank-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
-                    <button id="viewed-waiting__credit-sense"
-                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-sense-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="viewed-waiting-add-group global-block-add-group">
-                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
-                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
-                  </div>
-                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
-                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
-                <div class="viewed-waiting-color global-block-color black checked">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color blue disabled">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color gray">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color pink">
-                  <div></div>
-                </div>
-              </div>
-            </div>
-            <div class="exclusive-recently-viewed-waiting-bottom global-block-container-bottom">
-              <div class="viewed-waiting-list-header global-block-container-bottom-list-header">
-                <a href="#">
-                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
-                </a>
-              </div>
-              <div class="viewed-waiting-list-status global-block-container-bottom-list-status">
-                <div class="viewed-waiting-list-status--expected global-list-status--expected global-list">
-                  <span class="viewed-waiting-list-line global-list-line">
-                    Очікуємо
-                    <span class="viewed-waiting-list-expected global-list-line-expected">15.04.2024</span>
-                  </span>
-                </div>
-                <div class="viewed-waiting-list-rating global-list-rating global-list">
-                  <span class="viewed-waiting-list-line global-list-line">
-                    <span id="viewed-waiting-list-rating global-list-rating value">4,5</span>
-                  </span>
-                </div>
-              </div>
-              <div class="viewed-waiting-list-block-value global-block-container-bottom-value">
-                <span class="global-p-short-product-formed">Ціна формується</span>
-              </div>
-              <div class="viewed-waiting-order-button global-button global-block-container-button">
-                <button>Хочу купити</button>
-              </div>
-            </div>
-          </div>
-          <div class="exclusive-recently-viewed-waiting-container global-block-container">
-            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
-              <div class="viewed-waiting-img global-block-img">
-                <a href="#">
-                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
-                  <div class="viewed-waiting-discount-group global-block-discount-group">
-                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
-                      Новинка
-                    </div>
-                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
-                      Хіт продаж
-                    </div>
-                    <!-- <div
-                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
-                                  SALE
-                              </div> -->
-                  </div>
-                </a>
-                <div class="viewed-waiting-credit-group global-block-credit-group">
-                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
-                    <button id="viewed-waiting__credit-mono"
-                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-mono-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
-                    <button id="viewed-waiting__credit-privat"
-                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-privat-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
-                    <button id="viewed-waiting__credit-a-bank"
-                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-a-bank-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
-                    <button id="viewed-waiting__credit-sense"
-                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
-                      <span id="viewed-waiting__credit-sense-month"
-                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="viewed-waiting-add-group global-block-add-group">
-                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
-                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
-                  </div>
-                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
-                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
-                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
-                  </div>
-                </div>
-              </div>
-              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
-                <div class="viewed-waiting-color global-block-color black checked">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color blue disabled">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color gray">
-                  <div></div>
-                </div>
-                <div class="viewed-waiting-color global-block-color pink">
-                  <div></div>
-                </div>
-              </div>
-            </div>
-            <div class="exclusive-recently-viewed-waiting-bottom global-block-container-bottom">
-              <div class="viewed-waiting-list-header global-block-container-bottom-list-header">
-                <a href="#">
-                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
-                </a>
-              </div>
-              <div class="viewed-waiting-list-status global-block-container-bottom-list-status">
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
                 <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
                   <span class="gen-tab__info-list-line global-list-line">
                     Аутлет
                   </span>
                 </div>
-                <div class="viewed-waiting-list-rating global-list-rating global-list">
-                  <span class="viewed-waiting-list-line global-list-line">
-                    <span id="viewed-waiting-list-rating global-list-rating value">4,5</span>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
                   </span>
                 </div>
               </div>
-              <div class="viewed-waiting-list-block-value global-block-container-bottom-value">
-                <div class="global-p-short-product all-price">
-                  <div>
-                    <span class="global-p-short-product-old-price-container"><span>42699</span> ₴</span>
-                    <span class="global-p-short-product-discount-container">-8%</span>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
                   </div>
-                  <span
-                    class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
-                    ₴</span>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
                 </div>
               </div>
-              <div class="viewed-waiting-order-button global-button global-block-container-button">
-                <button onclick="toggleBayBtn(event, this)">Купити</button>
+            </div>
+          </div>
+          <div class="exclusive-recently-viewed-waiting-container global-block-container">
+            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                                  class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                  SALE
+                              </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exclusive-recently-viewed-waiting-container global-block-container">
+            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                                  class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                  SALE
+                              </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exclusive-recently-viewed-waiting-container global-block-container">
+            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                                  class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                  SALE
+                              </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exclusive-recently-viewed-waiting-container global-block-container">
+            <div class="exclusive-recently-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                                  class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                                  SALE
+                              </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="exclusive-recently-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
               </div>
             </div>
           </div>
@@ -6072,7 +6105,7 @@
         </div>
       </div>
     </div>
-    <!-- exclusive-recently end -->
+    <!-- popular-new end -->
 
     <!-- big baner-->
     <div class="big-baner-content">
@@ -6166,7 +6199,607 @@
       </div>
     </div>
     <!-- customers receive end -->
+    <!-- popular-new-->
+    <div class="exclusive-recently-viewed">
+      <div class="popular-new-viewed-container global-block-content-container content-container">
+        <div class="popular-new-viewed-header global-block-header">
+          <div class="popular-new-viewed-header-left global-block-header-left">
+            <span>Популярні</span>
+            <div class="global-horizontal-switch">
+              <div class="recently-viewed-text">
+                <span class="recently-viewed-new viewed-new">нові</span>
+                <span class="recently-viewed-old viewed-old">вживані</span>
+              </div>
+              <input type="checkbox" id="popular">
+            </div>
+          </div>
+          <div class="popular-new-viewed-header-right global-block-header-right">
+            <button class="content-right-button">БУ смартфони</button>
+            <button class="content-right-button active">Смартфони</button>
+            <div class="recently-viewed-header-right--btn-previous block-header--btn block-header--btn-previous">
+              <button type="button" data-role="none"
+                class="popular-new-viewed-slick-prev popular-new-viewed-slick-arrow" aria-label="Previous" role="button"
+                style="display: block"></button>
+            </div>
+            <div class="recently-viewed-header-right--btn-next block-header--btn block-header--btn-next">
+              <button type="button" data-role="none"
+                class="popular-new-viewed-slick-next popular-new-viewed-slick-arrow" aria-label="Next" role="button"
+                style="display: block"></button>
+            </div>
+          </div>
+          <a id="block-novelty-button" class="block-novelty-version-a__more button-a__more">Дивитись всі</a>
+        </div>
+        <div class="popular-new-viewed-content global-block-content multiple-items slick">
 
+          <div class="popular-new-viewed-waiting-container global-block-container">
+            <div class="popular-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="popular-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-new-viewed-waiting-container global-block-container">
+            <div class="popular-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="popular-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-new-viewed-waiting-container global-block-container">
+            <div class="popular-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="popular-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-new-viewed-waiting-container global-block-container">
+            <div class="popular-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="popular-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-new-viewed-waiting-container global-block-container">
+            <div class="popular-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="popular-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popular-new-viewed-show-more global-button-show-more">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.38751 11.6665C5.40259 12.2885 6.60631 12.528 7.78217 12.3417C8.95803 12.1555 10.0289 11.5558 10.802 10.6505C11.5752 9.74527 12 8.59382 12 7.40331C12 6.85102 12.4477 6.40331 13 6.40331C13.5523 6.40331 14 6.85102 14 7.40331C14 9.07003 13.4053 10.6821 12.3228 11.9494C11.2404 13.2168 9.74124 14.0564 8.09504 14.3171C6.44884 14.5779 4.76362 14.2426 3.34251 13.3718C1.9214 12.5009 0.857651 11.1516 0.342605 9.56642C-0.17244 7.98128 -0.104982 6.26437 0.532845 4.72452C1.17067 3.18467 2.33701 1.92293 3.82207 1.16626C5.30713 0.409582 7.01345 0.207626 8.63412 0.596716C9.59868 0.828287 10.4952 1.26017 11.2696 1.85618V1.39626C11.2696 0.843972 11.7173 0.396256 12.2696 0.396256C12.8219 0.396256 13.2696 0.843972 13.2696 1.39626V4.22468C13.2696 4.77697 12.8219 5.22468 12.2696 5.22468H9.44117C8.88888 5.22468 8.44117 4.77697 8.44117 4.22468C8.44117 3.6724 8.88888 3.22468 9.44117 3.22468H9.74575C9.26669 2.9099 8.73336 2.67737 8.16723 2.54145C7.00961 2.26353 5.79081 2.40779 4.73005 2.94827C3.66929 3.48875 2.83619 4.38999 2.3806 5.48989C1.92501 6.58978 1.87683 7.81614 2.24472 8.94839C2.61261 10.0806 3.37243 11.0445 4.38751 11.6665Z"
+                fill="var(--colors-gray-500, #696969)"></path>
+            </svg>
+            Показати більше
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- popular-new end -->
     <!-- promo-rectangle-->
     <div class="promo-rectangle-content mobile">
       <div class="promo-rectangle-content-container content-container">
@@ -6193,7 +6826,605 @@
       </div>
     </div>
     <!-- promo-rectangle end -->
+    <!-- new-new-->
+    <div class="exclusive-recently-viewed">
+      <div class="new-new-viewed-container global-block-content-container content-container">
+        <div class="new-new-viewed-header global-block-header">
+          <div class="new-new-viewed-header-left global-block-header-left">
+            <span>Новинки</span>
+            <div class="global-horizontal-switch">
+              <div class="recently-viewed-text">
+                <span class="recently-viewed-new viewed-new">нові</span>
+                <span class="recently-viewed-old viewed-old">вживані</span>
+              </div>
+              <input type="checkbox" id="novelty">
+            </div>
+          </div>
+          <a id="block-novelty-button" class="block-novelty-version-a__more button-a__more">Дивитись всі</a>
+          <div class="new-new-viewed-header-right global-block-header-right">
+            <button class="content-right-button">БУ смартфони</button>
+            <button class="content-right-button active">Смартфони</button>
+            <div class="recently-viewed-header-right--btn-previous block-header--btn block-header--btn-previous">
+              <button type="button" data-role="none" class="new-new-viewed-slick-prev new-new-viewed-slick-arrow"
+                aria-label="Previous" role="button" style="display: block"></button>
+            </div>
+            <div class="recently-viewed-header-right--btn-next block-header--btn block-header--btn-next">
+              <button type="button" data-role="none" class="new-new-viewed-slick-next new-new-viewed-slick-arrow"
+                aria-label="Next" role="button" style="display: block"></button>
+            </div>
+          </div>
+        </div>
+        <div class="new-new-viewed-content global-block-content multiple-items slick">
 
+          <div class="new-new-viewed-waiting-container global-block-container">
+            <div class="new-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new-new-viewed-waiting-container global-block-container">
+            <div class="new-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new-new-viewed-waiting-container global-block-container">
+            <div class="new-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new-new-viewed-waiting-container global-block-container">
+            <div class="new-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="new-new-viewed-waiting-container global-block-container">
+            <div class="new-new-viewed-waiting-header global-block-container-header">
+              <div class="viewed-waiting-img global-block-img">
+                <a href="#">
+                  <img src="/images/p8pro-Obsidian.jpg" alt="product" />
+                  <div class="viewed-waiting-discount-group global-block-discount-group">
+                    <div class="viewed-waiting-discount-new global-block-discount-new global-block-discount">
+                      Новинка
+                    </div>
+                    <div class="viewed-waiting-discount-hit-sale global-block-discount-hit-sale global-block-discount">
+                      Хіт продаж
+                    </div>
+                    <!-- <div
+                              class="viewed-waiting-discount-sale global-block-discount-sale global-block-discount">
+                              SALE
+                          </div> -->
+                  </div>
+                </a>
+                <div class="viewed-waiting-credit-group global-block-credit-group">
+                  <div class="viewed-waiting__credit-block-mono global-block-credit global-block-credit-mono">
+                    <button id="viewed-waiting__credit-mono"
+                      class="viewed-waiting__credit-block__btn global-block-credit-mono__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-mono-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-privat global-block-credit global-block-credit-privat">
+                    <button id="viewed-waiting__credit-privat"
+                      class="viewed-waiting__credit-block__btn global-block-credit-privat__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-privat-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-a-bank global-block-credit global-block-credit-a-bank">
+                    <button id="viewed-waiting__credit-a-bank"
+                      class="viewed-waiting__credit-block__btn global-block-credit-a-bank__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-a-bank-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                  <div class="viewed-waiting__credit-block-sense global-block-credit global-block-credit-sense">
+                    <button id="viewed-waiting__credit-sense"
+                      class="viewed-waiting__credit-block__btn global-block-credit-sense__btn global-block-credit__btn">
+                      <span id="viewed-waiting__credit-sense-month"
+                        class="viewed-waiting__credit-block__span global-block-credit__span">12</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="viewed-waiting-add-group global-block-add-group">
+                  <div class="viewed-waiting__add-block-wishlist global-block-credit global-block-wishlist">
+                    <button id="viewed-waiting__add-wishlist" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-wishlist__btn global-block-credit__btn"></button>
+                  </div>
+                  <div class="viewed-waiting__add-block-compare global-block-credit global-block-compare">
+                    <button id="viewed-waiting__add-compare" onclick="toggleTabInfoBtn(event, this)"
+                      class="viewed-waiting__add-block__btn global-block-add-compare__btn global-block-credit__btn"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-new-viewed-waiting-colors global-block-colors">
+                <div class="viewed-waiting-color global-block-color black checked">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color blue disabled">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color gray">
+                  <div></div>
+                </div>
+                <div class="viewed-waiting-color global-block-color pink">
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="block-recently-novelty-waiting-bottom global-block-container-bottom">
+              <div class="novelty-waiting-list-header global-block-container-bottom-list-header">
+                <a href="#" tabindex="0">
+                  <span>Смартфон Google Pixel 7 Pro 12/512GB Obsidian</span>
+                </a>
+              </div>
+              <div class="novelty-waiting-list-status global-block-container-bottom-list-status">
+                <div class="gen-tab__info-list-status--outlet global-list-status--outlet global-list">
+                  <span class="gen-tab__info-list-line global-list-line">
+                    Аутлет
+                  </span>
+                </div>
+                <div class="novelty-waiting-list-rating global-list-rating global-list">
+                  <span class="novelty-waiting-list-line global-list-line">
+                    <span id="novelty-waiting-list-rating global-list-rating value">4,5</span>
+                  </span>
+                </div>
+              </div>
+              <div class="global-block-container-buy">
+                <div class="novelty-waiting-list-block-value global-block-container-bottom-value">
+                  <div class="global-p-short-product all-price">
+                    <div>
+                      <span class="global-p-short-product-old-price-container"><span>42699</span>
+                        ₴</span>
+                      <span class="global-p-short-product-discount-container">-8%</span>
+                    </div>
+                    <span
+                      class="global-p-short-product-new-price-container global-block-container-bottom-new-price"><span>38499</span>
+                      ₴</span>
+                  </div>
+                </div>
+                <div class="novelty-waiting-order-button global-button global-block-container-button">
+                  <button onclick="toggleBayBtn(event, this)" tabindex="0"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="new-new-viewed-show-more global-button-show-more">
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M4.38751 11.6665C5.40259 12.2885 6.60631 12.528 7.78217 12.3417C8.95803 12.1555 10.0289 11.5558 10.802 10.6505C11.5752 9.74527 12 8.59382 12 7.40331C12 6.85102 12.4477 6.40331 13 6.40331C13.5523 6.40331 14 6.85102 14 7.40331C14 9.07003 13.4053 10.6821 12.3228 11.9494C11.2404 13.2168 9.74124 14.0564 8.09504 14.3171C6.44884 14.5779 4.76362 14.2426 3.34251 13.3718C1.9214 12.5009 0.857651 11.1516 0.342605 9.56642C-0.17244 7.98128 -0.104982 6.26437 0.532845 4.72452C1.17067 3.18467 2.33701 1.92293 3.82207 1.16626C5.30713 0.409582 7.01345 0.207626 8.63412 0.596716C9.59868 0.828287 10.4952 1.26017 11.2696 1.85618V1.39626C11.2696 0.843972 11.7173 0.396256 12.2696 0.396256C12.8219 0.396256 13.2696 0.843972 13.2696 1.39626V4.22468C13.2696 4.77697 12.8219 5.22468 12.2696 5.22468H9.44117C8.88888 5.22468 8.44117 4.77697 8.44117 4.22468C8.44117 3.6724 8.88888 3.22468 9.44117 3.22468H9.74575C9.26669 2.9099 8.73336 2.67737 8.16723 2.54145C7.00961 2.26353 5.79081 2.40779 4.73005 2.94827C3.66929 3.48875 2.83619 4.38999 2.3806 5.48989C1.92501 6.58978 1.87683 7.81614 2.24472 8.94839C2.61261 10.0806 3.37243 11.0445 4.38751 11.6665Z"
+                fill="var(--colors-gray-500, #696969)"></path>
+            </svg>
+            Показати більше
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- new-new end -->
     <!-- notify send-->
     <div class="notify-send-content">
       <div class="notify-send-content-container content-container">
@@ -8024,6 +9255,7 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
     <!-- scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="/scripts/splide.min.js"></script>
+    <script type="text/javascript" src="/scripts/slick.min.js"></script>
     <script type="text/javascript" src="/scripts/splide-extension-auto-scroll.min.js"></script>
     <script type="text/javascript" src="/scripts/videoContainer.js"></script>
     <script type="text/javascript" src="/scripts/header-basic.js"></script>

@@ -44,8 +44,56 @@ $(document).ready(function () {
     pagination: false,
     arrows: true,
     drag: true,
-    gap: 16,
+    // gap: 16,
   });
+  if ($(window).width() >= 720) {
+    // Функция для получения ширины элементов
+    function getWidth(element) {
+      return document.querySelector(element).offsetWidth;
+    }
+
+    // Вычисление итоговой ширины
+    function calculateSplideWidth() {
+      const contentContainerWidth = getWidth(".content-container");
+      const monoBrandContentLeftWidth = getWidth(".monobrand-content-left");
+      const finalWidth =
+        contentContainerWidth - monoBrandContentLeftWidth - 32 - 64;
+      return finalWidth;
+    }
+
+    // Объявление переменной для Splide
+    let splideMonoBrand;
+
+    // Функция обновления ширины Splide
+    function updateSplideMonoWidth() {
+      const splideWidth = calculateSplideWidth();
+
+      // Если Splide уже инициализирован, обновляем ширину
+      if (splideMonoBrand) {
+        splideMonoBrand.options = {
+          width: splideWidth,
+        };
+        splideMonoBrand.refresh();
+      } else {
+        // Инициализация Splide с динамической шириной
+        splideMonoBrand = new Splide("#monoBrand", {
+          width: splideWidth,
+          autoWidth: true,
+          pagination: false,
+          arrows: true,
+          drag: true,
+        });
+
+        splideMonoBrand.mount();
+      }
+    }
+
+    // Запуск функции обновления ширины
+    updateSplideMonoWidth();
+
+    // Добавление обработчика события изменения размера окна
+  }
+  window.addEventListener("resize", updateSplideMonoWidth);
 
   // Функция для обновления ширины слайдера
   function updateSplideWidth() {
@@ -79,4 +127,29 @@ $(document).ready(function () {
     $("html").removeClass("no-scroll");
     $(".screen").removeClass("overflow");
   });
+
+  if ($(window).width() <= 719) {
+    $(".multiple-items").each(function () {
+      $(this).slick({
+        infinite: false,
+        slidesToShow: 1.5,
+        slidesToScroll: 1,
+        arrows: false,
+      });
+
+      // Clear the content of all buttons inside each .multiple-items
+      $(this).find("button").text("");
+    });
+
+    $('.global-block-header-left input[type="checkbox"]').change(function () {
+      var parentBlock = $(this).closest(".global-block-header-left");
+      if ($(this).is(":checked")) {
+        parentBlock.find(".viewed-new").css("display", "none");
+        parentBlock.find(".viewed-old").css("display", "block");
+      } else {
+        parentBlock.find(".viewed-new").css("display", "block");
+        parentBlock.find(".viewed-old").css("display", "none");
+      }
+    });
+  }
 });
