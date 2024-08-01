@@ -1,6 +1,15 @@
 .header {
   @include flexbox($alignItems: flex-start, $direction: column);
 
+  .header_bottom-container {
+    width: 100%;
+    height: 64px;
+
+    @media (max-width: 719px) {
+      height: 80px;
+    }
+  }
+
   .header-container {
     @include flexbox($alignItems: flex-start, $direction: column);
     width: 100%;
