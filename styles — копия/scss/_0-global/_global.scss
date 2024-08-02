@@ -31,7 +31,7 @@ body,
 input,
 textarea,
 button {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -51,10 +51,6 @@ a:active,
 a:visited {
   color: var(--colors-gray-500, #696969);
   text-decoration: none;
-}
-
-.prohibit-transition {
-  pointer-events: none;
 }
 
 .content-container {

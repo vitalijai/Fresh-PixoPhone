@@ -59,7 +59,6 @@
   --colors-red-300: #{$--colors-red-300};
   --colors-red-500: #{$--colors-red-500};
   --colors-violet-300: #{$--colors-violet-300};
-  --colors-yellow-500: #ffbf00;
 
   //modal-searcch
   --modal-colors-white: #{$--modal-colors-white};
@@ -72,28 +71,4 @@
   --modal-colors-green-100: #{$--modal-colors-green-100};
   --modal-colors-green-400: #{$--modal-colors-green-400};
   --modal-colors-red-300: #{$--modal-colors-red-300};
-
-  //grid
-
-  --smartphone: #{$--colors-violet-300};
-  --smartphone-hover: #9f6fc2;
-  --laptops: #3d9af6;
-  --laptops-hover: #3789db;
-  --keyboards: #d981e7;
-  --keyboards-hover: #c273cf;
-  --access: #81d8d0;
-  --access-hover: #72bfb8;
-  --audio: #81d88f;
-  --audio-hover: #72bf7f;
-  --charging-stations: #ffbf00;
-  --charging-stations-hover: #e5ac00;
-  --tablets: #3d9af6;
-  --tablets-hover: #3789db;
-  --gaming: #52dce5;
-  --gaming-hover: #49c4cc;
-  --smart-gadgets: #eee967;
-  --smart-gadgets-hover: #d4cf5c;
-  --computers: #d981e7;
-  --computers-hover: #c273cf;
-  --promotions: #{$--colors-red-500};
 }

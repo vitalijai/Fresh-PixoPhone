@@ -1,0 +1,3 @@
+.block-novelty {
+  @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
+}
