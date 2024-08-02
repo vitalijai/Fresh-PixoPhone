@@ -53,10 +53,6 @@ a:visited {
   text-decoration: none;
 }
 
-.prohibit-transition {
-  pointer-events: none;
-}
-
 .content-container {
   width: min(95%, var(---width, 1366px));
   @media (max-width: 719px) {
