@@ -45,9 +45,11 @@ window.addEventListener("scroll", function () {
   var tabs = document.querySelectorAll(".tabs");
   var mainMenu = document.querySelectorAll(".catalog_products_main");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  var isFixed = scrollPosition > 64;
   const backToTop = document.getElementById("back-to-top");
   const vw50 = window.innerWidth / 2; // 50vw in pixels
+
+  var isFixed =
+    window.innerWidth < 719 ? scrollPosition > 48 : scrollPosition > 64;
 
   headerBottoms.forEach(function (headerBottom) {
     headerBottom.classList.toggle("fixed", isFixed);
@@ -66,12 +68,26 @@ window.addEventListener("scroll", function () {
   });
 
   if (scrollPosition > vw50) {
-    backToTop.style.display = "inline-flex";
+    backToTop.classList.add("visible");
   } else {
-    backToTop.style.display = "none";
+    backToTop.classList.remove("visible");
   }
+
   backToTop.addEventListener("click", function (event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+
+(function () {
+  const elements = document.querySelectorAll(".tabs__link-description");
+  if (window.innerWidth < 719) {
+    elements.forEach((element) => element.classList.remove("active"));
+  }
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 719) {
+      elements.forEach((element) => element.classList.remove("active"));
+    }
+  });
+})();
