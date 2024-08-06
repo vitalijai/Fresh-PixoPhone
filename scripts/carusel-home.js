@@ -106,6 +106,7 @@ $(document).ready(function () {
   updateSplideWidth();
 
   // Добавление обработчика события изменения размера окна
+  window.addEventListener("load", updateSplideWidth);
   window.addEventListener("resize", updateSplideWidth);
 
   // Синхронизация слайдеров
