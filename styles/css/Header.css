@@ -3297,6 +3297,15 @@ a:visited {
   align-items: flex-start;
   flex-direction: column;
 }
+.header .header_bottom-container {
+  width: 100%;
+  height: 64px;
+}
+@media (max-width: 719px) {
+  .header .header_bottom-container {
+    height: 80px;
+  }
+}
 .header .header-container {
   display: flex;
   align-items: flex-start;
@@ -3517,8 +3526,33 @@ a:visited {
   padding: 0px 8px;
   cursor: pointer;
 }
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn .header-bottom__profile-log {
+  color: var(--colors-white, #fff);
+  font-size: 10px;
+  line-height: 100%;
+  max-width: 46px;
+}
 .header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn:hover {
   background: var(--colors-green-700, #1d6d33);
+}
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn {
+  width: unset;
+  max-width: 91px;
+  padding: 0px 12px 0px 8px;
+  align-items: center;
+  gap: 2px;
+}
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn .header-bottom__profile-authorized {
+  display: none;
+}
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.authorized .header-bottom__profile-authorized {
+  display: block;
+}
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.authorized .header-bottom__profile-login {
+  display: none;
+}
+.header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-controls__btn.header-bottom__profile-btn.authorized svg {
+  fill: #fff;
 }
 .header .header-container .header_bottom .header_bottom-content__right .header-bottom-controls .header-bottom-cart .header-bottom-counter {
   display: none;
