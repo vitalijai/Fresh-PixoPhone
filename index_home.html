@@ -9320,7 +9320,7 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
         <div class="footer-container">
           <nav class="footer-products-container footer-nav__column">
             <label class="footer-nav__title">Продукція</label>
-            <div>
+            <div class="footer-nav__block">
               <ul class="footer-nav__list">
                 <li class="footer-nav__li">
                   <a class="footer-nav__link" href="#"> Смартфони </a>
@@ -9344,7 +9344,7 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
           </nav>
           <nav class="footer-novelty-container footer-nav__column">
             <label class="footer-nav__title">Новинки</label>
-            <div>
+            <div class="footer-nav__block">
               <ul class="footer-nav__list">
                 <li class="footer-nav__li">
                   <a class="footer-nav__link" href="#">
@@ -9385,7 +9385,7 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
           </nav>
           <nav class="footer-additionally-container footer-nav__column">
             <label class="footer-nav__title">Додатково</label>
-            <div>
+            <div class="footer-nav__block">
               <ul class="footer-nav__list">
                 <li class="footer-nav__li">
                   <a class="footer-nav__link" href="#">
@@ -9412,7 +9412,7 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
           </nav>
           <nav class="footer-clients-container footer-nav__column">
             <label class="footer-nav__title">Клієнтам</label>
-            <div>
+            <div class="footer-nav__block">
               <ul class="footer-nav__list">
                 <li class="footer-nav__li">
                   <a class="footer-nav__link" href="#">
@@ -9523,16 +9523,8 @@ L269.9,309.3c-7.7,7.7-20.2,7.7-27.8,0l0,0L5.8,73C-1.9,65.4-1.9,52.9,5.8,45.1L5.8
       </div>
     </div>
   </footer>
-  <script>
-    document.querySelectorAll(".footer-nav__title").forEach((header) => {
-      header.addEventListener("click", function () {
-        const parentBox = this.closest(".footer-nav__column");
-        if (parentBox) {
-          parentBox.classList.toggle("active");
-        }
-      });
-    });
-  </script>
+  <script type="text/javascript" src="/scripts/footer.js"></script>
+
 </body>
 
 </html>
