@@ -93,6 +93,7 @@ $(document).ready(function () {
 
     // Добавление обработчика события изменения размера окна
   }
+  window.addEventListener("load", updateSplideMonoWidth);
   window.addEventListener("resize", updateSplideMonoWidth);
 
   // Функция для обновления ширины слайдера
