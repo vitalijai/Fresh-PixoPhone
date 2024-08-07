@@ -9,9 +9,37 @@ function toggleShowMoreBtn(event) {
   const button = event.target;
   const showMoreContainer = button.closest(".show-more");
   if (showMoreContainer) {
-    showMoreContainer.classList.toggle("show");
+    const infoContainer = $(showMoreContainer).find(
+      ".inf-tab__information-container"
+    );
+    if (!showMoreContainer.classList.contains("show")) {
+      // Определить полную высоту контента
+      var scrollHeight = infoContainer.prop("scrollHeight") + "px";
+      // Установить полную высоту
+      infoContainer.css("max-height", scrollHeight);
+      showMoreContainer.classList.add("show");
+    }
   }
 }
+
+$(".footer-nav__title").on("click", function () {
+  // Проверяем ширину окна
+  if ($(window).width() < 719) {
+    // Находим родительский элемент footer-nav__column
+    var parent = $(this).closest(".footer-nav__column");
+
+    // Переключаем класс active у родительского элемента footer-nav__column
+    parent.toggleClass("active");
+
+    // Применяем slideToggle к элементу footer-nav__block внутри родительского элемента area__right
+    if (parent.hasClass("active")) {
+      parent.find(".footer-nav__block").slideDown().css("display", "flex");
+    } else {
+      parent.find(".footer-nav__block").slideUp();
+    }
+  }
+});
+
 // Получаем все элементы с классом global-block-content-container
 var containers = document.querySelectorAll(".global-block-content-container");
 

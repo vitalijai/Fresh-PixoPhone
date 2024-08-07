@@ -209,12 +209,6 @@
           }
         }
 
-        .carousel-container {
-          height: 0px;
-          overflow: hidden;
-          transition: height 1s ease-in-out;
-        }
-
         &.active {
           .gen-tab__add-product-mobile-header {
             span {
@@ -223,10 +217,6 @@
             &::after {
               transform: rotate(180deg);
             }
-          }
-          .carousel-container {
-            padding-bottom: 8px;
-            height: 300px;
           }
         }
       }

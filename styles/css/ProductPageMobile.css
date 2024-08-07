@@ -6838,7 +6838,7 @@ a:visited {
   .common-template .inf-tab__information-block .inf-tab__specifications-container.show .inf-tab__information-container,
   .common-template .inf-tab__information-block .inf-tab__reviews-container.show .inf-tab__information-container,
   .common-template .inf-tab__information-block .inf-tab__questions-container.show .inf-tab__information-container {
-    max-height: 3000px;
+    max-height: unset;
   }
   .common-template .inf-tab__information-block .inf-tab__specifications-container.show .fade,
   .common-template .inf-tab__information-block .inf-tab__specifications-container.show .global-all-view-button,
@@ -7042,19 +7042,13 @@ a:visited {
   transition: transform 0.5s ease;
 }
 .common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box .carousel-container {
-  height: 0px;
-  overflow: hidden;
-  transition: height 1s ease-in-out;
+  display: none;
 }
 .common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box.active .gen-tab__add-product-mobile-header span {
   font-weight: 500;
 }
 .common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box.active .gen-tab__add-product-mobile-header::after {
   transform: rotate(180deg);
-}
-.common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box.active .carousel-container {
-  padding-bottom: 8px;
-  height: 300px;
 }
 .common-template .gen-block-mobile {
   display: flex;

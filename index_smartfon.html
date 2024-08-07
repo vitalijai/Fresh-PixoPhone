@@ -16226,6 +16226,7 @@
         <script type="text/javascript" src="/scripts/slick.min.js"></script>
         <script type="text/javascript" src="/scripts/splide.min.js"></script>
         <script type="text/javascript" src="/scripts/carusel.js"></script>
+        <script type="text/javascript" src="/scripts/mobile-slideup.js"></script>
         <script type="text/javascript" src="/scripts/header-basic.js"></script>
         <script type="text/javascript" src="/scripts/popup.js"></script>
         <script type="text/javascript" src="/scripts/videoContainer.js"></script>
@@ -16503,7 +16504,16 @@
         </div>
     </footer>
     <script type="text/javascript" src="/scripts/footer.js"></script>
+    <script>
+        document.querySelectorAll(".tabs__link-span").forEach((span) => {
+            span.addEventListener("click", function () {
+                const targetId = this.getAttribute("data-target");
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            });
+        });
 
+    </script>
 </body>
 
 </html>

@@ -7283,20 +7283,11 @@ a:visited {
   height: 16px;
   transition: transform 0.5s ease;
 }
-.common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box .carousel-container {
-  height: 0px;
-  overflow: hidden;
-  transition: height 1s ease-in-out;
-}
 .common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box.active .gen-tab__add-product-mobile-header span {
   font-weight: 500;
 }
 .common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box.active .gen-tab__add-product-mobile-header::after {
   transform: rotate(180deg);
-}
-.common-template .gen-tab__add-product-mobile.add-product-mobile .add-product-mobile-conteiner .add-product-mobile-box.active .carousel-container {
-  padding-bottom: 8px;
-  height: 300px;
 }
 .common-template .gen-block-mobile {
   display: flex;

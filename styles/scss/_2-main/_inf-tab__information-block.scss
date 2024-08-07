@@ -98,7 +98,7 @@
 
       &.show {
         .inf-tab__information-container {
-          max-height: 3000px;
+          max-height: unset;
         }
         .fade,
         .global-all-view-button {
