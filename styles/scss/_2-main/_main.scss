@@ -6,8 +6,8 @@
   padding-bottom: 32px;
 
   @import "../_2-main/3-breadcrumbs";
-  @import "../_2-main/popular-questions";
-  @import "../_2-main/_13-mobile-nav/13-mobile-nav";
+  @import "../_2-main/16.1-top-big-banner";
+  @import "../_2-main/15.5-smartphone-filters";
 
   @media (max-width: 719px) {
     gap: 12px;
