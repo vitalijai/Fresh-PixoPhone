@@ -295,6 +295,56 @@
 .common-template .often-searched-content .often-searched-block-container .often-searched-block-content .often-searched-name:hover {
   background: var(--colors-gray-200, #e5e4e2);
 }
+.common-template .lorem-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .lorem-content .lorem-content-container {
+  display: flex;
+  padding: 48px 32px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+  border-radius: 32px;
+  background: var(--colors-white, #fff);
+  /* block-shadow */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.common-template .lorem-content .lorem-content-container .header-block {
+  margin: 0;
+  padding: 0;
+  align-self: stretch;
+  color: var(---dark-gray, #333);
+  text-align: justify;
+  font-size: 24px;
+}
+.common-template .lorem-content .lorem-content-container .header-block .conten-blok {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+.common-template .lorem-content .lorem-content-container .header-block .conten-blok .conten-blok-header {
+  align-self: stretch;
+  color: var(---dark-gray, #333);
+  text-align: justify;
+  font-size: 16px;
+}
+.common-template .lorem-content .lorem-content-container .header-block .conten-blok .conten-blok-p {
+  padding: 0;
+  align-self: stretch;
+  color: var(---dark-gray, #333);
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
 @media (max-width: 719px) {
   .common-template {
     gap: 12px;
