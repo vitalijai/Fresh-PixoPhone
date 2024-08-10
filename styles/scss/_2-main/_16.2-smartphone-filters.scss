@@ -18,6 +18,8 @@
     /* block-shadow */
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
+    width: min(91%, (var(---width, 1366px) - 48px));
+
     // width: min(92%, (var(---width, 1366px) - 32px));
     // overflow: auto;
 

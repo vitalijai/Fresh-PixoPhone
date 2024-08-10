@@ -17,8 +17,6 @@
     /* block-shadow */
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
-    width: min(99%, (var(---width, 1366px) + 48px));
-
     .header-block {
       display: flex;
       height: 72px;

@@ -122,6 +122,7 @@
   background: var(---white, #fff);
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  width: min(91%, var(---width, 1366px) - 48px);
 }
 @media (max-width: 719px) {
   .common-template .smartphone-filters-content .smartphone-filters-content-container {
@@ -243,7 +244,6 @@
   background: var(--colors-gray-200, #e5e4e2);
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
-  width: min(99%, var(---width, 1366px) + 48px);
 }
 .common-template .often-searched-content .often-searched-block-container .header-block {
   display: flex;
@@ -313,6 +313,7 @@
   background: var(--colors-white, #fff);
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  width: min(89.5%, var(---width, 1366px) - 64px);
 }
 .common-template .lorem-content .lorem-content-container .header-block {
   margin: 0;
@@ -345,6 +346,85 @@
   font-weight: 400;
   line-height: 150%; /* 24px */
 }
+.common-template .price-products-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .price-products-content .price-products-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  align-self: stretch;
+  border-radius: 32px;
+  background: var(--colors-gray-200, #e5e4e2);
+  /* block-shadow */
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+}
+.common-template .price-products-content .price-products-content-container .header-block {
+  display: flex;
+  height: 72px;
+  margin: 0;
+  padding: 0px 32px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+  border-radius: 28px 28px 0px 0px;
+  background: var(--colors-white, #fff);
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.common-template .price-products-content .price-products-content-container .header-block::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.0069 4.487C16.9603 3.53366 18.2533 2.99803 19.6015 2.99795L25.9495 2.99756C27.6343 2.99746 29.0001 4.36329 29 6.04811L28.9996 12.3961C28.9995 13.7443 28.4639 15.0373 27.5106 15.9906L15.0993 28.4019C14.3051 29.1961 13.0175 29.1961 12.2233 28.4019L3.59562 19.7742C2.80146 18.9801 2.80146 17.6925 3.59562 16.8983L16.0069 4.487ZM24.9116 10.4096C25.8314 9.48989 25.8314 7.99872 24.9116 7.07899C23.9919 6.15926 22.5007 6.15926 21.581 7.07899C20.6613 7.99872 20.6613 9.48989 21.581 10.4096C22.5007 11.3293 23.9919 11.3293 24.9116 10.4096Z" stroke="%232F2C2F" stroke-width="2"/></svg>');
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+}
+.common-template .price-products-content .price-products-content-container .price-product-content {
+  display: flex;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  background: var(---white, #fff);
+  border-radius: 0 0 32px 32px;
+}
+.common-template .price-products-content .price-products-content-container .price-product-content .list-item {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--colors-white, #fff);
+}
+.common-template .price-products-content .price-products-content-container .price-product-content .list-item .price-product-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: var(--colors-gray-700, #2f2c2f);
+  text-overflow: ellipsis;
+  font-weight: 400;
+}
+.common-template .price-products-content .price-products-content-container .price-product-content .list-item .price-product-value {
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: right;
+}
+.common-template .price-products-content .price-products-content-container .price-product-content .list-item .dots {
+  flex: 1;
+  margin: 0 10px;
+  border-bottom: 1px dotted black;
+  position: relative;
+}
 .common-template .frequent-questions-content {
   display: flex;
   justify-content: center;
@@ -361,7 +441,6 @@
   background: var(--colors-gray-200, #e5e4e2);
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
-  width: min(99%, var(---width, 1366px) + 48px);
 }
 .common-template .frequent-questions-content .frequent-questions-content-container .header-block {
   display: flex;
