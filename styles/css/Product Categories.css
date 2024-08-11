@@ -178,9 +178,8 @@
   text-overflow: ellipsis;
   font-size: 14px;
   opacity: 1;
-  height: unset;
   visibility: visible;
-  transition: opacity 0.35s ease-out 0.25s, height 0.35s ease-out 0.25s;
+  transition: opacity 0.35s ease-out 0.25s;
 }
 @media (max-width: 719px) {
   .common-template .smartphone-filters-content .smartphone-filters-content-container .smartphone-filters-block .header span {
@@ -192,7 +191,7 @@
 .common-template .smartphone-filters-content .smartphone-filters-content-container .smartphone-filters-block .dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 86%;
   left: 0;
   background: var(--colors-white, #fff);
   z-index: 1;
@@ -224,7 +223,6 @@
   border-radius: 16px 16px 0 0;
 }
 .common-template .smartphone-filters-content .smartphone-filters-content-container .smartphone-filters-block:hover span {
-  height: 0;
   visibility: hidden;
   opacity: 0;
 }
@@ -424,6 +422,13 @@
   margin: 0 10px;
   border-bottom: 1px dotted black;
   position: relative;
+}
+.common-template .price-products-content .price-products-content-container .price-product-content .list-item:hover {
+  border-radius: var(---radius-min, 8px);
+  background: var(--colors-gray-100, #f7f7f7);
+}
+.common-template .price-products-content .price-products-content-container .price-product-content .list-item:hover .dots {
+  border-bottom: 1px dotted transparent;
 }
 .common-template .frequent-questions-content {
   display: flex;

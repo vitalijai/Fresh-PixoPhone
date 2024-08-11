@@ -90,6 +90,15 @@
           border-bottom: 1px dotted black;
           position: relative;
         }
+
+        &:hover {
+          border-radius: var(---radius-min, 8px);
+          background: var(--colors-gray-100, #f7f7f7);
+
+          .dots {
+            border-bottom: 1px dotted transparent;
+          }
+        }
       }
     }
   }
