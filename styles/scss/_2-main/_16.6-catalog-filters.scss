@@ -180,6 +180,15 @@
 
               transform: translateY(-50%);
             }
+
+            &.focus {
+              .filters-search-svg {
+                circle,
+                path {
+                  stroke: var(--colors-gray-700, #2f2c2f);
+                }
+              }
+            }
           }
         }
 

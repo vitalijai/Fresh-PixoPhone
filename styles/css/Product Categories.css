@@ -579,6 +579,10 @@
   right: 8px;
   transform: translateY(-50%);
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-parametrs .filters-parametrs-checkbox-ul .filters-search-container.focus .filters-search-svg circle,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-parametrs .filters-parametrs-checkbox-ul .filters-search-container.focus .filters-search-svg path {
+  stroke: var(--colors-gray-700, #2f2c2f);
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-parametrs .show-more {
   display: flex;
   padding: 4px 0px;

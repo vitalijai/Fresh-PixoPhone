@@ -127,6 +127,14 @@ $(document).ready(function () {
     }
   });
 
+  $("#filters-search").on("focus", function () {
+    $(".filters-search-container").addClass("focus");
+  });
+
+  $("#filters-search").on("blur", function () {
+    $(".filters-search-container").removeClass("focus");
+  });
+
   // открытие списков фильтров
   $(".filters-parametrs-header").on("click", function () {
     // Найти родительский блок .catalog-filters-parametrs
