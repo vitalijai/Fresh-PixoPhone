@@ -39,6 +39,8 @@
   // Disabled box.
   &:disabled + label:before {
     box-shadow: none;
+    border: 2px solid var(--colors-gray-200, #e5e4e2);
+
     background: var(---disabled, #e9e9e9);
   }
   // Disabled state label.
