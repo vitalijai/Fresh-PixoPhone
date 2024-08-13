@@ -63,8 +63,12 @@
 .global-list-status--not-available,
 .global-list-status--no-offers {
   .global-list-line {
+    color: var(--colors-red-300, #fa8072);
+
+    font-weight: 500;
+
     &::before {
-      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="%23c0c0c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M6 6L12 12" stroke="%23c0c0c0" stroke-width="2" stroke-linecap="round" /><path d="M12 6L6 12" stroke="%23c0c0c0" stroke-width="2" stroke-linecap="round" /></svg>');
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17 9.00073C17 13.419 13.4183 17.0007 9 17.0007C4.58172 17.0007 1 13.419 1 9.00073C1 4.58245 4.58172 1.00073 9 1.00073C13.4183 1.00073 17 4.58245 17 9.00073Z" stroke="%23FA8072" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6.00073L12 12.0007" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/><path d="M12 6.00073L6 12.0007" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/></svg>');
       width: 18px;
       height: 18px;
     }

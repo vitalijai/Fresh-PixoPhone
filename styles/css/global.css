@@ -1372,9 +1372,14 @@ a:visited {
   height: 18px;
 }
 
+.global-list-status--not-available .global-list-line,
+.global-list-status--no-offers .global-list-line {
+  color: var(--colors-red-300, #fa8072);
+  font-weight: 500;
+}
 .global-list-status--not-available .global-list-line::before,
 .global-list-status--no-offers .global-list-line::before {
-  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17 9C17 13.4183 13.4183 17 9 17C4.58172 17 1 13.4183 1 9C1 4.58172 4.58172 1 9 1C13.4183 1 17 4.58172 17 9Z" stroke="%23c0c0c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M6 6L12 12" stroke="%23c0c0c0" stroke-width="2" stroke-linecap="round" /><path d="M12 6L6 12" stroke="%23c0c0c0" stroke-width="2" stroke-linecap="round" /></svg>');
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M17 9.00073C17 13.419 13.4183 17.0007 9 17.0007C4.58172 17.0007 1 13.419 1 9.00073C1 4.58245 4.58172 1.00073 9 1.00073C13.4183 1.00073 17 4.58245 17 9.00073Z" stroke="%23FA8072" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6.00073L12 12.0007" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/><path d="M12 6.00073L6 12.0007" stroke="%23FA8072" stroke-width="2" stroke-linecap="round"/></svg>');
   width: 18px;
   height: 18px;
 }
@@ -1926,9 +1931,10 @@ a:visited {
   padding: 20px;
   gap: 8px;
   flex: 1 0 0;
+  position: relative;
   background: var(--colors-white, #fff);
 }
-@media (max-width: 1290px) {
+@media (max-width: 1332px) {
   .global-block-container {
     padding: 10px !important;
   }
@@ -2111,6 +2117,7 @@ a:visited {
   padding: 2px;
   border-radius: 8px;
   cursor: pointer;
+  border: 2px solid transparent;
 }
 .global-block-container .global-block-colors .global-block-color div {
   width: 16px;
@@ -2123,11 +2130,14 @@ a:visited {
     height: 12px;
   }
 }
-.global-block-container .global-block-colors .global-block-color.checked {
-  border: 2px solid var(--colors-gray-700, #2f2c2f);
+.global-block-container .global-block-colors .global-block-color:hover {
+  border: 2px solid var(--colors-gray-200, #e5e4e2);
 }
 .global-block-container .global-block-colors .global-block-color.disabled div {
   background: url("/images/color-dis.svg") 50% no-repeat !important;
+}
+.global-block-container .global-block-colors .global-block-color.checked {
+  border: 2px solid var(--colors-gray-700, #2f2c2f);
 }
 .global-block-container .global-block-colors .global-block-color.black div {
   background: var(---black, #2b2b2b);
@@ -2169,7 +2179,6 @@ a:visited {
   flex-direction: column;
   align-self: stretch;
   gap: 8px;
-  align-self: stretch;
 }
 @media (max-width: 719px) {
   .global-block-container .global-block-container-bottom .global-block-container-buy {
@@ -2191,6 +2200,7 @@ a:visited {
   padding: 2px;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   border-radius: 4px;
   background: var(--colors-violet-300, #b57edc);
   color: var(--colors-white, #fff);
@@ -2380,6 +2390,66 @@ a:visited {
     height: 12px;
     margin: 0;
   }
+}
+.global-block-container .global-block-mark-top {
+  position: absolute;
+  top: 0;
+  user-select: none;
+  display: flex;
+  height: 16px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 0px 0px 8px 8px;
+}
+.global-block-container .global-block-mark-top .global-block-mark-name {
+  color: var(--colors-white, #fff);
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 10px;
+  font-weight: 700;
+}
+.global-block-container .global-block-mark-top .global-block-mark-timer {
+  display: flex;
+  padding: 3px 4px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  background: var(--colors-white, #fff);
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 10px;
+  font-weight: 600;
+}
+.global-block-container .global-block-mark-top.mark-offer-day {
+  background: var(--colors-violet-300, #b57edc);
+  box-shadow: 0px 30px 8px 0px rgba(95, 60, 119, 0), 0px 19px 8px 0px rgba(95, 60, 119, 0.01), 0px 11px 6px 0px rgba(95, 60, 119, 0.05), 0px 5px 5px 0px rgba(95, 60, 119, 0.09), 0px 1px 3px 0px rgba(95, 60, 119, 0.1);
+}
+.global-block-container .global-block-mark-top.mark-offer-day .global-block-mark-timer {
+  color: var(--colors-violet-300, #b57edc);
+}
+.global-block-container .global-block-mark-top.mark-price-reduced {
+  background: var(--colors-yellow-500, #ffbf00);
+  box-shadow: 0px 20px 6px 0px rgba(134, 100, 9, 0), 0px 13px 5px 0px rgba(134, 100, 9, 0.01), 0px 7px 4px 0px rgba(134, 100, 9, 0.05), 0px 3px 3px 0px rgba(134, 100, 9, 0.09), 0px 1px 2px 0px rgba(134, 100, 9, 0.1);
+}
+.global-block-container .global-block-mark-top.mark-price-reduced .global-block-mark-timer {
+  color: var(--colors-yellow-500, #ffbf00);
+}
+.global-block-container .global-block-mark-top.mark-with-gift {
+  background: var(--colors-red-300, #fa8072);
+  box-shadow: 0px 20px 6px 0px rgba(97, 28, 20, 0), 0px 13px 5px 0px rgba(97, 28, 20, 0.01), 0px 7px 4px 0px rgba(97, 28, 20, 0.05), 0px 3px 3px 0px rgba(97, 28, 20, 0.09), 0px 1px 2px 0px rgba(97, 28, 20, 0.1);
+}
+.global-block-container .global-block-mark-top.mark-with-gift .global-block-mark-timer {
+  color: var(--colors-red-300, #fa8072);
+}
+.global-block-container .global-block-mark-top.mark-free-delivery {
+  background: var(--colors-blue-400, #62a8ed);
+  box-shadow: 0px 28px 8px 0px rgba(27, 60, 95, 0), 0px 18px 7px 0px rgba(27, 60, 95, 0.01), 0px 10px 6px 0px rgba(27, 60, 95, 0.05), 0px 5px 5px 0px rgba(27, 60, 95, 0.09), 0px 1px 2px 0px rgba(27, 60, 95, 0.1);
+}
+.global-block-container .global-block-mark-top.mark-free-delivery .global-block-mark-timer {
+  color: var(--colors-blue-400, #62a8ed);
 }
 
 .global-p-short-product {
