@@ -1019,14 +1019,6 @@
               background-size: cover;
             }
 
-            &:last-child {
-              border-radius: 0 0 32px 0;
-
-              &:hover:not(.baner) {
-                border-radius: 0;
-              }
-            }
-
             .all-price-from {
               justify-content: flex-end;
               height: 32px;
@@ -1173,6 +1165,32 @@
               }
             }
           }
+        }
+      }
+
+      .global-button-show-more {
+        @include flexbox($self: stretch);
+
+        color: var(--colors-gray-500, #696969);
+
+        button {
+          @include flexbox(
+            $alignItems: center,
+            $justify: center,
+            $self: stretch
+          );
+          height: 64px;
+          padding: 8px 32px;
+          width: 100%;
+          gap: 4px;
+          border: none;
+          background: var(--colors-white, #fff);
+          border-radius: 0 0 32px 0;
+          cursor: pointer;
+        }
+
+        @media (max-width: 719px) {
+          display: none;
         }
       }
     }
