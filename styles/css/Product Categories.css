@@ -1243,7 +1243,8 @@
   border-radius: 0;
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container.baner {
-  background: url(/images/big-baner.png) no-repeat center;
+  background: url(/images/banner.png) no-repeat center;
+  background-size: cover;
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from {
   justify-content: flex-end;
