@@ -489,7 +489,7 @@
   gap: 2px;
   cursor: pointer;
   border-radius: 4px;
-  background: var(--colors-gray-200, #e5e4e2);
+  background: var(--colors-gray-100, #f7f7f7);
   color: var(--colors-gray-400, #929292);
   font-size: 12px;
 }
@@ -499,10 +499,10 @@
   height: 16px;
   transition: transform 0.5s ease;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-span .filters-left-header-span-value:hover, .common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-span .filters-left-header-span-value.active {
-  background: var(--colors-gray-100, #f7f7f7);
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-span .filters-left-header-span-value:hover, .common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-span .filters-left-header-span-value.open {
+  background: var(--colors-gray-200, #e5e4e2);
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-span .filters-left-header-span-value.active::after {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-span .filters-left-header-span-value.open::after {
   transform: rotate(180deg);
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-top .filters-left-header-values {

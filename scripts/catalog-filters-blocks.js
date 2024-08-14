@@ -98,4 +98,13 @@ $(document).ready(function () {
       bannerBlock.insertAfter(targetBlock);
     }
   });
+
+  // Обработчик клика для элемента filters-left-header-span-value
+  $(".filters-left-header-span-value").click(function () {
+    // Переключаем класс 'open' у нажатого элемента
+    $(this).toggleClass("open");
+
+    // Находим соседний контейнер и переключаем его видимость с анимацией
+    $(".catalog-filters-left-header-bottom-container").slideToggle();
+  });
 });
