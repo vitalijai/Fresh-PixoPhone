@@ -1318,6 +1318,18 @@
   width: 48px;
   flex: unset;
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-dropdown-similar-models {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 8px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-dropdown-similar-models .constructor-container__list {
+  flex-direction: column;
+  flex-wrap: unset;
+  align-items: unset;
+}
 @media (max-width: 1400px) {
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container {
     min-width: 145px;

@@ -1143,6 +1143,22 @@
               }
             }
 
+            .catalog-filters-viewed-dropdown {
+              .viewed-dropdown-similar-models {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                align-self: stretch;
+                gap: 8px;
+
+                .constructor-container__list {
+                  flex-direction: column;
+                  flex-wrap: unset;
+                  align-items: unset;
+                }
+              }
+            }
+
             @media (max-width: 1400px) {
               min-width: 145px;
             }
