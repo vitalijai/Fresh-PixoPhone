@@ -75,4 +75,27 @@ $(document).ready(function () {
   buttonsMoreGrid.each(function () {
     this.textContent = ""; // Очищаем текст внутри кнопки
   });
+
+  var containerListView = $(".catalog-filters-viewed-content.list-view");
+  var items = containerListView.find(".catalog-filters-viewed-container");
+
+  items.each(function (index) {
+    if ((index + 1) % 4 === 0) {
+      // Создаем новый баннер блок
+      var bannerBlock = $(
+        '<div class="catalog-filters-viewed-container-baner"><img src="/images/no_img-2.png" alt="baner"></div>'
+      );
+
+      // Определяем случайную четную позицию внутри текущих 4 блоков
+      var evenPositions = [0, 2]; // Возможные четные позиции (0 и 2 для 4 блоков)
+      var randomPosition =
+        evenPositions[Math.floor(Math.random() * evenPositions.length)];
+
+      // Определяем целевой блок для вставки баннера
+      var targetBlock = items.eq(index - randomPosition);
+
+      // Вставляем баннер блок после целевого элемента
+      bannerBlock.insertAfter(targetBlock);
+    }
+  });
 });
