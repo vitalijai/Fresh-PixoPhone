@@ -1011,6 +1011,37 @@
           }
         }
 
+        &.grid-view,
+        &.more-grid-view {
+          .catalog-filters-viewed-container {
+            &.baner {
+              background: url(/images/banner.png) no-repeat center;
+              background-size: cover;
+            }
+
+            &:last-child {
+              border-radius: 0 0 32px 0;
+
+              &:hover:not(.baner) {
+                border-radius: 0;
+              }
+            }
+
+            .all-price-from {
+              justify-content: flex-end;
+              height: 32px;
+
+              .global-block-container-bottom-from-price-top {
+                display: none;
+              }
+
+              .global-block-container-bottom-from-price {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
         &.grid-view {
           .catalog-filters-viewed-container {
             height: 438px;
@@ -1027,30 +1058,102 @@
                 }
               }
             }
+          }
+        }
 
-            &:last-child {
-              border-radius: 0 0 32px 0;
+        &.more-grid-view {
+          .catalog-filters-viewed-container {
+            height: 394px;
+            min-width: 160px;
+            max-width: 200px;
 
-              &:hover:not(.baner) {
-                border-radius: 0;
+            .filters-viewed-img {
+              img {
+                max-width: 184px;
               }
             }
 
-            &.baner {
-              background: url(/images/banner.png) no-repeat center;
-              background-size: cover;
-            }
+            .global-block-container-bottom {
+              gap: 4px;
 
-            .all-price-from {
-              justify-content: flex-end;
-              height: 32px;
-
-              .global-block-container-bottom-from-price-top {
-                display: none;
+              .global-list-line {
+                align-items: center;
               }
 
-              .global-block-container-bottom-from-price {
-                font-size: 20px;
+              .global-block-container-bottom-list-header {
+                font-size: 14px;
+              }
+
+              .global-block-container-bottom-list-status {
+                &,
+                span {
+                  font-size: 12px;
+                }
+              }
+
+              .list-bonus-bottom {
+                font-size: 8px !important;
+              }
+
+              .global-block-container-buy {
+                flex-direction: unset;
+                justify-content: space-between;
+
+                .global-p-short-product {
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: flex-start;
+                  gap: 0;
+                  align-self: unset;
+
+                  .global-block-container-bottom-from-price-top,
+                  .global-block-container-bottom-from-month {
+                    display: flex;
+                    font-size: 10px;
+                  }
+
+                  .global-block-container-bottom-from-price {
+                    display: flex;
+                    align-items: baseline;
+                    flex-wrap: nowrap;
+                  }
+
+                  &.all-price {
+                    display: none;
+                  }
+
+                  &,
+                  span {
+                    font-size: 16px;
+                  }
+                }
+
+                .global-block-container-bottom-value {
+                  height: unset;
+                }
+
+                .global-block-container-button {
+                  min-width: unset;
+
+                  &.global-button {
+                    width: 48px;
+                    flex: unset;
+                  }
+                }
+              }
+            }
+
+            @media (max-width: 1400px) {
+              min-width: 145px;
+            }
+
+            @media (max-width: 1210px) {
+              min-width: 130px;
+
+              .filters-viewed-img {
+                img {
+                  max-width: 170px;
+                }
               }
             }
           }

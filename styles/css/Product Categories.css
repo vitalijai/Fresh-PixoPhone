@@ -1223,6 +1223,26 @@
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content .catalog-filters-viewed-dropdown .viewed-dropdown-specs .viewed-dropdown-specs-snow-more:hover {
   color: var(--colors-green-400, #62b278);
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container.baner, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container.baner {
+  background: url(/images/banner.png) no-repeat center;
+  background-size: cover;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container:last-child, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container:last-child {
+  border-radius: 0 0 32px 0;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container:last-child:hover:not(.baner), .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container:last-child:hover:not(.baner) {
+  border-radius: 0;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .all-price-from {
+  justify-content: flex-end;
+  height: 32px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price-top, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price-top {
+  display: none;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price {
+  font-size: 20px;
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container {
   height: 438px;
 }
@@ -1236,25 +1256,80 @@
     max-width: 170px;
   }
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container:last-child {
-  border-radius: 0 0 32px 0;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container {
+  height: 394px;
+  min-width: 160px;
+  max-width: 200px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container:last-child:hover:not(.baner) {
-  border-radius: 0;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .filters-viewed-img img {
+  max-width: 184px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container.baner {
-  background: url(/images/banner.png) no-repeat center;
-  background-size: cover;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom {
+  gap: 4px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from {
-  justify-content: flex-end;
-  height: 32px;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-list-line {
+  align-items: center;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price-top {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-bottom-list-header {
+  font-size: 14px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-bottom-list-status,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-bottom-list-status span {
+  font-size: 12px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .list-bonus-bottom {
+  font-size: 8px !important;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy {
+  flex-direction: unset;
+  justify-content: space-between;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  align-self: unset;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product .global-block-container-bottom-from-price-top,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product .global-block-container-bottom-from-month {
+  display: flex;
+  font-size: 10px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product .global-block-container-bottom-from-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product.all-price {
   display: none;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price {
-  font-size: 20px;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product span {
+  font-size: 16px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-block-container-bottom-value {
+  height: unset;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-block-container-button {
+  min-width: unset;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-block-container-button.global-button {
+  width: 48px;
+  flex: unset;
+}
+@media (max-width: 1400px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container {
+    min-width: 145px;
+  }
+}
+@media (max-width: 1210px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container {
+    min-width: 130px;
+  }
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .filters-viewed-img img {
+    max-width: 170px;
+  }
 }
 .common-template .frequent-questions-content {
   display: flex;

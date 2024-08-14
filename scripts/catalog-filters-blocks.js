@@ -44,22 +44,35 @@ $(document).ready(function () {
     }
   );
 
-  var container = $(".catalog-filters-viewed-content.grid-view");
+  var container = $(
+    ".catalog-filters-viewed-content.grid-view, .catalog-filters-viewed-content.more-grid-view"
+  );
   var items = container.find(".catalog-filters-viewed-container");
 
   items.each(function (index) {
-    if ((index + 1) % 7 === 0) {
+    if ((index + 1) % 8 === 0) {
       // Создаем новый баннер блок
       var bannerBlock = $(
         '<a href="#" class="catalog-filters-viewed-container global-block-container baner"></a>'
       );
 
       // Определяем случайную позицию внутри текущих 7 блоков
-      var randomPosition = Math.floor(Math.random() * 7);
+      var randomPosition = Math.floor(Math.random() * 8);
       var targetBlock = items.eq(index - randomPosition);
 
       // Вставляем баннер блок перед случайным элементом
       bannerBlock.insertBefore(targetBlock);
     }
+  });
+
+  // Выбираем контейнер с классом .catalog-filters-viewed-content.more-grid-view
+  var containerMoreGrid = $(".catalog-filters-viewed-content.more-grid-view");
+
+  // Находим все кнопки с классом .global-block-container-button внутри контейнера
+  var buttonsMoreGrid = containerMoreGrid.find(".global-button button");
+
+  // Очищаем контент каждой кнопки
+  buttonsMoreGrid.each(function () {
+    this.textContent = ""; // Очищаем текст внутри кнопки
   });
 });
