@@ -802,6 +802,7 @@
   .global-block-container-bottom {
     @include flexbox($alignItems: center, $direction: column, $self: stretch);
     gap: 8px;
+    height: 100%;
 
     &,
     a {
@@ -817,6 +818,7 @@
     .global-block-container-buy {
       @include flexbox($alignItems: center, $direction: column, $self: stretch);
       gap: 8px;
+      margin-top: auto;
 
       @media (max-width: 719px) {
         display: flex;
@@ -884,6 +886,7 @@
         $justify: space-between,
         $self: stretch
       );
+      height: 24px;
     }
 
     .global-block-container-bottom-value {
@@ -1011,6 +1014,18 @@
             .global-block-container-bottom-from-month {
               font-size: 10px;
             }
+          }
+        }
+
+        &.from-start-finish {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 2px;
+          align-self: stretch;
+
+          span {
+            font-size: 20px;
           }
         }
       }

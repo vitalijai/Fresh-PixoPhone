@@ -810,6 +810,12 @@
       }
     }
   }
+
+  &.global-block-container-button {
+    button {
+      border-radius: 8px;
+    }
+  }
 }
 
 //Вернуться к верху
