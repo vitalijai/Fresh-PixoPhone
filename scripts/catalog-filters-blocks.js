@@ -81,7 +81,7 @@ $(document).ready(function () {
   );
 
   var container = $(
-    ".catalog-filters-viewed-content.grid-view, .catalog-filters-viewed-content.more-grid-view"
+    ".catalog-filters-viewed-content.grid-view, .catalog-filters-viewed-content.more-grid-view, .catalog-filters-viewed-content.more-grid-view-bu"
   );
   var items = container.find(".catalog-filters-viewed-container");
 

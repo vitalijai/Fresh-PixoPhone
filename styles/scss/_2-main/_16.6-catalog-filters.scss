@@ -1135,7 +1135,8 @@
         }
 
         &.grid-view,
-        &.more-grid-view {
+        &.more-grid-view,
+        &.more-grid-view-bu {
           .catalog-filters-viewed-container {
             &.baner {
               background: url(/images/banner.png) no-repeat center;
@@ -1592,12 +1593,35 @@
         &.more-grid-view {
           .catalog-filters-viewed-container {
             height: 394px;
+          }
+
+          .global-block-container-buy {
+            flex-direction: unset;
+            justify-content: space-between;
+          }
+
+          .global-block-container-bottom-value {
+            height: unset;
+          }
+          .global-block-container-buy {
+            .global-p-short-product {
+              &.all-price {
+                display: none;
+              }
+            }
+          }
+        }
+
+        &.more-grid-view,
+        &.more-grid-view-bu {
+          .catalog-filters-viewed-container {
             min-width: 160px;
             max-width: 200px;
 
             .filters-viewed-img {
               img {
                 max-width: 184px;
+                height: 184px;
               }
             }
 
@@ -1624,9 +1648,6 @@
               }
 
               .global-block-container-buy {
-                flex-direction: unset;
-                justify-content: space-between;
-
                 .global-p-short-product {
                   flex-direction: column;
                   justify-content: center;
@@ -1646,18 +1667,10 @@
                     flex-wrap: nowrap;
                   }
 
-                  &.all-price {
-                    display: none;
-                  }
-
                   &,
                   span {
                     font-size: 16px;
                   }
-                }
-
-                .global-block-container-bottom-value {
-                  height: unset;
                 }
 
                 .global-block-container-button {
@@ -1697,6 +1710,35 @@
               .filters-viewed-img {
                 img {
                   max-width: 170px;
+                }
+              }
+            }
+          }
+        }
+
+        &.more-grid-view-bu {
+          .catalog-filters-viewed-container {
+            height: 380px;
+
+            .global-block-container-buy {
+              .global-p-short-product {
+                display: flex;
+                min-width: 80px;
+                justify-content: flex-end;
+                align-items: baseline !important;
+                align-content: center;
+                gap: 0px 4px;
+                align-self: stretch;
+                flex-direction: unset !important;
+                flex-wrap: wrap;
+                gap: 4px !important;
+
+                .global-block-container-bottom-from-price {
+                  gap: 4px;
+
+                  .global-block-container-bottom-from-price-for {
+                    font-size: 10px;
+                  }
                 }
               }
             }
