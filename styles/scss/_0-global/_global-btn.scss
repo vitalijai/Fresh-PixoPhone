@@ -1064,9 +1064,25 @@
   font-size: 13.5px;
   font-weight: 700;
   text-transform: uppercase;
+
+  &.status {
+    width: 17px;
+    height: 8px;
+    padding: 4px;
+    gap: 0;
+    font-weight: 500;
+
+    .status-score-one-of {
+      font-size: 12px;
+    }
+
+    .status-score {
+      font-size: 8px;
+    }
+  }
 }
 
-.pixo-indx,
+.pixo-indx:not(.status),
 .status-indicator {
   &.score-0 {
     background: var(--score, #f7f7f7);

@@ -966,7 +966,7 @@
   top: 100%;
   left: 0;
   background: var(--colors-white, #fff);
-  z-index: 1;
+  z-index: 3;
   width: calc(100% - 32px);
   gap: 4px;
   padding: 0px 16px 12px 16px;
@@ -1331,22 +1331,23 @@
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .all-price-from .global-block-container-bottom-from-price {
   font-size: 20px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container {
-  min-width: 395px;
-  max-width: 560px;
-  flex-direction: unset;
-  gap: 16px;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-img img, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-img img {
+  max-width: 200px;
+  height: 200px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .global-block-container-bottom-list-header {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container {
+  height: 252px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-header, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom-list-header {
   padding-top: 8px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .global-block-container-header .global-block-img .global-block-add-group {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-header .global-block-img .global-block-add-group, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-header .global-block-img .global-block-add-group {
   display: none;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .global-block-container-bottom {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom {
   height: unset;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .global-block-container-bottom .global-block-container-buy .global-p-short-product-containers {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom .global-block-container-buy .global-p-short-product-containers, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom .global-block-container-buy .global-p-short-product-containers {
   display: flex;
   padding: 0px 4px;
   align-items: center;
@@ -1354,43 +1355,283 @@
   align-self: stretch;
   justify-content: space-between;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown div:not(.viewed-dropdown-specs,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown div:not(.viewed-dropdown-specs,
+.viewed-dropdown-reason-markdown,
+.viewed-dropdown-address,
+.viewed-btn-container), .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-dropdown div:not(.viewed-dropdown-specs,
 .viewed-dropdown-reason-markdown,
 .viewed-dropdown-address,
 .viewed-btn-container) {
   display: none;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-dropdown-address.shop .viewed-btn-container {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown .viewed-dropdown-address.shop .viewed-btn-container, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-dropdown .viewed-dropdown-address.shop .viewed-btn-container {
   flex-direction: unset;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-dropdown-address.shop .viewed-btn-container .viewed-shops {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown .viewed-dropdown-address.shop .viewed-btn-container .viewed-shops, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-dropdown .viewed-dropdown-address.shop .viewed-btn-container .viewed-shops {
   flex: 1 0 0;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-shops {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown .viewed-shops, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-dropdown .viewed-shops {
   font-size: 14px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-dropdown-reason-markdown span {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown .viewed-dropdown-reason-markdown span, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-dropdown .viewed-dropdown-reason-markdown span {
   display: flex;
   font-size: 12px;
   line-height: 135%;
   align-items: center;
   gap: 8px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container .catalog-filters-viewed-dropdown .viewed-dropdown-reason-markdown span::before {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown .viewed-dropdown-reason-markdown span::before, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-dropdown .viewed-dropdown-reason-markdown span::before {
   content: url("/images/discount.png");
   display: block;
   width: 48px; /* Задайте ширину */
   height: 48px; /* Задайте высоту */
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container-baner {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container-baner, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-baner {
   height: 200px;
   width: 100%;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container-baner img {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container-baner img, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-baner img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   background: #fff;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container {
+  min-width: 395px;
+  max-width: 560px;
+  flex-direction: unset;
+  gap: 16px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu {
+  display: flex;
+  position: relative;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .global-p-short-product-containers {
+  justify-content: flex-end !important;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .global-p-short-product-containers .global-p-short-product {
+  align-items: baseline;
+  font-size: 12px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .global-p-short-product-containers .global-p-short-product .global-block-container-bottom-from-price {
+  font-size: 20px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-right {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  flex: 1 0 0;
+  min-width: 395px;
+  max-width: 560px;
+  position: relative;
+  overflow: hidden;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container {
+  display: flex;
+  min-width: 220px;
+  padding: 8px 4px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: calc(50% - 16px) 0 0;
+  z-index: 2;
+  border-radius: 16px;
+  background: var(--colors-white, #fff);
+  box-shadow: 0px 18px 5px 0px rgba(160, 160, 160, 0), 0px 12px 5px 0px rgba(160, 160, 160, 0.01), 0px 7px 4px 0px rgba(160, 160, 160, 0.03), 0px 3px 3px 0px rgba(160, 160, 160, 0.05), 0px 1px 2px 0px rgba(160, 160, 160, 0.06);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .offers-in-list-status {
+  display: flex;
+  padding: 0px 8px 0px 4px;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .offers-in-list-status .pixo-indx-name {
+  color: var(--colors-gray-500, #696969);
+  text-align: right;
+  flex: 1 0 0;
+  font-size: 12px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .offers-in-list-parametrs-status {
+  display: flex;
+  padding: 0px 4px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .offers-in-list-parametrs-status .offers-in-list-parametr {
+  display: flex;
+  min-width: 105px;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  flex: 1 0 0;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .offers-in-list-parametrs-status .offers-in-list-parametr .status-indx-name {
+  flex: 1 0 0;
+  color: var(--colors-gray-500, #696969);
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 10px;
+  font-weight: 400;
+  transition: color 0.3s ease-in-out;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .pixo-indx {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .pixo-indx.status {
+  background: var(--colors-gray-100, #f7f7f7);
+  color: var(--colors-gray-300, #c0c0c0);
+  transition: background 0.3s ease-in-out;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-top .pixo-indx.status .status-score {
+  color: var(--colors-gray-300, #c0c0c0);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-bottom {
+  display: flex;
+  height: 20px;
+  padding: 0px 4px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  justify-content: flex-end;
+  position: relative;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-bottom .global-p-short-product {
+  transform: translateX(100px); /* Изначально сдвигаем кнопку вправо */
+  transition: all 0.3s ease;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-bottom .global-button-reviews {
+  transform: translateX(100px); /* Изначально сдвигаем кнопку вправо */
+  opacity: 0;
+  transition: all 0.3s ease;
+  flex: unset;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-bottom .global-button-reviews button {
+  height: 16px;
+  padding: 0 4px 0 10px;
+  font-size: 10px;
+  flex: unset;
+  gap: 2px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-bottom .global-button-reviews button::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.33398 6L5.33398 4" stroke="%2362A8ED" stroke-linecap="round"/><path d="M3.33398 2L5.33398 4" stroke="%2362A8ED" stroke-linecap="round"/></svg>');
+  width: 8px;
+  height: 8px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container .offers-in-list-bottom .global-button-reviews:hover button::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M3.33398 6L5.33398 4" stroke="%23fff" stroke-linecap="round"/><path d="M3.33398 2L5.33398 4" stroke="%23fff" stroke-linecap="round"/></svg>');
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .offers-in-list-parametr .status-indx-name {
+  color: var(--colors-gray-700, #2f2c2f) !important;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .global-button-reviews,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .global-p-short-product {
+  transform: translateX(0); /* Возвращаем кнопку на место при ховере */
+  opacity: 1;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx {
+  opacity: 1;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status .status-score {
+  color: var(--colors-white, #fff);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status.score-0 {
+  background: var(--score, #f7f7f7);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status.score-1 {
+  background: var(--score-1, #fa8072);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status.score-2 {
+  background: var(--score-2, #ffce4f);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status.score-3 {
+  background: var(--score-3, #cde24d);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status.score-4 {
+  background: var(--score-4, #94db5c);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-offers-in-list-container:hover .pixo-indx.status.score-5 {
+  background: var(--score-5, #62b278);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container {
+  min-width: 395px;
+  max-width: 560px;
+  flex-direction: unset;
+  gap: 16px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button {
+  position: relative;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button button {
+  z-index: 1;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: var(--colors-white, #fff);
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  transform: translateY(-50%) rotate(-45deg);
+  z-index: 0;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-dropdown {
+  display: flex;
+  display: none;
+  top: 100%;
+  position: absolute;
+  left: 0;
+  background: var(--colors-gray-200, #e5e4e2);
+  z-index: 3;
+  width: 100%;
+  align-self: stretch;
+  border-radius: 0px 0px 16px 16px;
+  transition: opacity 0.35s ease-out 0.25s;
+  box-shadow: 0px 18px 5px 0px rgba(160, 160, 160, 0), 0px 12px 5px 0px rgba(160, 160, 160, 0.01), 0px 7px 4px 0px rgba(160, 160, 160, 0.03), 0px 3px 3px 0px rgba(160, 160, 160, 0.05), 0px 1px 2px 0px rgba(160, 160, 160, 0.06);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-dropdown .catalog-filters-viewed-container-dropdown-box {
+  display: flex;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-dropdown .catalog-filters-viewed-dropdown-bu {
+  position: relative;
+  width: unset;
+  display: flex;
+  padding: 16px;
+  padding-top: 0;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  flex-wrap: wrap;
+  box-shadow: unset;
+  top: unset;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-dropdown .catalog-filters-viewed-dropdown-bu.left {
+  border-radius: 0px 0px 0 16px;
+  flex-wrap: unset;
+  width: calc(50% - 23px);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-dropdown .catalog-filters-viewed-dropdown-bu.right {
+  border-radius: 0px 0px 16px 0;
+  overflow: hidden;
+  width: calc(50% - 32px);
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view .catalog-filters-viewed-container {
   height: 438px;

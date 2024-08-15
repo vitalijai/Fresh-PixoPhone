@@ -27,20 +27,56 @@ $(document).ready(function () {
 
   $(".catalog-filters-viewed-container").hover(
     function () {
-      // Проверяем, есть ли внутри блок .catalog-filters-viewed-dropdown
+      // Проверяем, есть ли у текущего элемента или его предков класс `catalog-filters-viewed-content list-view-bu`
+      if (
+        $(this).hasClass("catalog-filters-viewed-content") ||
+        $(this).closest(".catalog-filters-viewed-content.list-view-bu").length >
+          0
+      ) {
+        return; // Выходим из функции, если условие выполнено
+      }
+
+      // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
       var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
       if (dropdown.length > 0) {
-        // Когда курсор наведен на блок, плавно раскрываем dropdown внутри этого блока
+        // Плавно показываем dropdown при наведении
         dropdown.stop(true, true).slideDown(300).css("display", "flex");
       }
     },
     function () {
-      // Проверяем, есть ли внутри блок .catalog-filters-viewed-dropdown
+      // Проверяем, есть ли у текущего элемента или его предков класс `catalog-filters-viewed-content list-view-bu`
+      if (
+        $(this).hasClass("catalog-filters-viewed-content") ||
+        $(this).closest(".catalog-filters-viewed-content.list-view-bu").length >
+          0
+      ) {
+        return; // Выходим из функции, если условие выполнено
+      }
+
+      // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
       var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
       if (dropdown.length > 0) {
-        // Когда курсор уходит с блока, плавно скрываем dropdown внутри этого блока
+        // Плавно скрываем dropdown, когда курсор уходит
         dropdown.stop(true, true).slideUp(300);
       }
+    }
+  );
+
+  $(".catalog-filters-viewed-container-bu").hover(
+    function () {
+      // При наведении на .catalog-filters-viewed-container-bu
+      $(this)
+        .find(".catalog-filters-viewed-container-dropdown")
+        .stop(true, true)
+        .slideDown(300)
+        .css("display", "flex");
+    },
+    function () {
+      // При уходе курсора с .catalog-filters-viewed-container-bu
+      $(this)
+        .find(".catalog-filters-viewed-container-dropdown")
+        .stop(true, true)
+        .slideUp(300);
     }
   );
 
@@ -76,28 +112,43 @@ $(document).ready(function () {
     this.textContent = ""; // Очищаем текст внутри кнопки
   });
 
-  var containerListView = $(".catalog-filters-viewed-content.list-view");
-  var items = containerListView.find(".catalog-filters-viewed-container");
+  function insertBannerBlocks(container, itemSelector, bannerClass) {
+    var items = container.find(itemSelector);
 
-  items.each(function (index) {
-    if ((index + 1) % 4 === 0) {
-      // Создаем новый баннер блок
-      var bannerBlock = $(
-        '<div class="catalog-filters-viewed-container-baner"><img src="/images/no_img-2.png" alt="baner"></div>'
-      );
+    items.each(function (index) {
+      if ((index + 1) % 4 === 0) {
+        // Создаем новый баннер блок
+        var bannerBlock = $(
+          '<div class="' +
+            bannerClass +
+            '"><img src="/images/no_img-2.png" alt="baner"></div>'
+        );
 
-      // Определяем случайную четную позицию внутри текущих 4 блоков
-      var evenPositions = [0, 2]; // Возможные четные позиции (0 и 2 для 4 блоков)
-      var randomPosition =
-        evenPositions[Math.floor(Math.random() * evenPositions.length)];
+        // Определяем случайную четную позицию внутри текущих 4 блоков
+        var evenPositions = [0, 2]; // Возможные четные позиции (0 и 2 для 4 блоков)
+        var randomPosition =
+          evenPositions[Math.floor(Math.random() * evenPositions.length)];
 
-      // Определяем целевой блок для вставки баннера
-      var targetBlock = items.eq(index - randomPosition);
+        // Определяем целевой блок для вставки баннера
+        var targetBlock = items.eq(index - randomPosition);
 
-      // Вставляем баннер блок после целевого элемента
-      bannerBlock.insertAfter(targetBlock);
-    }
-  });
+        // Вставляем баннер блок после целевого элемента
+        bannerBlock.insertAfter(targetBlock);
+      }
+    });
+  }
+
+  // Вызов функции для контейнеров
+  insertBannerBlocks(
+    $(".catalog-filters-viewed-content.list-view"),
+    ".catalog-filters-viewed-container",
+    "catalog-filters-viewed-container-baner"
+  );
+  insertBannerBlocks(
+    $(".catalog-filters-viewed-content.list-view-bu"),
+    ".catalog-filters-viewed-container-bu",
+    "catalog-filters-viewed-container-baner"
+  );
 
   // Обработчик клика для элемента filters-left-header-span-value
   $(".filters-left-header-span-value").click(function () {

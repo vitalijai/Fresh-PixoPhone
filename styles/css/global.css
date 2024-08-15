@@ -1291,28 +1291,41 @@ a:visited {
   font-weight: 700;
   text-transform: uppercase;
 }
+.pixo-indx.status {
+  width: 17px;
+  height: 8px;
+  padding: 4px;
+  gap: 0;
+  font-weight: 500;
+}
+.pixo-indx.status .status-score-one-of {
+  font-size: 12px;
+}
+.pixo-indx.status .status-score {
+  font-size: 8px;
+}
 
-.pixo-indx.score-0,
+.pixo-indx:not(.status).score-0,
 .status-indicator.score-0 {
   background: var(--score, #f7f7f7);
 }
-.pixo-indx.score-1,
+.pixo-indx:not(.status).score-1,
 .status-indicator.score-1 {
   background: var(--score-1, #fa8072);
 }
-.pixo-indx.score-2,
+.pixo-indx:not(.status).score-2,
 .status-indicator.score-2 {
   background: var(--score-2, #ffce4f);
 }
-.pixo-indx.score-3,
+.pixo-indx:not(.status).score-3,
 .status-indicator.score-3 {
   background: var(--score-3, #cde24d);
 }
-.pixo-indx.score-4,
+.pixo-indx:not(.status).score-4,
 .status-indicator.score-4 {
   background: var(--score-4, #94db5c);
 }
-.pixo-indx.score-5,
+.pixo-indx:not(.status).score-5,
 .status-indicator.score-5 {
   background: var(--score-5, #62b278);
 }
@@ -2486,6 +2499,7 @@ a:visited {
   position: absolute;
   top: 0;
   user-select: none;
+  text-wrap: nowrap;
   display: flex;
   height: 16px;
   padding: 6px;
