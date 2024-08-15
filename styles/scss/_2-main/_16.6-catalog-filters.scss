@@ -1270,6 +1270,10 @@
             display: flex;
             position: relative;
 
+            .constructor-container__block {
+              flex: calc(50% - 24px) 0 0;
+            }
+
             .global-p-short-product-containers {
               justify-content: flex-end !important;
 
