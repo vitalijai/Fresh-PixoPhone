@@ -694,15 +694,18 @@
                 height: 13px;
               }
 
-              &.list-view {
+              &.list-view,
+              &.list-view-bu {
                 padding: 8px 8px 8px 12px;
               }
 
-              &.grid-view {
+              &.grid-view,
+              &.grid-view-bu {
                 padding: 8px 6.5px;
               }
 
-              &.more-grid-view {
+              &.more-grid-view,
+              &.more-grid-view-bu {
                 padding: 8px 12px 8px 8px;
               }
             }
@@ -1179,10 +1182,11 @@
         }
 
         &.grid-view,
+        &.grid-view-bu,
         &.more-grid-view,
         &.more-grid-view-bu {
           .catalog-filters-viewed-container {
-            &.baner {
+            &.banner {
               background: url(/images/banner.png) no-repeat center;
               background-size: cover;
             }
@@ -1615,7 +1619,8 @@
           }
         }
 
-        &.grid-view {
+        &.grid-view,
+        &.grid-view-bu {
           .catalog-filters-viewed-container {
             height: 438px;
             // align-self: stretch;
