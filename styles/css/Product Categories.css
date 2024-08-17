@@ -471,7 +471,8 @@
 }
 @media (max-width: 719px) {
   .common-template .lorem-content .lorem-content-container {
-    width: min(82.5%, var(---width, 1366px) - 64px);
+    padding: 24px;
+    width: calc(93% - 48px);
   }
 }
 .common-template .lorem-content .lorem-content-container .header-block {
@@ -482,7 +483,12 @@
   text-align: justify;
   font-size: 24px;
 }
-.common-template .lorem-content .lorem-content-container .header-block .conten-blok {
+@media (max-width: 719px) {
+  .common-template .lorem-content .lorem-content-container .header-block {
+    font-size: 16px;
+  }
+}
+.common-template .lorem-content .lorem-content-container .conten-blok {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -490,20 +496,36 @@
   gap: 16px;
   align-self: stretch;
 }
-.common-template .lorem-content .lorem-content-container .header-block .conten-blok .conten-blok-header {
+@media (max-width: 719px) {
+  .common-template .lorem-content .lorem-content-container .conten-blok {
+    gap: 8px;
+  }
+}
+.common-template .lorem-content .lorem-content-container .conten-blok .conten-blok-header {
   align-self: stretch;
   color: var(---dark-gray, #333);
   text-align: justify;
   font-size: 16px;
 }
-.common-template .lorem-content .lorem-content-container .header-block .conten-blok .conten-blok-p {
+@media (max-width: 719px) {
+  .common-template .lorem-content .lorem-content-container .conten-blok .conten-blok-header {
+    font-size: 14px;
+  }
+}
+.common-template .lorem-content .lorem-content-container .conten-blok .conten-blok-p {
   padding: 0;
+  margin: 0;
   align-self: stretch;
   color: var(---dark-gray, #333);
   text-align: justify;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+@media (max-width: 719px) {
+  .common-template .lorem-content .lorem-content-container .conten-blok .conten-blok-p {
+    font-size: 14px;
+  }
 }
 .common-template .price-products-content {
   display: flex;
