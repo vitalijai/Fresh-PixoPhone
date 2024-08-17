@@ -53,3 +53,16 @@ $(window).on("scroll", function () {
     header.removeClass("before-visible"); // Убираем класс для ::before
   }
 });
+
+$("#novelty").change(function () {
+  // Check if the checkbox is checked
+  if ($(this).is(":checked")) {
+    // Add 'active' class to 'filters-right-header-month' and remove from 'filters-right-header-today'
+    $(".filters-right-header-month").addClass("active");
+    $(".filters-right-header-today").removeClass("active");
+  } else {
+    // Remove 'active' class from 'filters-right-header-month' and add to 'filters-right-header-today'
+    $(".filters-right-header-month").removeClass("active");
+    $(".filters-right-header-today").addClass("active");
+  }
+});
