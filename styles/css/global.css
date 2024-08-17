@@ -2619,6 +2619,25 @@ a:visited {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none"><path d="M32.5 0H0.5V32C5.447 32 10.0147 29.3493 12.4691 25.0541L21.5232 9.20946C23.364 5.98806 26.7898 4 30.5 4H32.5V0Z" fill="%23B57EDC"/><clipPath id="clip0_14702_13471"><rect width="32" height="32" fill="white" transform="matrix(-1 0 0 1 32.5 0)"/></clipPath></svg>');
 }
 
+.global-span-mark {
+  display: flex;
+  height: 24px;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  color: var(--colors-white, #fff);
+  /* main-medium */
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.global-span-mark.mark-price-reduced {
+  background: var(--colors-yellow-500, #ffbf00);
+}
+
 .global-p-short-product {
   display: flex;
   align-items: center;
