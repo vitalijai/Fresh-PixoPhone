@@ -2054,6 +2054,11 @@
   /* block-shadow */
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 }
+@media (max-width: 719px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container {
+    gap: 0;
+  }
+}
 .common-template .frequent-questions-content .frequent-questions-content-container .header-block {
   display: flex;
   height: 72px;
@@ -2078,6 +2083,31 @@
   display: flex;
   justify-content: center;
 }
+@media (max-width: 719px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container .header-block::before {
+    display: none;
+  }
+}
+@media (max-width: 719px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container .header-block {
+    height: unset;
+    padding: 24px;
+    padding-bottom: 8px;
+    font-size: 14px;
+  }
+}
+.common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-container {
+  width: 100%;
+  background: var(--colors-white, #fff);
+  border-radius: 0 0 32px 32px;
+}
+@media (max-width: 719px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-container {
+    padding: 16px;
+    padding-top: 0;
+    width: calc(100% - 32px);
+  }
+}
 .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions {
   display: flex;
   padding: 24px 32px;
@@ -2086,6 +2116,13 @@
   align-items: flex-start;
   align-self: stretch;
   background: var(--colors-white, #fff);
+}
+@media (max-width: 719px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions {
+    padding: 24px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+  }
 }
 .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-header-side {
   align-self: stretch;
@@ -2123,6 +2160,11 @@
   gap: 16px;
   align-self: stretch;
 }
+@media (max-width: 719px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-block {
+    padding-right: 0;
+  }
+}
 .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-block p {
   padding: 0;
   margin: 0;
@@ -2135,8 +2177,10 @@
   color: var(--colors-green-400, #62b278);
   font-weight: 500;
 }
-.common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions:last-child {
-  border-radius: 0 0 32px 32px;
+@media (min-width: 720px) {
+  .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions:last-child {
+    border-radius: 0 0 32px 32px;
+  }
 }
 .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions:hover {
   background: var(--colors-gray-100, #f7f7f7);
