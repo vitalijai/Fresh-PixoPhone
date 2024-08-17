@@ -2178,8 +2178,11 @@
 .common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-header-side .dropdown-area-block-header.open::after {
   transform: rotate(180deg);
 }
-.common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-block {
+.common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-block-box {
   display: none;
+}
+.common-template .frequent-questions-content .frequent-questions-content-container .dropdown-area-frequent-questions .dropdown-area-block {
+  display: flex;
   flex-direction: column;
   padding-right: 320px;
   align-items: flex-start;

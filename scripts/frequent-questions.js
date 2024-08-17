@@ -3,7 +3,7 @@ $(document).ready(function () {
     // Найти соответствующий блок внутри текущего родительского блока
     var $block = $(this)
       .closest(".dropdown-area-frequent-questions")
-      .find(".dropdown-area-block");
+      .find(".dropdown-area-block-box");
 
     // Проверка состояния блока
     if (!$block.is(":visible")) {
