@@ -18,7 +18,7 @@
     border-radius: 32px;
 
     /* block-shadow */
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 7px 8px 7px 0px rgba(0, 0, 0, 0.08);
 
     .catalog-filters-left {
       display: flex;
@@ -31,6 +31,26 @@
 
       background: var(--colors-gray-200, #e5e4e2);
       border-radius: 32px 0 0 32px;
+      height: calc(100vh - 88px);
+      position: sticky;
+      top: 76px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px; /* Ширина всего элемента навигации */
+      }
+
+      &::-webkit-scrollbar-track {
+        // border-radius: 8px; /* Округление бегунка */
+
+        background: var(--colors-gray-100, #f7f7f7); /* Цвет дорожки */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--colors-gray-200, #e5e4e2);
+        /* Цвет бегунка */
+        // border-radius: 8px; /* Округление бегунка */
+      }
 
       .catalog-filters-left-header {
         display: flex;
@@ -194,7 +214,7 @@
         padding: 20px 32px 12px 32px;
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        // gap: 12px;
         align-self: stretch;
 
         background: var(--colors-white, #fff);
@@ -213,6 +233,7 @@
           list-style: none;
           margin: 0;
           padding: 0;
+          margin-top: 12px; // gap: 12px;
           display: flex;
           gap: 16px;
           flex-direction: column;
@@ -511,6 +532,7 @@
 
       background: var(--colors-gray-200, #e5e4e2);
       border-radius: 0 32px 32px 0;
+      position: relative;
 
       .catalog-filters-right-header {
         display: flex;
@@ -523,6 +545,23 @@
         border-radius: 0 32px 0 0;
 
         background: var(--colors-white, #fff);
+
+        position: sticky;
+        top: 76px;
+        // z-index: 5;
+        transition: top 300ms ease-in-out;
+
+        &.before-visible {
+          &::before {
+            content: "";
+            width: calc(100% + 24px);
+            height: 16px;
+            position: absolute;
+            background: var(--bg-color, #f5f5f5);
+            top: -16px;
+            left: 0;
+          }
+        }
 
         .filters-right-header-left {
           display: flex;

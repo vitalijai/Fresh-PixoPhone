@@ -15,3 +15,41 @@ $(document).ready(function () {
     );
   }
 });
+
+$(window).on("scroll", function () {
+  var header = $(".catalog-filters-right-header");
+  var headerTop = header.offset().top; // Положение блока относительно страницы
+  var scrollPosition = $(window).scrollTop(); // Текущая позиция скролла
+
+  // Высота фиксированного хедера
+  var fixedHeaderHeight = $(".header").outerHeight();
+
+  // Проверяем, если элемент с классом often-searched-content стал видимым
+  var oftenSearchedContent = $(".often-searched-content");
+  var oftenSearchedContentOffset = oftenSearchedContent.offset().top;
+  var oftenSearchedContentHeight = oftenSearchedContent.outerHeight();
+
+  // Проверка видимости элемента often-searched-content
+  var isOftenSearchedContentVisible =
+    scrollPosition + $(window).height() > oftenSearchedContentOffset &&
+    scrollPosition < oftenSearchedContentOffset + oftenSearchedContentHeight;
+
+  // Устанавливаем стили в зависимости от условий
+  if (headerTop - scrollPosition <= fixedHeaderHeight + 12) {
+    header.css("border-radius", "0").css("z-index", "5"); // Убираем скругления
+
+    // Устанавливаем position в зависимости от видимости элемента often-searched-content
+    if (isOftenSearchedContentVisible) {
+      header.css("top", "-64px"); // Если often-searched-content видим, устанавливаем position relative
+    } else {
+      header.css("top", "76px"); // Если often-searched-content не видим, устанавливаем position sticky
+    }
+
+    header.addClass("before-visible"); // Добавляем класс для ::before
+  } else {
+    header.css("border-radius", "0 32px 0 0").css("z-index", "0"); // Возвращаем скругления
+    // header.css("position", "sticky"); // Всегда sticky, если расстояние больше 12px
+
+    header.removeClass("before-visible"); // Убираем класс для ::before
+  }
+});
