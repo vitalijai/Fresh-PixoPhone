@@ -82,6 +82,8 @@
         .price-product-value {
           color: var(--colors-gray-700, #2f2c2f);
           text-align: right;
+
+          text-wrap: nowrap;
         }
 
         .dots {

@@ -21,6 +21,10 @@
 
     width: min(89.5%, (var(---width, 1366px) - 64px));
 
+    @media (max-width: 719px) {
+      width: min(82.5%, (var(---width, 1366px) - 64px));
+    }
+
     .header-block {
       margin: 0;
       padding: 0;
