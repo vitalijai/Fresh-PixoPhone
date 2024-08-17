@@ -17,6 +17,10 @@
     /* block-shadow */
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
+    @media (max-width: 719px) {
+      gap: 0;
+    }
+
     .header-block {
       display: flex;
       height: 72px;
@@ -37,6 +41,10 @@
       font-weight: 500;
       line-height: normal;
 
+      @media (max-width: 719px) {
+        display: none;
+      }
+
       &::before {
         content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path d="M13.6607 23.8118C15.8062 23.8119 17.8903 23.096 19.5829 21.7777L25.9687 28.1634C26.4457 28.6241 27.2059 28.6109 27.6666 28.1339C28.116 27.6685 28.116 26.9308 27.6666 26.4655L21.2808 20.0798C24.5522 15.8686 23.7904 9.80279 19.5793 6.53138C15.3681 3.25997 9.3023 4.02177 6.03089 8.23295C2.75948 12.4441 3.52128 18.51 7.73247 21.7814C9.42786 23.0984 11.5139 23.8129 13.6607 23.8118ZM8.52984 9.02663C11.3636 6.19284 15.958 6.19279 18.7918 9.02653C21.6256 11.8603 21.6256 16.4547 18.7919 19.2885C15.9581 22.1222 11.3637 22.1223 8.52994 19.2886L8.52984 19.2885C5.6961 16.4754 5.6794 11.8977 8.49249 9.06398L8.52984 9.02663Z" fill="%232F2C2F"/></svg>');
         width: 32px;
@@ -44,6 +52,32 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+    }
+
+    .header-block-mobile {
+      display: none;
+
+      @media (max-width: 719px) {
+        display: flex;
+        height: unset;
+        margin: 0;
+        padding: 0px 24px;
+        padding-top: 24px;
+        justify-content: flex-start;
+        align-items: center;
+        align-self: stretch;
+        gap: 8px;
+
+        border-radius: 24px 24px 0 0;
+        background: var(--colors-white, #fff);
+
+        color: var(--colors-gray-700, #2f2c2f);
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
       }
     }
 
@@ -58,6 +92,12 @@
 
       background: var(---white, #fff);
       border-radius: 0 0 32px 32px;
+
+      @media (max-width: 719px) {
+        border-radius: 0 0 24px 24px;
+        padding: 24px;
+        padding-top: 16px;
+      }
 
       .often-searched-name {
         display: flex;
@@ -75,6 +115,11 @@
 
         &:hover {
           background: var(--colors-gray-200, #e5e4e2);
+        }
+
+        @media (max-width: 719px) {
+          padding: 4px 12px;
+          font-size: 12px;
         }
       }
     }
