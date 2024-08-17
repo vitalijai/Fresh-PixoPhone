@@ -2534,7 +2534,8 @@ a:visited {
     margin: 0;
   }
 }
-.global-block-container .global-block-mark-top {
+
+.global-block-mark-top {
   position: absolute;
   top: 0;
   user-select: none;
@@ -2549,14 +2550,14 @@ a:visited {
   transform: translateX(-50%);
   border-radius: 0px 0px 8px 8px;
 }
-.global-block-container .global-block-mark-top .global-block-mark-name {
+.global-block-mark-top .global-block-mark-name {
   color: var(--colors-white, #fff);
   leading-trim: both;
   text-edge: cap;
   font-size: 10px;
   font-weight: 700;
 }
-.global-block-container .global-block-mark-top .global-block-mark-timer {
+.global-block-mark-top .global-block-mark-timer {
   display: flex;
   padding: 3px 4px;
   justify-content: center;
@@ -2569,33 +2570,53 @@ a:visited {
   font-size: 10px;
   font-weight: 600;
 }
-.global-block-container .global-block-mark-top.mark-offer-day {
+.global-block-mark-top.mark-offer-day {
   background: var(--colors-violet-300, #b57edc);
   box-shadow: 0px 30px 8px 0px rgba(95, 60, 119, 0), 0px 19px 8px 0px rgba(95, 60, 119, 0.01), 0px 11px 6px 0px rgba(95, 60, 119, 0.05), 0px 5px 5px 0px rgba(95, 60, 119, 0.09), 0px 1px 3px 0px rgba(95, 60, 119, 0.1);
 }
-.global-block-container .global-block-mark-top.mark-offer-day .global-block-mark-timer {
+.global-block-mark-top.mark-offer-day .global-block-mark-timer {
   color: var(--colors-violet-300, #b57edc);
 }
-.global-block-container .global-block-mark-top.mark-price-reduced {
+.global-block-mark-top.mark-price-reduced {
   background: var(--colors-yellow-500, #ffbf00);
   box-shadow: 0px 20px 6px 0px rgba(134, 100, 9, 0), 0px 13px 5px 0px rgba(134, 100, 9, 0.01), 0px 7px 4px 0px rgba(134, 100, 9, 0.05), 0px 3px 3px 0px rgba(134, 100, 9, 0.09), 0px 1px 2px 0px rgba(134, 100, 9, 0.1);
 }
-.global-block-container .global-block-mark-top.mark-price-reduced .global-block-mark-timer {
+.global-block-mark-top.mark-price-reduced .global-block-mark-timer {
   color: var(--colors-yellow-500, #ffbf00);
 }
-.global-block-container .global-block-mark-top.mark-with-gift {
+.global-block-mark-top.mark-with-gift {
   background: var(--colors-red-300, #fa8072);
   box-shadow: 0px 20px 6px 0px rgba(97, 28, 20, 0), 0px 13px 5px 0px rgba(97, 28, 20, 0.01), 0px 7px 4px 0px rgba(97, 28, 20, 0.05), 0px 3px 3px 0px rgba(97, 28, 20, 0.09), 0px 1px 2px 0px rgba(97, 28, 20, 0.1);
 }
-.global-block-container .global-block-mark-top.mark-with-gift .global-block-mark-timer {
+.global-block-mark-top.mark-with-gift .global-block-mark-timer {
   color: var(--colors-red-300, #fa8072);
 }
-.global-block-container .global-block-mark-top.mark-free-delivery {
+.global-block-mark-top.mark-free-delivery {
   background: var(--colors-blue-400, #62a8ed);
   box-shadow: 0px 28px 8px 0px rgba(27, 60, 95, 0), 0px 18px 7px 0px rgba(27, 60, 95, 0.01), 0px 10px 6px 0px rgba(27, 60, 95, 0.05), 0px 5px 5px 0px rgba(27, 60, 95, 0.09), 0px 1px 2px 0px rgba(27, 60, 95, 0.1);
 }
-.global-block-container .global-block-mark-top.mark-free-delivery .global-block-mark-timer {
+.global-block-mark-top.mark-free-delivery .global-block-mark-timer {
   color: var(--colors-blue-400, #62a8ed);
+}
+.global-block-mark-top.big {
+  border-radius: 0;
+}
+.global-block-mark-top.big .global-block-mark-name {
+  font-size: 16px;
+}
+.global-block-mark-top.big .global-block-mark-timer {
+  font-size: 12px;
+  padding: 4px 6px;
+}
+.global-block-mark-top.big::before {
+  position: absolute;
+  right: calc(100% - 1px);
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none"><path d="M0.5 0H32.5V32C27.553 32 22.9853 29.3493 20.5309 25.0541L11.4768 9.20946C9.63603 5.98806 6.21025 4 2.5 4H0.5V0Z" fill="%23B57EDC"/><clipPath id="clip0_14702_13464"><rect width="32" height="32" fill="white" transform="translate(0.5)"/></clipPath></svg>');
+}
+.global-block-mark-top.big::after {
+  position: absolute;
+  left: calc(100% - 1px);
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none"><path d="M32.5 0H0.5V32C5.447 32 10.0147 29.3493 12.4691 25.0541L21.5232 9.20946C23.364 5.98806 26.7898 4 30.5 4H32.5V0Z" fill="%23B57EDC"/><clipPath id="clip0_14702_13471"><rect width="32" height="32" fill="white" transform="matrix(-1 0 0 1 32.5 0)"/></clipPath></svg>');
 }
 
 .global-p-short-product {

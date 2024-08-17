@@ -623,71 +623,64 @@ $(".offers-page-buy-guarantee-switch-compare").change(function () {
 
 // Логика для фильтра и сортировки мобайл
 $(document).ready(function () {
-  $(".sorting.BTN").click(function () {
-    if (!$(this).hasClass("active")) {
-      removeButtonActiveClasses();
-      $(this).addClass("active");
-      $(".offers-page-block__sorting").addClass("active");
-    } else {
-      $(this).removeClass("active");
-      $(".offers-page-block__sorting").removeClass("active");
-    }
-    $(".offers-page-block__sorting").fadeToggle("slow"); // Анимация открытия и закрытия
-  });
-
-  $(".filter.BTN").click(function () {
-    if (!$(this).hasClass("active")) {
-      removeButtonActiveClasses();
-      $(this).addClass("active");
-      $(".offers-page-block__filter").addClass("active");
-    } else {
-      $(this).removeClass("active");
-      $(".offers-page-block__filter").removeClass("active");
-    }
-    $(".offers-page-block__filter").fadeToggle("slow"); // Анимация открытия и закрытия
-  });
-
-  $(".header__close").click(function () {
-    $(this)
-      .closest(".offers-page-block__con")
-      .find(".sorting.BTN, .filter.BTN")
-      .removeClass("selected");
-    $(".offers-page-block__sorting, .offers-page-block__filter").fadeOut(
-      "slow",
-      function () {
-        removeActiveClasses();
-        removeSelectedClasses();
-      }
-    );
-  });
-
-  $(".offers-page-block__container span").click(function () {
-    $(this).toggleClass("active");
-    addSelectedClasses();
-  });
-
-  function removeActiveClasses() {
-    $(".active").removeClass("active");
-  }
-
-  function removeButtonActiveClasses() {
-    $(".sorting.BTN, .filter.BTN").removeClass("active");
-    $(".offers-page-block__sorting, .offers-page-block__filter")
-      .removeClass("active")
-      .hide(); // Убедимся, что элементы скрыты
-  }
-
-  function addSelectedClasses() {
-    $(".sorting.BTN, .filter.BTN").each(function () {
-      if ($(this).hasClass("active")) {
-        $(this).addClass("selected");
-      }
-    });
-  }
-
-  function removeSelectedClasses() {
-    $(".selected").removeClass("selected");
-  }
+  // $(".sorting.BTN").click(function () {
+  //   if (!$(this).hasClass("active")) {
+  //     removeButtonActiveClasses();
+  //     $(this).addClass("active");
+  //     $(".offers-page-block__sorting").addClass("active");
+  //   } else {
+  //     $(this).removeClass("active");
+  //     $(".offers-page-block__sorting").removeClass("active");
+  //   }
+  //   $(".offers-page-block__sorting").fadeToggle("slow"); // Анимация открытия и закрытия
+  // });
+  // $(".filter.BTN").click(function () {
+  //   if (!$(this).hasClass("active")) {
+  //     removeButtonActiveClasses();
+  //     $(this).addClass("active");
+  //     $(".offers-page-block__filter").addClass("active");
+  //   } else {
+  //     $(this).removeClass("active");
+  //     $(".offers-page-block__filter").removeClass("active");
+  //   }
+  //   $(".offers-page-block__filter").fadeToggle("slow"); // Анимация открытия и закрытия
+  // });
+  // $(".header__close").click(function () {
+  //   $(this)
+  //     .closest(".offers-page-block__con")
+  //     .find(".sorting.BTN, .filter.BTN")
+  //     .removeClass("selected");
+  //   $(".offers-page-block__sorting, .offers-page-block__filter").fadeOut(
+  //     "slow",
+  //     function () {
+  //       removeActiveClasses();
+  //       removeSelectedClasses();
+  //     }
+  //   );
+  // });
+  // $(".offers-page-block__container span").click(function () {
+  //   $(this).toggleClass("active");
+  //   addSelectedClasses();
+  // });
+  // function removeActiveClasses() {
+  //   $(".active").removeClass("active");
+  // }
+  // function removeButtonActiveClasses() {
+  //   $(".sorting.BTN, .filter.BTN").removeClass("active");
+  //   $(".offers-page-block__sorting, .offers-page-block__filter")
+  //     .removeClass("active")
+  //     .hide(); // Убедимся, что элементы скрыты
+  // }
+  // function addSelectedClasses() {
+  //   $(".sorting.BTN, .filter.BTN").each(function () {
+  //     if ($(this).hasClass("active")) {
+  //       $(this).addClass("selected");
+  //     }
+  //   });
+  // }
+  // function removeSelectedClasses() {
+  //   $(".selected").removeClass("selected");
+  // }
 });
 
 $(document).ready(function () {
