@@ -222,13 +222,10 @@ $(".offers-tab").on("click", ".global-pop-up-close", function () {
   $(".screen").removeClass("overflow");
 });
 
-// Закрытие окна по нажатию вне offers-tab
-$(document).on("click", function (e) {
-  if (
-    !$(e.target).closest(".offers-page-container").length &&
-    !$(e.target).is(".global-button-bu_name")
-  ) {
-    $(".offers-tab").fadeOut(); // Плавное исчезновение окна
+// Закрытие окна по нажатию вне offers-tab, только внутри offers-tab
+$(".offers-tab").on("click", function (e) {
+  if ($(e.target).is(".offers-tab")) {
+    $(this).fadeOut(); // Плавное исчезновение окна
     $("html").removeClass("no-scroll");
     $(".screen").removeClass("overflow");
   }
