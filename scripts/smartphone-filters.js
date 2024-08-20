@@ -17,7 +17,14 @@ $(document).ready(function () {
 });
 
 $(window).on("scroll", function () {
-  var header = $(".catalog-filters-right-header");
+  var windowWidth = $(window).width();
+
+  // Проверка ширины окна и выбор нужного класса
+  var header =
+    windowWidth >= 720
+      ? $(".catalog-filters-right-header")
+      : $(".catalog-filters-right-header-mobile");
+
   var headerTop = header.offset().top; // Положение блока относительно страницы
   var scrollPosition = $(window).scrollTop(); // Текущая позиция скролла
 
@@ -40,15 +47,17 @@ $(window).on("scroll", function () {
 
     // Устанавливаем position в зависимости от видимости элемента often-searched-content
     if (isOftenSearchedContentVisible) {
-      header.css("top", "-64px"); // Если often-searched-content видим, устанавливаем position relative
+      header.css("top", "-64px"); // Если often-searched-content видим, устанавливаем позицию относительную
     } else {
-      header.css("top", "76px"); // Если often-searched-content не видим, устанавливаем position sticky
+      header.css("top", "76px"); // Если often-searched-content не видим, устанавливаем позицию sticky
     }
 
     header.addClass("before-visible"); // Добавляем класс для ::before
   } else {
-    header.css("border-radius", "0 32px 0 0").css("z-index", "0"); // Возвращаем скругления
-    // header.css("position", "sticky"); // Всегда sticky, если расстояние больше 12px
+    // Если это элемент с классом .catalog-filters-right-header и ширина окна >= 720
+    if (windowWidth >= 720) {
+      header.css("border-radius", "0 32px 0 0").css("z-index", "0"); // Возвращаем скругления только для .catalog-filters-right-header
+    }
 
     header.removeClass("before-visible"); // Убираем класс для ::before
   }
