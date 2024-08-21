@@ -1481,6 +1481,10 @@
                   }
                 }
               }
+
+              &.not-bonus {
+                justify-content: flex-end;
+              }
             }
           }
         }

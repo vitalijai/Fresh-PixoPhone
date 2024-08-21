@@ -1836,6 +1836,9 @@
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-buy .global-block-container-bottom-value .global-p-short-product.all-price-from .global-block-container-bottom-from-price {
   font-size: 20px;
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-buy .global-block-container-bottom-value.not-bonus {
+  justify-content: flex-end;
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container {
   height: 240px;
 }
