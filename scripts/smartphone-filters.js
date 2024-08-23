@@ -65,6 +65,11 @@ $(document).ready(function () {
             $this.find(".offers-page-block__sorting").slideUp();
           });
       });
+
+      $(".pay_switch-bottom .language_switch-input").on("change", function () {
+        // Toggle the 'active' class on the span elements
+        $(".pay_switch-bottom .language_switch-span").toggleClass("active");
+      });
     }
   });
 });
@@ -101,6 +106,8 @@ $(window).on("scroll", function () {
     // Устанавливаем position в зависимости от видимости элемента often-searched-content
     if (isOftenSearchedContentVisible) {
       header.css("top", "-64px"); // Если often-searched-content видим, устанавливаем позицию относительную
+      $(".offers-page-block__filter").slideUp();
+      $(".offers-page-block__sorting").slideUp();
     } else {
       header.css("top", "76px"); // Если often-searched-content не видим, устанавливаем позицию sticky
     }

@@ -1535,6 +1535,9 @@
           }
 
           @media (max-width: 719px) {
+            flex-wrap: unst;
+            flex-direction: column;
+
             .global-block-container-bottom-list-status {
               padding-right: 48px;
               flex-wrap: wrap;
@@ -1558,6 +1561,12 @@
             height: unset;
             width: 100%;
 
+            @media (max-width: 719px) {
+              .filters-viewed-dropdown-box {
+                display: none;
+              }
+            }
+
             .filters-viewed-dropdown-box {
               margin-top: 16px;
 
@@ -1576,12 +1585,29 @@
                 align-self: stretch;
                 justify-content: space-between;
               }
+
               @media (max-width: 719px) {
                 gap: 8px;
+                // flex-direction: column;
+
+                .gen-tab__credit-block,
+                .global-list-bonus,
+                .viewed-dropdown-similar-models {
+                  display: none !important;
+                }
+
+                .global-block-container-bottom-new-price {
+                  &,
+                  &.span {
+                    font-size: 16px !important;
+                    align-items: baseline;
+                  }
+                }
 
                 .all-price-from {
                   flex-direction: column;
                   align-items: flex-start;
+                  gap: 0;
 
                   .global-block-container-bottom-from-price-top {
                     font-size: 10px;
@@ -1598,9 +1624,13 @@
 
                 .global-block-container-button {
                   flex: 1 0 0;
+
                   button {
                     width: 100%;
                   }
+                }
+
+                .global-waiting-button {
                 }
               }
             }
@@ -1681,6 +1711,7 @@
 
             @media (max-width: 719px) {
               min-width: 260px;
+              width: calc(100% - 32px);
             }
           }
 
@@ -1786,11 +1817,20 @@
 
                 &.all-price {
                   gap: 16px;
+
+                  @media (max-width: 719px) {
+                    gap: 0;
+                  }
                 }
 
                 &.all-price-from {
                   flex-direction: unset;
                   align-items: baseline;
+
+                  @media (max-width: 719px) {
+                    flex-direction: column;
+                    gap: 0;
+                  }
 
                   .global-block-container-bottom-from-price {
                     font-size: 20px;
@@ -2131,6 +2171,21 @@
 
             .all-price-from {
               align-items: flex-end;
+
+              @media (max-width: 719px) {
+                align-items: flex-start;
+                gap: 0;
+                justify-content: center;
+              }
+            }
+
+            @media (max-width: 719px) {
+              .global-block-container-bottom-new-price {
+                &,
+                &.span {
+                  font-size: 16px !important;
+                }
+              }
             }
 
             .global-p-short-product {
@@ -2139,6 +2194,13 @@
               }
               .global-block-container-bottom-new-price {
                 font-size: 24px;
+
+                @media (max-width: 719px) {
+                  &,
+                  &.span {
+                    font-size: 16px !important;
+                  }
+                }
               }
             }
 
@@ -2331,20 +2393,14 @@
           padding: 8px 16px;
           flex-direction: column;
           align-items: flex-start;
-          gap: 8px;
+          gap: 0;
           align-self: stretch;
 
           background: var(--colors-white, #fff);
           transition: top 300ms ease-in-out;
 
           &.before-visible {
-            // position: fixed;
-            // left: -16px;
-            // width: 100%;
-
-            // .top {
-            //   padding: 8px 16px;
-            // }
+            position: sticky;
           }
 
           .top {
@@ -2471,12 +2527,12 @@
                 .language_switch-span {
                   color: var(--colors-gray-300, #c0c0c0);
 
-                  &.pay_switch-span-ua {
+                  &.pay_switch-span-immediately {
                     &.active {
                       color: var(--colors-gray-500, #696969);
                     }
                   }
-                  &.pay_switch-span-ru {
+                  &.pay_switch-span-month {
                     &.active {
                       color: var(--colors-green-500-primary, #2ea84f);
                     }
@@ -2510,6 +2566,8 @@
           .offers-page-block__con {
             display: none;
             // display: flex;
+            margin-top: 8px;
+
             padding: 16px;
             flex-direction: column;
             align-items: flex-start;
