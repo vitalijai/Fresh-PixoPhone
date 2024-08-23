@@ -536,6 +536,7 @@
 
       @media (max-width: 719px) {
         background: unset;
+        width: 100%;
       }
 
       .catalog-filters-right-header {
@@ -1454,7 +1455,9 @@
 
             .global-block-container-buy {
               .gen-tab__credit-block,
-              .viewed-dropdown-similar-models {
+              .viewed-dropdown-similar-models,
+              .global-button-used,
+              .global-block-container-bottom-from-price-for-simb {
                 display: none;
               }
             }
@@ -1496,6 +1499,26 @@
                 }
               }
             }
+            .global-block-container-bottom-from-price-banknote {
+              margin-right: -2px;
+            }
+            .global-block-container-bottom-from-price-up {
+              display: flex;
+              font-size: 10px;
+              align-items: baseline;
+              gap: 4px;
+            }
+
+            .global-block-container-bottom-from-price {
+              .global-block-container-bottom-from-price-for {
+                font-size: 10px !important;
+              }
+
+              .global-block-container-bottom-from-price-fraction,
+              .global-block-container-bottom-from-month {
+                display: none !important;
+              }
+            }
 
             @media (max-width: 719px) {
               .all-price {
@@ -1535,7 +1558,7 @@
           }
 
           @media (max-width: 719px) {
-            flex-wrap: unst;
+            flex-wrap: unset;
             flex-direction: column;
 
             .global-block-container-bottom-list-status {
@@ -1865,6 +1888,65 @@
                   font-size: 20px;
                 }
               }
+              .global-block-container-bottom-from-price-up {
+                .global-block-container-bottom-from-price-banknote {
+                  display: none;
+                }
+
+                .global-block-container-bottom-from-price-up-value {
+                  font-size: 20px;
+                }
+              }
+              .global-block-container-bottom-from-price {
+                .global-block-container-bottom-from-price-for,
+                .global-block-container-bottom-from-price-for-simb,
+                .global-block-container-bottom-from-price-for-value {
+                  display: none;
+                }
+
+                .global-block-container-bottom-from-price-fraction,
+                .global-block-container-bottom-from-month {
+                  font-size: 12px;
+                  margin-left: -4px;
+                }
+              }
+
+              @media (max-width: 719px) {
+                .global-block-container-bottom-from-price-top,
+                .global-block-container-bottom-from-price-for {
+                  font-size: 10px;
+                }
+                .global-block-container-bottom-from-price-up {
+                  .global-block-container-bottom-from-price-up-value,
+                  .global-block-container-bottom-from-price-banknote {
+                    font-size: 16px;
+                  }
+
+                  .global-block-container-bottom-from-price-banknote {
+                    display: unset;
+                  }
+                }
+
+                .global-block-container-bottom-from-price {
+                  .global-block-container-bottom-from-price-fraction,
+                  .global-block-container-bottom-from-month {
+                    display: none;
+                  }
+                  .global-block-container-bottom-from-price-up-value,
+                  .global-block-container-bottom-from-price-banknote {
+                    font-size: 16px;
+                  }
+
+                  .global-block-container-bottom-from-price-banknote {
+                    margin-left: -2px;
+                  }
+
+                  .global-block-container-bottom-from-price-for,
+                  .global-block-container-bottom-from-price-for-value {
+                    display: unset;
+                  }
+                }
+              }
             }
           }
 
@@ -1881,6 +1963,10 @@
             max-width: 570px;
             position: relative;
             overflow: hidden;
+
+            @media (max-width: 719px) {
+              display: none;
+            }
           }
 
           .catalog-filters-offers-in-list-container {
@@ -2072,6 +2158,10 @@
             flex-direction: unset;
             gap: 16px;
 
+            @media (max-width: 719px) {
+              min-width: 260px;
+            }
+
             .novelty-waiting-order-button {
               position: relative;
 
@@ -2090,6 +2180,57 @@
                 right: -24px;
                 transform: translateY(-50%) rotate(-45deg);
                 z-index: 0;
+
+                @media (max-width: 719px) {
+                  display: none;
+                }
+              }
+            }
+
+            .global-button-used {
+              display: none;
+            }
+
+            @media (max-width: 719px) {
+              .global-block-img {
+                .global-block-add-group {
+                  display: none;
+                }
+              }
+
+              .global-block-container-bottom-list-view {
+                .global-block-add-group {
+                  button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 4px;
+                    border-radius: 8px;
+                    box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.24);
+                  }
+
+                  .global-block-credit__btn {
+                    &::after {
+                      width: unset;
+                    }
+                  }
+                }
+              }
+
+              .global-block-container-buy {
+                .constructor-container__list,
+                .global-button-send {
+                  display: none;
+                }
+
+                .global-button-used {
+                  display: unset;
+                }
+              }
+
+              .global-block-container-bottom-list-header,
+              .global-block-container-bottom-list-status {
+                padding-right: 0;
               }
             }
           }
@@ -2169,8 +2310,43 @@
               }
             }
 
+            .global-block-container-bottom-from-price-up {
+              .global-block-container-bottom-from-price-up-value,
+              .global-block-container-bottom-from-price-banknote {
+                font-size: 20px;
+              }
+
+              .global-block-container-bottom-from-price-banknote {
+                margin-left: -4px;
+              }
+            }
+            .global-block-container-bottom-from-price {
+              display: flex;
+              align-items: baseline;
+
+              .global-block-container-bottom-from-price-for {
+                display: none;
+
+                @media (max-width: 719px) {
+                  display: unset;
+                }
+              }
+
+              .global-block-container-bottom-from-price-for-simb {
+                display: unset;
+
+                @media (max-width: 719px) {
+                  display: none;
+                }
+              }
+
+              @media (max-width: 719px) {
+                gap: 4px;
+              }
+            }
+
             .all-price-from {
-              align-items: flex-end;
+              align-items: baseline;
 
               @media (max-width: 719px) {
                 align-items: flex-start;
@@ -2194,12 +2370,38 @@
               }
               .global-block-container-bottom-new-price {
                 font-size: 24px;
+              }
+            }
 
-                @media (max-width: 719px) {
-                  &,
-                  &.span {
-                    font-size: 16px !important;
-                  }
+            @media (max-width: 719px) {
+              .global-block-container-bottom-from-price-top,
+              .global-block-container-bottom-from-price-for {
+                font-size: 10px;
+              }
+              .global-block-container-bottom-from-price-up {
+                display: flex;
+                align-items: baseline;
+                gap: 4px;
+
+                .global-block-container-bottom-from-price-up-value,
+                .global-block-container-bottom-from-price-banknote {
+                  font-size: 16px;
+                }
+              }
+              .global-block-container-bottom-from-price-banknote {
+                margin-left: -2px;
+              }
+
+              .global-block-container-bottom-from-price {
+                .global-block-container-bottom-from-price-fraction {
+                  display: none;
+                }
+                .global-block-container-bottom-from-price-up-value,
+                .global-block-container-bottom-from-price-banknote {
+                  font-size: 16px;
+                }
+                .global-block-container-bottom-from-month {
+                  display: none;
                 }
               }
             }
@@ -2225,6 +2427,16 @@
                   flex: 1 0 0;
                 }
               }
+
+              .global-block-container-buy {
+                .global-button-bu {
+                  display: none;
+                }
+
+                .global-button-used {
+                  display: unset;
+                }
+              }
             }
           }
         }
@@ -2234,15 +2446,13 @@
             height: 356px;
           }
 
-          .global-block-container-buy {
-            flex-direction: unset;
-            justify-content: space-between;
-          }
-
           .global-block-container-bottom-value {
             height: unset;
           }
           .global-block-container-buy {
+            flex-direction: unset;
+            justify-content: space-between;
+
             .global-p-short-product {
               &.all-price {
                 display: none;
@@ -2374,10 +2584,9 @@
 
                 .global-block-container-bottom-from-price {
                   gap: 4px;
-
-                  .global-block-container-bottom-from-price-for {
-                    font-size: 10px;
-                  }
+                }
+                .global-block-container-bottom-from-price-for {
+                  font-size: 10px;
                 }
               }
             }
