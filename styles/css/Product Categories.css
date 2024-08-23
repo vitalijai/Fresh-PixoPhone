@@ -1213,50 +1213,84 @@
   align-items: center;
   gap: 24px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting {
-  display: flex;
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block {
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
   border-radius: 48px;
-}
-@media (max-width: 719px) {
-  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting {
-    display: none;
-  }
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-name {
-  display: flex;
-  align-items: center;
-  color: var(--colors-blue-400, #62a8ed);
-  text-align: center;
-  font-size: 14px;
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container {
-  display: flex;
-  align-items: baseline;
-  gap: 4px;
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container .sorting {
-  display: flex;
-  padding: 6px 10px;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 32px;
-  background: var(--colors-white, #fff);
-  color: var(--colors-gray-700, #2f2c2f);
-  text-align: center;
-  text-wrap: nowrap;
-  font-size: 14px;
+  background: var(--colors-gray-100, #f7f7f7);
   font-weight: 400;
+  position: relative;
+  min-width: 115px;
+  height: 32px;
+  margin-left: 10px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container {
+  border-radius: 48px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--colors-gray-100, #f7f7f7);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .ASC,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .DESC,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .ASC_RATING,
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .DESC_RATING {
+  display: none;
+  white-space: nowrap;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .sorting {
+  height: 32px;
+  padding: 8px 16px;
+  align-items: center;
   border: none;
+  border-radius: 48px;
+  background: var(--colors-gray-100, #f7f7f7);
+  cursor: pointer;
+  color: var(--colors-gray-500, #696969);
+  font-weight: 400;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container .sorting:hover {
-  color: var(--colors-blue-400, #62a8ed);
-  background: var(--colors-blue-100, #e9f5ff);
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container .sorting.active {
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .sorting.selected {
+  display: inline-flex;
+  padding: 0px 16px 0px 8px;
   color: var(--colors-white, #fff);
-  background: var(--colors-blue-500, #318ce7);
+  background: var(--colors-blue-100, #e9f5ff);
+  color: var(--colors-blue-400, #62a8ed);
+  text-align: center;
+  font-weight: 500;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .sorting.selected::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 6L7 18" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path d="M12 8L12 18" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path d="M17 10L17 18" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .sorting.selected.BTN::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 10L7 18" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path d="M12 6L12 18" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><path d="M17 12L17 18" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block .offers-page-header-sorting-container .sorting.selected:hover {
+  color: var(--colors-white, #fff);
+  font-weight: 500;
+  background: linear-gradient(0deg, var(--colors-blue-500, #318ce7) 0%, var(--colors-blue-500, #318ce7) 100%), var(--colors-white, #fff);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block.active .sorting {
+  display: inline-flex;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block.active .sorting.active {
+  padding: 0px 16px 0px 8px;
+  color: var(--colors-white, #fff);
+  font-weight: 500;
+  background: linear-gradient(0deg, var(--colors-blue-500, #318ce7) 0%, var(--colors-blue-500, #318ce7) 100%), var(--colors-white, #fff);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block.active .sorting.active::before {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 10L7 18" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M12 6L12 18" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M17 12L17 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
+  width: 24px;
+  height: 24px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block.active .sorting:hover:not(.active, .selected) {
+  color: var(--colors-gray-700, #2f2c2f);
+  background: var(--colors-gray-200, #e5e4e2);
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-filters {
   display: flex;

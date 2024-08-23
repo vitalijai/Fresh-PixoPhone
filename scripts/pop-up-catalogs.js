@@ -98,13 +98,14 @@ $(".offers-page-header-switch-compare-block input[type='checkbox']").change(
     }
   }
 );
-
 // При клике на .filter.BTN открываем offers-filter-options и добавляем/убираем класс active
 $(".filter.BTN").click(function () {
-  $(".offers-page-header-filter-block").toggleClass("active");
+  var $parentBlock = $(this).closest(".offers-page-header-sorting-block");
+  $parentBlock.find(".offers-page-header-filter-block").toggleClass("active");
 
-  // Toggle the visibility of .offers-filter-options without setting the display property
-  $(".offers-filter-options")
+  // Показываем .offers-filter-options без изменения свойства display
+  $parentBlock
+    .find(".offers-filter-options")
     .stop(true, true)
     .slideDown(300)
     .css("display", "flex");
@@ -112,36 +113,41 @@ $(".filter.BTN").click(function () {
 
 // При клике на .filter.cancellation убираем класс active и скрываем offers-filter-options
 $(".filter.cancellation").click(function () {
-  $(".offers-page-header-filter-block").removeClass("active");
+  var $parentBlock = $(this).closest(".offers-page-header-sorting-block");
+  $parentBlock.find(".offers-page-header-filter-block").removeClass("active");
 
-  // Stop any ongoing animation and hide .offers-filter-options
-  $(".offers-filter-options").stop(true, true).slideUp(300);
+  // Останавливаем анимацию и скрываем .offers-filter-options
+  $parentBlock.find(".offers-filter-options").stop(true, true).slideUp(300);
 
   // Убираем класс active у .filter.BTN
-  $(".filter.BTN").removeClass("active");
+  $parentBlock.find(".filter.BTN").removeClass("active");
 });
 
 // При клике на .filter.apply убираем класс active и скрываем offers-filter-options
 $(".filter.apply").click(function () {
-  $(".offers-page-header-filter-block").removeClass("active");
+  var $parentBlock = $(this).closest(".offers-page-header-sorting-block");
+  $parentBlock.find(".offers-page-header-filter-block").removeClass("active");
 
-  // Stop any ongoing animation and hide .offers-filter-options
-  $(".offers-filter-options").stop(true, true).slideUp(300);
+  // Останавливаем анимацию и скрываем .offers-filter-options
+  $parentBlock.find(".offers-filter-options").stop(true, true).slideUp(300);
 
   // Добавляем класс active к .filter.BTN
-  $(".filter.BTN").addClass("active");
+  $parentBlock.find(".filter.BTN").addClass("active");
 });
 
 // Обработчик клика для кнопки "Сортувати"
 $(".sorting.BTN.selected").on("click", function () {
   var $this = $(this);
-  var $headerBlock = $(".offers-page-header-sorting-block");
+  var $headerBlock = $this.closest(".offers-page-header-sorting-block");
 
   // Проверка наличия класса 'active'
   if ($this.hasClass("active")) {
     // Возвращение всех блоков в исходное состояние
     $headerBlock.removeClass("active");
-    $(".sorting").removeClass("active selected").css("display", "");
+    $headerBlock
+      .find(".sorting")
+      .removeClass("active selected")
+      .css("display", "");
 
     // Кнопка "Сортувати" получает класс 'selected'
     $this.addClass("selected");
@@ -155,29 +161,37 @@ $(".sorting.BTN.selected").on("click", function () {
 // Обработчик клика для кнопок сортировки
 $(".sorting:not(.BTN)").on("click", function () {
   var $this = $(this);
-  var $headerBlock = $(".offers-page-header-sorting-block");
+  var $headerBlock = $this.closest(".offers-page-header-sorting-block");
 
   // Проверка наличия класса 'selected' у нажатой кнопки
   if ($this.hasClass("selected")) {
     // Возвращение всех блоков в исходное состояние
-    $(".sorting.BTN.selected")
+    $headerBlock
+      .find(".sorting.BTN.selected")
       .removeClass("active")
       .addClass("selected")
       .css("display", "inline-flex");
     $headerBlock.addClass("active");
-    $(".sorting:not(.BTN)")
+    $headerBlock
+      .find(".sorting:not(.BTN)")
       .removeClass("selected")
       .css("display", "inline-flex");
 
     // Добавление класса 'active' к кнопке "Сортувати"
-    $(".sorting.BTN.selected").addClass("active");
+    $headerBlock.find(".sorting.BTN.selected").addClass("active");
   } else {
     // Удаление класса 'active' у кнопки "Сортувати" и скрытие её
-    $(".sorting.BTN.selected").removeClass("active").css("display", "none");
+    $headerBlock
+      .find(".sorting.BTN.selected")
+      .removeClass("active")
+      .css("display", "none");
     $headerBlock.removeClass("active");
 
     // Удаление класса 'selected' у всех кнопок сортировки и скрытие их
-    $(".sorting:not(.BTN)").removeClass("selected").css("display", "none");
+    $headerBlock
+      .find(".sorting:not(.BTN)")
+      .removeClass("selected")
+      .css("display", "none");
 
     // Добавление класса 'selected' к нажатой кнопке и отображение её
     $this.addClass("selected").css("display", "inline-flex");
