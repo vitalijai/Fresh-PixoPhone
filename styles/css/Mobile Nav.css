@@ -177,8 +177,8 @@
   }
   .mobile-nav__tabs .mobile-tabs .tablist .tabs__link.tabs__link-catalog .tabs__link-menu-bloks .tabs__link-menu-containers .tabs__link-menu-position .menu-position-header .tabs__link-menu-header-arrow {
     display: flex;
-    width: var(---button-height, 48px);
-    height: var(---button-height, 48px);
+    width: 48px;
+    height: 48px;
     justify-content: center;
     align-items: center;
     border-radius: 16px;

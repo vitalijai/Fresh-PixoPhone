@@ -214,7 +214,7 @@
             gap: 4px;
             position: relative;
 
-            border-radius: var(---button-height, 48px);
+            border-radius: 48px;
             background: linear-gradient(
                 0deg,
                 var(--colors-blue-100, #e9f5ff) 0%,
@@ -289,7 +289,7 @@
               align-items: center;
               gap: 4px;
 
-              border-radius: var(---button-height, 48px);
+              border-radius: 48px;
               background: linear-gradient(
                   0deg,
                   var(--colors-green-100, #e9f9e9) 0%,
@@ -300,7 +300,7 @@
               color: var(--colors-green-400, #62b278);
 
               &:hover {
-                border-radius: var(---button-height, 48px);
+                border-radius: 48px;
                 background: linear-gradient(
                     0deg,
                     var(--colors-green-500-primary, #2ea84f) 0%,

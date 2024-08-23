@@ -745,6 +745,10 @@
 
             margin-left: 10px;
 
+            @media (max-width: 719px) {
+              display: none;
+            }
+
             .offers-page-header-sorting-container {
               border-radius: 48px;
               display: flex;
@@ -1669,7 +1673,7 @@
         &.list-view {
           .catalog-filters-viewed-container {
             min-width: 395px;
-            max-width: 550px;
+            max-width: 950px;
             flex-direction: unset;
             gap: 16px;
 
@@ -2373,7 +2377,7 @@
                   gap: 4px;
                   position: relative;
 
-                  border-radius: var(---button-height, 48px);
+                  border-radius: 48px;
                   background: linear-gradient(
                       0deg,
                       var(--colors-blue-100, #e9f5ff) 0%,
@@ -2427,8 +2431,12 @@
                   position: relative;
 
                   border: none;
-                  border-radius: var(---button-height, 48px);
+                  border-radius: 48px;
                   background: var(--colors-blue-100, #e9f5ff);
+
+                  &:hover {
+                    background: var(--colors-blue-500, #318ce7);
+                  }
 
                   &.active {
                     background: var(--colors-blue-500, #318ce7);
@@ -2448,6 +2456,7 @@
                     width: 24px;
                     height: 24px;
                   }
+                  &:hover,
                   &.active::before {
                     content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 10L7 18" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M12 6L12 18" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M17 12L17 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
                   }
@@ -2493,9 +2502,14 @@
             }
           }
 
+          .bottom {
+            width: 100%;
+            display: none;
+          }
+
           .offers-page-block__con {
-            // display: none;
-            display: flex;
+            display: none;
+            // display: flex;
             padding: 16px;
             flex-direction: column;
             align-items: flex-start;
@@ -2589,7 +2603,7 @@
                 padding: 8px 16px;
                 align-items: center;
 
-                border-radius: var(---button-height, 48px);
+                border-radius: 48px;
                 background: var(--colors-white, #fff);
 
                 color: var(--colors-gray-700, #2f2c2f);
@@ -2629,9 +2643,9 @@
               }
             }
 
-            // &.active {
-            //   display: flex !important;
-            // }
+            &.active {
+              display: flex;
+            }
           }
         }
       }

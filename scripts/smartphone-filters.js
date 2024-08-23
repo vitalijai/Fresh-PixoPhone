@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Добавляем эффекты slideDown/slideUp при наведении на блок .smartphone-filters-block
-  if ($(window).width() > 719) {
+  if ($(window).width() >= 720) {
     $(".smartphone-filters-block").hover(
       function () {
         // Проверяем ширину окна, выполняем код только если ширина больше 719px
@@ -14,6 +14,59 @@ $(document).ready(function () {
       }
     );
   }
+
+  $(document).ready(function () {
+    // Проверяем ширину экрана
+    if ($(window).width() < 720) {
+      // Ограничиваем действия только блоком catalog-filters-right-header-mobile
+      $(".catalog-filters-right-header-mobile").each(function () {
+        var $this = $(this);
+
+        // Функция для скрытия активного блока и удаления класса active
+        function closeActiveBlock() {
+          $this.find(".offers-page-block__con").slideUp();
+        }
+
+        // Обработчик нажатия на кнопку Фильтр
+        $this.find(".filter.BTN").on("click", function () {
+          // Закрываем любой активный блок
+          closeActiveBlock();
+          $this.find(".offers-page-block__filter").addClass("active");
+          // Убедимся, что bottom видим
+          $this.find(".bottom").slideDown();
+          // Открываем блок offers-page-block__filter
+          $this.find(".offers-page-block__filter").slideDown();
+        });
+
+        // Обработчик нажатия на кнопку Сортировка
+        $this.find(".sorting.BTN").on("click", function () {
+          // Закрываем любой активный блок
+          closeActiveBlock();
+          $this.find(".offers-page-block__sorting").addClass("active");
+          // Убедимся, что bottom видим
+          $this.find(".bottom").slideDown();
+          // Открываем блок offers-page-block__sorting
+          $this.find(".offers-page-block__sorting").slideDown();
+        });
+
+        // Обработчик нажатия на кнопку закрытия внутри offers-page-block__filter
+        $this
+          .find(".offers-page-block__filter .header__close")
+          .on("click", function () {
+            // Скрываем блок offers-page-block__filter
+            $this.find(".offers-page-block__filter").slideUp();
+          });
+
+        // Обработчик нажатия на кнопку закрытия внутри offers-page-block__sorting
+        $this
+          .find(".offers-page-block__sorting .header__close")
+          .on("click", function () {
+            // Скрываем блок offers-page-block__sorting
+            $this.find(".offers-page-block__sorting").slideUp();
+          });
+      });
+    }
+  });
 });
 
 $(window).on("scroll", function () {
