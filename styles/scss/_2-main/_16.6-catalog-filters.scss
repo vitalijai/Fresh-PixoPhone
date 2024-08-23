@@ -1346,6 +1346,7 @@
 
             .all-price-from {
               justify-content: flex-end;
+
               height: 32px;
 
               @media (max-width: 719px) {
@@ -2004,6 +2005,19 @@
               }
             }
 
+            .all-price-from {
+              align-items: flex-end;
+            }
+
+            .global-p-short-product {
+              .global-p-short-product-old-price-container {
+                align-items: baseline;
+              }
+              .global-block-container-bottom-new-price {
+                font-size: 24px;
+              }
+            }
+
             @media (max-width: 719px) {
               min-width: 130px;
               max-width: 230px;
@@ -2031,7 +2045,7 @@
 
         &.more-grid-view {
           .catalog-filters-viewed-container {
-            height: 394px;
+            height: 356px;
           }
 
           .global-block-container-buy {
