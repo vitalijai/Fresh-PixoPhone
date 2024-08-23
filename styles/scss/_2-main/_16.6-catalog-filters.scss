@@ -1552,6 +1552,7 @@
 
           .global-block-container-bottom {
             height: unset;
+            width: 100%;
 
             .filters-viewed-dropdown-box {
               margin-top: 16px;
@@ -1668,9 +1669,11 @@
         &.list-view {
           .catalog-filters-viewed-container {
             min-width: 395px;
-            max-width: 560px;
+            max-width: 550px;
             flex-direction: unset;
             gap: 16px;
+
+            height: 240px;
 
             @media (max-width: 719px) {
               min-width: 260px;
@@ -1823,7 +1826,7 @@
 
           .catalog-filters-viewed-container-right {
             display: flex;
-            padding: 16px;
+            padding: 8px 16px;
             align-items: flex-start;
             align-content: flex-start;
             gap: 16px;
@@ -1831,7 +1834,7 @@
             flex-wrap: wrap;
             flex: 1 0 0;
             min-width: 395px;
-            max-width: 560px;
+            max-width: 570px;
             position: relative;
             overflow: hidden;
           }
@@ -2021,7 +2024,7 @@
 
           .catalog-filters-viewed-container {
             min-width: 395px;
-            max-width: 560px;
+            max-width: 570px;
             flex-direction: unset;
             gap: 16px;
 
