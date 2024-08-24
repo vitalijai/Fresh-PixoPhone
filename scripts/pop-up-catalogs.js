@@ -221,6 +221,30 @@ switches.forEach(function (switchElement) {
   });
 });
 
+$(document).on("click", function (event) {
+  // Если клик вне блока с классом .catalog-filters-left.pop-up и вне кнопки .arrow-filters
+  if (
+    !$(event.target).closest(".catalog-filters-left.pop-up, .arrow-filters")
+      .length
+  ) {
+    $(".arrow-filters").removeClass("active");
+    $(".catalog-filters-left.pop-up").removeClass("active");
+    $(".back-to-top").removeClass("mobile");
+    $("html").removeClass("no-scroll");
+    $(".screen").removeClass("overflow");
+  }
+});
+
+// Сохраните предыдущий код для обработки кликов по кнопке
+$(".arrow-filters").on("click", function (event) {
+  // event.stopPropagation(); // Останавливаем дальнейшее распространение события
+  $(this).toggleClass("active");
+  $(".catalog-filters-left.pop-up").toggleClass("active");
+  $(".back-to-top").toggleClass("mobile");
+  $("html").toggleClass("no-scroll");
+  $(".screen").toggleClass("overflow");
+});
+
 // Открытие окна offers-tab с плавным появлением
 $(".global-button-bu_name").on("click", function () {
   $(".offers-tab").fadeIn(); // Плавное появление окна

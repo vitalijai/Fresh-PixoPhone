@@ -272,11 +272,13 @@ $(".header-right-filters .view-block").on("click", function () {
     $catalogContentList.hide();
   } else {
     // Восстанавливаем текст внутри кнопок, если класс не more-grid-view
-    $catalogContent.find(".global-button button").each(function () {
-      if (this.dataset.originalText) {
-        this.textContent = this.dataset.originalText;
-      }
-    });
+    $catalogContent
+      .find(".global-button button, .global-waiting-button button")
+      .each(function () {
+        if (this.dataset.originalText) {
+          this.textContent = this.dataset.originalText;
+        }
+      });
 
     // Вызываем соответствующую функцию для добавления баннеров
     if (newClass === "grid-view") {
@@ -287,7 +289,9 @@ $(".header-right-filters .view-block").on("click", function () {
       );
 
       if ($(window).width() < 719) {
-        var $buttonsMoreGrid = $catalogContent.find(".global-button button");
+        var $buttonsMoreGrid = $catalogContent.find(
+          ".global-button button, .global-waiting-button button"
+        );
         $buttonsMoreGrid.each(function () {
           // Сохраняем оригинальный текст, если он не был сохранен ранее
           if (!this.dataset.originalText) {

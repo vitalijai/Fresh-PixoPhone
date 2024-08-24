@@ -1,64 +1,67 @@
 $(document).ready(function () {
   // Функция для обновления положения и ширины активной части трека слайдера
-  function updateSlider() {
-    let minVal = parseInt($(".range-min").val()); // Получаем текущее значение минимального бегунка
-    let maxVal = parseInt($(".range-max").val()); // Получаем текущее значение максимального бегунка
+  // Универсальная функция для инициализации слайдера
+  function initializeSlider(container) {
+    const $container = $(container);
+    const $minRange = $container.find(".range-min");
+    const $maxRange = $container.find(".range-max");
+    const $minPrice = $container.find("#min-price");
+    const $maxPrice = $container.find("#max-price");
+    const $progress = $container.find(".progress");
 
-    // Обновляем левую и правую позиции активной части трека в процентах
-    $(".progress").css("left", (minVal / 100000) * 100 + "%");
-    $(".progress").css("right", 100 - (maxVal / 100000) * 100 + "%");
+    function updateSlider() {
+      let minVal = parseInt($minRange.val(), 10) || 0;
+      let maxVal = parseInt($maxRange.val(), 10) || 0;
+
+      $progress.css("left", (minVal / 100000) * 100 + "%");
+      $progress.css("right", 100 - (maxVal / 100000) * 100 + "%");
+    }
+
+    $minRange.add($maxRange).on("input", function () {
+      let minValue = parseInt($minRange.val(), 10) || 0;
+      let maxValue = parseInt($maxRange.val(), 10) || 0;
+
+      if (minValue > maxValue - 100) {
+        $minRange.val(maxValue - 100);
+        minValue = maxValue - 100;
+      }
+
+      if (maxValue < minValue + 100) {
+        $maxRange.val(minValue + 100);
+        maxValue = minValue + 100;
+      }
+
+      $minPrice.val(minValue);
+      $maxPrice.val(maxValue);
+
+      updateSlider();
+    });
+
+    $minPrice.add($maxPrice).on("input", function () {
+      let minValue = parseInt($minPrice.val(), 10) || 0;
+      let maxValue = parseInt($maxPrice.val(), 10) || 0;
+
+      if (minValue > maxValue - 100) {
+        $minPrice.val(maxValue - 100);
+      }
+
+      if (maxValue < minValue + 100) {
+        $maxPrice.val(minValue + 100);
+      }
+
+      $minRange.val(minValue);
+      $maxRange.val(maxValue);
+
+      updateSlider();
+    });
+
+    updateSlider(); // Инициализация слайдера при загрузке страницы
   }
 
-  // Обработчик событий 'input' для обоих бегунков
-  $("#min-range, #max-range").on("input", function () {
-    let minValue = parseInt($("#min-range").val()); // Получаем текущее значение минимального бегунка
-    let maxValue = parseInt($("#max-range").val()); // Получаем текущее значение максимального бегунка
-
-    // Проверяем, чтобы минимальное значение не пересекалось с максимальным
-    if (minValue > maxValue - 100) {
-      $("#min-range").val(maxValue - 100); // Устанавливаем минимальное значение на 1000 меньше максимального
-      minValue = maxValue - 100; // Обновляем значение minValue
-    }
-
-    // Проверяем, чтобы максимальное значение не пересекалось с минимальным
-    if (maxValue < minValue + 100) {
-      $("#max-range").val(minValue + 100); // Устанавливаем максимальное значение на 1000 больше минимального
-      maxValue = minValue + 100; // Обновляем значение maxValue
-    }
-
-    // Обновляем значения полей ввода для минимального и максимального значений
-    $("#min-price").val(minValue);
-    $("#max-price").val(maxValue);
-
-    // Вызываем функцию для обновления активной части трека
-    updateSlider();
+  // Инициализация всех слайдеров на странице
+  $(".catalog-filters-parametrs.price").each(function () {
+    initializeSlider(this);
   });
-
-  // Обработчик событий 'input' для полей ввода минимальной и максимальной цены
-  $("#min-price, #max-price").on("input", function () {
-    let minValue = parseInt($("#min-price").val()); // Получаем текущее значение из поля минимальной цены
-    let maxValue = parseInt($("#max-price").val()); // Получаем текущее значение из поля максимальной цены
-
-    // Проверяем, чтобы минимальное значение не пересекалось с максимальным
-    if (minValue > maxValue - 100) {
-      $("#min-price").val(maxValue - 100); // Устанавливаем минимальное значение на 1000 меньше максимального
-    }
-
-    // Проверяем, чтобы максимальное значение не пересекалось с минимальным
-    if (maxValue < minValue + 100) {
-      $("#max-price").val(minValue + 100); // Устанавливаем максимальное значение на 1000 больше минимального
-    }
-
-    // Обновляем значения бегунков в соответствии с полями ввода
-    $("#min-range").val(minValue);
-    $("#max-range").val(maxValue);
-
-    // Вызываем функцию для обновления активной части трека
-    updateSlider();
-  });
-
-  // Инициализация трека при загрузке страницы
-  updateSlider();
 
   // Инициализация состояние списков при загрузке страницы
   $(".filters-parametrs-checkbox-li input:disabled")

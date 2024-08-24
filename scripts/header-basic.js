@@ -2,6 +2,7 @@ window.addEventListener("scroll", function () {
   var headerBottoms = document.querySelectorAll(".header_bottom");
   var headerTabs = document.querySelectorAll(".common-template__tabs");
   var tabs = document.querySelectorAll(".tabs");
+  var filters = document.querySelectorAll(".catalog-filters-left");
   var mainMenu = document.querySelectorAll(".catalog_products_main");
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   const backToTop = document.getElementById("back-to-top");
@@ -24,6 +25,10 @@ window.addEventListener("scroll", function () {
 
   mainMenu.forEach(function (main) {
     main.classList.toggle("active", isFixed);
+  });
+
+  filters.forEach(function (filters) {
+    filters.classList.toggle("filters-height", isFixed);
   });
 
   if (scrollPosition > vw50) {
