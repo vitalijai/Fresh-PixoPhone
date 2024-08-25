@@ -372,6 +372,8 @@ $(document).ready(function () {
       $("html").addClass("no-scroll");
       $(".screen").addClass("overflow");
       $(".screen.overflow").css("z-index", "22");
+      $(".back-to-top").addClass("mobile");
+      $(".mobile-nav__tabs").addClass("video");
     });
 
     function outSpec() {
@@ -379,6 +381,8 @@ $(document).ready(function () {
       $("html").removeClass("no-scroll");
       $(".screen").removeClass("overflow");
       $(".screen").css("z-index", "20");
+      $(".back-to-top").removeClass("mobile");
+      $(".mobile-nav__tabs").removeClass("video");
     }
 
     $(closeClass).on("click", function () {
@@ -515,19 +519,30 @@ $(document).ready(function () {
   //   ".pop-up-to-cart-bottom-left"
   // );
   //Показать блок заказа
-  initModal(
-    ".novelty-waiting-order-button",
-    "#popUpBuCardsProducts",
-    ".pop-up-bu-cards-close",
-    "#popUpBuCardsProducts"
-  );
-  //Показать блок заказа
-  initModal(
-    ".offers-page-description-show-more",
-    "#popUpBuProducts",
-    ".pop-up-bu-close",
-    "#popUpBuProducts"
-  );
+
+  function checkScreenWidthAndInitModal() {
+    if (window.innerWidth < 720) {
+      initModal(
+        ".novelty-waiting-order-button",
+        "#popUpBuCardsProducts",
+        ".pop-up-bu-cards-close",
+        "#popUpBuCardsProducts"
+      );
+
+      //Показать блок заказа
+      initModal(
+        ".offers-page-description-show-more",
+        "#popUpBuProducts",
+        ".pop-up-bu-close",
+        "#popUpBuProducts"
+      );
+    }
+  }
+  checkScreenWidthAndInitModal();
+
+  // Проверяем ширину экрана при изменении размера окна
+  window.addEventListener("resize", checkScreenWidthAndInitModal);
+
   //Показать блок заказа
   initModal(
     ".gen-tab__credit-btn",

@@ -12,7 +12,7 @@
 
     background: var(--colors-white, #fff);
 
-    @media (max-width: 1152px) {
+    @media (max-width: 1279px) {
       flex-direction: column;
     }
 
@@ -137,7 +137,7 @@
       gap: var(---gap-small, 16px);
       flex: 1 0 0;
 
-      @media (max-width: 1152px) {
+      @media (max-width: 1279px) {
         width: 100%;
       }
 
