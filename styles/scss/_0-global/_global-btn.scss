@@ -833,6 +833,10 @@
     button {
       border-radius: 8px;
     }
+    button,
+    a {
+      text-wrap: nowrap;
+    }
   }
 }
 

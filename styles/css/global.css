@@ -365,6 +365,18 @@ a:visited {
     width: unset;
   }
 }
+@media (max-width: 1207px) {
+  header.products-fix,
+  main.products-fix {
+    width: 1207px;
+  }
+}
+@media (max-width: 719px) {
+  header.products-fix,
+  main.products-fix {
+    width: unset;
+  }
+}
 
 @media (max-width: 1152px) {
   footer {
@@ -1104,6 +1116,12 @@ a:visited {
 .global-button-send.global-block-container-button button,
 .global-button-bu.global-block-container-button button {
   border-radius: 8px;
+}
+.global-button-send.global-block-container-button button,
+.global-button-send.global-block-container-button a,
+.global-button-bu.global-block-container-button button,
+.global-button-bu.global-block-container-button a {
+  text-wrap: nowrap;
 }
 
 .global-button-bu {

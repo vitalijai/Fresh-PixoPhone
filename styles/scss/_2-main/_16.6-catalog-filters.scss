@@ -986,6 +986,8 @@
                 @media (max-width: 719px) {
                   font-size: 16px;
 
+                  text-wrap: nowrap;
+
                   .global-block-container-bottom-from-month {
                     font-size: 10px;
                   }
@@ -1000,9 +1002,12 @@
               font-size: 10px;
               align-items: baseline;
               gap: 4px;
+
+              text-wrap: nowrap;
             }
 
             .global-block-container-bottom-from-price {
+              text-wrap: nowrap;
               .global-block-container-bottom-from-price-for {
                 font-size: 10px !important;
               }
@@ -1026,7 +1031,7 @@
         &.list-view,
         &.list-view-bu {
           .catalog-filters-viewed-container {
-            height: 240px;
+            // height: 240px;
 
             @media (max-width: 719px) {
               height: 150px;
@@ -1131,6 +1136,7 @@
 
                   .global-block-container-bottom-from-price {
                     font-size: 16px;
+                    text-wrap: nowrap;
 
                     .global-block-container-bottom-from-month {
                       font-size: 10px;
@@ -1218,7 +1224,7 @@
 
         &.list-view {
           .catalog-filters-viewed-container {
-            min-width: 395px;
+            min-width: 295px;
             max-width: 950px;
             flex-direction: unset;
             gap: 16px;
@@ -1371,6 +1377,40 @@
               flex: calc(50% - 24px) 0 0;
             }
 
+            @media (max-width: 1229px) {
+              .global-block-container-buy {
+                .constructor-container__list {
+                  overflow: hidden;
+                  overflow-y: scroll;
+                  max-height: 200px;
+
+                  &::-webkit-scrollbar {
+                    width: 8px; /* Ширина всего элемента навигации */
+                  }
+
+                  &::-webkit-scrollbar-track {
+                    border-radius: 8px; /* Округление бегунка */
+
+                    background: var(
+                      --colors-gray-100,
+                      #f7f7f7
+                    ); /* Цвет дорожки */
+                  }
+
+                  &::-webkit-scrollbar-thumb {
+                    background: var(--colors-gray-200, #e5e4e2);
+                    /* Цвет бегунка */
+                    border-radius: 8px; /* Округление бегунка */
+                  }
+                }
+
+                .device-color-block {
+                  flex: unset;
+                  width: 100%;
+                }
+              }
+            }
+
             .global-p-short-product-containers {
               justify-content: flex-end !important;
 
@@ -1386,6 +1426,7 @@
                 }
               }
               .global-block-container-bottom-from-price-up {
+                text-wrap: nowrap;
                 .global-block-container-bottom-from-price-banknote {
                   display: none;
                 }
@@ -1414,6 +1455,7 @@
                   font-size: 10px;
                 }
                 .global-block-container-bottom-from-price-up {
+                  text-wrap: nowrap;
                   .global-block-container-bottom-from-price-up-value,
                   .global-block-container-bottom-from-price-banknote {
                     font-size: 16px;
@@ -1464,7 +1506,7 @@
             align-self: stretch;
             flex-wrap: wrap;
             flex: 1 0 0;
-            min-width: 395px;
+            min-width: 295px;
             max-width: 570px;
             position: relative;
             overflow: hidden;
@@ -1476,7 +1518,7 @@
 
           .catalog-filters-offers-in-list-container {
             display: flex;
-            min-width: 220px;
+            min-width: 173px;
             padding: 8px 4px;
             flex-direction: column;
             align-items: flex-start;
@@ -1662,10 +1704,12 @@
             max-width: 570px;
             flex-direction: unset;
             gap: 16px;
+            min-height: 248px;
 
             @media (max-width: 719px) {
               min-width: 260px;
               max-width: 700px;
+              min-height: unset;
             }
 
             .novelty-waiting-order-button {
@@ -1686,6 +1730,10 @@
                 right: -24px;
                 transform: translateY(-50%) rotate(-45deg);
                 z-index: 0;
+
+                @media (max-width: 1332px) {
+                  right: -16px;
+                }
 
                 @media (max-width: 719px) {
                   display: none;
@@ -1785,6 +1833,16 @@
                 flex-wrap: unset;
 
                 width: calc(50% - 23px);
+
+                @media (max-width: 1332px) {
+                  width: calc(50% - 37px);
+                }
+                @media (max-width: 1280px) {
+                  width: calc(50% - 38px);
+                }
+                @media (max-width: 1207px) {
+                  width: calc(50% - 27px);
+                }
               }
 
               &.right {
@@ -1817,6 +1875,7 @@
             }
 
             .global-block-container-bottom-from-price-up {
+              text-wrap: nowrap;
               .global-block-container-bottom-from-price-up-value,
               .global-block-container-bottom-from-price-banknote {
                 font-size: 20px;
@@ -1888,6 +1947,8 @@
                 display: flex;
                 align-items: baseline;
                 gap: 4px;
+
+                text-wrap: nowrap;
 
                 .global-block-container-bottom-from-price-up-value,
                 .global-block-container-bottom-from-price-banknote {
@@ -2020,11 +2081,15 @@
                     display: flex;
                     align-items: baseline;
                     flex-wrap: nowrap;
+
+                    text-wrap: nowrap;
                   }
 
                   &,
                   span {
                     font-size: 16px;
+
+                    text-wrap: nowrap;
                   }
                 }
 
@@ -2074,6 +2139,15 @@
         &.more-grid-view-bu {
           .catalog-filters-viewed-container {
             height: 380px;
+
+            @media (max-width: 1380px) {
+              .global-block-mark-top {
+                &.mark-free-delivery {
+                  flex-direction: column;
+                  padding: 14px;
+                }
+              }
+            }
 
             .global-block-container-buy {
               .global-p-short-product {
@@ -2564,6 +2638,10 @@
   position: sticky;
   top: 76px;
   overflow: auto;
+
+  @media (max-width: 1207px) {
+    height: calc(100%);
+  }
 
   &::-webkit-scrollbar {
     width: 8px; /* Ширина всего элемента навигации */
