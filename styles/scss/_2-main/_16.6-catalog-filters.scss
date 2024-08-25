@@ -1380,6 +1380,9 @@
 
                 .global-block-container-bottom-from-price {
                   font-size: 20px;
+                  @media (max-width: 719px) {
+                    font-size: 16px;
+                  }
                 }
               }
               .global-block-container-bottom-from-price-up {
@@ -1819,9 +1822,9 @@
                 font-size: 20px;
               }
 
-              .global-block-container-bottom-from-price-banknote {
-                margin-left: -4px;
-              }
+              // .global-block-container-bottom-from-price-banknote {
+              //   margin-left: -4px;
+              // }
             }
             .global-block-container-bottom-from-price {
               display: flex;
@@ -2603,6 +2606,8 @@
       z-index: 20;
       background: transparent;
       align-items: flex-start;
+
+      background: var(--colors-white, #fff);
       .container {
         width: 320px;
       }

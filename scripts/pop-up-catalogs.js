@@ -222,11 +222,15 @@ switches.forEach(function (switchElement) {
 });
 
 $(document).on("click", function (event) {
-  // Если клик вне блока с классом .catalog-filters-left.pop-up и вне кнопки .arrow-filters
-  if (
-    !$(event.target).closest(".catalog-filters-left.pop-up, .arrow-filters")
-      .length
-  ) {
+  const $target = $(event.target);
+
+  // Проверяем, находится ли клик внутри элементов, которые должны оставаться открытыми
+  const isInsideFilter =
+    $target.closest(".catalog-filters-left.pop-up, .arrow-filters, .filter.BTN")
+      .length > 0;
+
+  if (!isInsideFilter) {
+    // Закрываем фильтры и восстанавливаем исходные стили
     $(".arrow-filters").removeClass("active");
     $(".catalog-filters-left.pop-up").removeClass("active");
     $(".back-to-top").removeClass("mobile");
@@ -245,6 +249,13 @@ $(".arrow-filters").on("click", function (event) {
   $(".screen").toggleClass("overflow");
 });
 
+// Открытие окна offers-tab с плавным появлением
+$(".global-button-bu_name").on("click", function () {
+  $(".offers-tab").fadeIn(); // Плавное появление окна
+  $("html").addClass("no-scroll");
+  $(".screen").addClass("overflow");
+  $(".screen.overflow").css("z-index", "22");
+});
 // Открытие окна offers-tab с плавным появлением
 $(".global-button-bu_name").on("click", function () {
   $(".offers-tab").fadeIn(); // Плавное появление окна

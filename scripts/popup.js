@@ -516,7 +516,7 @@ $(document).ready(function () {
   // );
   //Показать блок заказа
   initModal(
-    ".gen-tab__to-all-product-button",
+    ".novelty-waiting-order-button",
     "#popUpBuCardsProducts",
     ".pop-up-bu-cards-close",
     "#popUpBuCardsProducts"

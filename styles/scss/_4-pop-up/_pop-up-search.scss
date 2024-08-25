@@ -551,7 +551,7 @@
             width: 282px;
 
             .submenu-list__link {
-              height: 48px;
+              height: var(---button-height, 48px);
               padding: 0px 12px;
               border-bottom: 1px solid var(--modal-colors-gray-100, #f7f7f7);
             }
