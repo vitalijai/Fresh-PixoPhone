@@ -1047,7 +1047,7 @@
 
             @media (max-width: 719px) {
               padding-top: 0;
-              padding-right: 48px;
+              margin-right: 48px;
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -1060,7 +1060,7 @@
             flex-direction: column;
 
             .global-block-container-bottom-list-status {
-              padding-right: 48px;
+              margin-right: 48px;
               flex-wrap: wrap;
               gap: 4px;
             }
@@ -1223,6 +1223,11 @@
         }
 
         &.list-view {
+          @media (max-width: 1279px) {
+            flex-wrap: unset;
+            flex-direction: column;
+          }
+
           .catalog-filters-viewed-container {
             min-width: 295px;
             max-width: 950px;
@@ -1230,6 +1235,12 @@
             gap: 16px;
 
             height: 240px;
+
+            @media (max-width: 1279px) {
+              min-width: unset;
+              max-width: unset;
+              width: calc(100% - 20px);
+            }
 
             @media (max-width: 719px) {
               min-width: 260px;
@@ -1248,9 +1259,30 @@
             }
           }
 
+          @media (max-width: 389px) {
+            .global-waiting-button,
+            .global-button {
+              flex: unset !important;
+              button {
+                width: 48px !important;
+              }
+            }
+          }
+          .global-block-container-bottom-list-status {
+            @media (max-width: 389px) {
+              .gen-tab__info-list-status--expected,
+              .gen-tab__info-list-status--available-propositions {
+                span {
+                  flex-wrap: wrap;
+                  text-wrap: wrap;
+                }
+              }
+            }
+          }
+
           .global-block-container-bottom-list-status,
           .global-block-container-bottom-list-header {
-            padding-right: 40px;
+            margin-right: 40px;
 
             .global-list-bonus {
               display: none;
@@ -2011,6 +2043,14 @@
         &.more-grid-view {
           .catalog-filters-viewed-container {
             height: 356px;
+          }
+          @media (max-width: 1279px) {
+            .global-block-mark-top {
+              &.mark-free-delivery {
+                flex-direction: column;
+                padding: 14px;
+              }
+            }
           }
 
           .global-block-container-bottom-value {

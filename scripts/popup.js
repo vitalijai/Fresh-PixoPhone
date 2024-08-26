@@ -536,6 +536,13 @@ $(document).ready(function () {
         ".pop-up-bu-close",
         "#popUpBuProducts"
       );
+
+      initModal(
+        ".global-button-notify",
+        "#popUpNewCardsProducts",
+        ".pop-up-bu-cards-close",
+        "#popUpNewCardsProducts"
+      );
     }
   }
   checkScreenWidthAndInitModal();

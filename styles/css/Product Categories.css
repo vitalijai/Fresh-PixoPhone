@@ -1475,7 +1475,7 @@
 @media (max-width: 719px) {
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-header, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom-list-header {
     padding-top: 0;
-    padding-right: 48px;
+    margin-right: 48px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1488,7 +1488,7 @@
     flex-direction: column;
   }
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom-list-status {
-    padding-right: 48px;
+    margin-right: 48px;
     flex-wrap: wrap;
     gap: 4px;
   }
@@ -1610,12 +1610,25 @@
   object-fit: contain;
   background: #fff;
 }
+@media (max-width: 1279px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view {
+    flex-wrap: unset;
+    flex-direction: column;
+  }
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container {
   min-width: 295px;
   max-width: 950px;
   flex-direction: unset;
   gap: 16px;
   height: 240px;
+}
+@media (max-width: 1279px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container {
+    min-width: unset;
+    max-width: unset;
+    width: calc(100% - 20px);
+  }
 }
 @media (max-width: 719px) {
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-container {
@@ -1632,9 +1645,26 @@
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list .constructor-container__block span {
   text-align: left;
 }
+@media (max-width: 389px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-waiting-button,
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-button {
+    flex: unset !important;
+  }
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-waiting-button button,
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-button button {
+    width: 48px !important;
+  }
+}
+@media (max-width: 389px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status .gen-tab__info-list-status--expected span,
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status .gen-tab__info-list-status--available-propositions span {
+    flex-wrap: wrap;
+    text-wrap: wrap;
+  }
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status,
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-header {
-  padding-right: 40px;
+  margin-right: 40px;
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status .global-list-bonus,
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-header .global-list-bonus {
@@ -2235,6 +2265,12 @@
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container {
   height: 356px;
+}
+@media (max-width: 1279px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .global-block-mark-top.mark-free-delivery {
+    flex-direction: column;
+    padding: 14px;
+  }
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .global-block-container-bottom-value {
   height: unset;

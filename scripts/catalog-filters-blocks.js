@@ -253,6 +253,19 @@ $(".header-right-filters .view-block").on("click", function () {
       ".catalog-filters-viewed-container",
       "catalog-filters-viewed-container-baner"
     );
+
+    if ($(window).width() < 1279) {
+      var $buttonsMoreGrid = $catalogContent.find(
+        ".global-waiting-button button"
+      );
+      $buttonsMoreGrid.each(function () {
+        // Сохраняем оригинальный текст, если он не был сохранен ранее
+        if (!this.dataset.originalText) {
+          this.dataset.originalText = this.textContent;
+        }
+        this.textContent = ""; // Очищаем текст внутри кнопки
+      });
+    }
   } else if (newClass === "more-grid-view-bu") {
     var $buttonsMoreGrid = $catalogContent.find(".global-button button");
     $buttonsMoreGrid.each(function () {
@@ -313,6 +326,18 @@ $(".header-right-filters .view-block").on("click", function () {
         ".catalog-filters-viewed-container",
         "catalog-filters-viewed-container-baner"
       );
+      if ($(window).width() < 390) {
+        var $buttonsMoreGrid = $catalogContent.find(
+          ".global-button button, .global-waiting-button button"
+        );
+        $buttonsMoreGrid.each(function () {
+          // Сохраняем оригинальный текст, если он не был сохранен ранее
+          if (!this.dataset.originalText) {
+            this.dataset.originalText = this.textContent;
+          }
+          this.textContent = ""; // Очищаем текст внутри кнопки
+        });
+      }
     } else if (newClass === "list-view-bu") {
       insertBannerListBlocks(
         $catalogContent,

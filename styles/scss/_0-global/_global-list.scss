@@ -80,6 +80,7 @@
 
 .global-list-status--in-stock,
 .global-list-status--available-propositions {
+  text-wrap: nowrap;
   .global-list-line {
     color: var(--colors-green-400, #62b278);
 
@@ -184,6 +185,10 @@
     .list-bonus-bottom {
       color: var(--colors-gray-700, #2f2c2f);
       font-size: 8px;
+
+      &.line {
+        font-size: 12px;
+      }
     }
   }
 }
