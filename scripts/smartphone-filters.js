@@ -132,3 +132,39 @@ $("#novelty").change(function () {
     $(".filters-right-header-today").addClass("active");
   }
 });
+$(document).ready(function () {
+  // Функция для проверки размера окна и применения изменений
+  function checkWindowSize() {
+    if ($(window).width() < 720) {
+      // При клике на блок с классом 'header'
+      $(".header").on("click", function () {
+        // Удаляем класс 'active' у всех блоков
+        $(".header").removeClass("active");
+        // Добавляем класс 'active' к текущему блоку
+        $(this).addClass("active");
+
+        // Копируем блок 'dropdown' и добавляем класс 'mobile'
+        var $dropdownClone = $(this)
+          .siblings(".dropdown")
+          .clone()
+          .addClass("mobile");
+
+        // Удаляем предыдущий скопированный блок, если он есть
+        $(".smartphone-filters-content-container")
+          .find(".dropdown.mobile")
+          .remove();
+
+        // Вставляем скопированный блок в нужное место
+        $(".smartphone-filters-content-container").append($dropdownClone);
+      });
+    }
+  }
+
+  // Выполняем проверку при загрузке страницы
+  checkWindowSize();
+
+  // Выполняем проверку при изменении размера окна
+  $(window).resize(function () {
+    checkWindowSize();
+  });
+});
