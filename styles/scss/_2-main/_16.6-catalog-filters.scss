@@ -1066,6 +1066,17 @@
             }
           }
 
+          .constructor-container__list {
+            gap: 4px;
+
+            .constructor-container__block {
+              flex: calc(50% - 24px) 0 0;
+              span {
+                text-align: left;
+              }
+            }
+          }
+
           .global-block-img {
             img {
               max-width: 200px;
@@ -1245,17 +1256,6 @@
             @media (max-width: 719px) {
               min-width: 260px;
               width: calc(100% - 32px);
-            }
-          }
-
-          .constructor-container__list {
-            gap: 4px;
-
-            .constructor-container__block {
-              flex: calc(50% - 24px) 0 0;
-              span {
-                text-align: left;
-              }
             }
           }
 
@@ -1733,7 +1733,7 @@
 
           .catalog-filters-viewed-container {
             min-width: 395px;
-            max-width: 570px;
+            max-width: 870px;
             flex-direction: unset;
             gap: 16px;
             min-height: 248px;

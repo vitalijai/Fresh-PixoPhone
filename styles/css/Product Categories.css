@@ -1521,6 +1521,15 @@
     gap: 4px;
   }
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .constructor-container__list {
+  gap: 4px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list .constructor-container__block, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .constructor-container__list .constructor-container__block {
+  flex: calc(50% - 24px) 0 0;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list .constructor-container__block span, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .constructor-container__list .constructor-container__block span {
+  text-align: left;
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-img img, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-img img {
   max-width: 200px;
   height: 200px;
@@ -1663,15 +1672,6 @@
     min-width: 260px;
     width: calc(100% - 32px);
   }
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list {
-  gap: 4px;
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list .constructor-container__block {
-  flex: calc(50% - 24px) 0 0;
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .constructor-container__list .constructor-container__block span {
-  text-align: left;
 }
 @media (max-width: 389px) {
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-waiting-button,
@@ -2040,7 +2040,7 @@
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container {
   min-width: 395px;
-  max-width: 570px;
+  max-width: 870px;
   flex-direction: unset;
   gap: 16px;
   min-height: 248px;
