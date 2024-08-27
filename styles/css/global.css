@@ -1800,6 +1800,11 @@ a:visited {
 .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container.not-color .global-block-colors {
   display: none;
 }
+@media (max-width: 719px) {
+  .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container .global-block-container-bottom {
+    height: unset;
+  }
+}
 .global-block-content-container .global-block-cheaper-container .global-block-product-container .global-block-container .global-block-container-bottom .global-block-container-bottom-cheaper {
   color: var(--colors-gray-400, #929292);
   font-size: 24px;

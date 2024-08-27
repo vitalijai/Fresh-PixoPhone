@@ -1229,7 +1229,7 @@
           }
 
           .catalog-filters-viewed-container {
-            min-width: 295px;
+            min-width: 360px;
             max-width: 950px;
             flex-direction: unset;
             gap: 16px;
@@ -1890,6 +1890,8 @@
         &.grid-view,
         &.grid-view-bu {
           .catalog-filters-viewed-container {
+            min-width: 215px;
+            max-width: 300px;
             height: 438px;
             padding: 20px 12px 12px 12px !important;
             // align-self: stretch;
