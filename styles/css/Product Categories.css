@@ -1698,6 +1698,13 @@
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-header .global-list-bonus {
   display: none;
 }
+@media (max-width: 719px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status .global-list-bonus,
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-header .global-list-bonus {
+    display: flex;
+    flex-direction: unset;
+  }
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-header .global-block-img {
   position: unset;
 }

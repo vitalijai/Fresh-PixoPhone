@@ -1286,6 +1286,12 @@
 
             .global-list-bonus {
               display: none;
+
+              @media (max-width: 719px) {
+                display: flex;
+
+                flex-direction: unset;
+              }
             }
           }
 
