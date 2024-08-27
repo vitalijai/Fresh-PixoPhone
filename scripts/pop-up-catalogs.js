@@ -236,6 +236,7 @@ $(document).on("click", function (event) {
     $(".back-to-top").removeClass("mobile");
     $("html").removeClass("no-scroll");
     $(".screen").removeClass("overflow");
+    $(".mobile-nav__tabs").removeClass("video");
   }
 });
 
@@ -246,6 +247,7 @@ $(".arrow-filters").on("click", function (event) {
   $(".catalog-filters-left.pop-up").toggleClass("active");
   $(".back-to-top").toggleClass("mobile");
   $("html").toggleClass("no-scroll");
+  $(".mobile-nav__tabs").toggleClass("video");
   $(".screen").toggleClass("overflow");
 });
 

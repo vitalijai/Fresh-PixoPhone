@@ -2814,11 +2814,11 @@
     display: flex;
     position: fixed;
     width: 320px;
-    height: calc(100vh - 190px);
+    height: 100vh;
     transform: translate(-100%, 0%);
     transition: transform 0.52s ease-in-out;
     border-radius: 0;
-    top: 128px;
+    top: 0;
     z-index: 20;
     background: transparent;
     align-items: flex-start;
@@ -2828,8 +2828,7 @@
     width: 320px;
   }
   .common-template .catalog-filters-left.pop-up.filters-height {
-    top: 80px;
-    height: calc(100vh - 142px);
+    z-index: 22;
   }
   .common-template .catalog-filters-left.pop-up.active {
     transform: translate(0%, 0%);

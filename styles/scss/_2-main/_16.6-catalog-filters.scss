@@ -2716,13 +2716,15 @@
       display: flex;
       position: fixed;
       width: calc(320px);
-      height: calc(100vh - 190px);
+      // height: calc(100vh - 190px);
+      height: calc(100vh);
       // transform: translate(0%, 0%);
       transform: translate(calc(-100%), 0%);
 
       transition: transform 0.52s ease-in-out;
       border-radius: 0;
-      top: 128px;
+      // top: 128px;
+      top: 0;
       z-index: 20;
       background: transparent;
       align-items: flex-start;
@@ -2733,8 +2735,9 @@
       }
 
       &.filters-height {
-        top: 80px;
-        height: calc(100vh - 142px);
+        // top: 80px;
+        // height: calc(100vh - 142px);
+        z-index: 22;
       }
 
       &.active {

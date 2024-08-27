@@ -37,6 +37,7 @@ $(document).ready(function () {
           $(".back-to-top").addClass("mobile");
           $("html").addClass("no-scroll");
           $(".screen").addClass("overflow");
+          $(".mobile-nav__tabs").addClass("video");
         });
 
         // Обработчик нажатия на кнопку Сортировка
