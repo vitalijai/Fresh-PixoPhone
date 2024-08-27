@@ -1896,6 +1896,9 @@
             padding: 20px 12px 12px 12px !important;
             // align-self: stretch;
 
+            @media (max-width: 1349px) {
+              min-width: 190px;
+            }
             @media (max-width: 1249px) {
               min-width: 170px;
             }
