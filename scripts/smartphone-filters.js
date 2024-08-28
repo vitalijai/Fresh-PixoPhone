@@ -199,3 +199,23 @@ $(document).ready(function () {
     checkWindowSize();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const splide = new Splide("#filters-viewed-carousel", {
+    type: "fade", // Для плавного переключения изображений
+    heightRatio: 0.5, // Высота карусели
+    height: 232,
+    arrows: false, // Отключение стрелок
+    pagination: true, // Отключение пагинации
+    // cover: true,
+  }).mount();
+
+  const hoverAreas = document.querySelectorAll(".filters-viewed-hover-area");
+
+  hoverAreas.forEach((area) => {
+    area.addEventListener("mouseenter", function () {
+      const slideIndex = this.getAttribute("data-slide");
+      splide.go(parseInt(slideIndex, 10)); // Переключение на слайд по индексу
+    });
+  });
+});

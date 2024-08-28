@@ -94,4 +94,49 @@
       }
     }
   }
+  .filters-viewed-link {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #filters-viewed-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filters-viewed-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .filters-viewed-hover-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filters-viewed-hover-area {
+    width: 25%; /* 4 области по 25% */
+    // height: 50%; /* Половина высоты контейнера */
+    cursor: pointer;
+  }
+
+  .filters-viewed-discount-group {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+  }
 }
