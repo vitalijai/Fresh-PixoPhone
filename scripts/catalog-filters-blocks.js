@@ -26,34 +26,34 @@ $(document).ready(function () {
       }
     });
 
-    $(".catalog-filters-viewed-container.global-block-container").hover(
-      function () {
-        // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
-        var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
-        if (dropdown.length > 0) {
-          // Плавно показываем dropdown при наведении
-          dropdown.stop(true, true).slideDown(300).css("display", "flex");
-        }
-      },
-      function () {
-        // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
-        var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
-        if (dropdown.length > 0) {
-          // Плавно скрываем dropdown, когда курсор уходит
-          dropdown.stop(true, true).slideUp(300);
-        }
-      }
-    );
+    // $(".catalog-filters-viewed-container.global-block-container").hover(
+    //   function () {
+    //     // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
+    //     var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
+    //     if (dropdown.length > 0) {
+    //       // Плавно показываем dropdown при наведении
+    //       dropdown.stop(true, true).slideDown(300).css("display", "flex");
+    //     }
+    //   },
+    //   function () {
+    //     // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
+    //     var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
+    //     if (dropdown.length > 0) {
+    //       // Плавно скрываем dropdown, когда курсор уходит
+    //       dropdown.stop(true, true).slideUp(300);
+    //     }
+    //   }
+    // );
     $(".catalog-filters-viewed-container").hover(
       function () {
         // Проверяем, есть ли у текущего элемента или его предков класс `catalog-filters-viewed-content list-view-bu`
-        if (
-          $(this).hasClass("catalog-filters-viewed-content") ||
-          $(this).closest(".catalog-filters-viewed-content.list-view-bu")
-            .length > 0
-        ) {
-          return; // Выходим из функции, если условие выполнено
-        }
+        // if (
+        //   $(this).hasClass("catalog-filters-viewed-content") ||
+        //   $(this).closest(".catalog-filters-viewed-content.list-view-bu")
+        //     .length > 0
+        // ) {
+        //   return; // Выходим из функции, если условие выполнено
+        // }
 
         // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
         var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
@@ -64,13 +64,13 @@ $(document).ready(function () {
       },
       function () {
         // Проверяем, есть ли у текущего элемента или его предков класс `catalog-filters-viewed-content list-view-bu`
-        if (
-          $(this).hasClass("catalog-filters-viewed-content") ||
-          $(this).closest(".catalog-filters-viewed-content.list-view-bu")
-            .length > 0
-        ) {
-          return; // Выходим из функции, если условие выполнено
-        }
+        // if (
+        //   $(this).hasClass("catalog-filters-viewed-content") ||
+        //   $(this).closest(".catalog-filters-viewed-content.list-view-bu")
+        //     .length > 0
+        // ) {
+        //   return; // Выходим из функции, если условие выполнено
+        // }
 
         // Проверяем, есть ли внутри текущего элемента блок с классом .catalog-filters-viewed-dropdown
         var dropdown = $(this).find(".catalog-filters-viewed-dropdown");
