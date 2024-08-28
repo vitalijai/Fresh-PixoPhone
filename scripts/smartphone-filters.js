@@ -121,6 +121,36 @@ $(window).on("scroll", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Найдем все элементы с классом "filters-viewed-carousel"
+  const carousels = document.querySelectorAll(".splide");
+
+  carousels.forEach((carousel, index) => {
+    // Инициализируем Splide для каждого carousel
+    const splide = new Splide(carousel, {
+      type: "fade", // Для плавного переключения изображений
+      heightRatio: 0.5, // Высота карусели
+      // height: 232,
+      height: "auto",
+      // height: 184,
+      arrows: false, // Отключение стрелок
+      pagination: true, // Отключение пагинации
+    }).mount();
+
+    // Найдем все hover-области, относящиеся к текущему carousel
+    const hoverAreas = carousel.parentElement.querySelectorAll(
+      ".filters-viewed-hover-area"
+    );
+
+    hoverAreas.forEach((area) => {
+      area.addEventListener("mouseenter", function () {
+        const slideIndex = this.getAttribute("data-slide");
+        splide.go(parseInt(slideIndex, 10)); // Переключение на слайд по индексу
+      });
+    });
+  });
+});
+
 $("#novelty").change(function () {
   // Check if the checkbox is checked
   if ($(this).is(":checked")) {
@@ -197,25 +227,5 @@ $(document).ready(function () {
   // Выполняем проверку при изменении размера окна
   $(window).resize(function () {
     checkWindowSize();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const splide = new Splide("#filters-viewed-carousel", {
-    type: "fade", // Для плавного переключения изображений
-    heightRatio: 0.5, // Высота карусели
-    height: 232,
-    arrows: false, // Отключение стрелок
-    pagination: true, // Отключение пагинации
-    // cover: true,
-  }).mount();
-
-  const hoverAreas = document.querySelectorAll(".filters-viewed-hover-area");
-
-  hoverAreas.forEach((area) => {
-    area.addEventListener("mouseenter", function () {
-      const slideIndex = this.getAttribute("data-slide");
-      splide.go(parseInt(slideIndex, 10)); // Переключение на слайд по индексу
-    });
   });
 });

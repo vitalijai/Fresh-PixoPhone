@@ -2060,6 +2060,7 @@ a:visited {
   }
 }
 .global-block-container .global-block-container-header {
+  flex: 1 1 47.5%;
   display: flex;
   align-items: center;
   flex-direction: column;

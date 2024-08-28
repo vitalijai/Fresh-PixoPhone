@@ -598,6 +598,7 @@ $(document).ready(function () {
   //   ".pop-up-cart-bottom-left"
   // );
 });
+
 $(document).ready(function () {
   $(".bu-splide__span").on("click", function () {
     $("#popUpBuProducts").fadeOut();

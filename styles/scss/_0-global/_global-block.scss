@@ -535,6 +535,8 @@
   }
 
   .global-block-container-header {
+    flex: 1 1 47.5%;
+
     @include flexbox($alignItems: center, $direction: column, $self: stretch);
     user-select: none;
 

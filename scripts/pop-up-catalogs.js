@@ -233,12 +233,10 @@ $(document).on("click", function (event) {
   const $target = $(event.target);
 
   // Проверяем, находится ли клик внутри элементов, которые должны оставаться открытыми
-  const isInsideFilter =
-    $target.closest(
-      ".catalog-filters-left.pop-up, .arrow-filters, .filter.BTN, .filters-parametrs-checkbox"
-    ).length > 0;
 
-  if (!isInsideFilter) {
+  const isInsideFilter = $target.closest(".screen.overflow").length > 0;
+
+  if (isInsideFilter) {
     // Закрываем фильтры и восстанавливаем исходные стили
     $(".arrow-filters").removeClass("active");
     $(".catalog-filters-left.pop-up").removeClass("active");

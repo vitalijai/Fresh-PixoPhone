@@ -215,6 +215,7 @@ $(".header-right-filters .view-block").on("click", function () {
 
   // Добавляем класс 'active' к нажатой кнопке
   $(this).addClass("active");
+  // const carousels = document.querySelectorAll(".splide");
 
   // Определяем класс нажатой кнопки
   var newClass = "";
@@ -318,6 +319,31 @@ $(".header-right-filters .view-block").on("click", function () {
         ".catalog-filters-viewed-container",
         "catalog-filters-viewed-container-baner"
       );
+
+      // carousels.forEach((carousel, index) => {
+      //   // Инициализируем Splide для каждого carousel
+      //   const splide = new Splide(carousel, {
+      //     type: "fade", // Для плавного переключения изображений
+      //     heightRatio: 0.5, // Высота карусели
+      //     height: "auto",
+      //     // height: 200,
+      //     // height: 184,
+      //     arrows: false, // Отключение стрелок
+      //     pagination: true, // Отключение пагинации
+      //   }).mount();
+
+      //   // Найдем все hover-области, относящиеся к текущему carousel
+      //   const hoverAreas = carousel.parentElement.querySelectorAll(
+      //     ".filters-viewed-hover-area"
+      //   );
+
+      //   hoverAreas.forEach((area) => {
+      //     area.addEventListener("mouseenter", function () {
+      //       const slideIndex = this.getAttribute("data-slide");
+      //       splide.go(parseInt(slideIndex, 10)); // Переключение на слайд по индексу
+      //     });
+      //   });
+      // });
 
       if ($(window).width() < 719) {
         var $buttonsMoreGrid = $catalogContent.find(
