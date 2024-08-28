@@ -863,6 +863,51 @@
   align-items: center;
   gap: 24px;
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 48px;
+}
+@media (max-width: 719px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting {
+    display: none;
+  }
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-name {
+  display: flex;
+  align-items: center;
+  color: var(--colors-blue-400, #62a8ed);
+  text-align: center;
+  font-size: 14px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container .sorting {
+  display: flex;
+  padding: 6px 10px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 32px;
+  background: var(--colors-white, #fff);
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+  text-wrap: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container .sorting:hover {
+  color: var(--colors-blue-400, #62a8ed);
+  background: var(--colors-blue-100, #e9f5ff);
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .header-right-sorting .right-sorting-container .sorting.active {
+  color: var(--colors-white, #fff);
+  background: var(--colors-blue-500, #318ce7);
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-right-header .filters-right-header-right .offers-page-header-sorting-block {
   display: inline-flex;
   align-items: center;

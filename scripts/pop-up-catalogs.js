@@ -158,6 +158,14 @@ $(".sorting.BTN.selected").on("click", function () {
   }
 });
 
+$(".right-sorting-container .sorting").on("click", function () {
+  // Remove the 'active' class from all buttons
+  $(".right-sorting-container .sorting").removeClass("active");
+
+  // Add the 'active' class to the clicked button
+  $(this).addClass("active");
+});
+
 // Обработчик клика для кнопок сортировки
 $(".sorting:not(.BTN)").on("click", function () {
   var $this = $(this);

@@ -165,64 +165,64 @@
           align-items: center;
           gap: 24px;
 
-          // .header-right-sorting {
-          //   display: flex;
-          //   align-items: center;
-          //   gap: 4px;
+          .header-right-sorting {
+            display: flex;
+            align-items: center;
+            gap: 4px;
 
-          //   border-radius: 48px;
+            border-radius: 48px;
 
-          //   @media (max-width: 719px) {
-          //     display: none;
-          //   }
+            @media (max-width: 719px) {
+              display: none;
+            }
 
-          //   .right-sorting-name {
-          //     display: flex;
-          //     align-items: center;
+            .right-sorting-name {
+              display: flex;
+              align-items: center;
 
-          //     color: var(--colors-blue-400, #62a8ed);
-          //     text-align: center;
+              color: var(--colors-blue-400, #62a8ed);
+              text-align: center;
 
-          //     font-size: 14px;
-          //   }
+              font-size: 14px;
+            }
 
-          //   .right-sorting-container {
-          //     display: flex;
-          //     align-items: baseline;
-          //     gap: 4px;
+            .right-sorting-container {
+              display: flex;
+              align-items: baseline;
+              gap: 4px;
 
-          //     .sorting {
-          //       display: flex;
-          //       padding: 6px 10px;
-          //       align-items: center;
-          //       cursor: pointer;
+              .sorting {
+                display: flex;
+                padding: 6px 10px;
+                align-items: center;
+                cursor: pointer;
 
-          //       border-radius: 32px;
-          //       background: var(--colors-white, #fff);
+                border-radius: 32px;
+                background: var(--colors-white, #fff);
 
-          //       color: var(--colors-gray-700, #2f2c2f);
-          //       text-align: center;
-          //       text-wrap: nowrap;
+                color: var(--colors-gray-700, #2f2c2f);
+                text-align: center;
+                text-wrap: nowrap;
 
-          //       font-size: 14px;
-          //       font-weight: 400;
+                font-size: 14px;
+                font-weight: 400;
 
-          //       border: none;
+                border: none;
 
-          //       &:hover {
-          //         color: var(--colors-blue-400, #62a8ed);
+                &:hover {
+                  color: var(--colors-blue-400, #62a8ed);
 
-          //         background: var(--colors-blue-100, #e9f5ff);
-          //       }
+                  background: var(--colors-blue-100, #e9f5ff);
+                }
 
-          //       &.active {
-          //         color: var(--colors-white, #fff);
+                &.active {
+                  color: var(--colors-white, #fff);
 
-          //         background: var(--colors-blue-500, #318ce7);
-          //       }
-          //     }
-          //   }
-          // }
+                  background: var(--colors-blue-500, #318ce7);
+                }
+              }
+            }
+          }
 
           .offers-page-header-sorting-block {
             display: inline-flex;
