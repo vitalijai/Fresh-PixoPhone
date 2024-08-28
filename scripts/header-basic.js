@@ -1,3 +1,4 @@
+// Обработчик события scroll
 window.addEventListener("scroll", function () {
   var headerBottoms = document.querySelectorAll(".header_bottom");
   var headerTabs = document.querySelectorAll(".common-template__tabs");
@@ -9,7 +10,7 @@ window.addEventListener("scroll", function () {
   const vw50 = window.innerWidth / 2; // 50vw in pixels
 
   var isFixed =
-    window.innerWidth < 719 ? scrollPosition > 48 : scrollPosition > 64;
+    window.innerWidth < 720 ? scrollPosition > 48 : scrollPosition > 64;
 
   headerBottoms.forEach(function (headerBottom) {
     headerBottom.classList.toggle("fixed", isFixed);
@@ -27,8 +28,14 @@ window.addEventListener("scroll", function () {
     main.classList.toggle("active", isFixed);
   });
 
-  filters.forEach(function (filters) {
-    filters.classList.toggle("filters-height", isFixed);
+  filters.forEach(function (filter) {
+    filter.classList.toggle("filters-height", isFixed);
+    // Добавляем класс pop-up при ширине окна меньше 720px
+    if (window.innerWidth < 720) {
+      filter.classList.add("pop-up");
+    } else {
+      filter.classList.remove("pop-up");
+    }
   });
 
   if (scrollPosition > vw50) {
@@ -43,25 +50,30 @@ window.addEventListener("scroll", function () {
   });
 });
 
+// Обработчик события load
 window.addEventListener("load", function () {
   const scrollContainer = document.querySelector(".breadcrumbs");
   scrollContainer.scrollLeft = scrollContainer.scrollWidth;
 });
 
-(function () {
+// Обработчик события resize
+window.addEventListener("resize", function () {
   const elements = document.querySelectorAll(".tabs__link-description");
-  if (window.innerWidth < 719) {
+  if (window.innerWidth < 720) {
     elements.forEach((element) => element.classList.remove("active"));
   }
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth < 719) {
-      elements.forEach((element) => element.classList.remove("active"));
+  const filters = document.querySelectorAll(".catalog-filters-left");
+  filters.forEach(function (filter) {
+    if (window.innerWidth < 720) {
+      filter.classList.add("pop-up");
+    } else {
+      filter.classList.remove("pop-up");
     }
   });
-})();
+});
 
-//маска телефона
+// Маска телефона
 $(document).ready(function () {
   $("#check-form-contact-phone").mask("+38 (999) 99-99-999");
 });

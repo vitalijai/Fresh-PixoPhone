@@ -730,6 +730,7 @@
   align-items: flex-start;
   gap: 1px;
   align-self: stretch;
+  position: relative;
   border-radius: 32px;
   /* block-shadow */
   box-shadow: 7px 8px 7px 0px rgba(0, 0, 0, 0.08);
@@ -2924,8 +2925,8 @@
     position: fixed;
     width: 320px;
     height: 100vh;
-    transform: translate(-100%, 0%);
-    transition: transform 0.52s ease-in-out;
+    left: -100%;
+    transition: left 0.52s ease-in-out;
     border-radius: 0;
     top: 0;
     z-index: 20;
@@ -2940,7 +2941,7 @@
     z-index: 22;
   }
   .common-template .catalog-filters-left.pop-up.active {
-    transform: translate(0%, 0%);
+    left: 0;
   }
 }
 .common-template .catalog-filters-left .catalog-filters-left-header {
@@ -4642,7 +4643,7 @@
   align-items: center;
   gap: 8px;
   background: var(--colors-white, #fff);
-  transition: left 0.52s ease-in-out;
+  transition: left 0.38s ease-in-out;
 }
 @media (max-width: 719px) {
   .arrow-filters {

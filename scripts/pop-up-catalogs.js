@@ -234,8 +234,9 @@ $(document).on("click", function (event) {
 
   // Проверяем, находится ли клик внутри элементов, которые должны оставаться открытыми
   const isInsideFilter =
-    $target.closest(".catalog-filters-left.pop-up, .arrow-filters, .filter.BTN")
-      .length > 0;
+    $target.closest(
+      ".catalog-filters-left.pop-up, .arrow-filters, .filter.BTN, .filters-parametrs-checkbox"
+    ).length > 0;
 
   if (!isInsideFilter) {
     // Закрываем фильтры и восстанавливаем исходные стили
