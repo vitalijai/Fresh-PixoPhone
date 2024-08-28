@@ -134,37 +134,59 @@ $("#novelty").change(function () {
   }
 });
 $(document).ready(function () {
+  var isAnimating = false; // Флаг для предотвращения множественных анимаций
+
   // Функция для проверки размера окна и применения изменений
   function checkWindowSize() {
     if ($(window).width() < 720) {
       // При клике на блок с классом 'header'
       $(".header").on("click", function () {
-        // Удаляем класс 'active' у всех блоков
-        $(".header").removeClass("active");
-        // Добавляем класс 'active' к текущему блоку
-        $(this).addClass("active");
+        if (isAnimating) return; // Игнорировать клик, если идет анимация
 
-        // Копируем блок 'dropdown' и добавляем класс 'mobile'
-        var $dropdownClone = $(this)
-          .siblings(".dropdown")
-          .clone()
-          .addClass("mobile");
+        isAnimating = true; // Устанавливаем флаг анимации
+        var $this = $(this);
+        var $dropdown = $this.siblings(".dropdown");
 
-        // Создаем Promise для завершения анимации закрытия
-        $(".smartphone-filters-content-container")
-          .find(".dropdown.mobile")
-          .slideUp(300)
-          .promise()
-          .done(function () {
-            // Удаляем предыдущий блок после завершения анимации
-            $(this).remove();
+        if ($this.hasClass("active")) {
+          // Если текущий блок уже активен, скрываем .dropdown.mobile
+          $(".dropdown.mobile")
+            .slideUp(300)
+            .promise()
+            .done(function () {
+              $(this).remove();
+              isAnimating = false; // Сбрасываем флаг анимации после завершения
+            });
+          // Удаляем класс 'active' у текущего блока
+          $this.removeClass("active");
+        } else {
+          // Удаляем класс 'active' у всех блоков
+          $(".header").removeClass("active");
+          // Добавляем класс 'active' к текущему блоку
+          $this.addClass("active");
 
-            // Вставляем скопированный блок в нужное место и анимируем его появление
-            $dropdownClone
-              .hide()
-              .appendTo(".smartphone-filters-content-container")
-              .slideDown(300);
-          });
+          // Копируем блок 'dropdown' и добавляем класс 'mobile'
+          var $dropdownClone = $dropdown.clone().addClass("mobile");
+
+          // Создаем Promise для завершения анимации закрытия
+          $(".smartphone-filters-content-container")
+            .find(".dropdown.mobile")
+            .slideUp(300)
+            .promise()
+            .done(function () {
+              // Удаляем предыдущий блок после завершения анимации
+              $(this).remove();
+
+              // Вставляем скопированный блок в нужное место и анимируем его появление
+              $dropdownClone
+                .hide()
+                .appendTo(".smartphone-filters-content-container")
+                .slideDown(300)
+                .promise()
+                .done(function () {
+                  isAnimating = false; // Сбрасываем флаг анимации после завершения
+                });
+            });
+        }
       });
     }
   }
