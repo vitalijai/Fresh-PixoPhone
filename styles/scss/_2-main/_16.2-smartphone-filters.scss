@@ -95,8 +95,11 @@
           padding: 16px 20px 8px 20px;
           flex-direction: column;
           align-items: center;
+          border-radius: 8px;
+
           border: 2px solid transparent;
           gap: 8px;
+          transition: all 500ms ease-in-out;
 
           @media (max-width: 719px) {
             padding: 8px;
@@ -146,7 +149,6 @@
           }
 
           &.active {
-            border-radius: 8px;
             border: 2px solid var(--colors-gray-700, #2f2c2f);
           }
         }

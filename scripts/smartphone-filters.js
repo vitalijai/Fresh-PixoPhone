@@ -150,13 +150,21 @@ $(document).ready(function () {
           .clone()
           .addClass("mobile");
 
-        // Удаляем предыдущий скопированный блок, если он есть
+        // Создаем Promise для завершения анимации закрытия
         $(".smartphone-filters-content-container")
           .find(".dropdown.mobile")
-          .remove();
+          .slideUp(300)
+          .promise()
+          .done(function () {
+            // Удаляем предыдущий блок после завершения анимации
+            $(this).remove();
 
-        // Вставляем скопированный блок в нужное место
-        $(".smartphone-filters-content-container").append($dropdownClone);
+            // Вставляем скопированный блок в нужное место и анимируем его появление
+            $dropdownClone
+              .hide()
+              .appendTo(".smartphone-filters-content-container")
+              .slideDown(300);
+          });
       });
     }
   }
