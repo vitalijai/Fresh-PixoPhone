@@ -1912,6 +1912,34 @@
     width: 100%;
   }
 }
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .novelty-waiting-order-button {
+  position: relative;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .novelty-waiting-order-button button {
+  z-index: 1;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .novelty-waiting-order-button::after {
+  content: "";
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: var(--colors-white, #fff);
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  transform: translateY(-50%) rotate(-45deg);
+  z-index: 0;
+}
+@media (max-width: 1332px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .novelty-waiting-order-button::after {
+    right: -16px;
+  }
+}
+@media (max-width: 719px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .novelty-waiting-order-button::after {
+    display: none;
+  }
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu .global-p-short-product-containers {
   justify-content: flex-end !important;
 }
@@ -2158,34 +2186,6 @@
     min-width: 260px;
     max-width: 700px;
     height: 100%;
-  }
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button {
-  position: relative;
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button button {
-  z-index: 1;
-}
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button::after {
-  content: "";
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  background: var(--colors-white, #fff);
-  position: absolute;
-  top: 50%;
-  right: -24px;
-  transform: translateY(-50%) rotate(-45deg);
-  z-index: 0;
-}
-@media (max-width: 1332px) {
-  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button::after {
-    right: -16px;
-  }
-}
-@media (max-width: 719px) {
-  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button::after {
-    display: none;
   }
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .global-button-used {
