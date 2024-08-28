@@ -1549,9 +1549,11 @@
   top: 12px;
   gap: 12px;
 }
-.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-header .global-block-img .global-block-add-group .global-block-credit__btn, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-header .global-block-img .global-block-add-group .global-block-credit__btn {
-  border-radius: unset;
-  box-shadow: unset;
+@media (min-width: 720px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-header .global-block-img .global-block-add-group .global-block-credit__btn, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-header .global-block-img .global-block-add-group .global-block-credit__btn {
+    border-radius: unset;
+    box-shadow: unset;
+  }
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-header .global-block-img .global-block-add-group .global-block-add-wishlist__btn::after, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-header .global-block-img .global-block-add-group .global-block-add-wishlist__btn::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none"><path d="M10.6537 18.6458L2.64317 10.7102C2.30575 10.3978 2.03081 10.0229 1.79337 9.63548C0.481187 7.4735 0.818606 4.68667 2.64317 2.88711C3.69291 1.83736 5.10507 1.25 6.59222 1.25C8.92915 1.25 10.3913 2.61217 11.0037 3.39948C11.616 2.62467 13.0782 1.25 15.4151 1.25C16.9022 1.25 18.3144 1.83736 19.3641 2.88711C21.1637 4.68667 21.5261 7.461 20.2139 9.63548C19.9765 10.0229 19.7016 10.3853 19.3641 10.7102L11.3536 18.6458C11.1536 18.8458 10.8662 18.8458 10.6662 18.6458H10.6537Z" stroke="%23C0C0C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
@@ -1600,6 +1602,13 @@
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom-list-header .global-list-bonus {
     display: flex;
     flex-direction: unset;
+  }
+}
+@media (max-width: 389px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom-list-status {
+    margin-right: 0px;
+    margin-top: 12px;
+    flex-wrap: nowrap;
   }
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom {
@@ -1661,6 +1670,12 @@
   }
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom .global-block-container-buy .global-block-container-button button, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom .global-block-container-buy .global-block-container-button button {
     width: 100%;
+  }
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom .global-block-container-buy .global-block-container-button.global-button, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom .global-block-container-buy .global-block-container-button.global-button {
+    flex: unset;
+  }
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom .global-block-container-buy .global-block-container-button.global-button button, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom .global-block-container-buy .global-block-container-button.global-button button {
+    width: 48px;
   }
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .catalog-filters-viewed-dropdown div:not(.viewed-dropdown-specs,
@@ -1736,6 +1751,11 @@
   }
 }
 @media (max-width: 389px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-bottom-list-status {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 389px) {
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-waiting-button,
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-button {
     flex: unset !important;
@@ -1789,6 +1809,27 @@
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view .global-block-container-buy .global-block-container-bottom-value.not-bonus {
   justify-content: flex-end;
+}
+.common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-add-group {
+  display: none;
+}
+@media (max-width: 719px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-add-group {
+    display: flex;
+  }
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-add-group button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px 0px rgba(51, 51, 51, 0.24);
+  }
+}
+@media (max-width: 390px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .global-block-container-bottom-list-view .global-block-container-bottom-list-view-box {
+    gap: 18px;
+  }
 }
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container-bu {
   display: flex;
@@ -2065,6 +2106,13 @@
     min-height: unset;
   }
 }
+@media (max-width: 390px) {
+  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container {
+    min-width: 260px;
+    max-width: 700px;
+    height: 100%;
+  }
+}
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .novelty-waiting-order-button {
   position: relative;
 }
@@ -2097,9 +2145,6 @@
   display: none;
 }
 @media (max-width: 719px) {
-  .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .global-block-img .global-block-add-group {
-    display: none;
-  }
   .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.list-view-bu .catalog-filters-viewed-container .global-block-container-bottom-list-view .global-block-add-group button {
     display: flex;
     justify-content: center;
