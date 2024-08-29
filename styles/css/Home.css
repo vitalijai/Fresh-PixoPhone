@@ -1333,35 +1333,35 @@
     border-radius: 32px;
     font-size: 12px;
   }
-  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.transparent {
+  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link {
     color: var(--colors-white, #fff);
     border: 1px solid var(--colors-white, #fff);
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(4px);
   }
-  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.transparent.access {
+  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.access {
     left: 14%;
     bottom: 50%;
   }
-  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.transparent.gadgets {
+  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.gadgets {
     right: 14%;
     bottom: 12%;
   }
-  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.white {
-    color: var(--colors-gray-700, #2f2c2f);
-    border: 2px solid var(--colors-white, #fff);
-    background: var(--colors-white, #fff);
-    /* pop-up_shadow */
-    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
-  }
-  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.white.smartphones {
+  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.smartphones {
     font-size: 14px;
     top: 16px;
     left: 16px;
   }
-  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.white.smartphone {
+  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link.smartphone {
     right: 14%;
     bottom: 50%;
+  }
+  .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link:hover, .common-template .monobrand-content .monobrand-content-container .monobrand-content-left .content-left__link:active {
+    color: var(--colors-gray-700, #2f2c2f);
+    border: 1px solid var(--colors-white, #fff);
+    background: var(--colors-white, #fff);
+    /* pop-up_shadow */
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
   }
 }
 .common-template .monobrand-content .monobrand-content-container .monobrand-content-right {

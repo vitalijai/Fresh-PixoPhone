@@ -61,7 +61,7 @@
 
           font-size: 12px;
 
-          &.transparent {
+          & {
             color: var(--colors-white, #fff);
             border: 1px solid var(--colors-white, #fff);
             background: rgba(0, 0, 0, 0.4);
@@ -76,16 +76,6 @@
               right: 14%;
               bottom: 12%;
             }
-          }
-
-          &.white {
-            color: var(--colors-gray-700, #2f2c2f);
-
-            border: 2px solid var(--colors-white, #fff);
-            background: var(--colors-white, #fff);
-
-            /* pop-up_shadow */
-            box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
 
             &.smartphones {
               font-size: 14px;
@@ -96,6 +86,17 @@
             &.smartphone {
               right: 14%;
               bottom: 50%;
+            }
+
+            &:hover,
+            &:active {
+              color: var(--colors-gray-700, #2f2c2f);
+
+              border: 1px solid var(--colors-white, #fff);
+              background: var(--colors-white, #fff);
+
+              /* pop-up_shadow */
+              box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
             }
           }
         }
