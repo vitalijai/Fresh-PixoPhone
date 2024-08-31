@@ -4661,6 +4661,11 @@
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 719px) {
+  .common-template .filters-viewed-hover-container {
+    display: none;
+  }
+}
 .common-template .filters-viewed-hover-area {
   width: 25%; /* 4 области по 25% */
   cursor: pointer;

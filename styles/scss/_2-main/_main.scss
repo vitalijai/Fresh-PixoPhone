@@ -126,6 +126,10 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 719px) {
+      display: none;
+    }
   }
 
   .filters-viewed-hover-area {

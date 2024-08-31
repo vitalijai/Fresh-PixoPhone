@@ -151,6 +151,21 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
       });
+    } else {
+      const carousels = document.querySelectorAll(".splide");
+
+      carousels.forEach((carousel, index) => {
+        // Инициализируем Splide для каждого carousel
+        const splide = new Splide(carousel, {
+          type: "fade", // Для плавного переключения изображений
+          heightRatio: 0.5, // Высота карусели
+          height: "auto",
+          drag: true,
+
+          arrows: false, // Отключение стрелок
+          pagination: true, // Включение пагинации
+        }).mount();
+      });
     }
   }
 
