@@ -905,6 +905,7 @@
   display: flex !important;
   top: 24px;
   left: 8px;
+  position: absolute;
 }
 .pop-up-bu-products-modal .gen-tab__to-order {
   order: unset;
@@ -1467,8 +1468,7 @@
   align-self: stretch;
   align-content: flex-start;
   gap: 8px;
-  overflow: hidden;
-  overflow-x: scroll;
+  flex-wrap: wrap;
 }
 .pop-up-bu-products-modal .pop-up-bu-products-modal-content .pop-up-bu-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__left-side .pop-up-bu-main__carousel-img .viewed-dropdown-similar-models .constructor-container__list .constructor-container__block,
 .pop-up-bu-products-modal .pop-up-bu-products-modal-content .pop-up-new-main-photo-block-slider .splide__track--slide .pop-up-bu-main-block__list-block .pop-up-bu-main__left-side .pop-up-bu-main__carousel-img .viewed-dropdown-similar-models .constructor-container__list .constructor-container__block {

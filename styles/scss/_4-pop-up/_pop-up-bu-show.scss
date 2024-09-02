@@ -91,6 +91,7 @@
       display: flex !important;
       top: 24px;
       left: 8px;
+      position: absolute;
     }
   }
 
@@ -683,8 +684,9 @@
                   @include flexbox($alignItems: flex-start, $self: stretch);
                   align-content: flex-start;
                   gap: 8px;
-                  overflow: hidden;
-                  overflow-x: scroll;
+                  flex-wrap: wrap;
+                  // overflow: hidden;
+                  // overflow-x: scroll;
 
                   .constructor-container__block {
                     // default
