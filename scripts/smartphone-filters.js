@@ -124,49 +124,55 @@ $(window).on("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Функция для проверки ширины экрана и инициализации каруселей
   function initCarousels() {
-    // Проверяем, если ширина экрана больше 720 пикселей
-    if (window.innerWidth > 720) {
-      // Найдем все элементы с классом "filters-viewed-carousel"
-      const carousels = document.querySelectorAll(".splide");
+    // Найдём все элементы с классом "filters-viewed-link"
+    const filtersViewedLinks = document.querySelectorAll(
+      ".filters-viewed-link"
+    );
 
-      carousels.forEach((carousel, index) => {
-        // Инициализируем Splide для каждого carousel
-        const splide = new Splide(carousel, {
-          type: "fade", // Для плавного переключения изображений
-          heightRatio: 0.5, // Высота карусели
-          height: "auto",
-          arrows: false, // Отключение стрелок
-          pagination: true, // Включение пагинации
-        }).mount();
+    filtersViewedLinks.forEach((link) => {
+      // Проверяем, если ширина экрана больше 720 пикселей
+      if (window.innerWidth > 720) {
+        // Найдем все элементы с классом "splide" внутри текущего "filters-viewed-link"
+        const carousels = link.querySelectorAll(".splide");
 
-        // Найдем все hover-области, относящиеся к текущему carousel
-        const hoverAreas = carousel.parentElement.querySelectorAll(
-          ".filters-viewed-hover-area"
-        );
+        carousels.forEach((carousel) => {
+          // Инициализируем Splide для каждого carousel
+          const splide = new Splide(carousel, {
+            type: "fade", // Для плавного переключения изображений
+            heightRatio: 0.5, // Высота карусели
+            height: "auto",
+            arrows: false, // Отключение стрелок
+            pagination: true, // Включение пагинации
+          }).mount();
 
-        hoverAreas.forEach((area) => {
-          area.addEventListener("mouseenter", function () {
-            const slideIndex = this.getAttribute("data-slide");
-            splide.go(parseInt(slideIndex, 10)); // Переключение на слайд по индексу
+          // Найдем все hover-области, относящиеся к текущему carousel внутри текущего "filters-viewed-link"
+          const hoverAreas = link.querySelectorAll(
+            ".filters-viewed-hover-area"
+          );
+
+          hoverAreas.forEach((area) => {
+            area.addEventListener("mouseenter", function () {
+              const slideIndex = this.getAttribute("data-slide");
+              splide.go(parseInt(slideIndex, 10)); // Переключение на слайд по индексу
+            });
           });
         });
-      });
-    } else {
-      const carousels = document.querySelectorAll(".splide");
+      } else {
+        // Аналогичная логика для случая, когда ширина экрана <= 720 пикселей
+        const carousels = link.querySelectorAll(".splide");
 
-      carousels.forEach((carousel, index) => {
-        // Инициализируем Splide для каждого carousel
-        const splide = new Splide(carousel, {
-          type: "fade", // Для плавного переключения изображений
-          heightRatio: 0.5, // Высота карусели
-          height: "auto",
-          drag: true,
-
-          arrows: false, // Отключение стрелок
-          pagination: true, // Включение пагинации
-        }).mount();
-      });
-    }
+        carousels.forEach((carousel) => {
+          const splide = new Splide(carousel, {
+            type: "fade", // Для плавного переключения изображений
+            heightRatio: 0.5, // Высота карусели
+            height: "auto",
+            drag: true,
+            arrows: false, // Отключение стрелок
+            pagination: true, // Включение пагинации
+          }).mount();
+        });
+      }
+    });
   }
 
   // Инициализация каруселей при загрузке страницы
