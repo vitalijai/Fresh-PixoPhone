@@ -139,6 +139,107 @@ $(document).ready(function () {
   });
 });
 
+$(".offers-page-header-view-block button").click(function () {
+  // Проверяем состояние чекбокса
+  if (
+    $(".offers-page-switch-compare-guarantee input[type='checkbox']").is(
+      ":checked"
+    )
+  ) {
+    // Если чекбокс активен, снимаем его отметку
+    $(".offers-page-switch-compare-guarantee input[type='checkbox']").prop(
+      "checked",
+      false
+    );
+  }
+
+  // Удаляем класс 'active' у всех кнопок внутри '.offers-page-header-view-block'
+  $(".offers-page-header-view-block button").removeClass("active");
+  // Убираем класс 'active' у блока сравнения
+  $(".offers-page-block__comparison").removeClass("active");
+  // Добавляем класс 'active' только к текущей нажатой кнопке
+  $(this).addClass("active");
+
+  // Проверяем, какая кнопка активна
+  if ($(this).hasClass("list-view")) {
+    // Если активна кнопка с классом 'list-view', делаем '.offers-page-block__list' активным
+    $(".offers-page-block__list").addClass("active");
+    $(".offers-page-block__column").removeClass("active");
+  } else if ($(this).hasClass("grid-view")) {
+    // Если активна кнопка с классом 'grid-view', делаем '.offers-page-block__column' активным
+    $(".offers-page-block__column").addClass("active");
+    $(".offers-page-block__list").removeClass("active");
+  }
+});
+
+$(".offers-page-header-switch-compare-block input[type='checkbox']").change(
+  function () {
+    // Проверяем состояние чекбокса
+    if ($(this).is(":checked")) {
+      // Если чекбокс отмечен, убираем класс 'active' у всех блоков
+      $(
+        ".offers-page-block__list, .offers-page-block__column, .offers-page-block__comparison"
+      ).removeClass("active");
+
+      // Добавляем класс 'active' к блоку сравнения
+      $(".offers-page-block__comparison").addClass("active");
+      const comparisonBlock = $(".offers-page-block__comparison");
+
+      let tabsCount;
+      if (comparisonBlock.length) {
+        tabsCount = comparisonBlock.find(".offers-page-block__tabs").length;
+      }
+      const comparisonCarusel = $(".offers-page-block__comparison-gen-carusel");
+      if (comparisonCarusel.length) {
+        const tabsCover = comparisonCarusel.find(
+          ".offers-page-block__tabs-cover"
+        );
+        if (tabsCover.length) {
+          const comparisonWith = $(".content-container");
+          const ta = $(".offers-page-block__tabs");
+          const taWith = ta.width();
+          const caruselWidth = comparisonWith.width();
+          const newWidth = caruselWidth - tabsCount * taWith - tabsCount; // вычитаем три блока по 248px
+          const splideWitdh = caruselWidth - taWith;
+          tabsCover.css("width", newWidth + "px");
+
+          // Проверяем, если tabsCount больше 4, то добавляем класс splide
+          if (tabsCount > 5) {
+            $(".offers-page-block__comparison-gen-carusel").addClass("splide");
+            tabsCover.css("display", "none");
+            $(".offers-page-block__tabs-fade").css("display", "block");
+            $(".offers-page---item").css("margin-left", "0");
+
+            var offersSlider = new Splide("#offers-gen-carusel", {
+              pagination: false,
+              arrows: true,
+              fixedWidth: taWith + "px",
+              width: splideWitdh,
+              gap: "1px",
+              perPage: 3,
+            });
+            offersSlider.mount();
+          }
+        }
+      }
+    } else {
+      // Если чекбокс не отмечен, возвращаем класс 'active' последнему активному блоку
+      if (
+        $(".offers-page-header-view-block button.list-view").hasClass("active")
+      ) {
+        $(".offers-page-block__list").addClass("active");
+      } else if (
+        $(".offers-page-header-view-block button.grid-view").hasClass("active")
+      ) {
+        $(".offers-page-block__column").addClass("active");
+      }
+
+      // Убираем класс 'active' у блока сравнения
+      $(".offers-page-block__comparison").removeClass("active");
+    }
+  }
+);
+
 document.addEventListener("DOMContentLoaded", function () {
   const switches = document.querySelectorAll(
     ".offers-page-buy-guarantee-switch-compare"
