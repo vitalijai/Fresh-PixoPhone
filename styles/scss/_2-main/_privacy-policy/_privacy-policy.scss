@@ -1,0 +1,56 @@
+.privacy-policy-page {
+  .privacy-policy-page-content{
+    padding: 16px 24px 24px;
+
+    @media (min-width: 719px) {
+      padding: 32px;
+    }
+
+    ol {
+      list-style-type: none;
+      counter-reset: item;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        display: table;
+        counter-increment: item;
+        line-height: 24px;
+        font-weight: 400;
+
+        @media (max-width: 719px) {
+          font-size: 14px;
+          line-height: 21px;
+        }
+
+        &:before {
+          content: counters(item, ".") ". ";
+          display: table-cell;
+          padding-right: 0.6em;
+          font-weight: 500;
+        }
+
+        ol {
+          margin-top: 8px;
+
+          @media (min-width: 719px) {
+            margin-bottom: 12px;
+          }
+
+          > li {
+            margin-bottom: 8px;
+
+            @media (min-width: 719px) {
+              margin-bottom: 12px;
+            }
+
+            &:before {
+              content: counters(item, ".") " ";
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
