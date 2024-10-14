@@ -3726,6 +3726,7 @@ a:visited {
 }
 .section-container .section-content {
   flex: 1 1 auto;
+  min-width: 0;
 }
 .section-container .section-content .section-content-header {
   border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);

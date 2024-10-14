@@ -1,0 +1,351 @@
+.shops-page {
+  .section-side-menu {
+    padding: 32px 24px;
+
+    .side-menu-header {
+      margin-bottom: 24px;
+
+      @media (max-width: 719px) {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .filter {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.3;
+
+        @media (min-width: 719px) {
+          font-size: 24px;
+        }
+      }
+
+      .count {
+        line-height: 1.3;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .shops-list-filter {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      @media (max-width: 719px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .shops-list-filter-item {
+        padding: 10px 24px;
+        border: 2px solid var(--colors-gray-100, rgba(247, 247, 247, 1));
+        color: var(--colors-gray-700, #c0c0c0);
+        border-radius: 8px;
+        transition: 0.3s;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.3;
+
+        @media (max-width: 719px) {
+          background: var(--colors-gray-100, rgba(247, 247, 247, 1));
+          font-weight: 400;
+        }
+
+        @media (min-width: 719px) {
+          font-size: 16px;
+          padding: 16px 24px;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+
+        &:hover {
+          border: 2px solid var(--colors-gray-200, rgba(229, 228, 226, 1));
+        }
+
+        &.active {
+          border: 2px solid var(--colors-gray-700, rgba(47, 44, 47, 1));
+          background: transparent;
+          font-weight: 500;
+        }
+
+        a {
+          display: block;
+          color: inherit;
+        }
+
+        span {
+          display: block;
+          font-size: 14px;
+          font-weight: 400;
+
+          @media (max-width: 719px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .section-content-header {
+    padding: 32px;
+
+    @media (max-width: 719px) {
+      display: none;
+    }
+
+    .filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      .filter-item {
+        padding: 0 24px;
+        border: 2px solid var(--colors-gray-100, rgba(247, 247, 247, 1));
+        color: var(--colors-gray-700, #c0c0c0);
+        border-radius: 8px;
+        transition: 0.3s;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 48px;
+
+        &:hover {
+          border: 2px solid var(--colors-gray-200, rgba(229, 228, 226, 1));
+        }
+
+        &.active {
+          border: 2px solid var(--colors-gray-700, rgba(47, 44, 47, 1));
+        }
+      }
+    }
+  }
+
+  .section-content-body {
+    .shops-list {
+      .shops-list-item {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 24px;
+        color: var(--colors-gray-700, #2f2c2f);
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);
+        }
+
+        @media (min-width: 719px) {
+          padding: 32px;
+        }
+
+        .shops-list-header {
+          flex: 1 1 100%;
+          margin: 0 0 32px;
+
+          @media (max-width: 719px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0 0 8px;
+          }
+
+          .title {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.2;
+
+            @media (max-width: 719px) {
+              font-size: 14px;
+
+              span {
+                font-size: 12px;
+                font-weight: 400;
+                color: var(--colors-gray-500, #696969);
+                display: block;
+              }
+            }
+          }
+
+          .link {
+            flex: 0 0 auto;
+
+            @media (min-width: 719px) {
+              display: none;
+            }
+          }
+        }
+
+        .info {
+          flex: 0 0 100%;
+
+          @media (min-width: 719px) {
+            flex: 0 0 33.33%;
+          }
+
+          .block {
+            margin-bottom: 15px;
+
+            @media (min-width: 719px) {
+              margin-bottom: 32px;
+              padding: 0 16px;
+            }
+
+            p {
+              margin: 0;
+              font-weight: 500;
+              font-size: 14px;
+
+              img {
+                margin-right: 5px;
+                vertical-align: middle;
+              }
+            }
+
+            ul {
+              margin: 0;
+              list-style: none;
+              padding-left: 25px;
+
+              li {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+
+        .images {
+          display: flex;
+          gap: 16px;
+          flex: 0 0 100%;
+
+          @media (min-width: 719px) {
+            flex: 0 0 66.66%;
+          }
+
+          img {
+            max-width: 100%;
+            min-width: 0;
+          }
+        }
+      }
+    }
+
+    .shop-info {
+      padding: 32px;
+
+      .title {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      p {
+        margin: 0 0 24px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+      .slider-wrap{
+        display: flex;
+        flex-wrap: wrap;
+
+        .info {
+          flex: 0 0 100%;
+          order: 3;
+
+          @media (min-width: 719px) {
+            flex: 0 0 33.33%;
+            order: 1;
+          }
+
+          .block {
+            margin-bottom: 15px;
+
+            @media (min-width: 719px) {
+              padding: 0 16px;
+              margin-bottom: 32px;
+            }
+
+            p {
+              margin: 0;
+              font-weight: 500;
+              font-size: 14px;
+
+              img {
+                margin-right: 5px;
+                vertical-align: middle;
+              }
+            }
+
+            ul {
+              margin: 0;
+              list-style: none;
+              padding-left: 25px;
+
+              li {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+
+            .map{
+              margin-top: 12px;
+              margin-left: 25px;
+
+              @media (max-width: 719px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .slider-main-image{
+          flex: 1 1 auto;
+          order: 1;
+
+          @media (min-width: 719px) {
+            order: 2;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .slider-nav{
+          margin-top: 16px;
+          margin-bottom: 16px;
+          order: 2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          img {
+            max-width: 100%;
+          }
+
+          @media (min-width: 719px) {
+            order: 3;
+          }
+        }
+      }
+
+
+
+
+    }
+  }
+
+  .recently-viewed {
+    .global-block-header-left {
+      &::before {
+        content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIvSURBVHgBnVQ9dtpAEJ4d8uIWF3k8V8FdYgNa34CcwC7TgU8QfALkG5AT2NxAuQFlypWAxF1U8pJGhZvYSJOZlVYWAfR4/t6DWc3ufDu/q2AHtNZNyGBAGfVBgQaCtt1QEPPaKFSBicx0l63aIuvqKwK6Y8Mm1IHJlVL+/8QbhLqjJ0z2pfic8Tp4Tp+Do8bRqSiesqekAQ2NCsds2c4J1K1ZGH+LkMl8JhjzMmHpR4voq9vzOh6JPlyEx07XO++N2EM53yRFk2ge3YgeizCHjkxl6lOVrIKNFETLaCJnrQ2pkaSqJCzIRPrmhzFwIOQsEd1aW6I7KSaKd7aKBPEez2ohnrKYSQTZOhsge3XpvINXQoonkgvUR9djSBjCK4Fv8FvBrCWHWtaH5E739GCX3hgTQ+5iG+EQcH6tyOje63qS/Pa+o2jHiXHx8eL9vkPhMjzlKt5YYoIhremXPtej0nNGcbERD22oaSO9ghrYvku57wjuc1vyys00T5s4h3zzLF+rWkKBeTAxe3utHtWxSKcv+5goQK6QDHfCv341jFri2CRubW1cHy+jKXKFEp5JexvP5FifFfk4AJI7wpcpE9mQv9Xv1UOr1WpKY3Lsn0/enfxd/Vl9ryVjz9wzZx+TZT5lG89Xr9MbM6m9yb13sIbQ9aj+wO3yFi65fSTf/SKq8qXZIhR0z7rD6ntXgyRLs+v5z3lQVap9py0xosx5G+ClLaTXOMQZPuK0WhyHf1xyFNC36TuZAAAAAElFTkSuQmCC');
+      }
+    }
+  }
+}
