@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636e51c1-2607-4268-9bdd-cbe66857ebcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index_credit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/css/credit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/scss/_2-main/_credit/_credig.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_collaboration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/collaboration.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/scss/_2-main/_collaboration/_collaboration.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/_2-main/_credit/_credig.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_2-main/_credit/_credig.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +61,7 @@
       <updated>1728658965756</updated>
       <workItem from="1728658966927" duration="92000" />
       <workItem from="1728659064542" duration="199000" />
-      <workItem from="1728890409755" duration="3244000" />
+      <workItem from="1728890409755" duration="4129000" />
     </task>
     <servers />
   </component>

@@ -71,6 +71,12 @@
     }
   }
 
+  .section-content-header {
+    @media (max-width: 719px) {
+      display: none;
+    }
+  }
+
   .credit-page-content {
     @media (min-width: 719px) {
       padding: 32px;
@@ -91,7 +97,9 @@
     }
 
     .content-section {
-      margin-bottom: 32px;
+      &:not(:last-child){
+        margin-bottom: 32px;
+      }
 
       @media (max-width: 719px) {
         border-radius: 24px;
