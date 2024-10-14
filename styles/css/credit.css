@@ -1,0 +1,270 @@
+.common-template {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 32px;
+}
+.common-template .common-template__content-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  user-select: none;
+  margin-bottom: -32px;
+}
+@media (max-width: 719px) {
+  .common-template .common-template__content-top {
+    margin-bottom: -12px;
+  }
+  .common-template .common-template__content-top .breadcrumbs-content {
+    width: min(95%, var(---width, 1366px));
+  }
+}
+.common-template .common-template__content-top .breadcrumbs {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+@media (max-width: 719px) {
+  .common-template .common-template__content-top .breadcrumbs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    height: 40px;
+  }
+}
+.common-template .common-template__content-top .breadcrumbs .breadcrumbs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--colors-gray-400, #929292);
+  font-size: 12px;
+}
+@media (max-width: 719px) {
+  .common-template .common-template__content-top .breadcrumbs .breadcrumbs__item span {
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+.common-template .common-template__content-top .breadcrumbs .breadcrumbs__item:last-child {
+  color: var(--colors-gray-300, #c0c0c0);
+}
+.common-template .common-template__content-top .breadcrumbs .breadcrumbs__item:hover {
+  color: var(--colors-gray-500, #696969);
+}
+.common-template .common-template__content-top .breadcrumbs .breadcrumbs__item:not(:last-child)::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 11L9.5 8L6.5 5" stroke="%23929292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 16px;
+  height: 16px;
+}
+.common-template .common-template__content-top .breadcrumbs .breadcrumbs__item:hover:not(:last-child)::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6.5 11L9.5 8L6.5 5" stroke="%23696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+}
+
+.credit-page .credit-page-side-menu .title {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+@media (min-width: 719px) {
+  .credit-page .credit-page-side-menu .title {
+    display: none;
+  }
+}
+.credit-page .credit-page-side-menu .banner {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: 50%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block;
+}
+@media (min-width: 719px) {
+  .credit-page .credit-page-side-menu .banner {
+    display: none;
+  }
+}
+.credit-page .credit-page-side-menu .side-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item {
+  line-height: 1.3;
+  color: var(--colors-gray-700, #2f2c2f);
+  font-weight: 400;
+  transition: 0.3s;
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item.active a {
+  color: var(--colors-green-500-primary, #2ea84f);
+  font-weight: 500;
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item.active a span {
+  color: rgba(157, 215, 173, 1);
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item:hover {
+  background: var(--colors-gray-100, #f7f7f7);
+  border-radius: 8px;
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item a {
+  display: block;
+  padding: 12px 16px;
+}
+.credit-page .credit-page-side-menu .side-menu .side-menu-item span {
+  display: block;
+  color: var(--colors-gray-300, #c0c0c0);
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 719px) {
+  .credit-page .section-content-header {
+    display: none;
+  }
+}
+@media (min-width: 719px) {
+  .credit-page .credit-page-content {
+    padding: 32px;
+  }
+}
+.credit-page .credit-page-content .banner {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: 50%;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  display: block;
+}
+@media (max-width: 719px) {
+  .credit-page .credit-page-content .banner {
+    display: none;
+  }
+}
+.credit-page .credit-page-content .content-section:not(:last-child) {
+  margin-bottom: 32px;
+}
+@media (max-width: 719px) {
+  .credit-page .credit-page-content .content-section {
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 12px;
+    background: var(--colors-white, #fff);
+  }
+}
+.credit-page .credit-page-content .content-section .content-section-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 0 16px;
+}
+.credit-page .credit-page-content .content-section .bank-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+}
+.credit-page .credit-page-content .content-section .bank-list .bank-list-item {
+  text-align: center;
+  flex: 1 1 auto;
+  padding: 16px;
+  border-radius: 16px;
+}
+@media (min-width: 719px) {
+  .credit-page .credit-page-content .content-section .bank-list .bank-list-item {
+    box-shadow: 0 20px 40px 0 rgba(207, 207, 207, 0.4);
+  }
+}
+@media (max-width: 719px) {
+  .credit-page .credit-page-content .content-section .bank-list .bank-list-item {
+    background: var(--colors-gray-100, #f7f7f7);
+    width: 100%;
+  }
+}
+@media (min-width: 719px) {
+  .credit-page .credit-page-content .content-section .bank-list .bank-list-item .icon {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.credit-page .credit-page-content .content-section .bank-list .bank-list-item .icon img {
+  max-width: 100%;
+}
+.credit-page .credit-page-content .content-section .bank-list .bank-list-item p {
+  font-size: 12px;
+  text-align: center;
+  color: var(--colors-gray-500, #696969);
+  margin: 0;
+}
+.credit-page .credit-page-content .content-section .content-section-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item {
+  background: var(--colors-gray-100, #f7f7f7);
+  border-radius: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 16px 24px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 calc(33.33% - 16px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+@media (max-width: 719px) {
+  .credit-page .credit-page-content .content-section .content-section-list .content-section-list-item {
+    flex: 0 0 100%;
+  }
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item:hover {
+  background: var(--colors-green-100, #e9f9e9);
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item:hover .info .title {
+  color: var(--colors-green-400, #62b278);
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item .info {
+  flex: 1 1 auto;
+  gap: 10px;
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item .info .title {
+  margin: 0 0 4px;
+  color: var(--colors-gray-700, #2f2c2f);
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item .info p {
+  margin: 0;
+  line-height: 1;
+  color: var(--colors-gray-500, #696969);
+  font-size: 14px;
+  font-weight: 400;
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item .icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.credit-page .credit-page-content .content-section .content-section-list .content-section-list-item .icon img {
+  max-width: 100%;
+  max-height: 50px;
+}
+@media (min-width: 719px) {
+  .credit-page .credit-page-content .content-section .lending-conditions .content-section-list-item .icon {
+    min-height: 70px;
+  }
+}
