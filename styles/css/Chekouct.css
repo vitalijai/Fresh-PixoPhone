@@ -4484,4 +4484,129 @@ a:visited {
   .common-template .check-next-button button {
     width: calc(100% - 32px);
   }
-}/*# sourceMappingURL=Chekouct.css.map */
+}
+
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  transition: gap 0.5s ease;
+  background: var(--colors-white, #fff);
+  border-radius: 32px;
+  height: 100%;
+}
+@media (min-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation {
+    border-radius: 32px 0 0 32px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-number {
+  padding: 24px 24px 14px;
+  font-size: 14px;
+  color: var(--colors-gray-700, #2f2c2f);
+}
+@media (min-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-number {
+    font-size: 24px;
+    padding: 24px 32px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block {
+  text-align: center;
+  padding: 0 24px 24px;
+  margin: 0 auto;
+}
+@media (min-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block {
+    padding: 24px 32px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block h2 {
+  color: #d4d9dd;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+}
+@media (min-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block h2 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block .icon {
+    max-height: 160px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block p {
+  font-weight: 400;
+  margin: 0;
+}
+@media (max-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block p {
+    font-size: 14px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block p a {
+  color: var(--colors-green-400, #62b278);
+  font-weight: 500;
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block p a:hover {
+  text-decoration: underline;
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info {
+  border-top: 1px solid var(--colors-gray-200, #e5e4e2);
+  padding: 24px;
+}
+@media (min-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info {
+    padding: 32px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block {
+  border-bottom: 1px solid var(--colors-gray-100, #f7f7f7);
+  padding: 16px 8px;
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block .title {
+  margin-bottom: 16px;
+  line-height: 1;
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block p {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media (min-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block p br {
+    display: none;
+  }
+}
+@media (max-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block p {
+    font-size: 14px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block ul {
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block ul li {
+  color: var(--colors-gray-400, #929292);
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+@media (max-width: 719px) {
+  .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block ul li {
+    font-size: 14px;
+  }
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block ul li img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+/*# sourceMappingURL=Chekouct.css.map */
