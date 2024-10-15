@@ -485,6 +485,7 @@
 .step-block .step-right-side .main-image-block .image-container {
   position: relative;
   font-size: 0;
+  display: inline-block;
 }
 .step-block .step-right-side .main-image-block .image-container .layer {
   position: absolute;
