@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636e51c1-2607-4268-9bdd-cbe66857ebcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index_shops.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index_single-shop.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/shops.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/css/shops.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/scss/_2-main/_shops/_shops.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_trade-in.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/trade-in.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/css/trade-in.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/scss/_2-main/_trade-in/_trade-in.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/scss/_2-main/_15-home/_15.2-recently.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_2-main/_15-home/_15.2-recently.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,6 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Sergii\Desktop\pixophone\Fresh-PixoPhone new\styles\css" />
       <recent name="C:\Users\Sergii\Desktop\pixophone\Fresh-PixoPhone new" />
     </key>
   </component>
@@ -65,7 +62,7 @@
       <updated>1728658965756</updated>
       <workItem from="1728658966927" duration="92000" />
       <workItem from="1728659064542" duration="199000" />
-      <workItem from="1728890409755" duration="11797000" />
+      <workItem from="1728890409755" duration="1273000" />
     </task>
     <servers />
   </component>

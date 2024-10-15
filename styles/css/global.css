@@ -3683,6 +3683,11 @@ a:visited {
   transition: 0.3s;
   font-weight: 400;
 }
+.global-btn.disabled {
+  background: var(--colors-gray-100, #F7F7F7);
+  color: var(--colors-gray-300, #C0C0C0);
+  pointer-events: none;
+}
 .global-btn:hover {
   background: var(--colors-green-600, #25863f);
 }
