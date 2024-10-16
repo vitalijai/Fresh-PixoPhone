@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="636e51c1-2607-4268-9bdd-cbe66857ebcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_trade-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_trade-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/trade-in.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/trade-in.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_collaboration.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_collaboration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/collaboration.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/collaboration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/credit.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/credit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/shops.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/shops.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
