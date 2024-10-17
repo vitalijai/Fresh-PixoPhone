@@ -13,9 +13,6 @@
   margin-bottom: -32px;
 }
 @media (max-width: 719px) {
-  .common-template .common-template__content-top {
-    margin-bottom: -12px;
-  }
   .common-template .common-template__content-top .breadcrumbs-content {
     width: min(95%, var(---width, 1366px));
   }
@@ -24,7 +21,7 @@
   display: flex;
   align-items: center;
   height: 48px;
-  padding: 0 24px;
+  padding: 0;
   flex-shrink: 0;
 }
 @media (max-width: 719px) {
@@ -81,6 +78,48 @@
     flex-direction: column;
   }
 }
+.collaboration-page .collaboration-item .collaboration-item-left .collapse-panel {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: flex-start;
+}
+
+@media (min-width: 719px) {
+  .collaboration-page .collaboration-item .collaboration-item-left .collaboration-item-head .toggle-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  .collaboration-page .collaboration-item .collaboration-item-left .collaboration-item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .collaboration-page .collaboration-item .collaboration-item-left .collaboration-item-head.open .toggle-btn{
+    transform: rotate(180deg);
+  }
+  .collaboration-page .collaboration-item .collaboration-item-left .collaboration-item-head .toggle-btn {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABgSURBVHgBTYvRDYAgDEQpLscWukFxAnUChQkcg09XcQMnoF4JJL2kuZd7qXMmOeeoZzc/IKW0o069zi3TkES0iYiKF8whBCqlPGQlMx/94cY2A1dfa/0g45Aa8IK6sMsP7hcvoxzFIYQAAAAASUVORK5CYII=');
+    background-color: transparent;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    transition: 0.3s;
+  }
+}
+
+
+
 .collaboration-page .collaboration-item .collaboration-item-left {
   flex: 1 1 auto;
   display: flex;
@@ -91,7 +130,7 @@
   color: var(--colors-gray-700, #2f2c2f);
   font-size: 14px;
   line-height: 1.3;
-  margin: 0 0 16px;
+  margin: 0;
 }
 @media (min-width: 719px) {
   .collaboration-page .collaboration-item .collaboration-item-left .title {

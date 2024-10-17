@@ -13,9 +13,6 @@
   margin-bottom: -32px;
 }
 @media (max-width: 719px) {
-  .common-template .common-template__content-top {
-    margin-bottom: -12px;
-  }
   .common-template .common-template__content-top .breadcrumbs-content {
     width: min(95%, var(---width, 1366px));
   }
@@ -24,7 +21,7 @@
   display: flex;
   align-items: center;
   height: 48px;
-  padding: 0 24px;
+  padding: 0;
   flex-shrink: 0;
 }
 @media (max-width: 719px) {
@@ -96,10 +93,12 @@
 }
 .privacy-policy-page .privacy-policy-page-content ol > li ol {
   margin-top: 8px;
+  margin-left: -10px;
 }
 @media (min-width: 719px) {
   .privacy-policy-page .privacy-policy-page-content ol > li ol {
     margin-bottom: 12px;
+    margin-left: 0;
   }
 }
 .privacy-policy-page .privacy-policy-page-content ol > li ol > li {
@@ -113,4 +112,16 @@
 .privacy-policy-page .privacy-policy-page-content ol > li ol > li:before {
   content: counters(item, ".") " ";
   font-weight: 400;
+}
+
+@media (max-width: 719px){
+
+  .section-container .section-content .section-content-header {
+    border-bottom: none;
+    padding: 24px 24px 0px;
+  }
+
+  .section-container .section-content .section-content-header .header-title {
+    font-size: 14px;
+  }
 }

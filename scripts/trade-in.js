@@ -432,6 +432,7 @@ const TradeIn = (() => {
                 .every((select) => !$(select).prop('required') || $(select).val() && $(select).val().trim() !== "");
 
             $(button).toggleClass("disabled", !allFilled);
+            $('.js-verification-code').toggleClass("disabled", !allFilled);
         },
 
         next() {

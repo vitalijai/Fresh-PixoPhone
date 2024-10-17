@@ -3734,14 +3734,37 @@ a:visited {
   min-width: 0;
 }
 .section-container .section-content .section-content-header {
-  border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);
-  padding: 24px 32px;
+  padding: 24px 24px 0px;
 }
 .section-container .section-content .section-content-header .header-title {
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
   margin: 0;
+}
+
+@media (min-width: 719px) {
+  .section-container .section-content .section-content-header {
+    border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);
+    padding: 24px 32px;
+  }
+  .section-container .section-content .section-content-header .header-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 719px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 719px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+.hidden {
+  display: none !important;
 }
 
 /*# sourceMappingURL=global.css.map */

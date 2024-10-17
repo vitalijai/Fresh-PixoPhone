@@ -4826,7 +4826,7 @@
                             </div>
 
                             <div class="step js-proposition-step hidden">
-                                <h3 class="title">Цінова пропозиція</h3>
+                                <h3 class="title main-title">Цінова пропозиція</h3>
 
                                 <div class="phone-info">
                                     <div class="block price">
@@ -4841,28 +4841,27 @@
                                 </div>
 
                                 <form class="request-form">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="form-group">
-                                                <label for="phone" class="form-label">Номер телефону</label>
-                                                <input required class="form-control" type="text" name="phone" id="phone">
-                                                <p class="error-label"></p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col">
-                                            <div class="form-group">
-                                                <label for="name" class="form-label">Ім’я</label>
-                                                <input required class="form-control" type="text" name="name" id="name">
-                                                <p class="error-label"></p>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Ім’я</label>
+                                        <input required class="form-control" type="text" name="name" id="name">
+                                        <p class="error-label"></p>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="email" class="form-label">Email</label>
+                                        <label for="email" class="form-label">Електронна пошта</label>
                                         <input required class="form-control" type="text" name="email" id="email">
                                         <p class="error-label"></p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Номер телефону</label>
+                                        <input required class="form-control" type="text" name="phone" id="phone">
+                                        <p class="error-label"></p>
+                                    </div>
+
+                                    <div class="verification-block">
+                                        <button class="global-btn disabled js-verification-code">Отримати код</button>
+                                        <p>Ми надішлемо код підтвердження на вказаний номер</p>
                                     </div>
 
                                     <div class="file-input-block">
