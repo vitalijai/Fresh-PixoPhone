@@ -4523,7 +4523,7 @@ a:visited {
 }
 .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block h2 {
   color: #d4d9dd;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.3;
   margin: 0;
@@ -4534,9 +4534,15 @@ a:visited {
     font-weight: 600;
   }
 }
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block .icon {
+  margin: 8px auto 32px;
+  display: block;
+}
+
 @media (max-width: 719px) {
   .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block .icon {
     max-height: 160px;
+    margin: 8px auto 24px;
   }
 }
 .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .image-block p {
@@ -4557,15 +4563,17 @@ a:visited {
 }
 .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info {
   border-top: 1px solid var(--colors-gray-200, #e5e4e2);
-  padding: 24px;
+  padding: 8px 24px;
 }
 @media (min-width: 719px) {
   .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info {
     padding: 32px;
   }
 }
-.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block {
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block:not(:last-child){
   border-bottom: 1px solid var(--colors-gray-100, #f7f7f7);
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block {
   padding: 16px 8px;
 }
 .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block .title {
@@ -4596,8 +4604,12 @@ a:visited {
   color: var(--colors-gray-400, #929292);
   font-weight: 400;
   line-height: 1.3;
+  font-size: 14px;
+}
+.checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block ul li:not(:last-child){
   margin-bottom: 8px;
 }
+
 @media (max-width: 719px) {
   .checkout-tab .page-container .checkout-tab__left-side .check-contact-confirmation .order-info .order-info-block ul li {
     font-size: 14px;
@@ -4608,5 +4620,28 @@ a:visited {
   margin-right: 5px;
 }
 
+.common-template .checkout-tab .page-container .checkout-tab__right-side .checkout-tab-checking .btn-link:hover{
+  background: var(--colors-green-500-primary, #2ea84f);
+  color: #fff;
+
+}
+.common-template .checkout-tab .page-container .checkout-tab__right-side .checkout-tab-checking .btn-link{
+  color: var(--colors-green-400, #62B278);
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  margin-top: 50px;
+  line-height: 48px;
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media (max-width: 719px) {
+  .common-template .checkout-tab .page-container .checkout-tab__right-side .checkout-tab-checking .btn-link{
+    margin-top: 0px;
+  }
+}
 
 /*# sourceMappingURL=Chekouct.css.map */
