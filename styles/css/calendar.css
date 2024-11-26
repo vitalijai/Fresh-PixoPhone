@@ -103,6 +103,7 @@
    }
 }
 .calendar-page .calendar .node {
+    border: none;
     width: 136px;
     height: 136px;
     padding: 8px;
@@ -533,4 +534,23 @@
     .calendar-modal .modal-container .col-banner img {
         height: 220px;
    }
+}
+
+.tooltip.bottom.fade .tooltip-arrow{
+    margin-left: -8px;
+    border-width: 0 8px 6px;
+    border-bottom-color: #fff;
+}
+
+.tooltip .tooltip-inner{
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+    padding: 16px 20px;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
+    font-family: Rubik;
+    min-width: 240px;
 }

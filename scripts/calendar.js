@@ -6,11 +6,11 @@ const Calendar = (function() {
     const container = $('.calendar');
 
     const statusClass = {
-        0: 'unavailable',
-        1: 'received',
-        2: 'available',
-        3: 'active'
-      }
+      0: 'unavailable',
+      1: 'received',
+      2: 'available',
+      3: 'active'
+    }
 
     let curentNode = null;
   
@@ -33,27 +33,28 @@ const Calendar = (function() {
         let node = '';
   
         for (let i = 1; i < 26; i++) {
-          const status = this.getStatusClass(i)
+          const status = this.getStatusClass(i);
+          const tooltip = status === 0 ? 'data-toggle="tooltip"' : '';
   
-          node += '<div class="node '+ statusClass[status] +'"  data-day="'+ i +'">';
+          node += '<button role="button" tabindex class="node '+ statusClass[status] +'"  data-day="'+ i +'" '+ tooltip +'>';
           node += '<div class="number">'+ i +'</div>';
           if (status === 3) {
             node += '<div class="cover js-cover"><div class="number">'+ i +'</div></div>';
           }
           if(status === 1) {
-            node += '<button class="button expired-btn js-expired disabled">Отримано</button>';
+            node += '<div class="button expired-btn js-expired disabled">Отримано</div>';
           } else if (status === 3 || status === 2) {
-            node += '<button class="button get-btn js-get-code" data-id="'+ i +'">Отримати</button>';
+            node += '<div class="button get-btn js-get-code">Отримати</div>';
           }
          
-          node += '</div>';
+          node += '</button>';
         }
   
         return node
       },
   
       copy(selector) {
-        var $temp = $("<div>");
+        const $temp = $("<div>");
         $("body").append($temp);
         $temp.attr("contenteditable", true)
              .html($(selector).html()).select()
@@ -70,6 +71,22 @@ const Calendar = (function() {
 
         Calendar.initCalendar();
       },
+
+      initTooltip(){
+          $('[data-toggle="tooltip"]').tooltip({
+            placement: 'bottom',
+            container: 'body',
+            trigger: 'focus',
+            title: 'Упс, сьогодні інший день!<br> Не турбуйтеся, ми також часом плутаємо дати',
+            html: true
+          });
+
+          $('[data-toggle="tooltip"]').on('shown.bs.tooltip', function () {
+            setTimeout(() => {
+              $(this).tooltip('hide')
+            }, 4000);
+          })
+      },
   
       actions() {
         $('body').on('click touch', '.js-cover', function() {
@@ -77,20 +94,14 @@ const Calendar = (function() {
         });
 
         $('body').on('click', '.js-get-code', function() {
-            curentNode = $(this).parents('.node').data('day')
+            curentNode = $(this).parents('.node').data('day');
 
-            $('#active-event').modal('show', {
-                id: curentNode
-            });
+            $('#active-event').modal('show');
         });
 
         $('body').on('click', '.js-expired', function() {
             $('#expired-event').modal('show');
         })
-
-        $('body').on('click', '.node.unavailable', function() {
-            $('#future-event').modal('show');
-        });
   
         $('body').on('click', '.js-copy', function() {
           Calendar.copy('.js-code')
@@ -115,9 +126,6 @@ const Calendar = (function() {
           form.forEach((field) => {
             formData.append(field.name, field.value);
           });
-  
-          $('.js-active-event-block').addClass('hidden');
-          $('.js-active-event-success-block').removeClass('hidden');
 
           $.ajax({
             url: '/get-code',
@@ -138,51 +146,21 @@ const Calendar = (function() {
             }
           });
         });
-  
-        $('body').on('submit', '#event-subscribe-form', function(event) {
-          event.preventDefault();
-  
-          const form = $(this).serializeArray();
-          const formData = new FormData();
-  
-          form.forEach((field) => {
-            formData.append(field.name, field.value);
-          });
-  
-          $.ajax({
-            url: '/get-code',
-            type: 'POST',
-            data: formData,
-            success: function() {
-              $('.js-subscribe-event-block').addClass('hidden');
-              $('.js-subscribe-event-success-block').removeClass('hidden');
-  
-              $(this).trigger("reset")
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-  
-            }
-          });
-        });
       },
   
       initCalendar() {
           if(container) {
             const nodes = this.build();
 
-            container.html(nodes)
-
-            //   container.find('.node').map((i, node) => {
-            //       const status = this.getStatusClass(i + 1);
-        
-            //       $(node).removeClass('unavailable received available active').addClass(statusClass[status])
-            //   });
+            container.html(nodes);
           }
       },
   
       init() {
           this.actions();
           this.initCalendar();
+
+          this.initTooltip();
       }
     }
   })();
