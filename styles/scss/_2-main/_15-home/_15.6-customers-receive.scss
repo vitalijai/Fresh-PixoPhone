@@ -21,7 +21,7 @@
       text-align: center;
       font-size: 32px;
 
-      @media (max-width: 719px) {
+      @media (max-width: 992px) {
         font-size: 24px;
       }
     }
@@ -36,9 +36,9 @@
       align-self: stretch;
       flex-wrap: wrap;
 
-      @media (max-width: 719px) {
+      @media (max-width: 992px) {
         padding: 0px 12px;
-        gap: 0px 16px;
+        gap: 16px;
       }
 
       .block-box {
@@ -47,10 +47,10 @@
         height: 80px;
         padding: 16px;
         align-items: center;
-        gap: 8px;
+        gap: 4px;
         flex: 1 0 0;
 
-        @media (max-width: 719px) {
+        @media (max-width: 992px) {
           flex-direction: column;
           min-width: 135px;
           max-width: 170px;
@@ -64,7 +64,7 @@
           height: 80px;
           object-fit: contain;
 
-          @media (max-width: 719px) {
+          @media (max-width: 992px) {
             width: 64px;
             height: 64px;
           }
@@ -73,7 +73,7 @@
         span {
           color: var(--colors-gray-500, #696969);
           font-size: 18px;
-          @media (max-width: 719px) {
+          @media (max-width: 992px) {
             font-size: 12px;
             text-align: center;
           }

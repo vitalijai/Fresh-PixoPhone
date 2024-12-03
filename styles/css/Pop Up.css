@@ -614,7 +614,7 @@
   background: rgba(255, 255, 255, 0.2);
   color: var(--colors-white, #fff);
   font-size: 14px;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, gap 0.3s;
 }
 .pop-up-promo-modal .pop-up-promo-modal-content .promo-baner .promo--item .description-promo-container .description-promo .description-promo__top .description-promo__a::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M5.63379 9.87988L8.71379 6.79988" stroke="white" stroke-width="1.54" stroke-linecap="round"/><path d="M5.63379 3.71997L8.71379 6.79997" stroke="white" stroke-width="1.54" stroke-linecap="round"/></svg>');
@@ -623,7 +623,7 @@
 }
 .pop-up-promo-modal .pop-up-promo-modal-content .promo-baner .promo--item .description-promo-container .description-promo .description-promo__top .description-promo__a:hover {
   display: inline-flex;
-  padding: 5.39px 4.7px 5.39px 12.32px;
+  /* padding: 5.39px 4.7px 5.39px 12.32px; */
   justify-content: center;
   align-items: center;
   gap: 5px;

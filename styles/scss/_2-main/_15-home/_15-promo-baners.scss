@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 719px) {
+  @media (max-width: 992px) {
     order: -1;
   }
 
@@ -19,7 +19,7 @@
         height: 4px;
         background: var(--colors-gray-700, #2f2c2f);
 
-        @media (max-width: 719px) {
+        @media (max-width: 992p) {
           display: none;
         }
       }
@@ -30,7 +30,7 @@
         object-fit: cover;
         border-radius: 16px 16px 0px 0px;
 
-        @media (max-width: 719px) {
+        @media (max-width: 992p) {
           width: 160px;
           height: 285px;
           border-radius: 16px;
@@ -74,7 +74,7 @@
         transform: translateY(97%);
         transition: transform 0.5s ease-in-out;
 
-        @media (max-width: 719px) {
+        @media (max-width: 992p) {
           display: none;
         }
 
@@ -162,7 +162,7 @@
               color: var(--colors-white, #fff);
               font-size: 10.78px;
 
-              transition: background 0.3s, color 0.3s;
+              transition: background 0.3s, color 0.3s, gap 0.3s;
 
               &::after {
                 content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M5.63379 9.87988L8.71379 6.79988" stroke="white" stroke-width="1.54" stroke-linecap="round"/><path d="M5.63379 3.71997L8.71379 6.79997" stroke="white" stroke-width="1.54" stroke-linecap="round"/></svg>');
@@ -172,7 +172,7 @@
 
               &:hover {
                 display: inline-flex;
-                padding: 5.39px 4.7px 5.39px 12.32px;
+                // padding: 5.39px 4.7px 5.39px 12.32px;
                 justify-content: center;
                 align-items: center;
                 gap: 5px;

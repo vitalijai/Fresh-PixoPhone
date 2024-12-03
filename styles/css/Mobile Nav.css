@@ -586,7 +586,7 @@
   }
   .mobile-nav__tabs .mobile-tabs .tabs__link-menu-list .gen-block-mobile {
     gap: 12px;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     transform: translate(0%, 0%);
     transition: transform 0.5s ease-in-out;

@@ -7,7 +7,7 @@
   gap: 16px;
   background: var(--colors-green-900, #1c4427);
 }
-@media (max-width: 719px) {
+@media (max-width: 992px) {
   .footer {
     padding-bottom: 70px;
   }
@@ -62,6 +62,11 @@
   align-self: stretch;
   gap: 48px;
   flex-direction: row;
+}
+@media (max-width: 1200px) {
+  .footer .footer-content-container .footer-top .footer-container {
+    gap: 18px;
+  }
 }
 .footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__contact-link {
   color: var(--colors-white, #fff);
@@ -123,15 +128,15 @@
   align-self: stretch;
   gap: 16px;
 }
-@media (max-width: 719px) {
-  .footer .footer-content-container .footer-top,
-  .footer .footer-content-container .footer-top .footer-container {
-    flex-direction: column;
-    gap: 24px;
+@media (max-width: 1200px) {
+  .footer-top{
+    flex-wrap: wrap;
   }
-  .footer .footer-content-container .footer-top .footer-nav__column {
-    align-items: center;
+  .footer .footer-content-container .footer-top .footer-logo-container {
+    width: 100%;
+    flex: 1 1 auto;
   }
+
   .footer .footer-content-container .footer-top .footer-nav__column .footer-logo-block-container {
     width: unset;
     align-self: stretch;
@@ -151,11 +156,22 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+@media (max-width: 992px) {
+  .footer .footer-content-container .footer-top,
+  .footer .footer-content-container .footer-top .footer-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
   .footer .footer-content-container .footer-top .footer-container {
     gap: 12px;
   }
   .footer .footer-content-container .footer-top .footer-container .footer-nav__column {
     gap: 1px;
+  }
+  .footer .footer-content-container .footer-top .footer-nav__column {
+    align-items: center;
   }
   .footer .footer-content-container .footer-top .footer-container .footer-nav__column .footer-nav__title {
     align-items: flex-start;
@@ -231,7 +247,7 @@
 .footer .footer-content-container .footer-bottom .footer-nav__span-title {
   font-weight: 400;
 }
-@media (max-width: 719px) {
+@media (max-width: 992px) {
   .footer .footer-content-container .footer-bottom {
     font-size: 12px;
   }

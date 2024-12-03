@@ -118,7 +118,7 @@ $(document).ready(function () {
   splideMonoBrand.mount();
   splideMiniMobile.mount();
 
-  if ($(window).width() <= 719) {
+  if ($(window).width() <= 992) {
     $(".promo--item").on("click", function () {
       $("#popPromoBaner").fadeIn();
       $("html").addClass("no-scroll");

@@ -28,6 +28,9 @@
       border-radius: 32px;
       box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
 
+      @media (max-width: 1200px) {
+        max-width: 350px;
+      }
       @media (max-width: 719px) {
         box-shadow: unset;
         border-radius: 32px 32px 0 0;
@@ -38,6 +41,11 @@
         max-width: 440px;
         object-fit: cover;
         border-radius: 32px;
+
+        @media (max-width: 1200px) {
+          max-width: 350px;
+          height: 100%;
+        }
 
         @media (max-width: 719px) {
           max-width: unset;
@@ -167,6 +175,10 @@
 
             font-size: 14px;
             font-weight: 400;
+
+            @media (max-width: 1200px) {
+              padding: 12px 10px;
+            }
 
             &:hover {
               border: 2px solid var(--colors-gray-100, #f7f7f7);
