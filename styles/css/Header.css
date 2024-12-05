@@ -200,6 +200,7 @@
   text-overflow: ellipsis;
   outline: none;
 }
+
 @media (max-width: 992px) {
   .header .header-container .header_bottom .header_bottom-content__right .header-bottom-search .header-search-form .header-search-form__input {
     padding: 0 8px;
@@ -488,6 +489,7 @@
   /* .header .header-container {
     width: 99%;
   } */
+
   .header .header-container .header_top {
     display: none;
   }

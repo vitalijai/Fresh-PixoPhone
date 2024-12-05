@@ -7,6 +7,7 @@
   gap: 16px;
   background: var(--colors-green-900, #1c4427);
 }
+
 @media (max-width: 992px) {
   .footer {
     padding-bottom: 70px;
@@ -23,6 +24,11 @@
   font-size: 14px;
   font-weight: 400;
 }
+
+.footer .footer-content-container a:hover {
+  color: var(--colors-green-600, #25863f) !important;
+}
+
 .footer .footer-content-container .footer-top {
   display: flex;
   align-items: flex-start;
@@ -63,11 +69,13 @@
   gap: 48px;
   flex-direction: row;
 }
+
 @media (max-width: 1200px) {
   .footer .footer-content-container .footer-top .footer-container {
     gap: 18px;
   }
 }
+
 .footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__contact-link {
   color: var(--colors-white, #fff);
   font-size: 16px;
@@ -106,6 +114,21 @@
   justify-content: center;
   align-items: center;
 }
+
+.footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__social-media-container .footer-nav__contact-link:hover svg path:not(:last-child) {
+  fill: var(--colors-green-600, #25863f);
+}
+.footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__social-media-container .footer-nav__contact-link.footer-nav__link-viber:hover {
+  background-color: var(--colors-green-600, #25863f);
+  border-radius: 50%;
+}
+.footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__social-media-container .footer-nav__contact-link.footer-nav__link-viber:hover svg {
+  fill: white;
+}
+.footer .footer-content-container .footer-top .footer-nav__contact .footer-nav__social-media-container .footer-nav__contact-link.footer-nav__link-viber:hover svg path {
+  fill: white;
+}
+
 .footer .footer-content-container .footer-top .footer-logo-container {
   gap: var(---gap-basic, 24px);
   user-select: none;
@@ -128,6 +151,7 @@
   align-self: stretch;
   gap: 16px;
 }
+
 @media (max-width: 1200px) {
   .footer-top{
     flex-wrap: wrap;
@@ -170,9 +194,11 @@
   .footer .footer-content-container .footer-top .footer-container .footer-nav__column {
     gap: 1px;
   }
+
   .footer .footer-content-container .footer-top .footer-nav__column {
     align-items: center;
   }
+
   .footer .footer-content-container .footer-top .footer-container .footer-nav__column .footer-nav__title {
     align-items: flex-start;
     border-radius: 8px;
@@ -247,7 +273,9 @@
 .footer .footer-content-container .footer-bottom .footer-nav__span-title {
   font-weight: 400;
 }
+
 @media (max-width: 992px) {
+
   .footer .footer-content-container .footer-bottom {
     font-size: 12px;
   }

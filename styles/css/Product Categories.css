@@ -1528,6 +1528,7 @@
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.grid-view-bu .catalog-filters-viewed-container .global-block-container-bottom-from-price .global-block-container-bottom-from-month, .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom-from-price .global-block-container-bottom-from-price-fraction,
 /* .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view .catalog-filters-viewed-container .global-block-container-bottom-from-price .global-block-container-bottom-from-month, */
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view-bu .catalog-filters-viewed-container .global-block-container-bottom-from-price .global-block-container-bottom-from-price-fraction,
+
 .common-template .catalog-filters .catalog-filters-content .catalog-filters-right .catalog-filters-viewed-content.more-grid-view-bu .catalog-filters-viewed-container .global-block-container-bottom-from-price .global-block-container-bottom-from-month {
   display: none !important;
 }
@@ -3077,6 +3078,7 @@
 .common-template .catalog-filters-left .catalog-filters-left-header .catalog-filters-left-header-bottom-container .clear-all:hover {
   color: var(--colors-red-300, #fa8072);
 }
+
 /*
 .common-template .catalog-filters-left .catalog-filters-parametrs {
    display: flex;
@@ -3086,6 +3088,7 @@
   align-self: stretch;
   background: var(--colors-white, #fff); 
 }*/
+
 .common-template .catalog-filters-left .catalog-filters-parametrs .filters-parametrs-header {
   display: flex;
   align-items: center;

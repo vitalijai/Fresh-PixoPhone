@@ -383,7 +383,8 @@
 }
 
 //Прямоугольная кнопка Купить/Хочу купить
-.global-button {
+.global-button,
+.global-waiting-button {
   @include flexbox();
   flex: 1 0 0;
 
@@ -430,11 +431,27 @@
   .global-button-buy.active {
     background: var(--colors-green-200, #dbf6e2);
     color: var(--colors-green-400, #62b278);
+
     &::before {
       content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.5 13.4407L9.76442 16.7051L18.5 8" stroke="%2362B378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       width: 24px;
       height: 24px;
       margin: 0;
+    }
+  }
+}
+
+.global-waiting-button {
+  button {
+    background: var(--colors-green-100, #e9f9e9);
+    color: var(--colors-green-400, #62b278);
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L18.7457 4.92374C18.8767 4.30211 18.4025 3.71743 17.7672 3.71743H8.09091" stroke="%2362b278" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="%2362b278"/><circle cx="15.475" cy="15.225" r="1.35" fill="%2362b278"/></svg>');
+    }
+
+    &:hover {
+      color: var(--colors-white, #fff);
     }
   }
 }
@@ -772,7 +789,8 @@
   }
 }
 
-.global-button-send {
+.global-button-send,
+.global-button-bu {
   button {
     background: linear-gradient(
         0deg,
@@ -808,6 +826,57 @@
         animation: pulseblob 1.5s 1s infinite linear;
         box-sizing: border-box;
       }
+    }
+  }
+
+  &.global-block-container-button {
+    button {
+      border-radius: 8px;
+    }
+    button,
+    a {
+      text-wrap: nowrap;
+    }
+  }
+}
+
+.global-button-bu {
+  gap: 8px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    gap: 8px;
+    flex: 1 0 0;
+    cursor: pointer;
+
+    border-radius: 4px;
+
+    color: var(--colors-white, #fff);
+    font-size: 14px;
+    border: none;
+  }
+
+  .global-button-bu_link {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+    background: var(--colors-blue-100, #e9f5ff);
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5858 5.2002H15C14.4477 5.2002 14 4.75248 14 4.2002C14 3.64791 14.4477 3.2002 15 3.2002H18C19.6569 3.2002 21 4.54334 21 6.2002V9.2002C21 9.75248 20.5523 10.2002 20 10.2002C19.4477 10.2002 19 9.75248 19 9.2002V6.61441L12.7071 12.9073C12.3166 13.2978 11.6834 13.2978 11.2929 12.9073C10.9024 12.5168 10.9024 11.8836 11.2929 11.4931L17.5858 5.2002ZM19 13.2002C19 12.6479 19.4477 12.2002 20 12.2002C20.5523 12.2002 21 12.6479 21 13.2002V18.2002C21 19.857 19.6569 21.2002 18 21.2002H6C4.34315 21.2002 3 19.857 3 18.2002V6.2002C3 4.54334 4.34315 3.2002 6 3.2002H11C11.5523 3.2002 12 3.64791 12 4.2002C12 4.75248 11.5523 5.2002 11 5.2002H6C5.44772 5.2002 5 5.64791 5 6.2002V18.2002C5 18.7525 5.44772 19.2002 6 19.2002H18C18.5523 19.2002 19 18.7525 19 18.2002V13.2002Z" fill="%23318CE7"/></svg>');
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background: var(--colors-blue-200, #e9f8ff);
     }
   }
 }
@@ -1058,9 +1127,25 @@
   font-size: 13.5px;
   font-weight: 700;
   text-transform: uppercase;
+
+  &.status {
+    width: 17px;
+    height: 8px;
+    padding: 4px;
+    gap: 0;
+    font-weight: 500;
+
+    .status-score-one-of {
+      font-size: 12px;
+    }
+
+    .status-score {
+      font-size: 8px;
+    }
+  }
 }
 
-.pixo-indx,
+.pixo-indx:not(.status),
 .status-indicator {
   &.score-0 {
     background: var(--score, #f7f7f7);

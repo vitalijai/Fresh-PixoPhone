@@ -1,0 +1,40 @@
+@import "../scss/_0-global/mixin";
+@import "../scss/_2-main/main";
+.arrow-filters {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  display: none;
+  padding: 16px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  background: var(--colors-white, #fff);
+  transition: left 0.38s ease-in-out;
+
+  @media (max-width: 719px) {
+    display: flex;
+  }
+
+  &::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32" fill="none"><path d="M0 0L1.39876e-06 32L16 32L16 28.9443C16 23.4626 12.9029 18.4515 8 16C3.09707 13.5485 3.7318e-07 8.53737 1.3357e-07 3.05573L0 0Z" fill="white"/><clipPath id="clip0_12560_180147"><rect width="32" height="16" fill="white" transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)"/></clipPath></svg>');
+    width: 16px;
+    height: 32px;
+    position: absolute;
+    bottom: 47px;
+  }
+
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32" fill="none"><path d="M0 32L-1.39876e-06 0L16 -6.99382e-07L16 3.05572C16 8.53737 12.9029 13.5485 8 16C3.09707 18.4515 -3.7318e-07 23.4626 -1.3357e-07 28.9443L0 32Z" fill="white"/><clipPath id="clip0_12560_180142"><rect width="32" height="16" fill="white" transform="translate(0 32) rotate(-90)"/></clipPath></svg>');
+    width: 16px;
+    height: 32px;
+    position: absolute;
+    top: 47px;
+  }
+
+  &.active {
+    left: 320px;
+    z-index: 20;
+  }
+}

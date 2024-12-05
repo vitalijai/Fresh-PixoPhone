@@ -374,6 +374,8 @@ $(document).ready(function () {
       $("html").addClass("no-scroll");
       $(".screen").addClass("overflow");
       $(".screen.overflow").css("z-index", "22");
+      $(".back-to-top").addClass("mobile");
+      $(".mobile-nav__tabs").addClass("video");
     });
 
     function outSpec() {
@@ -381,6 +383,8 @@ $(document).ready(function () {
       $("html").removeClass("no-scroll");
       $(".screen").removeClass("overflow");
       $(".screen").css("z-index", "20");
+      $(".back-to-top").removeClass("mobile");
+      $(".mobile-nav__tabs").removeClass("video");
     }
 
     $(closeClass).on("click", function () {
@@ -517,19 +521,37 @@ $(document).ready(function () {
   //   ".pop-up-to-cart-bottom-left"
   // );
   //Показать блок заказа
-  initModal(
-    ".gen-tab__to-all-product-button",
-    "#popUpBuCardsProducts",
-    ".pop-up-bu-cards-close",
-    "#popUpBuCardsProducts"
-  );
-  //Показать блок заказа
-  initModal(
-    ".offers-page-description-show-more",
-    "#popUpBuProducts",
-    ".pop-up-bu-close",
-    "#popUpBuProducts"
-  );
+
+  function checkScreenWidthAndInitModal() {
+    if (window.innerWidth < 720) {
+      initModal(
+        ".novelty-waiting-order-button",
+        "#popUpBuCardsProducts",
+        ".pop-up-bu-cards-close",
+        "#popUpBuCardsProducts"
+      );
+
+      //Показать блок заказа
+      initModal(
+        ".offers-page-description-show-more",
+        "#popUpBuProducts",
+        ".pop-up-bu-close",
+        "#popUpBuProducts"
+      );
+
+      initModal(
+        ".global-button-notify",
+        "#popUpNewCardsProducts",
+        ".pop-up-bu-cards-close",
+        "#popUpNewCardsProducts"
+      );
+    }
+  }
+  checkScreenWidthAndInitModal();
+
+  // Проверяем ширину экрана при изменении размера окна
+  window.addEventListener("resize", checkScreenWidthAndInitModal);
+
   //Показать блок заказа
   initModal(
     ".gen-tab__credit-btn",
@@ -578,6 +600,7 @@ $(document).ready(function () {
   //   ".pop-up-cart-bottom-left"
   // );
 });
+
 $(document).ready(function () {
   $(".bu-splide__span").on("click", function () {
     $("#popUpBuProducts").fadeOut();
@@ -625,71 +648,64 @@ $(".offers-page-buy-guarantee-switch-compare").change(function () {
 
 // Логика для фильтра и сортировки мобайл
 $(document).ready(function () {
-  $(".sorting.BTN").click(function () {
-    if (!$(this).hasClass("active")) {
-      removeButtonActiveClasses();
-      $(this).addClass("active");
-      $(".offers-page-block__sorting").addClass("active");
-    } else {
-      $(this).removeClass("active");
-      $(".offers-page-block__sorting").removeClass("active");
-    }
-    $(".offers-page-block__sorting").fadeToggle("slow"); // Анимация открытия и закрытия
-  });
-
-  $(".filter.BTN").click(function () {
-    if (!$(this).hasClass("active")) {
-      removeButtonActiveClasses();
-      $(this).addClass("active");
-      $(".offers-page-block__filter").addClass("active");
-    } else {
-      $(this).removeClass("active");
-      $(".offers-page-block__filter").removeClass("active");
-    }
-    $(".offers-page-block__filter").fadeToggle("slow"); // Анимация открытия и закрытия
-  });
-
-  $(".header__close").click(function () {
-    $(this)
-      .closest(".offers-page-block__con")
-      .find(".sorting.BTN, .filter.BTN")
-      .removeClass("selected");
-    $(".offers-page-block__sorting, .offers-page-block__filter").fadeOut(
-      "slow",
-      function () {
-        removeActiveClasses();
-        removeSelectedClasses();
-      }
-    );
-  });
-
-  $(".offers-page-block__container span").click(function () {
-    $(this).toggleClass("active");
-    addSelectedClasses();
-  });
-
-  function removeActiveClasses() {
-    $(".active").removeClass("active");
-  }
-
-  function removeButtonActiveClasses() {
-    $(".sorting.BTN, .filter.BTN").removeClass("active");
-    $(".offers-page-block__sorting, .offers-page-block__filter")
-      .removeClass("active")
-      .hide(); // Убедимся, что элементы скрыты
-  }
-
-  function addSelectedClasses() {
-    $(".sorting.BTN, .filter.BTN").each(function () {
-      if ($(this).hasClass("active")) {
-        $(this).addClass("selected");
-      }
-    });
-  }
-
-  function removeSelectedClasses() {
-    $(".selected").removeClass("selected");
-  }
+  // $(".sorting.BTN").click(function () {
+  //   if (!$(this).hasClass("active")) {
+  //     removeButtonActiveClasses();
+  //     $(this).addClass("active");
+  //     $(".offers-page-block__sorting").addClass("active");
+  //   } else {
+  //     $(this).removeClass("active");
+  //     $(".offers-page-block__sorting").removeClass("active");
+  //   }
+  //   $(".offers-page-block__sorting").fadeToggle("slow"); // Анимация открытия и закрытия
+  // });
+  // $(".filter.BTN").click(function () {
+  //   if (!$(this).hasClass("active")) {
+  //     removeButtonActiveClasses();
+  //     $(this).addClass("active");
+  //     $(".offers-page-block__filter").addClass("active");
+  //   } else {
+  //     $(this).removeClass("active");
+  //     $(".offers-page-block__filter").removeClass("active");
+  //   }
+  //   $(".offers-page-block__filter").fadeToggle("slow"); // Анимация открытия и закрытия
+  // });
+  // $(".header__close").click(function () {
+  //   $(this)
+  //     .closest(".offers-page-block__con")
+  //     .find(".sorting.BTN, .filter.BTN")
+  //     .removeClass("selected");
+  //   $(".offers-page-block__sorting, .offers-page-block__filter").fadeOut(
+  //     "slow",
+  //     function () {
+  //       removeActiveClasses();
+  //       removeSelectedClasses();
+  //     }
+  //   );
+  // });
+  // $(".offers-page-block__container span").click(function () {
+  //   $(this).toggleClass("active");
+  //   addSelectedClasses();
+  // });
+  // function removeActiveClasses() {
+  //   $(".active").removeClass("active");
+  // }
+  // function removeButtonActiveClasses() {
+  //   $(".sorting.BTN, .filter.BTN").removeClass("active");
+  //   $(".offers-page-block__sorting, .offers-page-block__filter")
+  //     .removeClass("active")
+  //     .hide(); // Убедимся, что элементы скрыты
+  // }
+  // function addSelectedClasses() {
+  //   $(".sorting.BTN, .filter.BTN").each(function () {
+  //     if ($(this).hasClass("active")) {
+  //       $(this).addClass("selected");
+  //     }
+  //   });
+  // }
+  // function removeSelectedClasses() {
+  //   $(".selected").removeClass("selected");
+  // }
 });
 
 $(document).ready(function () {

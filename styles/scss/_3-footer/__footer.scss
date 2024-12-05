@@ -21,6 +21,10 @@
       font-weight: 400;
     }
 
+    & a:hover {
+      color: var(--colors-green-600, #25863f) !important;
+    }
+
     .footer-top {
       @include flexbox($alignItems: flex-start, $self: stretch);
 
@@ -112,6 +116,24 @@
             width: 32px;
             height: 32px;
             @include flexbox($alignItems: center, $justify: center);
+
+            &:hover {
+              svg {
+                path:not(:last-child) {
+                  fill: var(--colors-green-600, #25863f);
+                }
+              }
+            }
+            &.footer-nav__link-viber:hover {
+              background-color: var(--colors-green-600, #25863f);
+              border-radius: 50%;
+              svg {
+                fill: white;
+                path {
+                  fill: white;
+                }
+              }
+            }
           }
         }
       }
