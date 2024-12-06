@@ -26,6 +26,10 @@
 
       gap: var(---gap-big, 48px);
 
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+      }
+
       .footer-nav__column {
         @include flexbox(
           $alignItems: flex-start,
@@ -72,6 +76,10 @@
         align-self: stretch;
         gap: 48px;
         flex-direction: row;
+        
+        @media (max-width: 1200px) {
+            gap: 18px;
+        }
       }
 
       .footer-nav__contact {
@@ -148,9 +156,6 @@
       }
 
       @media (max-width: 1200px) {
-        .footer-top{
-          flex-wrap: wrap;
-        }
         .footer-logo-container {
           width: 100%;
           flex: 1 1 auto;
@@ -182,7 +187,7 @@
       }
 
       @media (max-width: 992px) {
-        &,
+        &, 
         .footer-container {
           flex-direction: column;
           gap: 24px;
