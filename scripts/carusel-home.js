@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     // Вычисление итоговой ширины
     function calculateSplideWidth() {
-      const contentContainerWidth = getWidth(".content-container");
+      const contentContainerWidth = getWidth(".monobrand-content .content-container");
       const monoBrandContentLeftWidth = getWidth(".monobrand-content-left");
       const finalWidth =
         contentContainerWidth - monoBrandContentLeftWidth - 32 - 64;
@@ -137,6 +137,7 @@ $(document).ready(function () {
         slidesToShow: 1.5,
         slidesToScroll: 1,
         arrows: false,
+        variableWidth: true,
       });
 
       // Clear the content of all buttons inside each .multiple-items

@@ -172,8 +172,8 @@
 
             border-radius: 48px;
 
-            @media (max-width: 719px) {
-              display: none;
+            @media (max-width: 1200px) {
+                display: none;
             }
 
             .right-sorting-name {
@@ -2785,7 +2785,7 @@
       width: calc(320px);
       // height: calc(100vh - 190px);
       height: calc(100vh);
-      left: -100%;
+      left: -320px;
       // transform: translate(0%, 0%);
       // transform: translate(calc(-100%), 0%);
 
