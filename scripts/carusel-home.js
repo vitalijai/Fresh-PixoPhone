@@ -54,8 +54,9 @@ $(document).ready(function () {
 
     // Вычисление итоговой ширины
     function calculateSplideWidth() {
-      const contentContainerWidth = getWidth(".content-container");
+      const contentContainerWidth = getWidth(".monobrand-content .content-container");
       const monoBrandContentLeftWidth = getWidth(".monobrand-content-left");
+      console.log(contentContainerWidth, monoBrandContentLeftWidth)
       const finalWidth =
         contentContainerWidth - monoBrandContentLeftWidth - 32 - 64;
       return finalWidth;
@@ -67,6 +68,8 @@ $(document).ready(function () {
     // Функция обновления ширины Splide
     function updateSplideMonoWidth() {
       const splideWidth = calculateSplideWidth();
+
+      console.log(calculateSplideWidth())
 
       // Если Splide уже инициализирован, обновляем ширину
       if (splideMonoBrand) {

@@ -46,8 +46,8 @@
     gap: 8px;
     overflow-x: auto;
     padding-left: 16px;
-    padding: 12px 0px 0px;
-    margin: auto;
+    padding: 12px 0px;
+    margin: 0 auto -12px;
   }
   .common-template .header-popular-page .header-popular-page-container .menu_pixocoin {
     display: flex;
