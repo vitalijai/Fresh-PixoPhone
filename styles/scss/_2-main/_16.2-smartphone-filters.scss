@@ -9,7 +9,7 @@
     align-self: stretch;
     align-items: flex-start;
 
-    @media (max-width: 719px) {
+    @media (max-width: 992px) {
       padding: 24px;
       flex-direction: column;
       align-items: flex-start;
@@ -23,7 +23,7 @@
     .smartphone-filters-header {
       display: none;
 
-      @media (max-width: 719px) {
+      @media (max-width: 992px) {
         display: flex;
         align-items: flex-start;
         align-self: stretch;
@@ -49,7 +49,10 @@
       // width: min(92%, (var(---width, 1366px) - 32px));
       // overflow: auto;
 
-      @media (max-width: 719px) {
+      @media (max-width: 1200px) {
+        gap: 4px;
+      }
+      @media (max-width: 992px) {
         // width: min(93%, (var(---width, 1366px) - 32px));
         background: unset;
         box-shadow: unset;
@@ -81,7 +84,7 @@
           min-width: 90px;
         }
 
-        @media (max-width: 719px) {
+        @media (max-width: 992px) {
           padding: 0;
           background: unset;
           flex-direction: unset;
@@ -101,7 +104,11 @@
           gap: 8px;
           transition: all 500ms ease-in-out;
 
-          @media (max-width: 719px) {
+          @media (max-width: 1200px) {
+            adding: 16px 10px 8px 10px;
+          }
+
+          @media (max-width: 992px) {
             padding: 8px;
             gap: 4px;
           }
@@ -116,7 +123,7 @@
               width: 83px;
             }
 
-            @media (max-width: 719px) {
+            @media (max-width: 992px) {
               width: 48px;
               height: 48px;
             }
@@ -138,7 +145,7 @@
             visibility: visible;
             transition: opacity 0.35s ease-out 0.25s;
 
-            @media (max-width: 719px) {
+            @media (max-width: 992px) {
               overflow: hidden;
               color: var(--colors-gray-500, #696969);
               text-align: center;

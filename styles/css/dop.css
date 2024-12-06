@@ -70,6 +70,7 @@
   -ms-animation: active_load 1s linear infinite;
   -o-animation: active_load 1s linear infinite;
   animation: active_load 1s linear infinite;
+  font-size: 0;
 }
 
 
@@ -171,7 +172,7 @@
 }
 
 
-@media (max-width: 719px) {
+@media (max-width: 992px) {
 
   .catalog-filters .catalog-filters-viewed-content.grid-view .soon-waiting-order-button.global-waiting-button.global-block-container-button button span {
     display: none;
@@ -345,6 +346,20 @@ font-size: 20px;
   flex-direction: column;
   gap: 1px;
 }
+.ocf-filter-list.ocf-clearfix .ocf-hidden-filters-divider > span:hover {
+  background-color: #fff;
+}
+.ocf-filter-list.ocf-clearfix .ocf-hidden-filters-divider > span {
+  transition: 0.3s;
+  background-color: #fff;
+  margin: 0;
+}
+.ocf-filter-list.ocf-clearfix .ocf-hidden-filters-divider{
+  margin: 15px auto;
+  height: unset;
+  top: 0;
+}
+
 .ocf-scroll-y{
   background-image: none!important;
 }

@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Добавляем эффекты slideDown/slideUp при наведении на блок .smartphone-filters-block
-  if ($(window).width() >= 720) {
+  if ($(window).width() >= 992) {
     $(".smartphone-filters-block").hover(
       function () {
         // Проверяем ширину окна, выполняем код только если ширина больше 719px
@@ -17,7 +17,7 @@ $(document).ready(function () {
 
   $(document).ready(function () {
     // Проверяем ширину экрана
-    if ($(window).width() < 720) {
+    if ($(window).width() < 992) {
       // Ограничиваем действия только блоком catalog-filters-right-header-mobile
       $(".catalog-filters-right-header-mobile").each(function () {
         var $this = $(this);
@@ -77,7 +77,7 @@ $(window).on("scroll", function () {
 
   // Проверка ширины окна и выбор нужного класса
   var header =
-    windowWidth >= 720
+    windowWidth >= 992
       ? $(".catalog-filters-right-header")
       : $(".catalog-filters-right-header-mobile");
 
@@ -112,8 +112,8 @@ $(window).on("scroll", function () {
 
     header.addClass("before-visible"); // Добавляем класс для ::before
   } else {
-    // Если это элемент с классом .catalog-filters-right-header и ширина окна >= 720
-    if (windowWidth >= 720) {
+    // Если это элемент с классом .catalog-filters-right-header и ширина окна >= 992
+    if (windowWidth >= 992) {
       header.css("border-radius", "0 32px 0 0").css("z-index", "0"); // Возвращаем скругления только для .catalog-filters-right-header
     }
 
@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     filtersViewedLinks.forEach((link) => {
-      // Проверяем, если ширина экрана больше 720 пикселей
-      if (window.innerWidth > 720) {
+      // Проверяем, если ширина экрана больше 992 пикселей
+      if (window.innerWidth > 992) {
         // Найдем все элементы с классом "splide" внутри текущего "filters-viewed-link"
         const carousels = link.querySelectorAll(".splide");
 
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
       } else {
-        // Аналогичная логика для случая, когда ширина экрана <= 720 пикселей
+        // Аналогичная логика для случая, когда ширина экрана <= 992 пикселей
         const carousels = link.querySelectorAll(".splide");
 
         carousels.forEach((carousel) => {
@@ -178,16 +178,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Инициализация каруселей при загрузке страницы
   initCarousels();
 
-  // Добавляем обработчик на изменение размера окна
-  window.addEventListener("resize", function () {
-    // Удаляем предыдущие инициализированные карусели при изменении размера экрана
-    Splide.instances.forEach((splideInstance) => {
-      splideInstance.destroy();
-    });
-
-    // Повторная инициализация каруселей, если ширина больше 720 пикселей
-    initCarousels();
-  });
+  // // Добавляем обработчик на изменение размера окна
+  // window.addEventListener("resize", function () {
+  //   // Удаляем предыдущие инициализированные карусели при изменении размера экрана
+  //   if(Splide.instances){
+  //     Splide.instances.forEach((splideInstance) => {
+  //       splideInstance.destroy();
+  //     });
+  //   }
+    
+  //   // Повторная инициализация каруселей, если ширина больше 992 пикселей
+  //   initCarousels();
+  // });
 });
 
 $("#novelty").change(function () {
@@ -207,7 +209,7 @@ $(document).ready(function () {
 
   // Функция для проверки размера окна и применения изменений
   function checkWindowSize() {
-    if ($(window).width() < 720) {
+    if ($(window).width() < 992) {
       // При клике на блок с классом 'header'
       $(".header").on("click", function () {
         if (isAnimating) return; // Игнорировать клик, если идет анимация

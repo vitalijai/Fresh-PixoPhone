@@ -31,7 +31,7 @@ window.addEventListener("scroll", function () {
   filters.forEach(function (filter) {
     filter.classList.toggle("filters-height", isFixed);
     // Добавляем класс pop-up при ширине окна меньше 720px
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 992) {
       filter.classList.add("pop-up");
     } else {
       filter.classList.remove("pop-up");
@@ -66,7 +66,7 @@ window.addEventListener("load", function () {
 
   const filters = document.querySelectorAll(".catalog-filters-left");
   filters.forEach(function (filter) {
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 992) {
       filter.classList.add("pop-up");
     } else {
       filter.classList.remove("pop-up");
