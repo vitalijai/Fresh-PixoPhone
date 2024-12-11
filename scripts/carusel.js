@@ -1,48 +1,4 @@
 $(document).ready(function () {
-  function updateCarouselWrapperClass() {
-    var $carouselWrapper = $(".gen-tab__add-product-accessories-container");
-    if ($(window).width() <= 1279) {
-      $carouselWrapper.addClass("carousel-wrapper-min");
-      $carouselWrapper.removeClass("carousel-wrapper");
-
-      $(".carousel-wrapper-min").slick({
-        infinite: false,
-        slidesToShow: 4.5,
-        slidesToScroll: 1,
-        arrows: false,
-      });
-    } else {
-      $carouselWrapper.removeClass("carousel-wrapper-min");
-      $carouselWrapper.addClass("carousel-wrapper");
-
-      $(".carousel-wrapper").slick({
-        infinite: false,
-        slidesToShow: 3.2,
-        slidesToScroll: 1,
-        arrows: false,
-      });
-    }
-  }
-
-  $(window).on("resize", updateCarouselWrapperClass);
-  $(document).ready(updateCarouselWrapperClass);
-  // Инициализация слайдера
-  $(".gen-tab__carousel-wrapper").slick({
-    infinite: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    arrows: false,
-  });
-
-  // Привязка кнопок к слайдеру
-  $(".block-cheaper-slick-prev").click(function () {
-    $(".gen-tab__carousel-wrapper").slick("slickPrev");
-  });
-
-  $(".block-cheaper-slick-next").click(function () {
-    $(".gen-tab__carousel-wrapper").slick("slickNext");
-  });
-
   //Аксы
   // Инициализация слайдера
   // $(".carousel-wrapper").slick({
@@ -68,24 +24,6 @@ $(document).ready(function () {
     $(".carousel-wrapper").slick("slickNext");
   });
 
-  //Аксы корзина
-  // Инициализация слайдера
-  $(".cart-carousel-wrapper").slick({
-    infinite: false,
-    slidesToShow: 3.7,
-    slidesToScroll: 2,
-    arrows: false,
-  });
-
-  // Привязка кнопок к слайдеру
-  $(".cart-prev").click(function () {
-    $(".cart-carousel-wrapper").slick("slickPrev");
-  });
-
-  $(".cart-next").click(function () {
-    $(".cart-carousel-wrapper").slick("slickNext");
-  });
-
   //Рандомайзер
   var randomNumber = Math.floor(Math.random() * 10) + 1;
   var text;
@@ -105,119 +43,96 @@ $(document).ready(function () {
   $(".people-watching-text-span").text(text);
   $(".people-watching-secondary-span").text(secondary);
 });
-
 //Главное фото
 document.addEventListener("DOMContentLoaded", function () {
-  var primarySlider = new Splide("#main-photo-slider", {
-    pagination: false,
-  });
-
-  var secondarySlider = new Splide("#secondary-slider", {
-    fixedWidth: 90,
-    height: 90,
-    gap: 8,
-    pagination: false,
-    arrows: true,
-    isNavigation: true,
-    focus: "center",
-  }).mount();
-
-  var popUpPhoto = new Splide("#popUpPhoto", {
-    pagination: false,
-  });
-
-  var secondSlider = new Splide("#second-slider", {
-    fixedWidth: 90,
-    height: 90,
-    gap: 8,
-    pagination: false,
-    arrows: false,
-    isNavigation: false,
-    focus: "center",
-  }).mount();
-
-  primarySlider.sync(secondarySlider).mount();
-  popUpPhoto.sync(secondSlider).mount();
-
-  var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
-    perPage: 3,
-    pagination: false,
-    arrows: true,
-  });
-  popUpAcces.mount();
-
+  // var primarySlider = new Splide("#main-photo-slider", {
+  //   pagination: false,
+  // });
+  // var secondarySlider = new Splide("#secondary-slider", {
+  //   fixedWidth: 90,
+  //   height: 90,
+  //   gap: 8,
+  //   pagination: false,
+  //   arrows: true,
+  //   isNavigation: true,
+  //   focus: "center",
+  // }).mount();
+  // var popUpPhoto = new Splide("#popUpPhoto", {
+  //   pagination: false,
+  // });
+  // var secondSlider = new Splide("#second-slider", {
+  //   fixedWidth: 90,
+  //   height: 90,
+  //   gap: 8,
+  //   pagination: false,
+  //   arrows: false,
+  //   isNavigation: false,
+  //   focus: "center",
+  // }).mount();
+  // primarySlider.sync(secondarySlider).mount();
+  // popUpPhoto.sync(secondSlider).mount();
+  // var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
+  //   perPage: 3,
+  //   pagination: false,
+  //   arrows: true,
+  // });
+  // popUpAcces.mount();
   // Вызов функции для инициализации слайдеров
-
   // // Функция для инициализации и синхронизации слайдеров на основе шаблона ID
-  function initializeAndSyncSliders() {
-    // Находим все основные слайдеры
-    var mainSliders = document.querySelectorAll(".bu-main-photo-slider");
-
-    mainSliders.forEach(function (mainElement) {
-      // Извлекаем идентификатор из ID основного слайдера
-      var mainId = mainElement.id;
-      var identifier = mainId.replace("bu-main-photo-slider-", "");
-
-      // Находим соответствующий вторичный слайдер с использованием идентификатора
-      var secondaryId = "bu-secondary-slider-" + identifier;
-      var secondaryElement = document.getElementById(secondaryId);
-
-      if (secondaryElement) {
-        // Инициализируем основной слайдер
-        var mainSplide = new Splide(mainElement, {
-          pagination: false,
-          arrows: false,
-        });
-
-        // Инициализируем вторичный слайдер
-        var secondarySplide = new Splide(secondaryElement, {
-          fixedWidth: 80,
-          height: 80,
-          gap: 8,
-          pagination: false,
-          arrows: false,
-          isNavigation: true,
-          drag: false,
-        });
-
-        // Синхронизируем основной слайдер с соответствующим вторичным слайдером
-        mainSplide.sync(secondarySplide);
-
-        // Монтируем слайдеры только после синхронизации
-        mainSplide.mount();
-        secondarySplide.mount();
-      }
-    });
-  }
-
-  function initializeSplidePopUpBu() {
-    new Splide("#pop-up-bu-main-photo-block-slider", {
-      width: 1300,
-
-      pagination: false,
-      arrows: true,
-      drag: false,
-    }).mount();
-
-    var elms = document.getElementsByClassName("pop-up-bu-main-photo-slider");
-
-    for (var i = 0; i < elms.length; i++) {
-      new Splide(elms[i], {
-        pagination: true,
-        arrows: true,
-        classes: {
-          arrows: "splide__arrows pop-up-bu-splide__arrows",
-          arrow: "splide__arrow pop-up-bu-splide__arrow",
-          prev: "splide__arrow--prev pop-up-bu-splide__arrow--prev",
-          next: "splide__arrow--next pop-up-bu-splide__arrow--next",
-        },
-      }).mount();
-    }
-  }
-  initializeSplidePopUpBu();
-  initializeAndSyncSliders();
+  // function initializeAndSyncSliders() {
+  //   // Находим все основные слайдеры
+  //   var mainSliders = document.querySelectorAll(".bu-main-photo-slider");
+  //   mainSliders.forEach(function (mainElement) {
+  //     // Извлекаем идентификатор из ID основного слайдера
+  //     var mainId = mainElement.id;
+  //     var identifier = mainId.replace("bu-main-photo-slider-", "");
+  //     // Находим соответствующий вторичный слайдер с использованием идентификатора
+  //     var secondaryId = "bu-secondary-slider-" + identifier;
+  //     var secondaryElement = document.getElementById(secondaryId);
+  //     if (secondaryElement) {
+  //       // Инициализируем основной слайдер
+  //       var mainSplide = new Splide(mainElement, {
+  //         pagination: false,
+  //         arrows: false,
+  //       });
+  //       // Инициализируем вторичный слайдер
+  //       var secondarySplide = new Splide(secondaryElement, {
+  //         fixedWidth: 80,
+  //         height: 80,
+  //         gap: 8,
+  //         pagination: false,
+  //         arrows: false,
+  //         isNavigation: true,
+  //         drag: false,
+  //       });
+  //       // Синхронизируем основной слайдер с соответствующим вторичным слайдером
+  //       mainSplide.sync(secondarySplide);
+  //       // Монтируем слайдеры только после синхронизации
+  //       mainSplide.mount();
+  //       secondarySplide.mount();
+  //     }
+  //   });
+  // }
+  // initializeAndSyncSliders();
 });
 
+$(".gen-tab__add-product-mobile-header").on("click", function () {
+  // Проверяем ширину окна
+  if ($(window).width() < 719) {
+    // Находим родительский элемент add-product-mobile-box
+    var parent = $(this).closest(".add-product-mobile-box");
+
+    // Переключаем класс active у родительского элемента add-product-mobile-box
+    parent.toggleClass("active");
+
+    // Применяем slideToggle к элементу carousel-container внутри родительского элемента add-product-mobile-box
+    if (parent.hasClass("active")) {
+      parent.find(".carousel-container").slideDown().css("display", "flex");
+    } else {
+      parent.find(".carousel-container").slideUp();
+    }
+  }
+});
 //Zoom
 (function ($) {
   $(document).ready(function () {

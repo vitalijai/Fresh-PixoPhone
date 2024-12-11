@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(".footer-nav__title").on("click", function () {
     // Проверяем ширину окна
-    if ($(window).width() < 719) {
+    if ($(window).width() < 992) {
       // Находим родительский элемент footer-nav__column
       var parent = $(this).closest(".footer-nav__column");
 

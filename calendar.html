@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="./styles/css/calendar.css">
+
+
+      <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="preload"
+            as="style" onload="this.onload=null;this.rel='stylesheet'" />
+
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <!-- don't copy -->
+    <style>
+        body {
+            background: var(--bg-color, #f5f5f5);
+        }
+    </style>
+     <!-- end don't copy -->
+
+    <div class="container">
+        <div class="calendar-page">
+            <h2 class="title">Advent calendar 2024</h2>
+    
+            <div class="calendar">
+
+                <!-- Events list -->
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Expired Modal -->
+    <div class="calendar-modal modal fade" id="expired-event" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">&times;</button>
+                
+                <div class="modal-container">
+                    <div class="col col-banner">
+                        <img src="./images/calendar/Image.png" alt="banner">
+                    </div>
+    
+                    <div class="col col-content">
+                        <h2>Цей день вже пройшов</h2>
+                        <p>Ви уже отримали промокод за цей день</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- active Modal -->
+    <div class="calendar-modal modal fade" id="active-event" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">&times;</button>
+    
+                <div class="modal-container">
+                    <div class="col col-banner">
+                        <img src="./images/calendar/Image.png" alt="banner">
+                    </div>
+    
+                    <div class="col col-content">
+                        <div class="active-event-form js-active-event-block">
+                            <h2>Цей день настав!</h2>
+                            <p>Введіть свою електронну пошту для отримання промокоду</p>
+                            <form id="event-code-form">
+                                <div class="form-group">
+                                    <input name='email' type="email" class="form-control" placeholder="example@mail.com">
+                                </div>
+                                <button class="button" type="submit">Отримати</button>
+                            </form>
+                        </div>
+    
+                        <div class="active-form-success hidden js-active-event-success-block">
+                            <h2>Вітаємо!</h2>
+                            <p>Вам доступний промокод</p>
+                            <div class="code-block">
+                                <div class="code js-code">PROMO-CODE</div>
+                                <div class="button icon js-copy">
+                                    <img src="./images/calendar/copy.png" alt="copy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+   <script type="text/javascript" src="./scripts/calendar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+.header-runs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  margin-top: -4px;
+
+  @media (max-width: 992px) {
+    order: -1;
+  }
+
+  .scrolling {
+    overflow: hidden;
+    white-space: nowrap;
+
+    div {
+      animation: marquee linear infinite;
+      display: inline-block;
+      width: fit-content;
+      animation-play-state: running; // По умолчанию анимация работает
+    }
+
+    &.fast {
+      display: flex;
+      padding: 16px;
+      justify-content: center;
+      align-items: center;
+      align-self: stretch;
+      gap: 16px;
+
+      background: var(--colors-gray-700, #2f2c2f);
+
+      @media (max-width: 992px) {
+        padding: 12px 0;
+        gap: 8px;
+        background: unset;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        gap: 16px;
+
+        @media (max-width: 992px) {
+          // gap: 0;
+          overflow-x: auto;
+          justify-content: flex-start;
+        }
+
+        a {
+          padding: 12px 24px;
+          height: 56px;
+          height: 32px;
+          border-radius: 48px;
+          background: var(--colors-gray-700, #2f2c2f);
+          display: flex;
+          align-items: center;
+
+          svg {
+            height: 32px;
+          }
+
+          &:hover {
+            background: var(--colors-white, #fff);
+
+            svg {
+              path {
+                fill: var(--colors-gray-700, #2f2c2f);
+              }
+            }
+          }
+
+          @media (max-width: 992px) {
+            padding: 0;
+            height: 28px;
+
+            background: unset;
+
+            svg {
+              height: 24px;
+
+              path {
+                fill: var(--colors-gray-700, #2f2c2f);
+              }
+            }
+
+            &:hover {
+              background: unset;
+            }
+          }
+        }
+      }
+    }
+
+    &.fast > div {
+      animation-duration: 15s; // Быстрая скорость
+
+      @media (max-width: 992px) {
+        animation-duration: unset;
+      }
+    }
+
+    &.slow {
+      display: flex;
+      padding: 24px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      align-self: stretch;
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+
+        a {
+          display: flex;
+          padding: 0px 16px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+
+          svg {
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+    }
+
+    &.slow > div {
+      animation-duration: 15s; // Медленная скорость
+    }
+
+    &:hover > div {
+      animation-play-state: paused; // Остановить анимацию при наведении
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
