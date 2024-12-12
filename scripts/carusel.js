@@ -106,7 +106,6 @@ $(document).ready(function () {
   $(".people-watching-secondary-span").text(secondary);
 });
 
-
 $(document).ready(function () {
   //Аксы
   // Инициализация слайдера
@@ -152,78 +151,6 @@ $(document).ready(function () {
   $(".people-watching-text-span").text(text);
   $(".people-watching-secondary-span").text(secondary);
 });
-//Главное фото
-document.addEventListener("DOMContentLoaded", function () {
-  // var primarySlider = new Splide("#main-photo-slider", {
-  //   pagination: false,
-  // });
-  // var secondarySlider = new Splide("#secondary-slider", {
-  //   fixedWidth: 90,
-  //   height: 90,
-  //   gap: 8,
-  //   pagination: false,
-  //   arrows: true,
-  //   isNavigation: true,
-  //   focus: "center",
-  // }).mount();
-  // var popUpPhoto = new Splide("#popUpPhoto", {
-  //   pagination: false,
-  // });
-  // var secondSlider = new Splide("#second-slider", {
-  //   fixedWidth: 90,
-  //   height: 90,
-  //   gap: 8,
-  //   pagination: false,
-  //   arrows: false,
-  //   isNavigation: false,
-  //   focus: "center",
-  // }).mount();
-  // primarySlider.sync(secondarySlider).mount();
-  // popUpPhoto.sync(secondSlider).mount();
-  // var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
-  //   perPage: 3,
-  //   pagination: false,
-  //   arrows: true,
-  // });
-  // popUpAcces.mount();
-  // Вызов функции для инициализации слайдеров
-  // // Функция для инициализации и синхронизации слайдеров на основе шаблона ID
-  // function initializeAndSyncSliders() {
-  //   // Находим все основные слайдеры
-  //   var mainSliders = document.querySelectorAll(".bu-main-photo-slider");
-  //   mainSliders.forEach(function (mainElement) {
-  //     // Извлекаем идентификатор из ID основного слайдера
-  //     var mainId = mainElement.id;
-  //     var identifier = mainId.replace("bu-main-photo-slider-", "");
-  //     // Находим соответствующий вторичный слайдер с использованием идентификатора
-  //     var secondaryId = "bu-secondary-slider-" + identifier;
-  //     var secondaryElement = document.getElementById(secondaryId);
-  //     if (secondaryElement) {
-  //       // Инициализируем основной слайдер
-  //       var mainSplide = new Splide(mainElement, {
-  //         pagination: false,
-  //         arrows: false,
-  //       });
-  //       // Инициализируем вторичный слайдер
-  //       var secondarySplide = new Splide(secondaryElement, {
-  //         fixedWidth: 80,
-  //         height: 80,
-  //         gap: 8,
-  //         pagination: false,
-  //         arrows: false,
-  //         isNavigation: true,
-  //         drag: false,
-  //       });
-  //       // Синхронизируем основной слайдер с соответствующим вторичным слайдером
-  //       mainSplide.sync(secondarySplide);
-  //       // Монтируем слайдеры только после синхронизации
-  //       mainSplide.mount();
-  //       secondarySplide.mount();
-  //     }
-  //   });
-  // }
-  // initializeAndSyncSliders();
-});
 
 $(".gen-tab__add-product-mobile-header").on("click", function () {
   // Проверяем ширину окна
@@ -242,6 +169,119 @@ $(".gen-tab__add-product-mobile-header").on("click", function () {
     }
   }
 });
+
+//Главное фото
+document.addEventListener("DOMContentLoaded", function () {
+  var primarySlider = new Splide("#main-photo-slider", {
+    pagination: false,
+  });
+
+  var secondarySlider = new Splide("#secondary-slider", {
+    fixedWidth: 90,
+    height: 90,
+    gap: 8,
+    pagination: false,
+    arrows: true,
+    isNavigation: true,
+    focus: "center",
+  }).mount();
+
+  var popUpPhoto = new Splide("#popUpPhoto", {
+    pagination: false,
+  });
+
+  var secondSlider = new Splide("#second-slider", {
+    fixedWidth: 90,
+    height: 90,
+    gap: 8,
+    pagination: false,
+    arrows: false,
+    isNavigation: false,
+    focus: "center",
+  }).mount();
+
+  primarySlider.sync(secondarySlider).mount();
+  popUpPhoto.sync(secondSlider).mount();
+
+  var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
+    perPage: 3,
+    pagination: false,
+    arrows: true,
+  });
+  popUpAcces.mount();
+
+  // Вызов функции для инициализации слайдеров
+
+  // // Функция для инициализации и синхронизации слайдеров на основе шаблона ID
+  function initializeAndSyncSliders() {
+    // Находим все основные слайдеры
+    var mainSliders = document.querySelectorAll(".bu-main-photo-slider");
+
+    mainSliders.forEach(function (mainElement) {
+      // Извлекаем идентификатор из ID основного слайдера
+      var mainId = mainElement.id;
+      var identifier = mainId.replace("bu-main-photo-slider-", "");
+
+      // Находим соответствующий вторичный слайдер с использованием идентификатора
+      var secondaryId = "bu-secondary-slider-" + identifier;
+      var secondaryElement = document.getElementById(secondaryId);
+
+      if (secondaryElement) {
+        // Инициализируем основной слайдер
+        var mainSplide = new Splide(mainElement, {
+          pagination: false,
+          arrows: false,
+        });
+
+        // Инициализируем вторичный слайдер
+        var secondarySplide = new Splide(secondaryElement, {
+          fixedWidth: 80,
+          height: 80,
+          gap: 8,
+          pagination: false,
+          arrows: false,
+          isNavigation: true,
+          drag: false,
+        });
+
+        // Синхронизируем основной слайдер с соответствующим вторичным слайдером
+        mainSplide.sync(secondarySplide);
+
+        // Монтируем слайдеры только после синхронизации
+        mainSplide.mount();
+        secondarySplide.mount();
+      }
+    });
+  }
+
+  function initializeSplidePopUpBu() {
+    new Splide("#pop-up-bu-main-photo-block-slider", {
+      width: 1300,
+
+      pagination: false,
+      arrows: true,
+      drag: false,
+    }).mount();
+
+    var elms = document.getElementsByClassName("pop-up-bu-main-photo-slider");
+
+    for (var i = 0; i < elms.length; i++) {
+      new Splide(elms[i], {
+        pagination: true,
+        arrows: true,
+        classes: {
+          arrows: "splide__arrows pop-up-bu-splide__arrows",
+          arrow: "splide__arrow pop-up-bu-splide__arrow",
+          prev: "splide__arrow--prev pop-up-bu-splide__arrow--prev",
+          next: "splide__arrow--next pop-up-bu-splide__arrow--next",
+        },
+      }).mount();
+    }
+  }
+  initializeSplidePopUpBu();
+  initializeAndSyncSliders();
+});
+
 //Zoom
 (function ($) {
   $(document).ready(function () {
