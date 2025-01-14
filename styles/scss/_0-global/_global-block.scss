@@ -1047,6 +1047,7 @@
       text-overflow: ellipsis;
 
       font-weight: 400;
+      min-height: 38px;
 
       @media (max-width: 992px) {
         font-size: 10px;
@@ -1431,6 +1432,7 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       align-self: stretch;
+      min-height: 38px;
 
       overflow: hidden;
       text-overflow: ellipsis;

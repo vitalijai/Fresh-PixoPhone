@@ -2,22 +2,92 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="636e51c1-2607-4268-9bdd-cbe66857ebcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/collaboration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_collaboration.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_collaboration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_privacy-policy.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_privacy-policy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_shops.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_shops.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_single-shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_single-shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_trade-in.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_trade-in.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/trade-in.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/trade-in.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/collaboration.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/collaboration.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/credit.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/credit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_smartfon.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_smartfon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/button-add.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/button-add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/carusel.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/carusel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/css/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/css/splide-default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/css/style.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-acces.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-block.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-btn.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-checkbox.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-label.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-p-short.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-pop-up.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global-service-block.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/_root.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_0-global/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_1-header/_1-header_top.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_1-header/_2-header_bottom.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_1-header/_2.1-header-menu.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_1-header/_3-breadcrumbs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_1-header/_header-variable.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_1-header/_header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_1-tabs/_1-tabs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_10-service-tab/_10-service-tab.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_11-used-sentences/_11-used-sentences.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_12-offers-tab/_12-offers-tab.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_12-offers-tab/_12.1-block-list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_12-offers-tab/_12.2-block-column.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_12-offers-tab/_12.3-block-comparison.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2-general-tab.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.0-zoom.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.1-tab-info.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.10-gen-tab__work-checked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.2-tab-to-order.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.3-tab-constructor.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.4-tab-stock.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.5-tab-credit.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.6-tab-services.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.7-tab-product.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.8-tab-delivery.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_2-general-tab/_2.9-tab-order-services.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_3-block-on-sale-soon/_3-block-on-sale-soon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_4-description/_4-description.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_5-recently-viewed/_5-recently-viewed.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_6-novelty/_6-novelty.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_7-information-tab/_7-information-tab.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_8-cheaper-together/_8-cheaper-together.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_9-acces-tab/_9-acces-tab.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_main-variable.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_2-main/_main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_3-footer/__footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_3-footer/_footer-variable.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_4-pop-up.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-bu-show.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-cart.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-credit.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-global-photo.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-modal-variable.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-search.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/_4-pop-up/_pop-up-smartphone-version.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles — копия/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Footer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Footer.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Header.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Header.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Pop Up.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Pop Up.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/Pop Up.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/Pop Up.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/ProductPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/ProductPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/ProductPage.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/ProductPage.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/dop.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/dop.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/privacy-policy.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/privacy-policy.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/shops.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/shops.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/css/trade-in.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/trade-in.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/css/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/global.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/Footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/Pop Up.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/Pop Up.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/ProductPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/ProductPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/_0-global/_global-acces.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_0-global/_global-acces.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/_0-global/_global-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_0-global/_global-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/_0-global/_global-service-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_0-global/_global-service-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/scss/_2-main/_4-description/_4-description.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/_2-main/_4-description/_4-description.scss" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,13 +104,28 @@
       </set>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2nISBzzatgp4IsHHx5KeDbpMykH" />
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "8d190ab7",
+    "last_opened_file_path": "/Users/sergiy/Documents/pixophone/pixophone/Fresh-PixoPhone",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Sergii\Desktop\pixophone\Fresh-PixoPhone new" />
@@ -58,6 +143,14 @@
       </list>
     </option>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -71,20 +164,19 @@
       <workItem from="1728658966927" duration="92000" />
       <workItem from="1728659064542" duration="199000" />
       <workItem from="1728890409755" duration="1273000" />
+      <workItem from="1736866465637" duration="272000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

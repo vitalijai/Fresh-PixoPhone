@@ -5,12 +5,16 @@ $(document).ready(function () {
       $carouselWrapper.addClass("carousel-wrapper-min");
       $carouselWrapper.removeClass("carousel-wrapper");
 
-      $(".carousel-wrapper-min").slick({
-        infinite: false,
-        slidesToShow: 4.5,
-        slidesToScroll: 1,
-        arrows: false,
-      });
+      try{
+        $(".carousel-wrapper-min").slick({
+          infinite: false,
+          slidesToShow: 4.5,
+          slidesToScroll: 1,
+          arrows: false,
+          variableWidth: true
+        });
+      } catch(e) {}
+
     } else {
       $carouselWrapper.removeClass("carousel-wrapper-min");
       $carouselWrapper.addClass("carousel-wrapper");
@@ -20,6 +24,7 @@ $(document).ready(function () {
         slidesToShow: 3.2,
         slidesToScroll: 1,
         arrows: false,
+        variableWidth: true
       });
     }
   }
@@ -68,6 +73,28 @@ $(document).ready(function () {
     $(".carousel-wrapper").slick("slickNext");
   });
 
+  // Привязка кнопок к слайдеру если есть такие
+  if($(".multiple-items").length > 0) {
+    $(".multiple-items").each(function () {
+      if(!$(this).hasClass('slick-initialized')) {
+        $(this).slick({
+          infinite: false,
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          arrows: false,
+        });
+      }
+    });
+  }
+  
+  // Инициализация слайдера
+  $(".multiple-item").slick({
+    infinite: false,
+    slidesToShow: 1.5,
+    slidesToScroll: 1,
+    arrows: false,
+  });
+
   //Аксы корзина
   // Инициализация слайдера
   $(".cart-carousel-wrapper").slick({
@@ -84,52 +111,6 @@ $(document).ready(function () {
 
   $(".cart-next").click(function () {
     $(".cart-carousel-wrapper").slick("slickNext");
-  });
-
-  //Рандомайзер
-  var randomNumber = Math.floor(Math.random() * 10) + 1;
-  var text;
-  var secondary;
-
-  if (randomNumber === 1) {
-    text = "людина";
-    secondary = "переглядає";
-  } else if (randomNumber >= 2 && randomNumber <= 4) {
-    text = "людини";
-    secondary = "переглядають";
-  } else {
-    text = "людей";
-  }
-
-  $(".people-watching-span").text(randomNumber);
-  $(".people-watching-text-span").text(text);
-  $(".people-watching-secondary-span").text(secondary);
-});
-
-$(document).ready(function () {
-  //Аксы
-  // Инициализация слайдера
-  // $(".carousel-wrapper").slick({
-  //   infinite: false,
-  //   slidesToShow: 3.2,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  // });
-
-  // $(".carousel-wrapper-min").slick({
-  //   infinite: false,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  // });
-
-  // Привязка кнопок к слайдеру
-  $(".gen-tab__prev").click(function () {
-    $(".carousel-wrapper").slick("slickPrev");
-  });
-
-  $(".gen-tab__next").click(function () {
-    $(".carousel-wrapper").slick("slickNext");
   });
 
   //Рандомайзер
@@ -203,12 +184,14 @@ document.addEventListener("DOMContentLoaded", function () {
   primarySlider.sync(secondarySlider).mount();
   popUpPhoto.sync(secondSlider).mount();
 
-  var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
-    perPage: 3,
-    pagination: false,
-    arrows: true,
-  });
-  popUpAcces.mount();
+  if($('#pop-up-bu-acces-block-slider').length) {
+    var popUpAcces = new Splide("#pop-up-bu-acces-block-slider", {
+      perPage: 3,
+      pagination: false,
+      arrows: true,
+    });
+    popUpAcces.mount();
+  }
 
   // Вызов функции для инициализации слайдеров
 
@@ -255,14 +238,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function initializeSplidePopUpBu() {
-    new Splide("#pop-up-bu-main-photo-block-slider", {
-      width: 1300,
-
-      pagination: false,
-      arrows: true,
-      drag: false,
-    }).mount();
-
+    if($('#pop-up-bu-main-photo-block-slider').length){
+      new Splide("#pop-up-bu-main-photo-block-slider", {
+        width: 1300,
+  
+        pagination: false,
+        arrows: true,
+        drag: false,
+      }).mount();  
+    }
+  
     var elms = document.getElementsByClassName("pop-up-bu-main-photo-slider");
 
     for (var i = 0; i < elms.length; i++) {
@@ -754,3 +739,14 @@ document.addEventListener("DOMContentLoaded", function () {
     adjustY: 0,
   };
 })(jQuery);
+
+try{
+  if (window.innerWidth < 769) {
+    new Splide("#main-photo-slider-mobile", {
+      pagination: true,
+    }).mount();
+  }
+  }
+  catch(e) {
+  
+  }

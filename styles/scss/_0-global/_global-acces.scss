@@ -16,30 +16,37 @@
 
   .carousel-container {
     overflow: hidden;
+
+    @media (max-width: 1290px) {
+      width: 100%;
+    }
   }
+
   .gen-tab__add-product-accessories-container {
     @include flexbox($alignItems: flex-start, $self: stretch);
 
     // (1366/2)-10% = 615px
-    width: calc(var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.09));
+    @media (min-width: 1280px) {
+      width: calc(100vw / 2 - 100vw / 2 * 0.18);
+    }
 
     transition: transform 0.3s ease;
 
-    @media (max-width: 1562px) {
-      width: calc(
-        var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.18)
-      );
-    }
+    // @media (max-width: 1562px) {
+    //   width: calc(
+    //     var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.18)
+    //   );
+    // }
 
-    @media (max-width: 1290px) {
-      width: calc(
-        var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.28)
-      );
-    }
+    // @media (max-width: 1290px) {
+    //   width: calc(
+    //     var(---width, 1366px) / 2 - (var(---width, 1366px) / 2 * 0.28)
+    //   );
+    // }
 
-    @media (max-width: 1279px) {
-      width: 1000px;
-    }
+    // @media (max-width: 1279px) {
+    //   width: 100%;
+    // }
 
     & .slick-slide {
       margin-right: var(---gap-small, 16px);
