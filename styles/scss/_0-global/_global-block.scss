@@ -1629,3 +1629,56 @@
     }
   }
 }
+
+.mobile-block-container{
+  @media (max-width: 719px) {
+    border-radius: 32px;
+    background: var(--colors-white, #fff);
+    margin-bottom: 12px;
+  }
+}
+
+.section-container{
+  margin: auto;
+
+  @media (min-width: 719px) {
+    border-radius: 32px;
+    background: var(--colors-white, #fff);
+    margin: 0 auto 48px;
+    display: flex;
+  }
+
+  .section-side-menu{
+    padding: 24px 16px;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    @media (max-width: 719px) {
+      background: var(--colors-white, #fff);
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 719px) {
+      border-radius: 0;
+      flex: 0 0 auto;
+      width: 320px;
+      border-right: 1px solid var(--colors-gray-200, #e5e4e2);
+    }
+  }
+
+  .section-content{
+    flex: 1 1 auto;
+
+    .section-content-header{
+      border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);
+      padding: 24px 32px;
+
+      .header-title{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin: 0;
+      }
+    }
+  }
+}
