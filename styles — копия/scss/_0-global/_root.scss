@@ -1,0 +1,74 @@
+@import "../_1-header/header-variable";
+@import "../_2-main/main-variable";
+@import "../_3-footer/footer-variable";
+@import "../_4-pop-up/pop-up-modal-variable";
+
+:root {
+  //PARAMETRS
+  //global
+  ---width: 1500px;
+  ---width-desc: 1920px;
+  ---gap-small: 16px;
+  ---gap-basic: 24px;
+  ---gap-big: 48px;
+
+  //COLORS
+  //global
+  --bg-color: #f5f5f5;
+
+  --score: #f7f7f7;
+  --score-1: #fa8072;
+  --score-2: #ffce4f;
+  --score-3: #cde24d;
+  --score-4: #94db5c;
+  --score-5: #62b278;
+
+  ---black: #2b2b2b;
+  ---black-ico: #333333;
+  ---blue-light: #81dcec;
+  ---blue: #0eb7d4;
+  ---green-btn: #62b378;
+  ---gray: #ececec;
+  ---disabled: #{$---disabled};
+  ---dark-gray: #{$---dark-gray};
+  ---pink: #ec8a8a;
+  ---pink-btn: #f37d7d;
+  ---soft-gray: #{$---soft-gray};
+  ---rating-star: #ffda55;
+  ---red-post: #da291c;
+  ---white: #fff;
+
+  --colors-white: #fff;
+  --colors-blue-100: #{$--colors-blue-100};
+  --colors-blue-400: #{$--colors-blue-400};
+  --colors-blue-500: #{$--colors-blue-500};
+  --colors-gray-svg: #{$--colors-gray-svg};
+  --colors-gray-100: #{$--colors-gray-100};
+  --colors-gray-200: #{$--colors-gray-200};
+  --colors-gray-300: #{$--colors-gray-300};
+  --colors-gray-400: #{$--colors-gray-400};
+  --colors-gray-500: #{$--colors-gray-500};
+  --colors-gray-700: #{$--colors-gray-700};
+  --colors-green-200: #{$--colors-green-200};
+  --colors-green-400: #{$--colors-green-400};
+  --colors-green-500-primary: #2ea84f;
+  --colors-green-600: #{$--colors-green-600};
+  --colors-green-700: #{$--colors-green-700};
+  --colors-green-900: #{$--colors-green-900};
+  --colors-mint-300: #81d8d0;
+  --colors-red-300: #{$--colors-red-300};
+  --colors-red-500: #{$--colors-red-500};
+  --colors-violet-300: #{$--colors-violet-300};
+
+  //modal-searcch
+  --modal-colors-white: #{$--modal-colors-white};
+  --modal-colors-blue-400: #{$--modal-colors-blue-400};
+  --modal-colors-gray-100: #{$--modal-colors-gray-100};
+  --modal-colors-gray-200: #{$--modal-colors-gray-200};
+  --modal-colors-gray-400: #{$--modal-colors-gray-400};
+  --modal-colors-gray-500: #{$--modal-colors-gray-500};
+  --modal-colors-gray-700: #{$--modal-colors-gray-700};
+  --modal-colors-green-100: #{$--modal-colors-green-100};
+  --modal-colors-green-400: #{$--modal-colors-green-400};
+  --modal-colors-red-300: #{$--modal-colors-red-300};
+}

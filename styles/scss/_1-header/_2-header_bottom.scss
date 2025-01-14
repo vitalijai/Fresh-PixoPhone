@@ -105,8 +105,42 @@
         padding: 0px 8px;
         cursor: pointer;
 
+        .header-bottom__profile-log {
+          color: var(--colors-white, #fff);
+
+          font-size: 10px;
+          line-height: 100%;
+          max-width: 46px;
+        }
+
         &:hover {
           background: var(--colors-green-700, #1d6d33);
+        }
+
+        &.header-bottom__profile-btn {
+          width: unset;
+          max-width: 91px;
+
+          padding: 0px 12px 0px 8px;
+
+          align-items: center;
+          gap: 2px;
+
+          .header-bottom__profile-authorized {
+            display: none;
+          }
+
+          &.authorized {
+            .header-bottom__profile-authorized {
+              display: block;
+            }
+            .header-bottom__profile-login {
+              display: none;
+            }
+            svg {
+              fill: #fff;
+            }
+          }
         }
       }
 

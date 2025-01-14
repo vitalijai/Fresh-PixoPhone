@@ -967,6 +967,8 @@
             }
           }
         }
+      }
+    }
 
         .global-block-add-compare__btn {
           &::after {
@@ -1249,8 +1251,6 @@
           }
         }
       }
-    }
-  }
 
   &.mark-free-delivery {
     background: var(--colors-blue-400, #62a8ed);
@@ -1390,6 +1390,7 @@
         justify-content: space-around;
       }
     }
+  }
 
     .global-block-container-bottom-list-offer {
       display: flex;
@@ -1458,8 +1459,43 @@
       &.min {
         height: unset;
       }
+    }
 
       @media (max-width: 719px) {
+        height: unset;
+      }
+    }
+
+    .global-block-container-bottom-list-header {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      align-self: stretch;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      font-weight: 400;
+
+      @media (max-width: 719px) {
+        font-size: 10px;
+      }
+    }
+
+    .global-block-container-bottom-list-status {
+      @include flexbox(
+        $alignItems: center,
+        $justify: space-between,
+        $self: stretch
+      );
+    }
+
+    .global-block-container-bottom-value {
+      @include flexbox($alignItems: center, $justify: flex-end, $self: stretch);
+
+      height: 32px;
+
+      &.min {
         height: unset;
       }
 

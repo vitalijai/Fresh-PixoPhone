@@ -209,6 +209,10 @@
           }
         }
 
+        .carousel-container {
+          display: none;
+        }
+
         &.active {
           .gen-tab__add-product-mobile-header {
             span {
