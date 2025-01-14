@@ -21,7 +21,6 @@
 
       .header_bottom-catalog {
         position: relative;
-
         .header-bottom-catalog__desc {
           @include flexbox($alignItems: center);
 
@@ -44,12 +43,6 @@
         }
       }
     }
-
-    @media (max-width: 719px) {
-      gap: 16px;
-      padding: 16px;
-      font-size: 12px;
-    }
   }
   .header_bottom-content__right {
     @include flexbox($justify: flex-end, $alignItems: center, $self: stretch);
@@ -57,10 +50,6 @@
     padding-left: 48px;
     gap: var(---gap-small, 16px);
     flex: 1 0 0;
-
-    @media (max-width: 719px) {
-      padding-left: 0;
-    }
 
     .header-bottom-search {
       background: var(--colors-white, #fff);
@@ -70,10 +59,10 @@
       max-width: 580px;
       gap: var(---gap-basic, 24px);
       flex: 1 0 0;
-      height: 36px;
+
       border-radius: 8px;
       border: 2px solid var(--colors-gray-100, #f7f7f7);
-      margin: auto 0;
+
       .header-search-form {
         @include flexbox();
         width: 100%;
@@ -88,10 +77,6 @@
           padding: 0 16px;
           text-overflow: ellipsis;
           outline: none;
-
-          @media (max-width: 719px) {
-            padding: 0 8px;
-          }
         }
         .header-search-form__search-btn {
           background: var(--colors-white, #fff);
@@ -120,42 +105,8 @@
         padding: 0px 8px;
         cursor: pointer;
 
-        .header-bottom__profile-log {
-          color: var(--colors-white, #fff);
-
-          font-size: 10px;
-          line-height: 100%;
-          max-width: 46px;
-        }
-
         &:hover {
           background: var(--colors-green-700, #1d6d33);
-        }
-
-        &.header-bottom__profile-btn {
-          width: unset;
-          max-width: 91px;
-
-          padding: 0px 12px 0px 8px;
-
-          align-items: center;
-          gap: 2px;
-
-          .header-bottom__profile-authorized {
-            display: none;
-          }
-
-          &.authorized {
-            .header-bottom__profile-authorized {
-              display: block;
-            }
-            .header-bottom__profile-login {
-              display: none;
-            }
-            svg {
-              fill: #fff;
-            }
-          }
         }
       }
 
@@ -207,7 +158,6 @@
     position: fixed;
     top: 0;
     z-index: 21;
-    transition: top 0.5s ease-in-out;
 
     .header_bottom-content__left {
       display: flex;
@@ -251,9 +201,5 @@
         }
       }
     }
-  }
-
-  &.mobile {
-    top: -80px;
   }
 }

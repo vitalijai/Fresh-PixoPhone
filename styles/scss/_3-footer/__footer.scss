@@ -1,9 +1,10 @@
 .footer {
   @include flexbox($alignItems: center, $direction: column, $self: stretch);
-  padding: 32px 10px;
-  gap: 16px;
 
-  background: var(--colors-green-900, #1c4427);
+  padding: 32px 10px;
+  gap: var(---gap-small, 16px);
+  user-select: none;
+
 
   @media (max-width: 992px) {
     padding-bottom: 70px;
@@ -317,6 +318,8 @@
 
     .footer-bottom {
       .footer-nav__span-title {
+        color: var(--colors-gray-300, #c0c0c0);
+        font-size: 12px;
         font-weight: 400;
       }
 
@@ -324,5 +327,9 @@
         font-size: 12px;
       }
     }
+  }
+
+  @media (max-width: 719px) {
+    margin-bottom: 36px;
   }
 }
