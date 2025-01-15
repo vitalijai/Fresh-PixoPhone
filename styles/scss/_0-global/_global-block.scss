@@ -30,9 +30,9 @@
 
   .global-block-header {
     @include flexbox(
-      $alignItems: center,
-      $justify: space-between,
-      $self: stretch
+            $alignItems: center,
+            $justify: space-between,
+            $self: stretch
     );
     user-select: none;
 
@@ -556,6 +556,7 @@
 
   .global-block-container-header {
     flex: 1 1 47.5%;
+
     @include flexbox($alignItems: center, $direction: column, $self: stretch);
     user-select: none;
 
@@ -692,50 +693,50 @@
           justify-content: center;
           align-items: center;
           align-self: stretch;
-      
+
           border-radius: 4px;
           background: var(--colors-white, #fff);
-      
+
           leading-trim: both;
           text-edge: cap;
           font-size: 10px;
           font-weight: 600;
         }
-      
+
         &.mark-offer-day {
           background: var(--colors-violet-300, #b57edc);
           box-shadow: 0px 30px 8px 0px rgba(95, 60, 119, 0),
-            0px 19px 8px 0px rgba(95, 60, 119, 0.01),
-            0px 11px 6px 0px rgba(95, 60, 119, 0.05),
-            0px 5px 5px 0px rgba(95, 60, 119, 0.09),
-            0px 1px 3px 0px rgba(95, 60, 119, 0.1);
-      
+          0px 19px 8px 0px rgba(95, 60, 119, 0.01),
+          0px 11px 6px 0px rgba(95, 60, 119, 0.05),
+          0px 5px 5px 0px rgba(95, 60, 119, 0.09),
+          0px 1px 3px 0px rgba(95, 60, 119, 0.1);
+
           .global-block-mark-timer {
             color: var(--colors-violet-300, #b57edc);
           }
         }
-      
+
         &.mark-price-reduced {
           background: var(--colors-yellow-500, #ffbf00);
           box-shadow: 0px 20px 6px 0px rgba(134, 100, 9, 0),
-            0px 13px 5px 0px rgba(134, 100, 9, 0.01),
-            0px 7px 4px 0px rgba(134, 100, 9, 0.05),
-            0px 3px 3px 0px rgba(134, 100, 9, 0.09),
-            0px 1px 2px 0px rgba(134, 100, 9, 0.1);
-      
+          0px 13px 5px 0px rgba(134, 100, 9, 0.01),
+          0px 7px 4px 0px rgba(134, 100, 9, 0.05),
+          0px 3px 3px 0px rgba(134, 100, 9, 0.09),
+          0px 1px 2px 0px rgba(134, 100, 9, 0.1);
+
           .global-block-mark-timer {
             color: var(--colors-yellow-500, #ffbf00);
           }
         }
-      
+
         &.mark-with-gift {
           background: var(--colors-red-300, #fa8072);
           box-shadow: 0px 20px 6px 0px rgba(97, 28, 20, 0),
-            0px 13px 5px 0px rgba(97, 28, 20, 0.01),
-            0px 7px 4px 0px rgba(97, 28, 20, 0.05),
-            0px 3px 3px 0px rgba(97, 28, 20, 0.09),
-            0px 1px 2px 0px rgba(97, 28, 20, 0.1);
-      
+          0px 13px 5px 0px rgba(97, 28, 20, 0.01),
+          0px 7px 4px 0px rgba(97, 28, 20, 0.05),
+          0px 3px 3px 0px rgba(97, 28, 20, 0.09),
+          0px 1px 2px 0px rgba(97, 28, 20, 0.1);
+
           .global-block-mark-timer {
             color: var(--colors-red-300, #fa8072);
           }
@@ -822,6 +823,7 @@
 
       padding: 2px;
       border-radius: 8px;
+
       cursor: pointer;
       border: 2px solid transparent;
 
@@ -967,8 +969,6 @@
             }
           }
         }
-      }
-    }
 
         .global-block-add-compare__btn {
           &::after {
@@ -1056,9 +1056,9 @@
 
     .global-block-container-bottom-list-status {
       @include flexbox(
-        $alignItems: center,
-        $justify: space-between,
-        $self: stretch
+              $alignItems: center,
+              $justify: space-between,
+              $self: stretch
       );
       height: 24px;
     }
@@ -1100,9 +1100,9 @@
       .global-p-short-product {
         &.all-price {
           @include flexbox(
-            $alignItems: center,
-            $justify: space-between,
-            $self: stretch
+                  $alignItems: center,
+                  $justify: space-between,
+                  $self: stretch
           );
 
           width: 100%;
@@ -1251,14 +1251,16 @@
           }
         }
       }
+    }
+  }
 
   &.mark-free-delivery {
     background: var(--colors-blue-400, #62a8ed);
     box-shadow: 0px 28px 8px 0px rgba(27, 60, 95, 0),
-      0px 18px 7px 0px rgba(27, 60, 95, 0.01),
-      0px 10px 6px 0px rgba(27, 60, 95, 0.05),
-      0px 5px 5px 0px rgba(27, 60, 95, 0.09),
-      0px 1px 2px 0px rgba(27, 60, 95, 0.1);
+    0px 18px 7px 0px rgba(27, 60, 95, 0.01),
+    0px 10px 6px 0px rgba(27, 60, 95, 0.05),
+    0px 5px 5px 0px rgba(27, 60, 95, 0.09),
+    0px 1px 2px 0px rgba(27, 60, 95, 0.1);
 
     .global-block-mark-timer {
       color: var(--colors-blue-400, #62a8ed);
@@ -1390,7 +1392,6 @@
         justify-content: space-around;
       }
     }
-  }
 
     .global-block-container-bottom-list-offer {
       display: flex;
@@ -1445,9 +1446,9 @@
 
     .global-block-container-bottom-list-status {
       @include flexbox(
-        $alignItems: center,
-        $justify: space-between,
-        $self: stretch
+              $alignItems: center,
+              $justify: space-between,
+              $self: stretch
       );
     }
 
@@ -1459,43 +1460,8 @@
       &.min {
         height: unset;
       }
-    }
 
       @media (max-width: 719px) {
-        height: unset;
-      }
-    }
-
-    .global-block-container-bottom-list-header {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
-      align-self: stretch;
-
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      font-weight: 400;
-
-      @media (max-width: 719px) {
-        font-size: 10px;
-      }
-    }
-
-    .global-block-container-bottom-list-status {
-      @include flexbox(
-        $alignItems: center,
-        $justify: space-between,
-        $self: stretch
-      );
-    }
-
-    .global-block-container-bottom-value {
-      @include flexbox($alignItems: center, $justify: flex-end, $self: stretch);
-
-      height: 32px;
-
-      &.min {
         height: unset;
       }
 
@@ -1523,9 +1489,9 @@
       .global-p-short-product {
         &.all-price {
           @include flexbox(
-            $alignItems: center,
-            $justify: space-between,
-            $self: stretch
+                  $alignItems: center,
+                  $justify: space-between,
+                  $self: stretch
           );
 
           width: 100%;
@@ -1661,59 +1627,6 @@
             }
           }
         }
-      }
-    }
-  }
-}
-
-.mobile-block-container{
-  @media (max-width: 719px) {
-    border-radius: 32px;
-    background: var(--colors-white, #fff);
-    margin-bottom: 12px;
-  }
-}
-
-.section-container{
-  margin: auto;
-
-  @media (min-width: 719px) {
-    border-radius: 32px;
-    background: var(--colors-white, #fff);
-    margin: 0 auto 48px;
-    display: flex;
-  }
-
-  .section-side-menu{
-    padding: 24px 16px;
-    box-sizing: border-box;
-    border-radius: 24px;
-
-    @media (max-width: 719px) {
-      background: var(--colors-white, #fff);
-      margin-bottom: 12px;
-    }
-
-    @media (min-width: 719px) {
-      border-radius: 0;
-      flex: 0 0 auto;
-      width: 320px;
-      border-right: 1px solid var(--colors-gray-200, #e5e4e2);
-    }
-  }
-
-  .section-content{
-    flex: 1 1 auto;
-
-    .section-content-header{
-      border-bottom: 1px solid var(--colors-gray-200, #e5e4e2);
-      padding: 24px 32px;
-
-      .header-title{
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.2;
-        margin: 0;
       }
     }
   }
